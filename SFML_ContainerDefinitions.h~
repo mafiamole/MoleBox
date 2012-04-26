@@ -1,0 +1,7 @@
+#ifndef SFML_CONTAINERDEF_H
+#define SFML_CONTAINERDEF_H
+/**
+ * This definition is used by the SFMLGame and SFMLGameComponent classes and their subclasses.
+ */
+typedef std::map<sf::Event::EventType,sf::Event> EventList;
+#endif

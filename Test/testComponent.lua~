@@ -1,0 +1,3 @@
+function init()
+    io.write("nothing to init.");
+end
