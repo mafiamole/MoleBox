@@ -32,9 +32,6 @@
 class TestComponent : public SFMLGameComponent
 {
   public:
-    
-  
-    
 		TestComponent(SFMLGame* game);
     virtual 	~TestComponent();
     
@@ -44,7 +41,7 @@ class TestComponent : public SFMLGameComponent
 private:
     sf::Texture texture;
     sf::Sprite 	sprite;
-    sf::Music 	*music;
+    const sf::Music 	*music;
     sf::Sound	sound;
     bool	musicPaused;
 };

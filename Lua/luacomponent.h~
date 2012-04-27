@@ -44,7 +44,7 @@ extern "C" {
  */
 /**
  * 
- * These static const luaL_reg essentally define the frameworks component API for LUA
+ * These static const luaL_reg essentally define the frameworks component API for Lua
  * 
  */
 static const luaL_reg sprite[] =

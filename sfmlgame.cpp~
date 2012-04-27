@@ -30,16 +30,16 @@
 
 SFMLGame::SFMLGame(std::string windowName)
 {
-  window = new sf::RenderWindow(sf::VideoMode(800,600),windowName);
+  window = new sf::RenderWindow( sf::VideoMode( 800, 600 ), windowName );
 }
 
 SFMLGame::~SFMLGame()
 {
   ComponentVector::iterator componentItr;
   // ensure all components are removed from memory.
-  for (componentItr = components.begin(); componentItr != components.end(); componentItr++)
+  for ( componentItr = components.begin(); componentItr != components.end(); componentItr++ )
   {
-    delete (*componentItr);
+    delete ( *componentItr );
   }
   // empty pointers from container.
   components.clear();
@@ -54,15 +54,16 @@ void SFMLGame::Draw()
   {
     (*componentItr)->Draw();
   }
+  
 }
 
 void SFMLGame::Update(EventList* events)
 {
   ComponentVector::iterator componentItr;
   
-  for (componentItr = components.begin(); componentItr != components.end(); componentItr++)
+  for ( componentItr = components.begin(); componentItr != components.end(); componentItr++ )
   {
-    (*componentItr)->Update(events);
+    ( *componentItr )->Update( events );
   }
   
 }
@@ -77,24 +78,28 @@ void SFMLGame::Run()
 {
 
   EventList eventList;
-  while (this->window->isOpen())
+  
+  while ( this->window->isOpen() )
   {
     sf::Event event;
     while ( window->pollEvent(event) )
     {
-      if (event.type == sf::Event::Closed)
+      if ( event.type == sf::Event::Closed )
 	window->close();
       else
-	eventList.insert(std::pair<sf::Event::EventType,sf::Event>(event.type,event));
+	eventList.insert( std::pair< sf::Event::EventType,sf::Event >( event.type,event ) );
     }
     
     window->clear();
-    this->Update(&eventList);
+    
+    this->Update( &eventList );
     
     this->Draw();
     
     this->window->display();
+    
     eventList.clear();
+    
   }
 }
 

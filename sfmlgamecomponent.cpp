@@ -1,5 +1,5 @@
 /*
-    Copyright (c) 2012 Paul Brown <email>
+    Copyright (c) 2012 Paul Brown mafiamole@gmail.com
 
     Permission is hereby granted, free of charge, to any person
     obtaining a copy of this software and associated documentation
@@ -26,7 +26,7 @@
 
 #include "sfmlgamecomponent.h"
 
-SFMLGameComponent::SFMLGameComponent(SFMLGame *game) : game(game)
+SFMLGameComponent::SFMLGameComponent( SFMLGame *game ) : game( game )
 {
 
 
@@ -43,7 +43,7 @@ void SFMLGameComponent::Draw()
 }
 
 
-void SFMLGameComponent::Update(EventList* events)
+void SFMLGameComponent::Update (EventList* events )
 {
 
 }

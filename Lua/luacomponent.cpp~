@@ -38,13 +38,20 @@ LuaComponent::LuaComponent(SFMLGame* game,std::string file) : SFMLGameComponent(
 
 }
 
-bool LuaComponent::LoadScript(std::string file) {
+bool LuaComponent::LoadScript(std::string file)
+{
   int success;
+  
   L = lua_open();
 
   luaL_openlibs(this->L);
+  
   luaL_register(L,"Sprites",sprite);
+  
+  luaL_register(L,"Sounds",sound);
+  
   success = luaL_loadfile(this->L,file.c_str());
+  
   this->HandelError(this->L,success);
   
   success = lua_pcall(this->L,0,0,0); //execute script so we can grab functions;
@@ -92,11 +99,24 @@ void LuaComponent::Update(EventList* events)
   
   lua_getglobal(this->L,"update");
   
-  int s = lua_pcall(this->L,0,0,0);
+  lua_newtable(L);
+  EventList::iterator eventItr;
+  for (eventItr = events->begin();eventItr != events->end();eventItr++)
+  {
+    sf::Event ev = (*eventItr).second;
+    lua_pushinteger(L,(*eventItr).first); // key
+    lua_pushstring(L,"blarg"); // value
+    lua_settable(L,-3);    
+  }
+
+  
+  int s = lua_pcall(this->L,1,0,0);
   HandelError(L,s);
   
-  SFMLGameComponent::Update(events);
   
+  
+  SFMLGameComponent::Update(events);
+
 }
 
 void LuaComponent::Draw()

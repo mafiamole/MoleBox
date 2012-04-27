@@ -1,5 +1,5 @@
 /*
-    Copyright (c) 2012 Paul Brown <email>
+    Copyright (c) 2012 Paul Brown mafiamole@gmail.com
 
     Permission is hereby granted, free of charge, to any person
     obtaining a copy of this software and associated documentation
@@ -22,7 +22,6 @@
     FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
     OTHER DEALINGS IN THE SOFTWARE.
 */
-
 
 #include "luacomponent.h"
 #include "../SFMLContent.h"
@@ -47,6 +46,8 @@ bool LuaComponent::LoadScript(std::string file)
   luaL_openlibs(this->L);
   
   luaL_register(L,"Sprites",sprite);
+  
+  luaL_register(L,"Sounds",sound);
   
   success = luaL_loadfile(this->L,file.c_str());
   
@@ -97,11 +98,24 @@ void LuaComponent::Update(EventList* events)
   
   lua_getglobal(this->L,"update");
   
-  int s = lua_pcall(this->L,0,0,0);
+  lua_newtable(L);
+  EventList::iterator eventItr;
+  for (eventItr = events->begin();eventItr != events->end();eventItr++)
+  {
+    sf::Event ev = (*eventItr).second;
+    lua_pushinteger(L,(*eventItr).first); // key
+    lua_pushstring(L,"blarg"); // value
+    lua_settable(L,-3);    
+  }
+
+  
+  int s = lua_pcall(this->L,1,0,0);
   HandelError(L,s);
   
-  SFMLGameComponent::Update(events);
   
+  
+  SFMLGameComponent::Update(events);
+
 }
 
 void LuaComponent::Draw()

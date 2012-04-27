@@ -51,7 +51,7 @@ void TestComponent::Update(EventList* events)
     {
       if ((*found).second.key.code == sf::Keyboard::Space)
       {
-
+	  
 	  if (musicPaused) {
 	    music->play();
 	    musicPaused = false;
@@ -79,7 +79,7 @@ void TestComponent::Update(EventList* events)
 void TestComponent::Draw()
 {
 
-    //this->game->Window()->draw(sprite);
+    this->game->Window()->draw(sprite);
     
     SFMLGameComponent::Draw();
     

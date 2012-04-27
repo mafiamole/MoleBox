@@ -1,5 +1,5 @@
 /*
-    Copyright (c) 2012 Paul Brown <email>
+    Copyright (c) 2012 Paul Brown mafiamole@gmail.com
 
     Permission is hereby granted, free of charge, to any person
     obtaining a copy of this software and associated documentation
@@ -45,28 +45,28 @@ protected:
    * Pointer to the game object.
    * This is to allow the component to access the window object for rendering purposes.
    */
-  SFMLGame *game;
+  SFMLGame 	*game;
     
 public:
   /**
    * the Constructor sets the pointer to the SFMLGame member.
    */
-  SFMLGameComponent(SFMLGame *game);
+		SFMLGameComponent	(SFMLGame *game);
   /**
    * Called every game loop.
    * This function is used for changing the components state.
    */
-  virtual void Update(EventList* events);
+  virtual void 	Update			(EventList* events);
   /**
    * Called every game loop.
    * This function is used to render to the screen. 
    */
-  virtual void Draw();
+  virtual void 	Draw			();
   /**
    * Does nothing.
    * 
    */
-  virtual ~SFMLGameComponent();
+  virtual 	~SFMLGameComponent	();
 };
 
 #endif // SFMLGAMECOMPONENT_H

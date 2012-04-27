@@ -1,5 +1,5 @@
 /*
-    Copyright (c) 2012 Paul Brown <email>
+    Copyright (c) 2012 Paul Brown mafiamole@gmail.com
 
     Permission is hereby granted, free of charge, to any person
     obtaining a copy of this software and associated documentation
@@ -61,41 +61,42 @@ protected:
   /**
    * Method that is used to add a new game component to the game loop
    */
-  void 			AddComponent( SFMLGameComponent *component );
+  void 			AddComponent	( SFMLGameComponent * component );
   /**
    * Method that returns the number of components already assigned to the game loop.
    */
-  int 			ComponentCount();
+  int 			ComponentCount	();
 public:
   
   /**
    * The constructor requires the games window title to perform initalisation of the sf::RenderWindow object.
    */
-  SFMLGame(std::string windowName);
+			SFMLGame	( std::string windowName );
+  /**
+   * Deletes all components from memory.
+   */
+  virtual 		~SFMLGame	();
   /**
    * Method for obtaining the sf::RenderWindow instance in this class.
    * This is to allow components to draw to the window.
    */
-  sf::RenderWindow* Window();
+  sf::RenderWindow * 	Window		();
   /**
    * Called once per loop.
    * The update function accepts events from the window poll event loop construct.
    * It also calls the update method of each component.
    */
-  virtual void Update(EventList *events);
+  virtual void 		Update		( EventList *events );
   /**
    * Called once per loop.
    * This calls the Draw method of each component.
    */
-  virtual void Draw();
+  virtual void 		Draw 		();
   /**
    * Contains the game loop
    */
-  virtual void Run();
-  /**
-   * Deletes all components from memory.
-   */
-  virtual ~SFMLGame();
+  virtual void 		Run		();
+
 };
 
 #endif // SFMLGAME_H

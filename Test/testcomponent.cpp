@@ -51,7 +51,7 @@ void TestComponent::Update(EventList* events)
     {
       if ((*found).second.key.code == sf::Keyboard::Space)
       {
-
+	  
 	  if (musicPaused) {
 	    music->play();
 	    musicPaused = false;
