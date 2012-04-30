@@ -8,8 +8,9 @@ SET(CMAKE_DEPENDS_GENERATOR "Unix Makefiles")
 SET(CMAKE_MAKEFILE_DEPENDS
   "CMakeCache.txt"
   "../../CMakeLists.txt"
-  "../../Lua/CMakeLists.txt"
-  "../../Test/CMakeLists.txt"
+  "../../Example/CMakeLists.txt"
+  "../../Framework/CMakeLists.txt"
+  "../../Framework/Lua/CMakeLists.txt"
   "CMakeFiles/CMakeCCompiler.cmake"
   "CMakeFiles/CMakeCXXCompiler.cmake"
   "CMakeFiles/CMakeSystem.cmake"
@@ -47,8 +48,9 @@ SET(CMAKE_MAKEFILE_OUTPUTS
 # Byproducts of CMake generate step:
 SET(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/CMakeDirectoryInformation.cmake"
-  "Test/CMakeFiles/CMakeDirectoryInformation.cmake"
-  "Lua/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "Example/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "Framework/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "Framework/Lua/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:

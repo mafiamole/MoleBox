@@ -25,7 +25,7 @@
 
 #include "luacomponent.h"
 #include "../SFMLContent.h"
-#include "../Lua/luaScriptHelper.h"
+#include "luaScriptHelper.h"
 
 
 LuaComponent::LuaComponent(SFMLGame* game,std::string file) : SFMLGameComponent(game)

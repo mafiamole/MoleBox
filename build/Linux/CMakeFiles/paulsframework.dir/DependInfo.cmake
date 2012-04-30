@@ -4,13 +4,13 @@ SET(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 SET(CMAKE_DEPENDS_CHECK_CXX
-  "/home/mafiamole/projects/paulsFramework/Lua/luaScriptHelper.cpp" "/home/mafiamole/projects/paulsFramework/build/Linux/CMakeFiles/paulsframework.dir/Lua/luaScriptHelper.cpp.o"
-  "/home/mafiamole/projects/paulsFramework/Lua/luacomponent.cpp" "/home/mafiamole/projects/paulsFramework/build/Linux/CMakeFiles/paulsframework.dir/Lua/luacomponent.cpp.o"
-  "/home/mafiamole/projects/paulsFramework/Test/game.cpp" "/home/mafiamole/projects/paulsFramework/build/Linux/CMakeFiles/paulsframework.dir/Test/game.cpp.o"
-  "/home/mafiamole/projects/paulsFramework/Test/testcomponent.cpp" "/home/mafiamole/projects/paulsFramework/build/Linux/CMakeFiles/paulsframework.dir/Test/testcomponent.cpp.o"
-  "/home/mafiamole/projects/paulsFramework/main.cpp" "/home/mafiamole/projects/paulsFramework/build/Linux/CMakeFiles/paulsframework.dir/main.cpp.o"
-  "/home/mafiamole/projects/paulsFramework/sfmlgame.cpp" "/home/mafiamole/projects/paulsFramework/build/Linux/CMakeFiles/paulsframework.dir/sfmlgame.cpp.o"
-  "/home/mafiamole/projects/paulsFramework/sfmlgamecomponent.cpp" "/home/mafiamole/projects/paulsFramework/build/Linux/CMakeFiles/paulsframework.dir/sfmlgamecomponent.cpp.o"
+  "/home/mafiamole/projects/paulsFramework/Example/game.cpp" "/home/mafiamole/projects/paulsFramework/build/Linux/CMakeFiles/paulsframework.dir/Example/game.cpp.o"
+  "/home/mafiamole/projects/paulsFramework/Example/main.cpp" "/home/mafiamole/projects/paulsFramework/build/Linux/CMakeFiles/paulsframework.dir/Example/main.cpp.o"
+  "/home/mafiamole/projects/paulsFramework/Example/testcomponent.cpp" "/home/mafiamole/projects/paulsFramework/build/Linux/CMakeFiles/paulsframework.dir/Example/testcomponent.cpp.o"
+  "/home/mafiamole/projects/paulsFramework/Framework/Lua/luaScriptHelper.cpp" "/home/mafiamole/projects/paulsFramework/build/Linux/CMakeFiles/paulsframework.dir/Framework/Lua/luaScriptHelper.cpp.o"
+  "/home/mafiamole/projects/paulsFramework/Framework/Lua/luacomponent.cpp" "/home/mafiamole/projects/paulsFramework/build/Linux/CMakeFiles/paulsframework.dir/Framework/Lua/luacomponent.cpp.o"
+  "/home/mafiamole/projects/paulsFramework/Framework/sfmlgame.cpp" "/home/mafiamole/projects/paulsFramework/build/Linux/CMakeFiles/paulsframework.dir/Framework/sfmlgame.cpp.o"
+  "/home/mafiamole/projects/paulsFramework/Framework/sfmlgamecomponent.cpp" "/home/mafiamole/projects/paulsFramework/build/Linux/CMakeFiles/paulsframework.dir/Framework/sfmlgamecomponent.cpp.o"
   )
 SET(CMAKE_CXX_COMPILER_ID "GNU")
 

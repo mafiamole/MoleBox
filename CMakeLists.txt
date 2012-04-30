@@ -5,7 +5,15 @@ find_package(SFML 2.0 REQUIRED system window graphics audio)
 find_package(OpenGL REQUIRED)
 find_package(GLU REQUIRED)
 find_package(Lua51)
-add_executable(paulsframework Lua/luaScriptHelper.cpp Lua/luacomponent.cpp Test/testcomponent.cpp Test/game.cpp sfmlgamecomponent.cpp sfmlgame.cpp main.cpp
+add_executable(paulsframework
+	      Framework/Lua/luaScriptHelper.cpp
+	      Framework/Lua/luacomponent.cpp
+	      Framework/sfmlgamecomponent.cpp
+	      Framework/sfmlgame.cpp
+	      Example/testcomponent.cpp 
+	      Example/game.cpp
+	      Example/main.cpp
+
 	      )
 
 if(SFML_FOUND)
@@ -15,5 +23,7 @@ endif()
 
  set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -Wno-long-long -pedantic -Weffc++ -Wextra")
 
-add_subdirectory(Test)
-add_subdirectory(Lua)
+add_subdirectory(Example)
+add_subdirectory(Framework)
+# Copy content to output directiory
+file(COPY Content/ DESTINATION ${CMAKE_BINARY_DIR})

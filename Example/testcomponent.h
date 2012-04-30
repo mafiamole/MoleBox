@@ -26,9 +26,9 @@
 
 #ifndef TESTCOMPONENT_H
 #define TESTCOMPONENT_H
-#include "../sfmlgamecomponent.h"
-#include "../SFMLContent.h"
-#include "../sfmlgame.h"
+#include "../Framework/sfmlgamecomponent.h"
+#include "../Framework/SFMLContent.h"
+#include "../Framework/sfmlgame.h"
 class TestComponent : public SFMLGameComponent
 {
   public:

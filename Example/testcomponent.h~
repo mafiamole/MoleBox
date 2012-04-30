@@ -41,7 +41,7 @@ class TestComponent : public SFMLGameComponent
 private:
     sf::Texture texture;
     sf::Sprite 	sprite;
-    const sf::Music 	*music;
+    sf::Music 	*music;
     sf::Sound	sound;
     bool	musicPaused;
 };

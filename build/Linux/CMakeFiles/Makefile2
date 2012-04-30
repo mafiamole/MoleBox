@@ -88,34 +88,49 @@ clean: CMakeFiles/paulsframework.dir/clean
 .PHONY : clean
 
 #=============================================================================
-# Directory level rules for directory Test
+# Directory level rules for directory Example
 
 # Convenience name for "all" pass in the directory.
-Test/all:
-.PHONY : Test/all
+Example/all:
+.PHONY : Example/all
 
 # Convenience name for "clean" pass in the directory.
-Test/clean:
-.PHONY : Test/clean
+Example/clean:
+.PHONY : Example/clean
 
 # Convenience name for "preinstall" pass in the directory.
-Test/preinstall:
-.PHONY : Test/preinstall
+Example/preinstall:
+.PHONY : Example/preinstall
 
 #=============================================================================
-# Directory level rules for directory Lua
+# Directory level rules for directory Framework
 
 # Convenience name for "all" pass in the directory.
-Lua/all:
-.PHONY : Lua/all
+Framework/all: Framework/Lua/all
+.PHONY : Framework/all
 
 # Convenience name for "clean" pass in the directory.
-Lua/clean:
-.PHONY : Lua/clean
+Framework/clean: Framework/Lua/clean
+.PHONY : Framework/clean
 
 # Convenience name for "preinstall" pass in the directory.
-Lua/preinstall:
-.PHONY : Lua/preinstall
+Framework/preinstall: Framework/Lua/preinstall
+.PHONY : Framework/preinstall
+
+#=============================================================================
+# Directory level rules for directory Framework/Lua
+
+# Convenience name for "all" pass in the directory.
+Framework/Lua/all:
+.PHONY : Framework/Lua/all
+
+# Convenience name for "clean" pass in the directory.
+Framework/Lua/clean:
+.PHONY : Framework/Lua/clean
+
+# Convenience name for "preinstall" pass in the directory.
+Framework/Lua/preinstall:
+.PHONY : Framework/Lua/preinstall
 
 #=============================================================================
 # Special targets to cleanup operation of make.

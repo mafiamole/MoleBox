@@ -49,187 +49,187 @@ include CMakeFiles/paulsframework.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/paulsframework.dir/flags.make
 
-CMakeFiles/paulsframework.dir/Lua/luaScriptHelper.cpp.o: CMakeFiles/paulsframework.dir/flags.make
-CMakeFiles/paulsframework.dir/Lua/luaScriptHelper.cpp.o: ../../Lua/luaScriptHelper.cpp
+CMakeFiles/paulsframework.dir/Framework/Lua/luaScriptHelper.cpp.o: CMakeFiles/paulsframework.dir/flags.make
+CMakeFiles/paulsframework.dir/Framework/Lua/luaScriptHelper.cpp.o: ../../Framework/Lua/luaScriptHelper.cpp
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/mafiamole/projects/paulsFramework/build/Linux/CMakeFiles $(CMAKE_PROGRESS_1)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/paulsframework.dir/Lua/luaScriptHelper.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/paulsframework.dir/Lua/luaScriptHelper.cpp.o -c /home/mafiamole/projects/paulsFramework/Lua/luaScriptHelper.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/paulsframework.dir/Framework/Lua/luaScriptHelper.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/paulsframework.dir/Framework/Lua/luaScriptHelper.cpp.o -c /home/mafiamole/projects/paulsFramework/Framework/Lua/luaScriptHelper.cpp
 
-CMakeFiles/paulsframework.dir/Lua/luaScriptHelper.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/paulsframework.dir/Lua/luaScriptHelper.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/mafiamole/projects/paulsFramework/Lua/luaScriptHelper.cpp > CMakeFiles/paulsframework.dir/Lua/luaScriptHelper.cpp.i
+CMakeFiles/paulsframework.dir/Framework/Lua/luaScriptHelper.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/paulsframework.dir/Framework/Lua/luaScriptHelper.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/mafiamole/projects/paulsFramework/Framework/Lua/luaScriptHelper.cpp > CMakeFiles/paulsframework.dir/Framework/Lua/luaScriptHelper.cpp.i
 
-CMakeFiles/paulsframework.dir/Lua/luaScriptHelper.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/paulsframework.dir/Lua/luaScriptHelper.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/mafiamole/projects/paulsFramework/Lua/luaScriptHelper.cpp -o CMakeFiles/paulsframework.dir/Lua/luaScriptHelper.cpp.s
+CMakeFiles/paulsframework.dir/Framework/Lua/luaScriptHelper.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/paulsframework.dir/Framework/Lua/luaScriptHelper.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/mafiamole/projects/paulsFramework/Framework/Lua/luaScriptHelper.cpp -o CMakeFiles/paulsframework.dir/Framework/Lua/luaScriptHelper.cpp.s
 
-CMakeFiles/paulsframework.dir/Lua/luaScriptHelper.cpp.o.requires:
-.PHONY : CMakeFiles/paulsframework.dir/Lua/luaScriptHelper.cpp.o.requires
+CMakeFiles/paulsframework.dir/Framework/Lua/luaScriptHelper.cpp.o.requires:
+.PHONY : CMakeFiles/paulsframework.dir/Framework/Lua/luaScriptHelper.cpp.o.requires
 
-CMakeFiles/paulsframework.dir/Lua/luaScriptHelper.cpp.o.provides: CMakeFiles/paulsframework.dir/Lua/luaScriptHelper.cpp.o.requires
-	$(MAKE) -f CMakeFiles/paulsframework.dir/build.make CMakeFiles/paulsframework.dir/Lua/luaScriptHelper.cpp.o.provides.build
-.PHONY : CMakeFiles/paulsframework.dir/Lua/luaScriptHelper.cpp.o.provides
+CMakeFiles/paulsframework.dir/Framework/Lua/luaScriptHelper.cpp.o.provides: CMakeFiles/paulsframework.dir/Framework/Lua/luaScriptHelper.cpp.o.requires
+	$(MAKE) -f CMakeFiles/paulsframework.dir/build.make CMakeFiles/paulsframework.dir/Framework/Lua/luaScriptHelper.cpp.o.provides.build
+.PHONY : CMakeFiles/paulsframework.dir/Framework/Lua/luaScriptHelper.cpp.o.provides
 
-CMakeFiles/paulsframework.dir/Lua/luaScriptHelper.cpp.o.provides.build: CMakeFiles/paulsframework.dir/Lua/luaScriptHelper.cpp.o
+CMakeFiles/paulsframework.dir/Framework/Lua/luaScriptHelper.cpp.o.provides.build: CMakeFiles/paulsframework.dir/Framework/Lua/luaScriptHelper.cpp.o
 
-CMakeFiles/paulsframework.dir/Lua/luacomponent.cpp.o: CMakeFiles/paulsframework.dir/flags.make
-CMakeFiles/paulsframework.dir/Lua/luacomponent.cpp.o: ../../Lua/luacomponent.cpp
+CMakeFiles/paulsframework.dir/Framework/Lua/luacomponent.cpp.o: CMakeFiles/paulsframework.dir/flags.make
+CMakeFiles/paulsframework.dir/Framework/Lua/luacomponent.cpp.o: ../../Framework/Lua/luacomponent.cpp
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/mafiamole/projects/paulsFramework/build/Linux/CMakeFiles $(CMAKE_PROGRESS_2)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/paulsframework.dir/Lua/luacomponent.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/paulsframework.dir/Lua/luacomponent.cpp.o -c /home/mafiamole/projects/paulsFramework/Lua/luacomponent.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/paulsframework.dir/Framework/Lua/luacomponent.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/paulsframework.dir/Framework/Lua/luacomponent.cpp.o -c /home/mafiamole/projects/paulsFramework/Framework/Lua/luacomponent.cpp
 
-CMakeFiles/paulsframework.dir/Lua/luacomponent.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/paulsframework.dir/Lua/luacomponent.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/mafiamole/projects/paulsFramework/Lua/luacomponent.cpp > CMakeFiles/paulsframework.dir/Lua/luacomponent.cpp.i
+CMakeFiles/paulsframework.dir/Framework/Lua/luacomponent.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/paulsframework.dir/Framework/Lua/luacomponent.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/mafiamole/projects/paulsFramework/Framework/Lua/luacomponent.cpp > CMakeFiles/paulsframework.dir/Framework/Lua/luacomponent.cpp.i
 
-CMakeFiles/paulsframework.dir/Lua/luacomponent.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/paulsframework.dir/Lua/luacomponent.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/mafiamole/projects/paulsFramework/Lua/luacomponent.cpp -o CMakeFiles/paulsframework.dir/Lua/luacomponent.cpp.s
+CMakeFiles/paulsframework.dir/Framework/Lua/luacomponent.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/paulsframework.dir/Framework/Lua/luacomponent.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/mafiamole/projects/paulsFramework/Framework/Lua/luacomponent.cpp -o CMakeFiles/paulsframework.dir/Framework/Lua/luacomponent.cpp.s
 
-CMakeFiles/paulsframework.dir/Lua/luacomponent.cpp.o.requires:
-.PHONY : CMakeFiles/paulsframework.dir/Lua/luacomponent.cpp.o.requires
+CMakeFiles/paulsframework.dir/Framework/Lua/luacomponent.cpp.o.requires:
+.PHONY : CMakeFiles/paulsframework.dir/Framework/Lua/luacomponent.cpp.o.requires
 
-CMakeFiles/paulsframework.dir/Lua/luacomponent.cpp.o.provides: CMakeFiles/paulsframework.dir/Lua/luacomponent.cpp.o.requires
-	$(MAKE) -f CMakeFiles/paulsframework.dir/build.make CMakeFiles/paulsframework.dir/Lua/luacomponent.cpp.o.provides.build
-.PHONY : CMakeFiles/paulsframework.dir/Lua/luacomponent.cpp.o.provides
+CMakeFiles/paulsframework.dir/Framework/Lua/luacomponent.cpp.o.provides: CMakeFiles/paulsframework.dir/Framework/Lua/luacomponent.cpp.o.requires
+	$(MAKE) -f CMakeFiles/paulsframework.dir/build.make CMakeFiles/paulsframework.dir/Framework/Lua/luacomponent.cpp.o.provides.build
+.PHONY : CMakeFiles/paulsframework.dir/Framework/Lua/luacomponent.cpp.o.provides
 
-CMakeFiles/paulsframework.dir/Lua/luacomponent.cpp.o.provides.build: CMakeFiles/paulsframework.dir/Lua/luacomponent.cpp.o
+CMakeFiles/paulsframework.dir/Framework/Lua/luacomponent.cpp.o.provides.build: CMakeFiles/paulsframework.dir/Framework/Lua/luacomponent.cpp.o
 
-CMakeFiles/paulsframework.dir/Test/testcomponent.cpp.o: CMakeFiles/paulsframework.dir/flags.make
-CMakeFiles/paulsframework.dir/Test/testcomponent.cpp.o: ../../Test/testcomponent.cpp
+CMakeFiles/paulsframework.dir/Framework/sfmlgamecomponent.cpp.o: CMakeFiles/paulsframework.dir/flags.make
+CMakeFiles/paulsframework.dir/Framework/sfmlgamecomponent.cpp.o: ../../Framework/sfmlgamecomponent.cpp
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/mafiamole/projects/paulsFramework/build/Linux/CMakeFiles $(CMAKE_PROGRESS_3)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/paulsframework.dir/Test/testcomponent.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/paulsframework.dir/Test/testcomponent.cpp.o -c /home/mafiamole/projects/paulsFramework/Test/testcomponent.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/paulsframework.dir/Framework/sfmlgamecomponent.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/paulsframework.dir/Framework/sfmlgamecomponent.cpp.o -c /home/mafiamole/projects/paulsFramework/Framework/sfmlgamecomponent.cpp
 
-CMakeFiles/paulsframework.dir/Test/testcomponent.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/paulsframework.dir/Test/testcomponent.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/mafiamole/projects/paulsFramework/Test/testcomponent.cpp > CMakeFiles/paulsframework.dir/Test/testcomponent.cpp.i
+CMakeFiles/paulsframework.dir/Framework/sfmlgamecomponent.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/paulsframework.dir/Framework/sfmlgamecomponent.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/mafiamole/projects/paulsFramework/Framework/sfmlgamecomponent.cpp > CMakeFiles/paulsframework.dir/Framework/sfmlgamecomponent.cpp.i
 
-CMakeFiles/paulsframework.dir/Test/testcomponent.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/paulsframework.dir/Test/testcomponent.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/mafiamole/projects/paulsFramework/Test/testcomponent.cpp -o CMakeFiles/paulsframework.dir/Test/testcomponent.cpp.s
+CMakeFiles/paulsframework.dir/Framework/sfmlgamecomponent.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/paulsframework.dir/Framework/sfmlgamecomponent.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/mafiamole/projects/paulsFramework/Framework/sfmlgamecomponent.cpp -o CMakeFiles/paulsframework.dir/Framework/sfmlgamecomponent.cpp.s
 
-CMakeFiles/paulsframework.dir/Test/testcomponent.cpp.o.requires:
-.PHONY : CMakeFiles/paulsframework.dir/Test/testcomponent.cpp.o.requires
+CMakeFiles/paulsframework.dir/Framework/sfmlgamecomponent.cpp.o.requires:
+.PHONY : CMakeFiles/paulsframework.dir/Framework/sfmlgamecomponent.cpp.o.requires
 
-CMakeFiles/paulsframework.dir/Test/testcomponent.cpp.o.provides: CMakeFiles/paulsframework.dir/Test/testcomponent.cpp.o.requires
-	$(MAKE) -f CMakeFiles/paulsframework.dir/build.make CMakeFiles/paulsframework.dir/Test/testcomponent.cpp.o.provides.build
-.PHONY : CMakeFiles/paulsframework.dir/Test/testcomponent.cpp.o.provides
+CMakeFiles/paulsframework.dir/Framework/sfmlgamecomponent.cpp.o.provides: CMakeFiles/paulsframework.dir/Framework/sfmlgamecomponent.cpp.o.requires
+	$(MAKE) -f CMakeFiles/paulsframework.dir/build.make CMakeFiles/paulsframework.dir/Framework/sfmlgamecomponent.cpp.o.provides.build
+.PHONY : CMakeFiles/paulsframework.dir/Framework/sfmlgamecomponent.cpp.o.provides
 
-CMakeFiles/paulsframework.dir/Test/testcomponent.cpp.o.provides.build: CMakeFiles/paulsframework.dir/Test/testcomponent.cpp.o
+CMakeFiles/paulsframework.dir/Framework/sfmlgamecomponent.cpp.o.provides.build: CMakeFiles/paulsframework.dir/Framework/sfmlgamecomponent.cpp.o
 
-CMakeFiles/paulsframework.dir/Test/game.cpp.o: CMakeFiles/paulsframework.dir/flags.make
-CMakeFiles/paulsframework.dir/Test/game.cpp.o: ../../Test/game.cpp
+CMakeFiles/paulsframework.dir/Framework/sfmlgame.cpp.o: CMakeFiles/paulsframework.dir/flags.make
+CMakeFiles/paulsframework.dir/Framework/sfmlgame.cpp.o: ../../Framework/sfmlgame.cpp
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/mafiamole/projects/paulsFramework/build/Linux/CMakeFiles $(CMAKE_PROGRESS_4)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/paulsframework.dir/Test/game.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/paulsframework.dir/Test/game.cpp.o -c /home/mafiamole/projects/paulsFramework/Test/game.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/paulsframework.dir/Framework/sfmlgame.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/paulsframework.dir/Framework/sfmlgame.cpp.o -c /home/mafiamole/projects/paulsFramework/Framework/sfmlgame.cpp
 
-CMakeFiles/paulsframework.dir/Test/game.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/paulsframework.dir/Test/game.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/mafiamole/projects/paulsFramework/Test/game.cpp > CMakeFiles/paulsframework.dir/Test/game.cpp.i
+CMakeFiles/paulsframework.dir/Framework/sfmlgame.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/paulsframework.dir/Framework/sfmlgame.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/mafiamole/projects/paulsFramework/Framework/sfmlgame.cpp > CMakeFiles/paulsframework.dir/Framework/sfmlgame.cpp.i
 
-CMakeFiles/paulsframework.dir/Test/game.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/paulsframework.dir/Test/game.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/mafiamole/projects/paulsFramework/Test/game.cpp -o CMakeFiles/paulsframework.dir/Test/game.cpp.s
+CMakeFiles/paulsframework.dir/Framework/sfmlgame.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/paulsframework.dir/Framework/sfmlgame.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/mafiamole/projects/paulsFramework/Framework/sfmlgame.cpp -o CMakeFiles/paulsframework.dir/Framework/sfmlgame.cpp.s
 
-CMakeFiles/paulsframework.dir/Test/game.cpp.o.requires:
-.PHONY : CMakeFiles/paulsframework.dir/Test/game.cpp.o.requires
+CMakeFiles/paulsframework.dir/Framework/sfmlgame.cpp.o.requires:
+.PHONY : CMakeFiles/paulsframework.dir/Framework/sfmlgame.cpp.o.requires
 
-CMakeFiles/paulsframework.dir/Test/game.cpp.o.provides: CMakeFiles/paulsframework.dir/Test/game.cpp.o.requires
-	$(MAKE) -f CMakeFiles/paulsframework.dir/build.make CMakeFiles/paulsframework.dir/Test/game.cpp.o.provides.build
-.PHONY : CMakeFiles/paulsframework.dir/Test/game.cpp.o.provides
+CMakeFiles/paulsframework.dir/Framework/sfmlgame.cpp.o.provides: CMakeFiles/paulsframework.dir/Framework/sfmlgame.cpp.o.requires
+	$(MAKE) -f CMakeFiles/paulsframework.dir/build.make CMakeFiles/paulsframework.dir/Framework/sfmlgame.cpp.o.provides.build
+.PHONY : CMakeFiles/paulsframework.dir/Framework/sfmlgame.cpp.o.provides
 
-CMakeFiles/paulsframework.dir/Test/game.cpp.o.provides.build: CMakeFiles/paulsframework.dir/Test/game.cpp.o
+CMakeFiles/paulsframework.dir/Framework/sfmlgame.cpp.o.provides.build: CMakeFiles/paulsframework.dir/Framework/sfmlgame.cpp.o
 
-CMakeFiles/paulsframework.dir/sfmlgamecomponent.cpp.o: CMakeFiles/paulsframework.dir/flags.make
-CMakeFiles/paulsframework.dir/sfmlgamecomponent.cpp.o: ../../sfmlgamecomponent.cpp
+CMakeFiles/paulsframework.dir/Example/testcomponent.cpp.o: CMakeFiles/paulsframework.dir/flags.make
+CMakeFiles/paulsframework.dir/Example/testcomponent.cpp.o: ../../Example/testcomponent.cpp
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/mafiamole/projects/paulsFramework/build/Linux/CMakeFiles $(CMAKE_PROGRESS_5)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/paulsframework.dir/sfmlgamecomponent.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/paulsframework.dir/sfmlgamecomponent.cpp.o -c /home/mafiamole/projects/paulsFramework/sfmlgamecomponent.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/paulsframework.dir/Example/testcomponent.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/paulsframework.dir/Example/testcomponent.cpp.o -c /home/mafiamole/projects/paulsFramework/Example/testcomponent.cpp
 
-CMakeFiles/paulsframework.dir/sfmlgamecomponent.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/paulsframework.dir/sfmlgamecomponent.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/mafiamole/projects/paulsFramework/sfmlgamecomponent.cpp > CMakeFiles/paulsframework.dir/sfmlgamecomponent.cpp.i
+CMakeFiles/paulsframework.dir/Example/testcomponent.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/paulsframework.dir/Example/testcomponent.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/mafiamole/projects/paulsFramework/Example/testcomponent.cpp > CMakeFiles/paulsframework.dir/Example/testcomponent.cpp.i
 
-CMakeFiles/paulsframework.dir/sfmlgamecomponent.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/paulsframework.dir/sfmlgamecomponent.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/mafiamole/projects/paulsFramework/sfmlgamecomponent.cpp -o CMakeFiles/paulsframework.dir/sfmlgamecomponent.cpp.s
+CMakeFiles/paulsframework.dir/Example/testcomponent.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/paulsframework.dir/Example/testcomponent.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/mafiamole/projects/paulsFramework/Example/testcomponent.cpp -o CMakeFiles/paulsframework.dir/Example/testcomponent.cpp.s
 
-CMakeFiles/paulsframework.dir/sfmlgamecomponent.cpp.o.requires:
-.PHONY : CMakeFiles/paulsframework.dir/sfmlgamecomponent.cpp.o.requires
+CMakeFiles/paulsframework.dir/Example/testcomponent.cpp.o.requires:
+.PHONY : CMakeFiles/paulsframework.dir/Example/testcomponent.cpp.o.requires
 
-CMakeFiles/paulsframework.dir/sfmlgamecomponent.cpp.o.provides: CMakeFiles/paulsframework.dir/sfmlgamecomponent.cpp.o.requires
-	$(MAKE) -f CMakeFiles/paulsframework.dir/build.make CMakeFiles/paulsframework.dir/sfmlgamecomponent.cpp.o.provides.build
-.PHONY : CMakeFiles/paulsframework.dir/sfmlgamecomponent.cpp.o.provides
+CMakeFiles/paulsframework.dir/Example/testcomponent.cpp.o.provides: CMakeFiles/paulsframework.dir/Example/testcomponent.cpp.o.requires
+	$(MAKE) -f CMakeFiles/paulsframework.dir/build.make CMakeFiles/paulsframework.dir/Example/testcomponent.cpp.o.provides.build
+.PHONY : CMakeFiles/paulsframework.dir/Example/testcomponent.cpp.o.provides
 
-CMakeFiles/paulsframework.dir/sfmlgamecomponent.cpp.o.provides.build: CMakeFiles/paulsframework.dir/sfmlgamecomponent.cpp.o
+CMakeFiles/paulsframework.dir/Example/testcomponent.cpp.o.provides.build: CMakeFiles/paulsframework.dir/Example/testcomponent.cpp.o
 
-CMakeFiles/paulsframework.dir/sfmlgame.cpp.o: CMakeFiles/paulsframework.dir/flags.make
-CMakeFiles/paulsframework.dir/sfmlgame.cpp.o: ../../sfmlgame.cpp
+CMakeFiles/paulsframework.dir/Example/game.cpp.o: CMakeFiles/paulsframework.dir/flags.make
+CMakeFiles/paulsframework.dir/Example/game.cpp.o: ../../Example/game.cpp
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/mafiamole/projects/paulsFramework/build/Linux/CMakeFiles $(CMAKE_PROGRESS_6)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/paulsframework.dir/sfmlgame.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/paulsframework.dir/sfmlgame.cpp.o -c /home/mafiamole/projects/paulsFramework/sfmlgame.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/paulsframework.dir/Example/game.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/paulsframework.dir/Example/game.cpp.o -c /home/mafiamole/projects/paulsFramework/Example/game.cpp
 
-CMakeFiles/paulsframework.dir/sfmlgame.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/paulsframework.dir/sfmlgame.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/mafiamole/projects/paulsFramework/sfmlgame.cpp > CMakeFiles/paulsframework.dir/sfmlgame.cpp.i
+CMakeFiles/paulsframework.dir/Example/game.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/paulsframework.dir/Example/game.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/mafiamole/projects/paulsFramework/Example/game.cpp > CMakeFiles/paulsframework.dir/Example/game.cpp.i
 
-CMakeFiles/paulsframework.dir/sfmlgame.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/paulsframework.dir/sfmlgame.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/mafiamole/projects/paulsFramework/sfmlgame.cpp -o CMakeFiles/paulsframework.dir/sfmlgame.cpp.s
+CMakeFiles/paulsframework.dir/Example/game.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/paulsframework.dir/Example/game.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/mafiamole/projects/paulsFramework/Example/game.cpp -o CMakeFiles/paulsframework.dir/Example/game.cpp.s
 
-CMakeFiles/paulsframework.dir/sfmlgame.cpp.o.requires:
-.PHONY : CMakeFiles/paulsframework.dir/sfmlgame.cpp.o.requires
+CMakeFiles/paulsframework.dir/Example/game.cpp.o.requires:
+.PHONY : CMakeFiles/paulsframework.dir/Example/game.cpp.o.requires
 
-CMakeFiles/paulsframework.dir/sfmlgame.cpp.o.provides: CMakeFiles/paulsframework.dir/sfmlgame.cpp.o.requires
-	$(MAKE) -f CMakeFiles/paulsframework.dir/build.make CMakeFiles/paulsframework.dir/sfmlgame.cpp.o.provides.build
-.PHONY : CMakeFiles/paulsframework.dir/sfmlgame.cpp.o.provides
+CMakeFiles/paulsframework.dir/Example/game.cpp.o.provides: CMakeFiles/paulsframework.dir/Example/game.cpp.o.requires
+	$(MAKE) -f CMakeFiles/paulsframework.dir/build.make CMakeFiles/paulsframework.dir/Example/game.cpp.o.provides.build
+.PHONY : CMakeFiles/paulsframework.dir/Example/game.cpp.o.provides
 
-CMakeFiles/paulsframework.dir/sfmlgame.cpp.o.provides.build: CMakeFiles/paulsframework.dir/sfmlgame.cpp.o
+CMakeFiles/paulsframework.dir/Example/game.cpp.o.provides.build: CMakeFiles/paulsframework.dir/Example/game.cpp.o
 
-CMakeFiles/paulsframework.dir/main.cpp.o: CMakeFiles/paulsframework.dir/flags.make
-CMakeFiles/paulsframework.dir/main.cpp.o: ../../main.cpp
+CMakeFiles/paulsframework.dir/Example/main.cpp.o: CMakeFiles/paulsframework.dir/flags.make
+CMakeFiles/paulsframework.dir/Example/main.cpp.o: ../../Example/main.cpp
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/mafiamole/projects/paulsFramework/build/Linux/CMakeFiles $(CMAKE_PROGRESS_7)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/paulsframework.dir/main.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/paulsframework.dir/main.cpp.o -c /home/mafiamole/projects/paulsFramework/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/paulsframework.dir/Example/main.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/paulsframework.dir/Example/main.cpp.o -c /home/mafiamole/projects/paulsFramework/Example/main.cpp
 
-CMakeFiles/paulsframework.dir/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/paulsframework.dir/main.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/mafiamole/projects/paulsFramework/main.cpp > CMakeFiles/paulsframework.dir/main.cpp.i
+CMakeFiles/paulsframework.dir/Example/main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/paulsframework.dir/Example/main.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/mafiamole/projects/paulsFramework/Example/main.cpp > CMakeFiles/paulsframework.dir/Example/main.cpp.i
 
-CMakeFiles/paulsframework.dir/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/paulsframework.dir/main.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/mafiamole/projects/paulsFramework/main.cpp -o CMakeFiles/paulsframework.dir/main.cpp.s
+CMakeFiles/paulsframework.dir/Example/main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/paulsframework.dir/Example/main.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/mafiamole/projects/paulsFramework/Example/main.cpp -o CMakeFiles/paulsframework.dir/Example/main.cpp.s
 
-CMakeFiles/paulsframework.dir/main.cpp.o.requires:
-.PHONY : CMakeFiles/paulsframework.dir/main.cpp.o.requires
+CMakeFiles/paulsframework.dir/Example/main.cpp.o.requires:
+.PHONY : CMakeFiles/paulsframework.dir/Example/main.cpp.o.requires
 
-CMakeFiles/paulsframework.dir/main.cpp.o.provides: CMakeFiles/paulsframework.dir/main.cpp.o.requires
-	$(MAKE) -f CMakeFiles/paulsframework.dir/build.make CMakeFiles/paulsframework.dir/main.cpp.o.provides.build
-.PHONY : CMakeFiles/paulsframework.dir/main.cpp.o.provides
+CMakeFiles/paulsframework.dir/Example/main.cpp.o.provides: CMakeFiles/paulsframework.dir/Example/main.cpp.o.requires
+	$(MAKE) -f CMakeFiles/paulsframework.dir/build.make CMakeFiles/paulsframework.dir/Example/main.cpp.o.provides.build
+.PHONY : CMakeFiles/paulsframework.dir/Example/main.cpp.o.provides
 
-CMakeFiles/paulsframework.dir/main.cpp.o.provides.build: CMakeFiles/paulsframework.dir/main.cpp.o
+CMakeFiles/paulsframework.dir/Example/main.cpp.o.provides.build: CMakeFiles/paulsframework.dir/Example/main.cpp.o
 
 # Object files for target paulsframework
 paulsframework_OBJECTS = \
-"CMakeFiles/paulsframework.dir/Lua/luaScriptHelper.cpp.o" \
-"CMakeFiles/paulsframework.dir/Lua/luacomponent.cpp.o" \
-"CMakeFiles/paulsframework.dir/Test/testcomponent.cpp.o" \
-"CMakeFiles/paulsframework.dir/Test/game.cpp.o" \
-"CMakeFiles/paulsframework.dir/sfmlgamecomponent.cpp.o" \
-"CMakeFiles/paulsframework.dir/sfmlgame.cpp.o" \
-"CMakeFiles/paulsframework.dir/main.cpp.o"
+"CMakeFiles/paulsframework.dir/Framework/Lua/luaScriptHelper.cpp.o" \
+"CMakeFiles/paulsframework.dir/Framework/Lua/luacomponent.cpp.o" \
+"CMakeFiles/paulsframework.dir/Framework/sfmlgamecomponent.cpp.o" \
+"CMakeFiles/paulsframework.dir/Framework/sfmlgame.cpp.o" \
+"CMakeFiles/paulsframework.dir/Example/testcomponent.cpp.o" \
+"CMakeFiles/paulsframework.dir/Example/game.cpp.o" \
+"CMakeFiles/paulsframework.dir/Example/main.cpp.o"
 
 # External object files for target paulsframework
 paulsframework_EXTERNAL_OBJECTS =
 
-paulsframework: CMakeFiles/paulsframework.dir/Lua/luaScriptHelper.cpp.o
-paulsframework: CMakeFiles/paulsframework.dir/Lua/luacomponent.cpp.o
-paulsframework: CMakeFiles/paulsframework.dir/Test/testcomponent.cpp.o
-paulsframework: CMakeFiles/paulsframework.dir/Test/game.cpp.o
-paulsframework: CMakeFiles/paulsframework.dir/sfmlgamecomponent.cpp.o
-paulsframework: CMakeFiles/paulsframework.dir/sfmlgame.cpp.o
-paulsframework: CMakeFiles/paulsframework.dir/main.cpp.o
+paulsframework: CMakeFiles/paulsframework.dir/Framework/Lua/luaScriptHelper.cpp.o
+paulsframework: CMakeFiles/paulsframework.dir/Framework/Lua/luacomponent.cpp.o
+paulsframework: CMakeFiles/paulsframework.dir/Framework/sfmlgamecomponent.cpp.o
+paulsframework: CMakeFiles/paulsframework.dir/Framework/sfmlgame.cpp.o
+paulsframework: CMakeFiles/paulsframework.dir/Example/testcomponent.cpp.o
+paulsframework: CMakeFiles/paulsframework.dir/Example/game.cpp.o
+paulsframework: CMakeFiles/paulsframework.dir/Example/main.cpp.o
 paulsframework: /usr/local/lib64/libsfml-system.so
 paulsframework: /usr/local/lib64/libsfml-window.so
 paulsframework: /usr/local/lib64/libsfml-graphics.so
@@ -257,13 +257,13 @@ paulsframework: CMakeFiles/paulsframework.dir/link.txt
 CMakeFiles/paulsframework.dir/build: paulsframework
 .PHONY : CMakeFiles/paulsframework.dir/build
 
-CMakeFiles/paulsframework.dir/requires: CMakeFiles/paulsframework.dir/Lua/luaScriptHelper.cpp.o.requires
-CMakeFiles/paulsframework.dir/requires: CMakeFiles/paulsframework.dir/Lua/luacomponent.cpp.o.requires
-CMakeFiles/paulsframework.dir/requires: CMakeFiles/paulsframework.dir/Test/testcomponent.cpp.o.requires
-CMakeFiles/paulsframework.dir/requires: CMakeFiles/paulsframework.dir/Test/game.cpp.o.requires
-CMakeFiles/paulsframework.dir/requires: CMakeFiles/paulsframework.dir/sfmlgamecomponent.cpp.o.requires
-CMakeFiles/paulsframework.dir/requires: CMakeFiles/paulsframework.dir/sfmlgame.cpp.o.requires
-CMakeFiles/paulsframework.dir/requires: CMakeFiles/paulsframework.dir/main.cpp.o.requires
+CMakeFiles/paulsframework.dir/requires: CMakeFiles/paulsframework.dir/Framework/Lua/luaScriptHelper.cpp.o.requires
+CMakeFiles/paulsframework.dir/requires: CMakeFiles/paulsframework.dir/Framework/Lua/luacomponent.cpp.o.requires
+CMakeFiles/paulsframework.dir/requires: CMakeFiles/paulsframework.dir/Framework/sfmlgamecomponent.cpp.o.requires
+CMakeFiles/paulsframework.dir/requires: CMakeFiles/paulsframework.dir/Framework/sfmlgame.cpp.o.requires
+CMakeFiles/paulsframework.dir/requires: CMakeFiles/paulsframework.dir/Example/testcomponent.cpp.o.requires
+CMakeFiles/paulsframework.dir/requires: CMakeFiles/paulsframework.dir/Example/game.cpp.o.requires
+CMakeFiles/paulsframework.dir/requires: CMakeFiles/paulsframework.dir/Example/main.cpp.o.requires
 .PHONY : CMakeFiles/paulsframework.dir/requires
 
 CMakeFiles/paulsframework.dir/clean:

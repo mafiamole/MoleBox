@@ -24,11 +24,13 @@
 */
 
 #include <iostream>
-#include "content.h"
-#include "SFMLContent.h"
-#include "sfmlgame.h"
-#include "Test/game.h"
-#include "Lua/luaScriptHelper.h"
+#include "../Framework/content.h"
+#include "../Framework/SFMLContent.h"
+#include "../Framework/sfmlgame.h"
+#include "../Framework/Lua/luaScriptHelper.h"
+
+#include "game.h"
+
 #include <SFML/Graphics.hpp>
 
 int main(int argc, char **argv) {

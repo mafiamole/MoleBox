@@ -23,10 +23,12 @@
     OTHER DEALINGS IN THE SOFTWARE.
 */
 
-
 #include "game.h"
-#include "../Lua/luacomponent.h"
+
+#include "../Framework/Lua/luacomponent.h"
+
 #include <iostream>
+
 Game::Game() : SFMLGame("Game Title")
 {
   this->AddComponent(new TestComponent(this));
@@ -34,7 +36,6 @@ Game::Game() : SFMLGame("Game Title")
   std::cout << " Component count " <<  this->ComponentCount() << std::endl;
 
 }
-
 
 Game::~Game()
 {
@@ -45,7 +46,6 @@ void Game::Draw()
 {
     SFMLGame::Draw();
 }
-
 
 void Game::Update(EventList* events)
 {

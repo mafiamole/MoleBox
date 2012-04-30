@@ -34,8 +34,8 @@ ENDIF(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
 
 IF(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  INCLUDE("/home/mafiamole/projects/paulsFramework/build/Linux/Test/cmake_install.cmake")
-  INCLUDE("/home/mafiamole/projects/paulsFramework/build/Linux/Lua/cmake_install.cmake")
+  INCLUDE("/home/mafiamole/projects/paulsFramework/build/Linux/Example/cmake_install.cmake")
+  INCLUDE("/home/mafiamole/projects/paulsFramework/build/Linux/Framework/cmake_install.cmake")
 
 ENDIF(NOT CMAKE_INSTALL_LOCAL_ONLY)
 

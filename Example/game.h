@@ -26,9 +26,9 @@
 
 #ifndef GAME_H
 #define GAME_H
-#include "../sfmlgame.h"
+#include "../Framework/sfmlgame.h"
 #include "testcomponent.h"
-#include "../Lua/Lua.h"
+#include "../Framework/Lua/Lua.h"
 class Game : public SFMLGame
 {
 
