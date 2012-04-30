@@ -1,0 +1,4 @@
+This is a small 'play' framework that uses SFML.
+
+The folder Example has an example of how to use it.
+The folder Framework has all the framework code.
