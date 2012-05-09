@@ -136,6 +136,10 @@ CMAKE_SHARED_LINKER_FLAGS_RELEASE:STRING=
 //Flags used by the linker during Release with Debug Info builds.
 CMAKE_SHARED_LINKER_FLAGS_RELWITHDEBINFO:STRING=
 
+//If set, runtime paths are not added when installing shared libraries,
+// but are added when building.
+CMAKE_SKIP_INSTALL_RPATH:BOOL=NO
+
 //If set, runtime paths are not added when using shared libraries.
 CMAKE_SKIP_RPATH:BOOL=NO
 
@@ -323,6 +327,12 @@ X11_Xkblib_INCLUDE_PATH:PATH=/usr/include
 X11_Xlib_INCLUDE_PATH:PATH=/usr/include
 
 //Path to a file.
+X11_Xmu_INCLUDE_PATH:PATH=X11_Xmu_INCLUDE_PATH-NOTFOUND
+
+//Path to a library.
+X11_Xmu_LIB:FILEPATH=X11_Xmu_LIB-NOTFOUND
+
+//Path to a file.
 X11_Xpm_INCLUDE_PATH:PATH=/usr/include
 
 //Path to a library.
@@ -367,6 +377,9 @@ X11_Xv_LIB:FILEPATH=/usr/lib64/libXv.so
 //Path to a library.
 X11_Xxf86misc_LIB:FILEPATH=/usr/lib64/libXxf86misc.so
 
+//Path to a library.
+X11_Xxf86vm_LIB:FILEPATH=/usr/lib64/libXxf86vm.so
+
 //Path to a file.
 X11_dpms_INCLUDE_PATH:PATH=/usr/include
 
@@ -400,7 +413,7 @@ CMAKE_CACHE_MAJOR_VERSION:INTERNAL=2
 //Minor version of cmake used to create the current loaded cache
 CMAKE_CACHE_MINOR_VERSION:INTERNAL=8
 //Patch version of cmake used to create the current loaded cache
-CMAKE_CACHE_PATCH_VERSION:INTERNAL=7
+CMAKE_CACHE_PATCH_VERSION:INTERNAL=8
 //ADVANCED property for variable: CMAKE_COLOR_MAKEFILE
 CMAKE_COLOR_MAKEFILE-ADVANCED:INTERNAL=1
 //Path to CMake executable.
@@ -508,6 +521,8 @@ CMAKE_SHARED_LINKER_FLAGS_MINSIZEREL-ADVANCED:INTERNAL=1
 CMAKE_SHARED_LINKER_FLAGS_RELEASE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_SHARED_LINKER_FLAGS_RELWITHDEBINFO
 CMAKE_SHARED_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_SKIP_INSTALL_RPATH
+CMAKE_SKIP_INSTALL_RPATH-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_SKIP_RPATH
 CMAKE_SKIP_RPATH-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_STRIP
@@ -519,7 +534,7 @@ CMAKE_USE_RELATIVE_PATHS-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_VERBOSE_MAKEFILE
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
 //Details about finding Lua51
-FIND_PACKAGE_MESSAGE_DETAILS_Lua51:INTERNAL=[/usr/lib64/liblua-5.1.so;/usr/lib64/libm.so][/usr/include][v()]
+FIND_PACKAGE_MESSAGE_DETAILS_Lua51:INTERNAL=[/usr/lib64/liblua-5.1.so;/usr/lib64/libm.so][/usr/include][v5.1.4()]
 //Details about finding OpenGL
 FIND_PACKAGE_MESSAGE_DETAILS_OpenGL:INTERNAL=[/usr/lib64/libGL.so][v()]
 //Details about finding X11
@@ -638,6 +653,10 @@ X11_Xkbfile_LIB-ADVANCED:INTERNAL=1
 X11_Xkblib_INCLUDE_PATH-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: X11_Xlib_INCLUDE_PATH
 X11_Xlib_INCLUDE_PATH-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: X11_Xmu_INCLUDE_PATH
+X11_Xmu_INCLUDE_PATH-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: X11_Xmu_LIB
+X11_Xmu_LIB-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: X11_Xpm_INCLUDE_PATH
 X11_Xpm_INCLUDE_PATH-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: X11_Xpm_LIB
@@ -668,6 +687,8 @@ X11_Xv_INCLUDE_PATH-ADVANCED:INTERNAL=1
 X11_Xv_LIB-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: X11_Xxf86misc_LIB
 X11_Xxf86misc_LIB-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: X11_Xxf86vm_LIB
+X11_Xxf86vm_LIB-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: X11_dpms_INCLUDE_PATH
 X11_dpms_INCLUDE_PATH-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: X11_xf86misc_INCLUDE_PATH

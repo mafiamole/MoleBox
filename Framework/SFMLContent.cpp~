@@ -1,27 +1,67 @@
-/*
-    Copyright (c) 2012 Paul Brown <email>
+#include "SFMLContent.h"
 
-    Permission is hereby granted, free of charge, to any person
-    obtaining a copy of this software and associated documentation
-    files (the "Software"), to deal in the Software without
-    restriction, including without limitation the rights to use,
-    copy, modify, merge, publish, distribute, sublicense, and/or sell
-    copies of the Software, and to permit persons to whom the
-    Software is furnished to do so, subject to the following
-    conditions:
+SpriteBatch::SpriteBatch(sf::Vector2u size, sf::RenderTarget* target, sf::RenderStates states) : sf::Drawable(),std::vector< sf::Drawable *>()
+{
+    this->initiate(size,target,states);
+}
 
-    The above copyright notice and this permission notice shall be
-    included in all copies or substantial portions of the Software.
+SpriteBatch::SpriteBatch(sf::RenderTarget* target, sf::RenderStates states) : sf::Drawable(),std::vector< sf::Drawable *>() {
 
-    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
-    EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
-    OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
-    NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
-    HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
-    WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-    FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
-    OTHER DEALINGS IN THE SOFTWARE.
-*/
+  this->initiate(target->getSize(),target,states);
+  
+}
 
-#include "content.h"
+void SpriteBatch::initiate(sf::Vector2u size, sf::RenderTarget* target, sf::RenderStates states)
+{
+    this->target = target;
+    this->renderState = renderState;
+    //this->renderTexture.create(size.x,size.y);
+}
 
+
+SpriteBatch::~SpriteBatch()
+{
+
+  
+}
+
+
+void SpriteBatch::SetRenderState(sf::RenderStates states)
+{
+  this->renderState = states;
+}
+
+
+void SpriteBatch::Draw()
+{
+  /*
+   *  This implemenation does not work on Intel devices due to poor implemenation, by intel.
+  this->renderTexture.clear();
+
+  for ( std::vector< sf::Drawable* >::iterator itr = begin(); itr != end(); ++itr)
+  {
+    sf::Drawable *p_drawable = (*itr);
+    this->renderTexture.draw(*p_drawable);
+  }
+  
+  this->renderTexture.display();
+  sf::Texture text;
+  text = this->renderTexture.getTexture();
+  sf::Sprite sprite( text );
+  
+  this->target->draw(sprite);
+  */
+  
+  for ( std::vector< sf::Drawable* >::iterator itr = begin(); itr != end(); ++itr)
+  { 
+    sf::Drawable *p_drawable = (*itr);
+    this->target->draw(*p_drawable,this->renderState);
+  }
+}
+
+void SpriteBatch::draw(sf::RenderTarget& target, const sf::RenderStates states) const
+{
+//    for(std::vector<sf::Drawable*>::iterator i = this->begin(); i != end(); ++i) {
+//        target.draw(*(*i),states);
+//    }
+}

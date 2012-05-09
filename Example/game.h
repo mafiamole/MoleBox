@@ -32,13 +32,13 @@
 class Game : public SFMLGame
 {
 
-  
 public:
     Game();
     void Update(EventList *events);
     void Draw();
     void Run();
     virtual ~Game();
+
 };
 
 #endif // GAME_H

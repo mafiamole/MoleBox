@@ -60,7 +60,7 @@ public:
    */
   const sf::Texture& Load(std::string reference)
   {
-    
+
     if ( this->textures.find( reference ) == this->textures.end() )
     {
       
@@ -183,4 +183,24 @@ public:
   }
   
 };
+
+
+class SpriteBatch : public sf::Drawable, public std::vector<sf::Drawable *> {
+  
+private:
+  sf::RenderTarget* target;
+  sf::RenderStates renderState;
+  //sf::RenderTexture renderTexture;
+  void initiate(sf::Vector2u size, sf::RenderTarget* target, sf::RenderStates states = sf::RenderStates::Default);
+public:
+  SpriteBatch(sf::Vector2u size, sf::RenderTarget* target, sf::RenderStates states = sf::RenderStates::Default);  
+  SpriteBatch(sf::RenderTarget* target, sf::RenderStates states = sf::RenderStates::Default);
+  
+  ~SpriteBatch();
+  
+  void SetRenderState(sf::RenderStates states = sf::RenderStates::Default);
+  void Draw();
+  void draw(sf::RenderTarget& target,const sf::RenderStates states = sf::RenderStates::Default) const;
+};
+
 #endif

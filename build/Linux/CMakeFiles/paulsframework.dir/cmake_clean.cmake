@@ -3,6 +3,7 @@ FILE(REMOVE_RECURSE
   "CMakeFiles/paulsframework.dir/Framework/Lua/luacomponent.cpp.o"
   "CMakeFiles/paulsframework.dir/Framework/sfmlgamecomponent.cpp.o"
   "CMakeFiles/paulsframework.dir/Framework/sfmlgame.cpp.o"
+  "CMakeFiles/paulsframework.dir/Framework/SFMLContent.cpp.o"
   "CMakeFiles/paulsframework.dir/Example/testcomponent.cpp.o"
   "CMakeFiles/paulsframework.dir/Example/game.cpp.o"
   "CMakeFiles/paulsframework.dir/Example/main.cpp.o"

@@ -1,5 +1,5 @@
 /*
-    Copyright (c) 2012 Paul Brown <email>
+    Copyright (c) 2012 Paul Brown mafiamole@gmail.com
 
     Permission is hereby granted, free of charge, to any person
     obtaining a copy of this software and associated documentation
@@ -66,6 +66,13 @@ protected:
    * Method that returns the number of components already assigned to the game loop.
    */
   int 			ComponentCount	();
+  /**
+   * 
+   * Used to render the sprite to the screen.
+   * 
+   */
+  void			DrawSprite(const Drawable& drawable, const RenderStates& states = sf::RenderStates::Default);
+  
 public:
   
   /**

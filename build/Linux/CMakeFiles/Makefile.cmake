@@ -17,6 +17,7 @@ SET(CMAKE_MAKEFILE_DEPENDS
   "/usr/share/cmake/Modules/CMakeCInformation.cmake"
   "/usr/share/cmake/Modules/CMakeCXXInformation.cmake"
   "/usr/share/cmake/Modules/CMakeCommonLanguageInclude.cmake"
+  "/usr/share/cmake/Modules/CMakeExpandImportedTargets.cmake"
   "/usr/share/cmake/Modules/CMakeGenericSystem.cmake"
   "/usr/share/cmake/Modules/CMakeParseArguments.cmake"
   "/usr/share/cmake/Modules/CMakeSystemSpecificInformation.cmake"

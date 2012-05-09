@@ -66,6 +66,13 @@ protected:
    * Method that returns the number of components already assigned to the game loop.
    */
   int 			ComponentCount	();
+  /**
+   * 
+   * Used to render the sprite to the screen.
+   * 
+   */
+  void			DrawSprite(const sf::Drawable& drawable, const sf::RenderStates& states = sf::RenderStates::Default);
+  
 public:
   
   /**

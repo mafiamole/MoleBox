@@ -41,9 +41,13 @@ class TestComponent : public SFMLGameComponent
 private:
     sf::Texture texture;
     sf::Sprite 	sprite;
-    sf::Music 	*music;
-    sf::Sound	sound;
-    bool	musicPaused;
+
+    sf::RenderTexture 	rendText;
+    bool		musicPaused;
+    sf::Sprite 		sprite2;
+    SpriteBatch* 	spriteBatch;
+    sf::Music* 		music;
+    sf::Sound 		sound;
 };
 
 #endif // TESTCOMPONENT_H

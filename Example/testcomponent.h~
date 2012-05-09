@@ -26,9 +26,9 @@
 
 #ifndef TESTCOMPONENT_H
 #define TESTCOMPONENT_H
-#include "../sfmlgamecomponent.h"
-#include "../SFMLContent.h"
-#include "../sfmlgame.h"
+#include "../Framework/sfmlgamecomponent.h"
+#include "../Framework/SFMLContent.h"
+#include "../Framework/sfmlgame.h"
 class TestComponent : public SFMLGameComponent
 {
   public:
@@ -41,9 +41,13 @@ class TestComponent : public SFMLGameComponent
 private:
     sf::Texture texture;
     sf::Sprite 	sprite;
-    sf::Music 	*music;
-    sf::Sound	sound;
+
+    sf::RenderTexture rendText;
     bool	musicPaused;
+    sf::Sprite sprite2;
+    SpriteBatch* spriteBatch;
+    sf::Music* music;
+    sf::Sound sound;
 };
 
 #endif // TESTCOMPONENT_H

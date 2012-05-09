@@ -22,6 +22,7 @@
     FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
     OTHER DEALINGS IN THE SOFTWARE.
 */
+
 #include "content.h"
 #include <SFML/Graphics.hpp>
 #include <SFML/Audio.hpp>
@@ -59,7 +60,7 @@ public:
    */
   const sf::Texture& Load(std::string reference)
   {
-    
+
     if ( this->textures.find( reference ) == this->textures.end() )
     {
       
@@ -182,4 +183,24 @@ public:
   }
   
 };
+
+
+class SpriteBatch : public sf::Drawable, public std::vector<sf::Drawable *> {
+  
+private:
+  sf::RenderTarget* target;
+  sf::RenderStates renderState;
+  sf::RenderTexture renderTexture;
+  void initiate(sf::Vector2u size, sf::RenderTarget* target, sf::RenderStates states = sf::RenderStates::Default);
+public:
+  SpriteBatch(sf::Vector2u size, sf::RenderTarget* target, sf::RenderStates states = sf::RenderStates::Default);  
+  SpriteBatch(sf::RenderTarget* target, sf::RenderStates states = sf::RenderStates::Default);
+  
+  ~SpriteBatch();
+  
+  void SetRenderState(sf::RenderStates states = sf::RenderStates::Default);
+  void Draw();
+  void draw(sf::RenderTarget& target,const sf::RenderStates states = sf::RenderStates::Default) const;
+};
+
 #endif

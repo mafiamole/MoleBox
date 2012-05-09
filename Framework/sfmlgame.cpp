@@ -95,7 +95,7 @@ void SFMLGame::Run()
     this->Update( &eventList );
     
     this->Draw();
-    
+
     this->window->display();
     
     eventList.clear();
@@ -111,5 +111,10 @@ void SFMLGame::AddComponent(SFMLGameComponent* component)
 int SFMLGame::ComponentCount()
 {
   return this->components.size();
+}
+
+void SFMLGame::DrawSprite(const sf::Drawable& drawable, const sf::RenderStates& states)
+{
+  this->window->draw(drawable,states);
 }
 

@@ -31,28 +31,27 @@
 
 Game::Game() : SFMLGame("Game Title")
 {
+    
   this->AddComponent(new TestComponent(this));
-  components.push_back( new LuaComponent(this,"testComponent.lua") );
-  std::cout << " Component count " <<  this->ComponentCount() << std::endl;
-
+  this->AddComponent(new LuaComponent(this,"testComponent.lua"));
+  
 }
 
 Game::~Game()
 {
-
 }
 
 void Game::Draw()
 {
-    SFMLGame::Draw();
+  SFMLGame::Draw();
 }
 
 void Game::Update(EventList* events)
 {
-    SFMLGame::Update(events);
+  SFMLGame::Update(events);
 }
 
 void Game::Run()
 {
-    SFMLGame::Run();
+  SFMLGame::Run();
 }

@@ -231,6 +231,30 @@ Framework/Lua/luacomponent.cpp.s:
 	$(MAKE) -f CMakeFiles/paulsframework.dir/build.make CMakeFiles/paulsframework.dir/Framework/Lua/luacomponent.cpp.s
 .PHONY : Framework/Lua/luacomponent.cpp.s
 
+Framework/SFMLContent.o: Framework/SFMLContent.cpp.o
+.PHONY : Framework/SFMLContent.o
+
+# target to build an object file
+Framework/SFMLContent.cpp.o:
+	$(MAKE) -f CMakeFiles/paulsframework.dir/build.make CMakeFiles/paulsframework.dir/Framework/SFMLContent.cpp.o
+.PHONY : Framework/SFMLContent.cpp.o
+
+Framework/SFMLContent.i: Framework/SFMLContent.cpp.i
+.PHONY : Framework/SFMLContent.i
+
+# target to preprocess a source file
+Framework/SFMLContent.cpp.i:
+	$(MAKE) -f CMakeFiles/paulsframework.dir/build.make CMakeFiles/paulsframework.dir/Framework/SFMLContent.cpp.i
+.PHONY : Framework/SFMLContent.cpp.i
+
+Framework/SFMLContent.s: Framework/SFMLContent.cpp.s
+.PHONY : Framework/SFMLContent.s
+
+# target to generate assembly for a file
+Framework/SFMLContent.cpp.s:
+	$(MAKE) -f CMakeFiles/paulsframework.dir/build.make CMakeFiles/paulsframework.dir/Framework/SFMLContent.cpp.s
+.PHONY : Framework/SFMLContent.cpp.s
+
 Framework/sfmlgame.o: Framework/sfmlgame.cpp.o
 .PHONY : Framework/sfmlgame.o
 
@@ -303,6 +327,9 @@ help:
 	@echo "... Framework/Lua/luacomponent.o"
 	@echo "... Framework/Lua/luacomponent.i"
 	@echo "... Framework/Lua/luacomponent.s"
+	@echo "... Framework/SFMLContent.o"
+	@echo "... Framework/SFMLContent.i"
+	@echo "... Framework/SFMLContent.s"
 	@echo "... Framework/sfmlgame.o"
 	@echo "... Framework/sfmlgame.i"
 	@echo "... Framework/sfmlgame.s"

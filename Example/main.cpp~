@@ -24,21 +24,18 @@
 */
 
 #include <iostream>
-#include "Framework/content.h"
-#include "Framework/SFMLContent.h"
-#include "Framework/sfmlgame.h"
-#include "Framework/Lua/luaScriptHelper.h"
-
 #include "game.h"
-
-#include <SFML/Graphics.hpp>
+#include "SFML/Graphics.hpp"
 
 int main(int argc, char **argv) {
+
   
   try {
   Game game;
   
-  game.Run();
+  game.Run();   
+    sf::RenderTexture texture;  
+    texture.create(400, 300);
   }
   catch (std::string error) {
     std::cout << error << std::endl;

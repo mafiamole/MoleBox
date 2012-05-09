@@ -59,6 +59,7 @@ public:
  */
 template <class T>	class Content
 {
+  
 public:
 /**
  * Static method for calls the ContentContainer.load method for type T.
@@ -72,6 +73,7 @@ public:
  {
     return ContentContainer<T>::I().Load(itemName);
  }
+ 
 };
 
 

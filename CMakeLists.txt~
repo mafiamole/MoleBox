@@ -10,6 +10,7 @@ add_executable(paulsframework
 	      Framework/Lua/luacomponent.cpp
 	      Framework/sfmlgamecomponent.cpp
 	      Framework/sfmlgame.cpp
+	      Framework/SFMLContent.cpp
 	      Example/testcomponent.cpp 
 	      Example/game.cpp
 	      Example/main.cpp
@@ -21,9 +22,9 @@ if(SFML_FOUND)
   target_link_libraries(paulsframework ${SFML_LIBRARIES} ${OPENGL_gl_LIBRARY} ${GLU_LIBRARY} ${LUA_LIBRARY})
 endif()
 
- set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -Wno-long-long -pedantic -Weffc++ -Wextra")
+ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++0x -Wall -Wno-long-long -pedantic -Weffc++ -Wextra")
 
 add_subdirectory(Example)
 add_subdirectory(Framework)
-
+# Copy content to output directiory
 file(COPY Content/ DESTINATION ${CMAKE_BINARY_DIR})
