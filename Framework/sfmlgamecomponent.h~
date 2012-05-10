@@ -29,44 +29,47 @@
 
 #include <SFML/Graphics.hpp>
 #include "SFML_ContainerDefinitions.h"
-/**
- * Forward declarations
- */
-class SFMLGame;
+namespace MB {
+  /**
+  * Forward declarations
+  */
+  class Game;
 
-/**
- * Class is used to represent a component in the game.
- * It is aimed at being inherited.
- */
-class SFMLGameComponent
-{
-protected:
   /**
-   * Pointer to the game object.
-   * This is to allow the component to access the window object for rendering purposes.
-   */
-  SFMLGame *game;
-    
-public:
-  /**
-   * the Constructor sets the pointer to the SFMLGame member.
-   */
-		SFMLGameComponent	(SFMLGame *game);
-  /**
-   * Called every game loop.
-   * This function is used for changing the components state.
-   */
-  virtual void 	Update			(EventList* events);
-  /**
-   * Called every game loop.
-   * This function is used to render to the screen. 
-   */
-  virtual void 	Draw			();
-  /**
-   * Does nothing.
-   * 
-   */
-  virtual 	~SFMLGameComponent	();
-};
+  * Class is used to represent a component in the game.
+  * It is aimed at being inherited.
+  */
+  class GameComponent
+  {
+  protected:
+    /**
+    * Pointer to the game object.
+    * This is to allow the component to access the window object for rendering purposes.
+    */
+    Game 		*game;
+      
+  public:
+    /**
+    * the Constructor sets the pointer to the SFMLGame member.
+    */
+			GameComponent	(SFMLGame *game);
+    /**
+    * Called every game loop.
+    * This function is used for changing the components state.
+    */
+    virtual void 	Update			(EventList* events);
+    /**
+    * Called every game loop.
+    * This function is used to render to the screen. 
+    */
+    virtual void 	Draw			();
+    /**
+    * Does nothing.
+    * 
+    */
+    virtual 		~GameComponent	();
+  };
+
+}
 
 #endif // SFMLGAMECOMPONENT_H

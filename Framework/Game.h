@@ -29,7 +29,7 @@
 #include <vector>
 #include <string>
 #include <SFML/Graphics.hpp>
-#include "SFML_ContainerDefinitions.h"
+#include "ContainerDefinitions.h"
 
 namespace MB {
 /**
@@ -80,11 +80,11 @@ class GameComponent;
     /**
     * The constructor requires the games window title to perform initalisation of the sf::RenderWindow object.
     */
-			  Game	( std::string windowName );
+				Game	( std::string windowName );
     /**
     * Deletes all components from memory.
     */
-    virtual 		~Game	();
+    virtual 			~Game	();
     /**
     * Method for obtaining the sf::RenderWindow instance in this class.
     * This is to allow components to draw to the window.

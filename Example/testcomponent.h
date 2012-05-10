@@ -26,16 +26,16 @@
 
 #ifndef TESTCOMPONENT_H
 #define TESTCOMPONENT_H
-#include "../Framework/sfmlgamecomponent.h"
-#include "../Framework/SFMLContent.h"
-#include "../Framework/sfmlgame.h"
-class TestComponent : public SFMLGameComponent
+#include "../Framework/GameComponent.h"
+#include "../Framework/Content.h"
+#include "../Framework/Game.h"
+class TestComponent : public MB::GameComponent
 {
   public:
-		TestComponent(SFMLGame* game);
+		TestComponent(MB::Game* game);
     virtual 	~TestComponent();
     
-    void 	Update(EventList* events);
+    void 	Update(MB::EventList* events);
     void 	Draw();
 
 private:
@@ -45,7 +45,7 @@ private:
     sf::RenderTexture 	rendText;
     bool		musicPaused;
     sf::Sprite 		sprite2;
-    SpriteBatch* 	spriteBatch;
+    MB::SpriteBatch* 	spriteBatch;
     sf::Music* 		music;
     sf::Sound 		sound;
 };

@@ -190,7 +190,7 @@ class SpriteBatch : public sf::Drawable, public std::vector<sf::Drawable *> {
 private:
   sf::RenderTarget* target;
   sf::RenderStates renderState;
-  sf::RenderTexture renderTexture;
+  //sf::RenderTexture renderTexture;
   void initiate(sf::Vector2u size, sf::RenderTarget* target, sf::RenderStates states = sf::RenderStates::Default);
 public:
   SpriteBatch(sf::Vector2u size, sf::RenderTarget* target, sf::RenderStates states = sf::RenderStates::Default);  

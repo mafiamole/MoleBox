@@ -27,16 +27,16 @@
 #include "testcomponent.h"
 #include <iostream>
 
-TestComponent::TestComponent(SFMLGame* game): SFMLGameComponent(game)
+TestComponent::TestComponent(MB::Game* game): MB::GameComponent(game)
 {
-  texture 	= Content< sf::Texture >::Load( "test.png" );
+  texture 	= MB::Content< sf::Texture >::Load( "test.png" );
   sprite 	= sf::Sprite(texture);
   sprite2	= sf::Sprite(texture);
   sprite2.move(sprite.getTextureRect().width,0);
-  music		= Content< sf::Music >::Open( "menu.ogg" );
+  music		= MB::Content< sf::Music >::Open( "menu.ogg" );
   musicPaused  = true;
-  spriteBatch	= new SpriteBatch(this->game->Window());
-  sound		= sf::Sound(Content< sf::SoundBuffer >::Load( "mouthpop.wav" ));
+  spriteBatch	= new MB::SpriteBatch(this->game->Window());
+  sound		= sf::Sound(MB::Content< sf::SoundBuffer >::Load( "mouthpop.wav" ));
   spriteBatch->push_back(&sprite);
   spriteBatch->push_back(&sprite2);
 }
@@ -48,11 +48,11 @@ TestComponent::~TestComponent()
 
 }
 
-void TestComponent::Update(EventList* events)
+void TestComponent::Update(MB::EventList* events)
 {
-    SFMLGameComponent::Update(events);
+    MB::GameComponent::Update(events);
     
-    EventList::iterator found = events->find(sf::Event::KeyReleased);
+    MB::EventList::iterator found = events->find(sf::Event::KeyReleased);
     if (found != events->end())
     {
       if ((*found).second.key.code == sf::Keyboard::Space)
@@ -87,7 +87,7 @@ void TestComponent::Draw()
   
   this->spriteBatch->Draw();
 
-    SFMLGameComponent::Draw();
+   MB::GameComponent::Draw();
     
 }
 

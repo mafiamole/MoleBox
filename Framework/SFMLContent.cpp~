@@ -1,17 +1,17 @@
 #include "SFMLContent.h"
 
-SpriteBatch::SpriteBatch(sf::Vector2u size, sf::RenderTarget* target, sf::RenderStates states) : sf::Drawable(),std::vector< sf::Drawable *>()
+MB::SpriteBatch::SpriteBatch(sf::Vector2u size, sf::RenderTarget* target, sf::RenderStates states) : sf::Drawable(),std::vector< sf::Drawable *>()
 {
     this->initiate(size,target,states);
 }
 
-SpriteBatch::SpriteBatch(sf::RenderTarget* target, sf::RenderStates states) : sf::Drawable(),std::vector< sf::Drawable *>() {
+MB::SpriteBatch::SpriteBatch(sf::RenderTarget* target, sf::RenderStates states) : sf::Drawable(),std::vector< sf::Drawable *>() {
 
   this->initiate(target->getSize(),target,states);
   
 }
 
-void SpriteBatch::initiate(sf::Vector2u size, sf::RenderTarget* target, sf::RenderStates states)
+void MB::SpriteBatch::initiate(sf::Vector2u size, sf::RenderTarget* target, sf::RenderStates states)
 {
     this->target = target;
     this->renderState = renderState;
@@ -19,7 +19,7 @@ void SpriteBatch::initiate(sf::Vector2u size, sf::RenderTarget* target, sf::Rend
 }
 
 
-SpriteBatch::~SpriteBatch()
+MB::SpriteBatch::~SpriteBatch()
 {
 
   

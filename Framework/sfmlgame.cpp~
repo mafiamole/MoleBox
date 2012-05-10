@@ -28,12 +28,12 @@
 #include "sfmlgamecomponent.h"
 #include <iostream>
 
-SFMLGame::SFMLGame(std::string windowName)
+MB::Game::Game(std::string windowName)
 {
   window = new sf::RenderWindow( sf::VideoMode( 800, 600 ), windowName );
 }
 
-SFMLGame::~SFMLGame()
+MB::Game::~Game()
 {
   ComponentVector::iterator componentItr;
   // ensure all components are removed from memory.
@@ -45,7 +45,7 @@ SFMLGame::~SFMLGame()
   components.clear();
 }
 
-void SFMLGame::Draw()
+void MB::Game::Draw()
 {
 
   ComponentVector::iterator componentItr;
@@ -57,7 +57,7 @@ void SFMLGame::Draw()
   
 }
 
-void SFMLGame::Update(EventList* events)
+void MB::Game::Update(EventList* events)
 {
   ComponentVector::iterator componentItr;
   
@@ -68,13 +68,13 @@ void SFMLGame::Update(EventList* events)
   
 }
 
-sf::RenderWindow* SFMLGame::Window()
+sf::RenderWindow* MB::Game::Window()
 {
   return this->window;
 }
 
 
-void SFMLGame::Run()
+void MB::Game::Run()
 {
 
   EventList eventList;
@@ -103,13 +103,18 @@ void SFMLGame::Run()
   }
 }
 
-void SFMLGame::AddComponent(SFMLGameComponent* component)
+void MB::Game::AddComponent(SFMLGameComponent* component)
 {
   this->components.push_back(component);
 }
 
-int SFMLGame::ComponentCount()
+int MB::Game::ComponentCount()
 {
   return this->components.size();
+}
+
+void MB::Game::DrawSprite(const sf::Drawable& drawable, const sf::RenderStates& states)
+{
+  this->window->draw(drawable,states);
 }
 

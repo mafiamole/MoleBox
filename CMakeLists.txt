@@ -7,10 +7,10 @@ find_package(GLU REQUIRED)
 find_package(Lua51)
 add_executable(paulsframework
 	      Framework/Lua/luaScriptHelper.cpp
-	      Framework/Lua/luacomponent.cpp
-	      Framework/sfmlgamecomponent.cpp
-	      Framework/sfmlgame.cpp
-	      Framework/SFMLContent.cpp
+	      Framework/Lua/Component.cpp
+	      Framework/GameComponent.cpp
+	      Framework/Game.cpp
+	      Framework/Content.cpp
 	      Example/testcomponent.cpp 
 	      Example/game.cpp
 	      Example/main.cpp

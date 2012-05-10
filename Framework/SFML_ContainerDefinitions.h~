@@ -30,4 +30,5 @@
  * It holds a list of events and uses the event type as a key to allow simple locating by the user.
  */
 typedef std::map<sf::Event::EventType,sf::Event> EventList;
+
 #endif

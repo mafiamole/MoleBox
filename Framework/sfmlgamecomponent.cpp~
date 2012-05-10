@@ -26,24 +26,24 @@
 
 #include "sfmlgamecomponent.h"
 
-SFMLGameComponent::SFMLGameComponent(SFMLGame *game) : game(game)
+MB::GameComponent::GameComponent( SFMLGame *game ) : game( game )
 {
 
 
 }
 
-SFMLGameComponent::~SFMLGameComponent()
+MB::GameComponent::~GameComponent()
 {
 
 }
 
-void SFMLGameComponent::Draw()
+void MB::GameComponent::Draw()
 {
 
 }
 
 
-void SFMLGameComponent::Update(EventList* events)
+void MB::GameComponent::Update (EventList* events )
 {
 
 }

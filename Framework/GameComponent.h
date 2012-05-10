@@ -23,12 +23,53 @@
     OTHER DEALINGS IN THE SOFTWARE.
 */
 
-#ifndef SFML_CONTAINERDEF_H
-#define SFML_CONTAINERDEF_H
-/**
- * This definition is used by the SFMLGame and SFMLGameComponent classes and their subclasses.
- * It holds a list of events and uses the event type as a key to allow simple locating by the user.
- */
-typedef std::map<sf::Event::EventType,sf::Event> EventList;
 
-#endif
+#ifndef SFMLGAMECOMPONENT_H
+#define SFMLGAMECOMPONENT_H
+
+#include <SFML/Graphics.hpp>
+#include "ContainerDefinitions.h"
+namespace MB {
+  /**
+  * Forward declarations
+  */
+  class Game;
+
+  /**
+  * Class is used to represent a component in the game.
+  * It is aimed at being inherited.
+  */
+  class GameComponent
+  {
+  protected:
+    /**
+    * Pointer to the game object.
+    * This is to allow the component to access the window object for rendering purposes.
+    */
+    Game 		*game;
+      
+  public:
+    /**
+    * the Constructor sets the pointer to the SFMLGame member.
+    */
+			GameComponent	(Game *game);
+    /**
+    * Called every game loop.
+    * This function is used for changing the components state.
+    */
+    virtual void 	Update			(EventList* events);
+    /**
+    * Called every game loop.
+    * This function is used to render to the screen. 
+    */
+    virtual void 	Draw			();
+    /**
+    * Does nothing.
+    * 
+    */
+    virtual 		~GameComponent	();
+  };
+
+}
+
+#endif // SFMLGAMECOMPONENT_H

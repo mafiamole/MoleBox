@@ -26,15 +26,20 @@
 
 #ifndef GAME_H
 #define GAME_H
-#include "../Framework/sfmlgame.h"
-#include "testcomponent.h"
+#include <stdlib.h>
+
+#include "../Framework/Game.h"
 #include "../Framework/Lua/Lua.h"
-class Game : public SFMLGame
+
+#include "testcomponent.h"
+
+
+class Game : public MB::Game
 {
 
 public:
     Game();
-    void Update(EventList *events);
+    void Update(MB::EventList* events);
     void Draw();
     void Run();
     virtual ~Game();

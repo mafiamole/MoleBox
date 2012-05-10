@@ -37,7 +37,7 @@ extern "C" {
 #include <map>
 #include "../SFMLContent.h"
 
-namespace LuaSFML {
+namespace MB_Lua {
 
 class Sounds {
   
@@ -89,7 +89,7 @@ namespace LuaHelper {
   
   bool 					TypeCheck			( lua_State* L, int index , int type );
   void 					HandelError			( lua_State* L, int status );
-  void					PushError			( lua_State* L, std::string errorString);
+  void					PushError			( lua_State* L, std::string errorString );
 
   template <class T> 	T 		LuaReturnType			( lua_State* L, int index );
   template <> 		std::string 	LuaReturnType <std::string>	( lua_State* L, int index );

@@ -183,6 +183,102 @@ Example/testcomponent.cpp.s:
 	$(MAKE) -f CMakeFiles/paulsframework.dir/build.make CMakeFiles/paulsframework.dir/Example/testcomponent.cpp.s
 .PHONY : Example/testcomponent.cpp.s
 
+Framework/Content.o: Framework/Content.cpp.o
+.PHONY : Framework/Content.o
+
+# target to build an object file
+Framework/Content.cpp.o:
+	$(MAKE) -f CMakeFiles/paulsframework.dir/build.make CMakeFiles/paulsframework.dir/Framework/Content.cpp.o
+.PHONY : Framework/Content.cpp.o
+
+Framework/Content.i: Framework/Content.cpp.i
+.PHONY : Framework/Content.i
+
+# target to preprocess a source file
+Framework/Content.cpp.i:
+	$(MAKE) -f CMakeFiles/paulsframework.dir/build.make CMakeFiles/paulsframework.dir/Framework/Content.cpp.i
+.PHONY : Framework/Content.cpp.i
+
+Framework/Content.s: Framework/Content.cpp.s
+.PHONY : Framework/Content.s
+
+# target to generate assembly for a file
+Framework/Content.cpp.s:
+	$(MAKE) -f CMakeFiles/paulsframework.dir/build.make CMakeFiles/paulsframework.dir/Framework/Content.cpp.s
+.PHONY : Framework/Content.cpp.s
+
+Framework/Game.o: Framework/Game.cpp.o
+.PHONY : Framework/Game.o
+
+# target to build an object file
+Framework/Game.cpp.o:
+	$(MAKE) -f CMakeFiles/paulsframework.dir/build.make CMakeFiles/paulsframework.dir/Framework/Game.cpp.o
+.PHONY : Framework/Game.cpp.o
+
+Framework/Game.i: Framework/Game.cpp.i
+.PHONY : Framework/Game.i
+
+# target to preprocess a source file
+Framework/Game.cpp.i:
+	$(MAKE) -f CMakeFiles/paulsframework.dir/build.make CMakeFiles/paulsframework.dir/Framework/Game.cpp.i
+.PHONY : Framework/Game.cpp.i
+
+Framework/Game.s: Framework/Game.cpp.s
+.PHONY : Framework/Game.s
+
+# target to generate assembly for a file
+Framework/Game.cpp.s:
+	$(MAKE) -f CMakeFiles/paulsframework.dir/build.make CMakeFiles/paulsframework.dir/Framework/Game.cpp.s
+.PHONY : Framework/Game.cpp.s
+
+Framework/GameComponent.o: Framework/GameComponent.cpp.o
+.PHONY : Framework/GameComponent.o
+
+# target to build an object file
+Framework/GameComponent.cpp.o:
+	$(MAKE) -f CMakeFiles/paulsframework.dir/build.make CMakeFiles/paulsframework.dir/Framework/GameComponent.cpp.o
+.PHONY : Framework/GameComponent.cpp.o
+
+Framework/GameComponent.i: Framework/GameComponent.cpp.i
+.PHONY : Framework/GameComponent.i
+
+# target to preprocess a source file
+Framework/GameComponent.cpp.i:
+	$(MAKE) -f CMakeFiles/paulsframework.dir/build.make CMakeFiles/paulsframework.dir/Framework/GameComponent.cpp.i
+.PHONY : Framework/GameComponent.cpp.i
+
+Framework/GameComponent.s: Framework/GameComponent.cpp.s
+.PHONY : Framework/GameComponent.s
+
+# target to generate assembly for a file
+Framework/GameComponent.cpp.s:
+	$(MAKE) -f CMakeFiles/paulsframework.dir/build.make CMakeFiles/paulsframework.dir/Framework/GameComponent.cpp.s
+.PHONY : Framework/GameComponent.cpp.s
+
+Framework/Lua/Component.o: Framework/Lua/Component.cpp.o
+.PHONY : Framework/Lua/Component.o
+
+# target to build an object file
+Framework/Lua/Component.cpp.o:
+	$(MAKE) -f CMakeFiles/paulsframework.dir/build.make CMakeFiles/paulsframework.dir/Framework/Lua/Component.cpp.o
+.PHONY : Framework/Lua/Component.cpp.o
+
+Framework/Lua/Component.i: Framework/Lua/Component.cpp.i
+.PHONY : Framework/Lua/Component.i
+
+# target to preprocess a source file
+Framework/Lua/Component.cpp.i:
+	$(MAKE) -f CMakeFiles/paulsframework.dir/build.make CMakeFiles/paulsframework.dir/Framework/Lua/Component.cpp.i
+.PHONY : Framework/Lua/Component.cpp.i
+
+Framework/Lua/Component.s: Framework/Lua/Component.cpp.s
+.PHONY : Framework/Lua/Component.s
+
+# target to generate assembly for a file
+Framework/Lua/Component.cpp.s:
+	$(MAKE) -f CMakeFiles/paulsframework.dir/build.make CMakeFiles/paulsframework.dir/Framework/Lua/Component.cpp.s
+.PHONY : Framework/Lua/Component.cpp.s
+
 Framework/Lua/luaScriptHelper.o: Framework/Lua/luaScriptHelper.cpp.o
 .PHONY : Framework/Lua/luaScriptHelper.o
 
@@ -207,102 +303,6 @@ Framework/Lua/luaScriptHelper.cpp.s:
 	$(MAKE) -f CMakeFiles/paulsframework.dir/build.make CMakeFiles/paulsframework.dir/Framework/Lua/luaScriptHelper.cpp.s
 .PHONY : Framework/Lua/luaScriptHelper.cpp.s
 
-Framework/Lua/luacomponent.o: Framework/Lua/luacomponent.cpp.o
-.PHONY : Framework/Lua/luacomponent.o
-
-# target to build an object file
-Framework/Lua/luacomponent.cpp.o:
-	$(MAKE) -f CMakeFiles/paulsframework.dir/build.make CMakeFiles/paulsframework.dir/Framework/Lua/luacomponent.cpp.o
-.PHONY : Framework/Lua/luacomponent.cpp.o
-
-Framework/Lua/luacomponent.i: Framework/Lua/luacomponent.cpp.i
-.PHONY : Framework/Lua/luacomponent.i
-
-# target to preprocess a source file
-Framework/Lua/luacomponent.cpp.i:
-	$(MAKE) -f CMakeFiles/paulsframework.dir/build.make CMakeFiles/paulsframework.dir/Framework/Lua/luacomponent.cpp.i
-.PHONY : Framework/Lua/luacomponent.cpp.i
-
-Framework/Lua/luacomponent.s: Framework/Lua/luacomponent.cpp.s
-.PHONY : Framework/Lua/luacomponent.s
-
-# target to generate assembly for a file
-Framework/Lua/luacomponent.cpp.s:
-	$(MAKE) -f CMakeFiles/paulsframework.dir/build.make CMakeFiles/paulsframework.dir/Framework/Lua/luacomponent.cpp.s
-.PHONY : Framework/Lua/luacomponent.cpp.s
-
-Framework/SFMLContent.o: Framework/SFMLContent.cpp.o
-.PHONY : Framework/SFMLContent.o
-
-# target to build an object file
-Framework/SFMLContent.cpp.o:
-	$(MAKE) -f CMakeFiles/paulsframework.dir/build.make CMakeFiles/paulsframework.dir/Framework/SFMLContent.cpp.o
-.PHONY : Framework/SFMLContent.cpp.o
-
-Framework/SFMLContent.i: Framework/SFMLContent.cpp.i
-.PHONY : Framework/SFMLContent.i
-
-# target to preprocess a source file
-Framework/SFMLContent.cpp.i:
-	$(MAKE) -f CMakeFiles/paulsframework.dir/build.make CMakeFiles/paulsframework.dir/Framework/SFMLContent.cpp.i
-.PHONY : Framework/SFMLContent.cpp.i
-
-Framework/SFMLContent.s: Framework/SFMLContent.cpp.s
-.PHONY : Framework/SFMLContent.s
-
-# target to generate assembly for a file
-Framework/SFMLContent.cpp.s:
-	$(MAKE) -f CMakeFiles/paulsframework.dir/build.make CMakeFiles/paulsframework.dir/Framework/SFMLContent.cpp.s
-.PHONY : Framework/SFMLContent.cpp.s
-
-Framework/sfmlgame.o: Framework/sfmlgame.cpp.o
-.PHONY : Framework/sfmlgame.o
-
-# target to build an object file
-Framework/sfmlgame.cpp.o:
-	$(MAKE) -f CMakeFiles/paulsframework.dir/build.make CMakeFiles/paulsframework.dir/Framework/sfmlgame.cpp.o
-.PHONY : Framework/sfmlgame.cpp.o
-
-Framework/sfmlgame.i: Framework/sfmlgame.cpp.i
-.PHONY : Framework/sfmlgame.i
-
-# target to preprocess a source file
-Framework/sfmlgame.cpp.i:
-	$(MAKE) -f CMakeFiles/paulsframework.dir/build.make CMakeFiles/paulsframework.dir/Framework/sfmlgame.cpp.i
-.PHONY : Framework/sfmlgame.cpp.i
-
-Framework/sfmlgame.s: Framework/sfmlgame.cpp.s
-.PHONY : Framework/sfmlgame.s
-
-# target to generate assembly for a file
-Framework/sfmlgame.cpp.s:
-	$(MAKE) -f CMakeFiles/paulsframework.dir/build.make CMakeFiles/paulsframework.dir/Framework/sfmlgame.cpp.s
-.PHONY : Framework/sfmlgame.cpp.s
-
-Framework/sfmlgamecomponent.o: Framework/sfmlgamecomponent.cpp.o
-.PHONY : Framework/sfmlgamecomponent.o
-
-# target to build an object file
-Framework/sfmlgamecomponent.cpp.o:
-	$(MAKE) -f CMakeFiles/paulsframework.dir/build.make CMakeFiles/paulsframework.dir/Framework/sfmlgamecomponent.cpp.o
-.PHONY : Framework/sfmlgamecomponent.cpp.o
-
-Framework/sfmlgamecomponent.i: Framework/sfmlgamecomponent.cpp.i
-.PHONY : Framework/sfmlgamecomponent.i
-
-# target to preprocess a source file
-Framework/sfmlgamecomponent.cpp.i:
-	$(MAKE) -f CMakeFiles/paulsframework.dir/build.make CMakeFiles/paulsframework.dir/Framework/sfmlgamecomponent.cpp.i
-.PHONY : Framework/sfmlgamecomponent.cpp.i
-
-Framework/sfmlgamecomponent.s: Framework/sfmlgamecomponent.cpp.s
-.PHONY : Framework/sfmlgamecomponent.s
-
-# target to generate assembly for a file
-Framework/sfmlgamecomponent.cpp.s:
-	$(MAKE) -f CMakeFiles/paulsframework.dir/build.make CMakeFiles/paulsframework.dir/Framework/sfmlgamecomponent.cpp.s
-.PHONY : Framework/sfmlgamecomponent.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -321,21 +321,21 @@ help:
 	@echo "... Example/testcomponent.o"
 	@echo "... Example/testcomponent.i"
 	@echo "... Example/testcomponent.s"
+	@echo "... Framework/Content.o"
+	@echo "... Framework/Content.i"
+	@echo "... Framework/Content.s"
+	@echo "... Framework/Game.o"
+	@echo "... Framework/Game.i"
+	@echo "... Framework/Game.s"
+	@echo "... Framework/GameComponent.o"
+	@echo "... Framework/GameComponent.i"
+	@echo "... Framework/GameComponent.s"
+	@echo "... Framework/Lua/Component.o"
+	@echo "... Framework/Lua/Component.i"
+	@echo "... Framework/Lua/Component.s"
 	@echo "... Framework/Lua/luaScriptHelper.o"
 	@echo "... Framework/Lua/luaScriptHelper.i"
 	@echo "... Framework/Lua/luaScriptHelper.s"
-	@echo "... Framework/Lua/luacomponent.o"
-	@echo "... Framework/Lua/luacomponent.i"
-	@echo "... Framework/Lua/luacomponent.s"
-	@echo "... Framework/SFMLContent.o"
-	@echo "... Framework/SFMLContent.i"
-	@echo "... Framework/SFMLContent.s"
-	@echo "... Framework/sfmlgame.o"
-	@echo "... Framework/sfmlgame.i"
-	@echo "... Framework/sfmlgame.s"
-	@echo "... Framework/sfmlgamecomponent.o"
-	@echo "... Framework/sfmlgamecomponent.i"
-	@echo "... Framework/sfmlgamecomponent.s"
 .PHONY : help
 
 

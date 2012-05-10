@@ -40,7 +40,7 @@ int main(int argc, char **argv) {
   catch (std::string error) {
     std::cout << error << std::endl;
   }
- 
-  
+
   return EXIT_SUCCESS;
+  
 }

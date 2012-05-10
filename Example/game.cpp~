@@ -25,16 +25,15 @@
 
 #include "game.h"
 
-#include "../Framework/Lua/luacomponent.h"
+#include "../Framework/Lua/LuaComponent.h"
 
 #include <iostream>
 
-Game::Game() : SFMLGame("Game Title")
+Game::Game() : MB::Game("Game Title")
 {
     
   this->AddComponent(new TestComponent(this));
-  this->AddComponent(new LuaComponent(this,"testComponent.lua"));
-
+  this->AddComponent(new MB::LuaComponent(this,"testComponent.lua"));
   
 }
 
@@ -44,15 +43,15 @@ Game::~Game()
 
 void Game::Draw()
 {
-  SFMLGame::Draw();
+  MB::Game::Draw();
 }
 
-void Game::Update(EventList* events)
+void Game::Update(MB::EventList* events)
 {
-  SFMLGame::Update(events);
+  MB::Game::Update(events);
 }
 
 void Game::Run()
 {
-  SFMLGame::Run();
+  MB::Game::Run();
 }

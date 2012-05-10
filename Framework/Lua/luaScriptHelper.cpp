@@ -23,12 +23,14 @@
     OTHER DEALINGS IN THE SOFTWARE.
 */
 
-#include "luaScriptHelper.h"
+#include "LuaScriptHelper.h"
 // extracts a table into a std::map with provided types
 /**
  * LuaHelper namespace
  * 
  */
+
+
 bool LuaHelper::TypeCheck(lua_State *L,int index,int type) {
 
   return (bool)(lua_type(L,index) == type);
@@ -95,23 +97,23 @@ template <> int LuaHelper::LuaReturnType< int >(lua_State* L, int index)
  * LuaSFML namespace
  * 
  */
-LuaSFML::Sounds& LuaSFML::Sounds::Instance()
+MB_Lua::Sounds& MB_Lua::Sounds::Instance()
 {
 	static Sounds sounds;
 	return sounds;
 }
 
-LuaSFML::Sounds::Sounds()
+MB_Lua::Sounds::Sounds()
 {
 
 }
 
-LuaSFML::Sounds::~Sounds()
+MB_Lua::Sounds::~Sounds()
 {
 
 }
 
-int LuaSFML::Sounds::Load(lua_State* L)
+int MB_Lua::Sounds::Load(lua_State* L)
 {
 
   int n = lua_gettop(L);
@@ -129,11 +131,11 @@ int LuaSFML::Sounds::Load(lua_State* L)
   
   file = lua_tostring(L,1);
   
-  Sounds::Instance().sounds.insert( std::pair<std::string,sf::Sound> ( file, sf::Sound( Content<sf::SoundBuffer>::Load(file) ) ) );
+  Sounds::Instance().sounds.insert( std::pair<std::string,sf::Sound> ( file, sf::Sound( MB::Content<sf::SoundBuffer>::Load(file) ) ) );
 
 }
 
-int LuaSFML::Sounds::Play(lua_State* L)
+int MB_Lua::Sounds::Play(lua_State* L)
 {
 
   int n = lua_gettop(L);
@@ -153,7 +155,7 @@ int LuaSFML::Sounds::Play(lua_State* L)
   
 }
 
-int LuaSFML::Sounds::Stop(lua_State* l)
+int MB_Lua::Sounds::Stop(lua_State* l)
 {
   std::string file;
   
@@ -165,7 +167,7 @@ int LuaSFML::Sounds::Stop(lua_State* l)
 
 
 
-int LuaSFML::Sounds::PauseUnPause(lua_State* l)
+int MB_Lua::Sounds::PauseUnPause(lua_State* l)
 {
   std::string file;
 
@@ -190,33 +192,33 @@ int LuaSFML::Sounds::PauseUnPause(lua_State* l)
   }
 }
 
-LuaSFML::Sprites::Sprites()
+MB_Lua::Sprites::Sprites()
 {
 
 }
 
-LuaSFML::Sprites::~Sprites()
+MB_Lua::Sprites::~Sprites()
 {
 
 }
 
-LuaSFML::Sprites& LuaSFML::Sprites::Instance()
+MB_Lua::Sprites& MB_Lua::Sprites::Instance()
 {
   static Sprites sprites;
   return sprites;
 }
 
-void LuaSFML::Sprites::SetWindow(sf::RenderWindow* window)
+void MB_Lua::Sprites::SetWindow(sf::RenderWindow* window)
 {
   this->window = window;
 }
 
-sf::RenderWindow* LuaSFML::Sprites::GetWindow()
+sf::RenderWindow* MB_Lua::Sprites::GetWindow()
 {
   return this->window;
 }
 
-sf::Sprite LuaSFML::Sprites::GetSprite(std::string name)
+sf::Sprite MB_Lua::Sprites::GetSprite(std::string name)
 {
 
   return luaSprites[name];
@@ -224,7 +226,7 @@ sf::Sprite LuaSFML::Sprites::GetSprite(std::string name)
 }
 
 
-int LuaSFML::Sprites::Load(lua_State* L)
+int MB_Lua::Sprites::Load(lua_State* L)
 {
   int n = lua_gettop(L);
   
@@ -237,13 +239,13 @@ int LuaSFML::Sprites::Load(lua_State* L)
   name 		= lua_tostring(L,1);
   texture 	= lua_tostring(L,2);
   
-  std::pair<std::string,sf::Sprite> spriteInsert( name , sf::Sprite( Content<sf::Texture>::Load(texture) ) );
+  std::pair<std::string,sf::Sprite> spriteInsert( name , sf::Sprite( MB::Content<sf::Texture>::Load(texture) ) );
   
   Sprites::Instance().luaSprites.insert( spriteInsert);
 	
 }
 
-int LuaSFML::Sprites::Draw(lua_State* L)
+int MB_Lua::Sprites::Draw(lua_State* L)
 {
 
   if ( Sprites::Instance().GetWindow() == NULL )
@@ -274,7 +276,7 @@ int LuaSFML::Sprites::Draw(lua_State* L)
 
 }
 
-int LuaSFML::Sprites::Move(lua_State* L)
+int MB_Lua::Sprites::Move(lua_State* L)
 {
   if ( Sprites::Instance().GetWindow() == NULL )
     

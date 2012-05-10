@@ -23,27 +23,13 @@
     OTHER DEALINGS IN THE SOFTWARE.
 */
 
-
-#include "sfmlgamecomponent.h"
-
-SFMLGameComponent::SFMLGameComponent( SFMLGame *game ) : game( game )
-{
-
-
+#ifndef SFML_CONTAINERDEF_H
+#define SFML_CONTAINERDEF_H
+/**
+ * This definition is used by the SFMLGame and SFMLGameComponent classes and their subclasses.
+ * It holds a list of events and uses the event type as a key to allow simple locating by the user.
+ */
+namespace MB {
+  typedef std::map<sf::Event::EventType,sf::Event> EventList;
 }
-
-SFMLGameComponent::~SFMLGameComponent()
-{
-
-}
-
-void SFMLGameComponent::Draw()
-{
-
-}
-
-
-void SFMLGameComponent::Update (EventList* events )
-{
-
-}
+#endif

@@ -34,13 +34,12 @@ int main(int argc, char **argv) {
   Game game;
   
   game.Run();   
-    sf::RenderTexture texture;  
-    texture.create(400, 300);
+
+  
   }
   catch (std::string error) {
     std::cout << error << std::endl;
   }
- 
-  
+
   return EXIT_SUCCESS;
 }

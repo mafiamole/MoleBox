@@ -35,9 +35,9 @@ extern "C" {
 #include <iostream>
 #include <string>
 #include <map>
-#include "../SFMLContent.h"
+#include "../Content.h"
 
-namespace LuaSFML {
+namespace MB_Lua {
 
 class Sounds {
   

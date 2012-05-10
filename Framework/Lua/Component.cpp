@@ -23,21 +23,21 @@
     OTHER DEALINGS IN THE SOFTWARE.
 */
 
-#include "luacomponent.h"
-#include "../SFMLContent.h"
-#include "luaScriptHelper.h"
+#include "Component.h"
+#include "../Content.h"
+#include "LuaScriptHelper.h"
 
 
-LuaComponent::LuaComponent(SFMLGame* game,std::string file) : SFMLGameComponent(game)
+MB::LuaComponent::LuaComponent(Game* game,std::string file) : GameComponent(game)
 {
-  LuaSFML::Sprites::Instance().SetWindow(game->Window());
+  MB_Lua::Sprites::Instance().SetWindow(game->Window());
   this->LoadScript(file);
   
   scriptFile = file;
 
 }
 
-bool LuaComponent::LoadScript(std::string file)
+bool MB::LuaComponent::LoadScript(std::string file)
 {
   int success;
   
@@ -71,7 +71,7 @@ bool LuaComponent::LoadScript(std::string file)
  
 }
 
-void LuaComponent::HandelError(lua_State* L, int status)
+void MB::LuaComponent::HandelError(lua_State* L, int status)
 {
   if ( status!=0 ) {
     
@@ -84,7 +84,7 @@ void LuaComponent::HandelError(lua_State* L, int status)
 }
 
 
-lua_CFunction LuaComponent::Test(lua_State* L)
+lua_CFunction MB::LuaComponent::Test(lua_State* L)
 {
   
 return 0;
@@ -93,7 +93,7 @@ return 0;
 
 
 
-void LuaComponent::Update(EventList* events)
+void MB::LuaComponent::Update(EventList* events)
 {
   
   lua_getglobal(this->L,"update");
@@ -114,11 +114,11 @@ void LuaComponent::Update(EventList* events)
   
   
   
-  SFMLGameComponent::Update(events);
+  GameComponent::Update(events);
 
 }
 
-void LuaComponent::Draw()
+void MB::LuaComponent::Draw()
 {
   
   lua_getglobal(this->L,"draw");
@@ -129,10 +129,10 @@ void LuaComponent::Draw()
   
   HandelError(L,s);
 
-  SFMLGameComponent::Draw();
+  GameComponent::Draw();
 }
 
-LuaComponent::~LuaComponent()
+MB::LuaComponent::~LuaComponent()
 {
   lua_close(L);
 }
