@@ -27,6 +27,25 @@
 #include "../Content.h"
 #include "LuaScriptHelper.h"
 
+void MB::ActionsToLua(lua_State* L,MB::Actions* actions)
+{
+  lua_newtable(L);
+  
+  std::map< std::string, Action* > actionList = actions->GetList();
+  std::map< std::string, Action* >::iterator actionItr;
+  
+  for (actionItr = actionList.begin(); actionItr != actionList.end(); actionItr++) {
+    lua_newtable	( L );
+    lua_pushboolean	( L, (*actionItr).second->IsActive() );
+    lua_setfield	( L, -2, "IsActive" );
+    lua_pushboolean	( L, (*actionItr).second->HasChanged() );
+    lua_setfield	( L, -2, "HasChanged" );
+    lua_setfield	( L, -2, (*actionItr).first.c_str() );
+  }
+  
+}
+
+
 
 MB::LuaComponent::LuaComponent(Game* game,std::string file) : GameComponent(game)
 {
@@ -97,7 +116,7 @@ void MB::LuaComponent::Update(EventList* events)
 {
   
   lua_getglobal(this->L,"update");
-  
+  /*
   lua_newtable(L);
   EventList::iterator eventItr;
   for (eventItr = events->begin();eventItr != events->end();eventItr++)
@@ -107,8 +126,8 @@ void MB::LuaComponent::Update(EventList* events)
     lua_pushstring(L,"blarg"); // value
     lua_settable(L,-3);    
   }
-
-  
+*/
+  ActionsToLua(L,this->game->GetActions());
   int s = lua_pcall(this->L,1,0,0);
   HandelError(L,s);
   

@@ -25,8 +25,9 @@
 
 
 #include "GameComponent.h"
+#include "Game.h"
 
-MB::GameComponent::GameComponent( Game *game ) : game( game )
+MB::GameComponent::GameComponent( Game *game ) : game( game ), actions( game->GetActions() )
 {
 
 
@@ -47,3 +48,4 @@ void MB::GameComponent::Update (EventList* events )
 {
 
 }
+

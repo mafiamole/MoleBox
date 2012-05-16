@@ -5,7 +5,7 @@ find_package(SFML 2.0 REQUIRED system window graphics audio)
 find_package(OpenGL REQUIRED)
 find_package(GLU REQUIRED)
 find_package(Lua51)
-add_executable(paulsframework
+add_executable(paulsframework Framework/Actions/keyboard.cpp Framework/Actions/mouse.cpp Framework/action.cpp Framework/actions.cpp
 	      Framework/Lua/luaScriptHelper.cpp
 	      Framework/Lua/Component.cpp
 	      Framework/GameComponent.cpp

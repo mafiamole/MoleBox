@@ -30,6 +30,7 @@
 #include <string>
 #include <SFML/Graphics.hpp>
 #include "ContainerDefinitions.h"
+#include "actions.h"
 
 namespace MB {
 /**
@@ -53,9 +54,11 @@ class GameComponent;
     /**
     * SFML render window object.
     */
-    sf::RenderWindow*	window;
+    sf::RenderWindow*		window;
     
   protected:
+    
+    Actions 			actionList;
     /**
     * Components container contains an list of components.
     */
@@ -90,6 +93,8 @@ class GameComponent;
     * This is to allow components to draw to the window.
     */
     sf::RenderWindow * 		Window		();
+    
+    MB::Actions*		GetActions	();
     /**
     * Called once per loop.
     * The update function accepts events from the window poll event loop construct.

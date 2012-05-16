@@ -43,6 +43,8 @@ MB::Game::~Game()
   }
   // empty pointers from container.
   components.clear();
+ ///std::cout << "finished clearing up!" << std::endl;
+
 }
 
 void MB::Game::Draw()
@@ -66,6 +68,8 @@ void MB::Game::Update(EventList* events)
     ( *componentItr )->Update( events );
   }
   
+  this->actionList.Update();
+  
 }
 
 sf::RenderWindow* MB::Game::Window()
@@ -88,6 +92,8 @@ void MB::Game::Run()
 	window->close();
       else
 	eventList.insert( std::pair< sf::Event::EventType,sf::Event >( event.type,event ) );
+      
+
     }
     
     window->clear();
@@ -118,3 +124,7 @@ void MB::Game::DrawSprite(const sf::Drawable& drawable, const sf::RenderStates& 
   this->window->draw(drawable,states);
 }
 
+MB::Actions* MB::Game::GetActions()
+{
+  return &this->actionList;
+}

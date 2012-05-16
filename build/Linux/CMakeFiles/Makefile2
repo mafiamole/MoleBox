@@ -59,7 +59,7 @@ CMAKE_BINARY_DIR = /home/mafiamole/projects/paulsFramework/build/Linux
 CMakeFiles/paulsframework.dir/all:
 	$(MAKE) -f CMakeFiles/paulsframework.dir/build.make CMakeFiles/paulsframework.dir/depend
 	$(MAKE) -f CMakeFiles/paulsframework.dir/build.make CMakeFiles/paulsframework.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/mafiamole/projects/paulsFramework/build/Linux/CMakeFiles  1 2 3 4 5 6 7 8
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/mafiamole/projects/paulsFramework/build/Linux/CMakeFiles  1 2 3 4 5 6 7 8 9 10 11 12
 	@echo "Built target paulsframework"
 .PHONY : CMakeFiles/paulsframework.dir/all
 
@@ -69,7 +69,7 @@ all: CMakeFiles/paulsframework.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/paulsframework.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/mafiamole/projects/paulsFramework/build/Linux/CMakeFiles 8
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mafiamole/projects/paulsFramework/build/Linux/CMakeFiles 12
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/paulsframework.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/mafiamole/projects/paulsFramework/build/Linux/CMakeFiles 0
 .PHONY : CMakeFiles/paulsframework.dir/rule
@@ -107,14 +107,17 @@ Example/preinstall:
 
 # Convenience name for "all" pass in the directory.
 Framework/all: Framework/Lua/all
+Framework/all: Framework/Actions/all
 .PHONY : Framework/all
 
 # Convenience name for "clean" pass in the directory.
 Framework/clean: Framework/Lua/clean
+Framework/clean: Framework/Actions/clean
 .PHONY : Framework/clean
 
 # Convenience name for "preinstall" pass in the directory.
 Framework/preinstall: Framework/Lua/preinstall
+Framework/preinstall: Framework/Actions/preinstall
 .PHONY : Framework/preinstall
 
 #=============================================================================
@@ -131,6 +134,21 @@ Framework/Lua/clean:
 # Convenience name for "preinstall" pass in the directory.
 Framework/Lua/preinstall:
 .PHONY : Framework/Lua/preinstall
+
+#=============================================================================
+# Directory level rules for directory Framework/Actions
+
+# Convenience name for "all" pass in the directory.
+Framework/Actions/all:
+.PHONY : Framework/Actions/all
+
+# Convenience name for "clean" pass in the directory.
+Framework/Actions/clean:
+.PHONY : Framework/Actions/clean
+
+# Convenience name for "preinstall" pass in the directory.
+Framework/Actions/preinstall:
+.PHONY : Framework/Actions/preinstall
 
 #=============================================================================
 # Special targets to cleanup operation of make.

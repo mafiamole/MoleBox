@@ -9,6 +9,7 @@ SET(CMAKE_MAKEFILE_DEPENDS
   "CMakeCache.txt"
   "../../CMakeLists.txt"
   "../../Example/CMakeLists.txt"
+  "../../Framework/Actions/CMakeLists.txt"
   "../../Framework/CMakeLists.txt"
   "../../Framework/Lua/CMakeLists.txt"
   "CMakeFiles/CMakeCCompiler.cmake"
@@ -52,6 +53,7 @@ SET(CMAKE_MAKEFILE_PRODUCTS
   "Example/CMakeFiles/CMakeDirectoryInformation.cmake"
   "Framework/CMakeFiles/CMakeDirectoryInformation.cmake"
   "Framework/Lua/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "Framework/Actions/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:

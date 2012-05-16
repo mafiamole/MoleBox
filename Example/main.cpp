@@ -31,16 +31,17 @@ int main(int argc, char **argv) {
 
   
   try {
-  Game game;
+    
+    Game game;
   
-  game.Run();   
-
+    game.Run();   
+ 
   
   }
   catch (std::string error) {
     std::cout << error << std::endl;
   }
-
+  
   return EXIT_SUCCESS;
   
 }

@@ -5,10 +5,23 @@ function init()
   Sprites.Load("Test","ufpdfLogo.png")
   --Sounds.Load("mouthpop.wav")
   Sprites.Move("Test",10,10)
+  
+  function Point(x,y)
+    return { x = x, y = y }
+  end
+  
+  array = { Point(10,20), Point(30,40) }
+  
+  print( array[2].y)
+
 end
 
-function update(events)
+function update(actions)
  --Sounds.Play("mouthpop.wav")-- o yea!
+  
+  print(actions["Play Sound"].Check );
+  print(actions["Play Sound"].Change);
+  print();
   delta = 0.2 * direction  
   logoPosition = (logoPosition * direction) + delta
   if logoPosition > 15 then

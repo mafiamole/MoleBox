@@ -49,9 +49,101 @@ include CMakeFiles/paulsframework.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/paulsframework.dir/flags.make
 
+CMakeFiles/paulsframework.dir/Framework/Actions/keyboard.cpp.o: CMakeFiles/paulsframework.dir/flags.make
+CMakeFiles/paulsframework.dir/Framework/Actions/keyboard.cpp.o: ../../Framework/Actions/keyboard.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/mafiamole/projects/paulsFramework/build/Linux/CMakeFiles $(CMAKE_PROGRESS_1)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/paulsframework.dir/Framework/Actions/keyboard.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/paulsframework.dir/Framework/Actions/keyboard.cpp.o -c /home/mafiamole/projects/paulsFramework/Framework/Actions/keyboard.cpp
+
+CMakeFiles/paulsframework.dir/Framework/Actions/keyboard.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/paulsframework.dir/Framework/Actions/keyboard.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/mafiamole/projects/paulsFramework/Framework/Actions/keyboard.cpp > CMakeFiles/paulsframework.dir/Framework/Actions/keyboard.cpp.i
+
+CMakeFiles/paulsframework.dir/Framework/Actions/keyboard.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/paulsframework.dir/Framework/Actions/keyboard.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/mafiamole/projects/paulsFramework/Framework/Actions/keyboard.cpp -o CMakeFiles/paulsframework.dir/Framework/Actions/keyboard.cpp.s
+
+CMakeFiles/paulsframework.dir/Framework/Actions/keyboard.cpp.o.requires:
+.PHONY : CMakeFiles/paulsframework.dir/Framework/Actions/keyboard.cpp.o.requires
+
+CMakeFiles/paulsframework.dir/Framework/Actions/keyboard.cpp.o.provides: CMakeFiles/paulsframework.dir/Framework/Actions/keyboard.cpp.o.requires
+	$(MAKE) -f CMakeFiles/paulsframework.dir/build.make CMakeFiles/paulsframework.dir/Framework/Actions/keyboard.cpp.o.provides.build
+.PHONY : CMakeFiles/paulsframework.dir/Framework/Actions/keyboard.cpp.o.provides
+
+CMakeFiles/paulsframework.dir/Framework/Actions/keyboard.cpp.o.provides.build: CMakeFiles/paulsframework.dir/Framework/Actions/keyboard.cpp.o
+
+CMakeFiles/paulsframework.dir/Framework/Actions/mouse.cpp.o: CMakeFiles/paulsframework.dir/flags.make
+CMakeFiles/paulsframework.dir/Framework/Actions/mouse.cpp.o: ../../Framework/Actions/mouse.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/mafiamole/projects/paulsFramework/build/Linux/CMakeFiles $(CMAKE_PROGRESS_2)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/paulsframework.dir/Framework/Actions/mouse.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/paulsframework.dir/Framework/Actions/mouse.cpp.o -c /home/mafiamole/projects/paulsFramework/Framework/Actions/mouse.cpp
+
+CMakeFiles/paulsframework.dir/Framework/Actions/mouse.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/paulsframework.dir/Framework/Actions/mouse.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/mafiamole/projects/paulsFramework/Framework/Actions/mouse.cpp > CMakeFiles/paulsframework.dir/Framework/Actions/mouse.cpp.i
+
+CMakeFiles/paulsframework.dir/Framework/Actions/mouse.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/paulsframework.dir/Framework/Actions/mouse.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/mafiamole/projects/paulsFramework/Framework/Actions/mouse.cpp -o CMakeFiles/paulsframework.dir/Framework/Actions/mouse.cpp.s
+
+CMakeFiles/paulsframework.dir/Framework/Actions/mouse.cpp.o.requires:
+.PHONY : CMakeFiles/paulsframework.dir/Framework/Actions/mouse.cpp.o.requires
+
+CMakeFiles/paulsframework.dir/Framework/Actions/mouse.cpp.o.provides: CMakeFiles/paulsframework.dir/Framework/Actions/mouse.cpp.o.requires
+	$(MAKE) -f CMakeFiles/paulsframework.dir/build.make CMakeFiles/paulsframework.dir/Framework/Actions/mouse.cpp.o.provides.build
+.PHONY : CMakeFiles/paulsframework.dir/Framework/Actions/mouse.cpp.o.provides
+
+CMakeFiles/paulsframework.dir/Framework/Actions/mouse.cpp.o.provides.build: CMakeFiles/paulsframework.dir/Framework/Actions/mouse.cpp.o
+
+CMakeFiles/paulsframework.dir/Framework/action.cpp.o: CMakeFiles/paulsframework.dir/flags.make
+CMakeFiles/paulsframework.dir/Framework/action.cpp.o: ../../Framework/action.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/mafiamole/projects/paulsFramework/build/Linux/CMakeFiles $(CMAKE_PROGRESS_3)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/paulsframework.dir/Framework/action.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/paulsframework.dir/Framework/action.cpp.o -c /home/mafiamole/projects/paulsFramework/Framework/action.cpp
+
+CMakeFiles/paulsframework.dir/Framework/action.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/paulsframework.dir/Framework/action.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/mafiamole/projects/paulsFramework/Framework/action.cpp > CMakeFiles/paulsframework.dir/Framework/action.cpp.i
+
+CMakeFiles/paulsframework.dir/Framework/action.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/paulsframework.dir/Framework/action.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/mafiamole/projects/paulsFramework/Framework/action.cpp -o CMakeFiles/paulsframework.dir/Framework/action.cpp.s
+
+CMakeFiles/paulsframework.dir/Framework/action.cpp.o.requires:
+.PHONY : CMakeFiles/paulsframework.dir/Framework/action.cpp.o.requires
+
+CMakeFiles/paulsframework.dir/Framework/action.cpp.o.provides: CMakeFiles/paulsframework.dir/Framework/action.cpp.o.requires
+	$(MAKE) -f CMakeFiles/paulsframework.dir/build.make CMakeFiles/paulsframework.dir/Framework/action.cpp.o.provides.build
+.PHONY : CMakeFiles/paulsframework.dir/Framework/action.cpp.o.provides
+
+CMakeFiles/paulsframework.dir/Framework/action.cpp.o.provides.build: CMakeFiles/paulsframework.dir/Framework/action.cpp.o
+
+CMakeFiles/paulsframework.dir/Framework/actions.cpp.o: CMakeFiles/paulsframework.dir/flags.make
+CMakeFiles/paulsframework.dir/Framework/actions.cpp.o: ../../Framework/actions.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/mafiamole/projects/paulsFramework/build/Linux/CMakeFiles $(CMAKE_PROGRESS_4)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/paulsframework.dir/Framework/actions.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/paulsframework.dir/Framework/actions.cpp.o -c /home/mafiamole/projects/paulsFramework/Framework/actions.cpp
+
+CMakeFiles/paulsframework.dir/Framework/actions.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/paulsframework.dir/Framework/actions.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/mafiamole/projects/paulsFramework/Framework/actions.cpp > CMakeFiles/paulsframework.dir/Framework/actions.cpp.i
+
+CMakeFiles/paulsframework.dir/Framework/actions.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/paulsframework.dir/Framework/actions.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/mafiamole/projects/paulsFramework/Framework/actions.cpp -o CMakeFiles/paulsframework.dir/Framework/actions.cpp.s
+
+CMakeFiles/paulsframework.dir/Framework/actions.cpp.o.requires:
+.PHONY : CMakeFiles/paulsframework.dir/Framework/actions.cpp.o.requires
+
+CMakeFiles/paulsframework.dir/Framework/actions.cpp.o.provides: CMakeFiles/paulsframework.dir/Framework/actions.cpp.o.requires
+	$(MAKE) -f CMakeFiles/paulsframework.dir/build.make CMakeFiles/paulsframework.dir/Framework/actions.cpp.o.provides.build
+.PHONY : CMakeFiles/paulsframework.dir/Framework/actions.cpp.o.provides
+
+CMakeFiles/paulsframework.dir/Framework/actions.cpp.o.provides.build: CMakeFiles/paulsframework.dir/Framework/actions.cpp.o
+
 CMakeFiles/paulsframework.dir/Framework/Lua/luaScriptHelper.cpp.o: CMakeFiles/paulsframework.dir/flags.make
 CMakeFiles/paulsframework.dir/Framework/Lua/luaScriptHelper.cpp.o: ../../Framework/Lua/luaScriptHelper.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/mafiamole/projects/paulsFramework/build/Linux/CMakeFiles $(CMAKE_PROGRESS_1)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/mafiamole/projects/paulsFramework/build/Linux/CMakeFiles $(CMAKE_PROGRESS_5)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/paulsframework.dir/Framework/Lua/luaScriptHelper.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/paulsframework.dir/Framework/Lua/luaScriptHelper.cpp.o -c /home/mafiamole/projects/paulsFramework/Framework/Lua/luaScriptHelper.cpp
 
@@ -74,7 +166,7 @@ CMakeFiles/paulsframework.dir/Framework/Lua/luaScriptHelper.cpp.o.provides.build
 
 CMakeFiles/paulsframework.dir/Framework/Lua/Component.cpp.o: CMakeFiles/paulsframework.dir/flags.make
 CMakeFiles/paulsframework.dir/Framework/Lua/Component.cpp.o: ../../Framework/Lua/Component.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/mafiamole/projects/paulsFramework/build/Linux/CMakeFiles $(CMAKE_PROGRESS_2)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/mafiamole/projects/paulsFramework/build/Linux/CMakeFiles $(CMAKE_PROGRESS_6)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/paulsframework.dir/Framework/Lua/Component.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/paulsframework.dir/Framework/Lua/Component.cpp.o -c /home/mafiamole/projects/paulsFramework/Framework/Lua/Component.cpp
 
@@ -97,7 +189,7 @@ CMakeFiles/paulsframework.dir/Framework/Lua/Component.cpp.o.provides.build: CMak
 
 CMakeFiles/paulsframework.dir/Framework/GameComponent.cpp.o: CMakeFiles/paulsframework.dir/flags.make
 CMakeFiles/paulsframework.dir/Framework/GameComponent.cpp.o: ../../Framework/GameComponent.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/mafiamole/projects/paulsFramework/build/Linux/CMakeFiles $(CMAKE_PROGRESS_3)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/mafiamole/projects/paulsFramework/build/Linux/CMakeFiles $(CMAKE_PROGRESS_7)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/paulsframework.dir/Framework/GameComponent.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/paulsframework.dir/Framework/GameComponent.cpp.o -c /home/mafiamole/projects/paulsFramework/Framework/GameComponent.cpp
 
@@ -120,7 +212,7 @@ CMakeFiles/paulsframework.dir/Framework/GameComponent.cpp.o.provides.build: CMak
 
 CMakeFiles/paulsframework.dir/Framework/Game.cpp.o: CMakeFiles/paulsframework.dir/flags.make
 CMakeFiles/paulsframework.dir/Framework/Game.cpp.o: ../../Framework/Game.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/mafiamole/projects/paulsFramework/build/Linux/CMakeFiles $(CMAKE_PROGRESS_4)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/mafiamole/projects/paulsFramework/build/Linux/CMakeFiles $(CMAKE_PROGRESS_8)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/paulsframework.dir/Framework/Game.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/paulsframework.dir/Framework/Game.cpp.o -c /home/mafiamole/projects/paulsFramework/Framework/Game.cpp
 
@@ -143,7 +235,7 @@ CMakeFiles/paulsframework.dir/Framework/Game.cpp.o.provides.build: CMakeFiles/pa
 
 CMakeFiles/paulsframework.dir/Framework/Content.cpp.o: CMakeFiles/paulsframework.dir/flags.make
 CMakeFiles/paulsframework.dir/Framework/Content.cpp.o: ../../Framework/Content.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/mafiamole/projects/paulsFramework/build/Linux/CMakeFiles $(CMAKE_PROGRESS_5)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/mafiamole/projects/paulsFramework/build/Linux/CMakeFiles $(CMAKE_PROGRESS_9)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/paulsframework.dir/Framework/Content.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/paulsframework.dir/Framework/Content.cpp.o -c /home/mafiamole/projects/paulsFramework/Framework/Content.cpp
 
@@ -166,7 +258,7 @@ CMakeFiles/paulsframework.dir/Framework/Content.cpp.o.provides.build: CMakeFiles
 
 CMakeFiles/paulsframework.dir/Example/testcomponent.cpp.o: CMakeFiles/paulsframework.dir/flags.make
 CMakeFiles/paulsframework.dir/Example/testcomponent.cpp.o: ../../Example/testcomponent.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/mafiamole/projects/paulsFramework/build/Linux/CMakeFiles $(CMAKE_PROGRESS_6)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/mafiamole/projects/paulsFramework/build/Linux/CMakeFiles $(CMAKE_PROGRESS_10)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/paulsframework.dir/Example/testcomponent.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/paulsframework.dir/Example/testcomponent.cpp.o -c /home/mafiamole/projects/paulsFramework/Example/testcomponent.cpp
 
@@ -189,7 +281,7 @@ CMakeFiles/paulsframework.dir/Example/testcomponent.cpp.o.provides.build: CMakeF
 
 CMakeFiles/paulsframework.dir/Example/game.cpp.o: CMakeFiles/paulsframework.dir/flags.make
 CMakeFiles/paulsframework.dir/Example/game.cpp.o: ../../Example/game.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/mafiamole/projects/paulsFramework/build/Linux/CMakeFiles $(CMAKE_PROGRESS_7)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/mafiamole/projects/paulsFramework/build/Linux/CMakeFiles $(CMAKE_PROGRESS_11)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/paulsframework.dir/Example/game.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/paulsframework.dir/Example/game.cpp.o -c /home/mafiamole/projects/paulsFramework/Example/game.cpp
 
@@ -212,7 +304,7 @@ CMakeFiles/paulsframework.dir/Example/game.cpp.o.provides.build: CMakeFiles/paul
 
 CMakeFiles/paulsframework.dir/Example/main.cpp.o: CMakeFiles/paulsframework.dir/flags.make
 CMakeFiles/paulsframework.dir/Example/main.cpp.o: ../../Example/main.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/mafiamole/projects/paulsFramework/build/Linux/CMakeFiles $(CMAKE_PROGRESS_8)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/mafiamole/projects/paulsFramework/build/Linux/CMakeFiles $(CMAKE_PROGRESS_12)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/paulsframework.dir/Example/main.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/paulsframework.dir/Example/main.cpp.o -c /home/mafiamole/projects/paulsFramework/Example/main.cpp
 
@@ -235,6 +327,10 @@ CMakeFiles/paulsframework.dir/Example/main.cpp.o.provides.build: CMakeFiles/paul
 
 # Object files for target paulsframework
 paulsframework_OBJECTS = \
+"CMakeFiles/paulsframework.dir/Framework/Actions/keyboard.cpp.o" \
+"CMakeFiles/paulsframework.dir/Framework/Actions/mouse.cpp.o" \
+"CMakeFiles/paulsframework.dir/Framework/action.cpp.o" \
+"CMakeFiles/paulsframework.dir/Framework/actions.cpp.o" \
 "CMakeFiles/paulsframework.dir/Framework/Lua/luaScriptHelper.cpp.o" \
 "CMakeFiles/paulsframework.dir/Framework/Lua/Component.cpp.o" \
 "CMakeFiles/paulsframework.dir/Framework/GameComponent.cpp.o" \
@@ -247,6 +343,10 @@ paulsframework_OBJECTS = \
 # External object files for target paulsframework
 paulsframework_EXTERNAL_OBJECTS =
 
+paulsframework: CMakeFiles/paulsframework.dir/Framework/Actions/keyboard.cpp.o
+paulsframework: CMakeFiles/paulsframework.dir/Framework/Actions/mouse.cpp.o
+paulsframework: CMakeFiles/paulsframework.dir/Framework/action.cpp.o
+paulsframework: CMakeFiles/paulsframework.dir/Framework/actions.cpp.o
 paulsframework: CMakeFiles/paulsframework.dir/Framework/Lua/luaScriptHelper.cpp.o
 paulsframework: CMakeFiles/paulsframework.dir/Framework/Lua/Component.cpp.o
 paulsframework: CMakeFiles/paulsframework.dir/Framework/GameComponent.cpp.o
@@ -282,6 +382,10 @@ paulsframework: CMakeFiles/paulsframework.dir/link.txt
 CMakeFiles/paulsframework.dir/build: paulsframework
 .PHONY : CMakeFiles/paulsframework.dir/build
 
+CMakeFiles/paulsframework.dir/requires: CMakeFiles/paulsframework.dir/Framework/Actions/keyboard.cpp.o.requires
+CMakeFiles/paulsframework.dir/requires: CMakeFiles/paulsframework.dir/Framework/Actions/mouse.cpp.o.requires
+CMakeFiles/paulsframework.dir/requires: CMakeFiles/paulsframework.dir/Framework/action.cpp.o.requires
+CMakeFiles/paulsframework.dir/requires: CMakeFiles/paulsframework.dir/Framework/actions.cpp.o.requires
 CMakeFiles/paulsframework.dir/requires: CMakeFiles/paulsframework.dir/Framework/Lua/luaScriptHelper.cpp.o.requires
 CMakeFiles/paulsframework.dir/requires: CMakeFiles/paulsframework.dir/Framework/Lua/Component.cpp.o.requires
 CMakeFiles/paulsframework.dir/requires: CMakeFiles/paulsframework.dir/Framework/GameComponent.cpp.o.requires

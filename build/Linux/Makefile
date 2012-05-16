@@ -183,6 +183,54 @@ Example/testcomponent.cpp.s:
 	$(MAKE) -f CMakeFiles/paulsframework.dir/build.make CMakeFiles/paulsframework.dir/Example/testcomponent.cpp.s
 .PHONY : Example/testcomponent.cpp.s
 
+Framework/Actions/keyboard.o: Framework/Actions/keyboard.cpp.o
+.PHONY : Framework/Actions/keyboard.o
+
+# target to build an object file
+Framework/Actions/keyboard.cpp.o:
+	$(MAKE) -f CMakeFiles/paulsframework.dir/build.make CMakeFiles/paulsframework.dir/Framework/Actions/keyboard.cpp.o
+.PHONY : Framework/Actions/keyboard.cpp.o
+
+Framework/Actions/keyboard.i: Framework/Actions/keyboard.cpp.i
+.PHONY : Framework/Actions/keyboard.i
+
+# target to preprocess a source file
+Framework/Actions/keyboard.cpp.i:
+	$(MAKE) -f CMakeFiles/paulsframework.dir/build.make CMakeFiles/paulsframework.dir/Framework/Actions/keyboard.cpp.i
+.PHONY : Framework/Actions/keyboard.cpp.i
+
+Framework/Actions/keyboard.s: Framework/Actions/keyboard.cpp.s
+.PHONY : Framework/Actions/keyboard.s
+
+# target to generate assembly for a file
+Framework/Actions/keyboard.cpp.s:
+	$(MAKE) -f CMakeFiles/paulsframework.dir/build.make CMakeFiles/paulsframework.dir/Framework/Actions/keyboard.cpp.s
+.PHONY : Framework/Actions/keyboard.cpp.s
+
+Framework/Actions/mouse.o: Framework/Actions/mouse.cpp.o
+.PHONY : Framework/Actions/mouse.o
+
+# target to build an object file
+Framework/Actions/mouse.cpp.o:
+	$(MAKE) -f CMakeFiles/paulsframework.dir/build.make CMakeFiles/paulsframework.dir/Framework/Actions/mouse.cpp.o
+.PHONY : Framework/Actions/mouse.cpp.o
+
+Framework/Actions/mouse.i: Framework/Actions/mouse.cpp.i
+.PHONY : Framework/Actions/mouse.i
+
+# target to preprocess a source file
+Framework/Actions/mouse.cpp.i:
+	$(MAKE) -f CMakeFiles/paulsframework.dir/build.make CMakeFiles/paulsframework.dir/Framework/Actions/mouse.cpp.i
+.PHONY : Framework/Actions/mouse.cpp.i
+
+Framework/Actions/mouse.s: Framework/Actions/mouse.cpp.s
+.PHONY : Framework/Actions/mouse.s
+
+# target to generate assembly for a file
+Framework/Actions/mouse.cpp.s:
+	$(MAKE) -f CMakeFiles/paulsframework.dir/build.make CMakeFiles/paulsframework.dir/Framework/Actions/mouse.cpp.s
+.PHONY : Framework/Actions/mouse.cpp.s
+
 Framework/Content.o: Framework/Content.cpp.o
 .PHONY : Framework/Content.o
 
@@ -303,6 +351,54 @@ Framework/Lua/luaScriptHelper.cpp.s:
 	$(MAKE) -f CMakeFiles/paulsframework.dir/build.make CMakeFiles/paulsframework.dir/Framework/Lua/luaScriptHelper.cpp.s
 .PHONY : Framework/Lua/luaScriptHelper.cpp.s
 
+Framework/action.o: Framework/action.cpp.o
+.PHONY : Framework/action.o
+
+# target to build an object file
+Framework/action.cpp.o:
+	$(MAKE) -f CMakeFiles/paulsframework.dir/build.make CMakeFiles/paulsframework.dir/Framework/action.cpp.o
+.PHONY : Framework/action.cpp.o
+
+Framework/action.i: Framework/action.cpp.i
+.PHONY : Framework/action.i
+
+# target to preprocess a source file
+Framework/action.cpp.i:
+	$(MAKE) -f CMakeFiles/paulsframework.dir/build.make CMakeFiles/paulsframework.dir/Framework/action.cpp.i
+.PHONY : Framework/action.cpp.i
+
+Framework/action.s: Framework/action.cpp.s
+.PHONY : Framework/action.s
+
+# target to generate assembly for a file
+Framework/action.cpp.s:
+	$(MAKE) -f CMakeFiles/paulsframework.dir/build.make CMakeFiles/paulsframework.dir/Framework/action.cpp.s
+.PHONY : Framework/action.cpp.s
+
+Framework/actions.o: Framework/actions.cpp.o
+.PHONY : Framework/actions.o
+
+# target to build an object file
+Framework/actions.cpp.o:
+	$(MAKE) -f CMakeFiles/paulsframework.dir/build.make CMakeFiles/paulsframework.dir/Framework/actions.cpp.o
+.PHONY : Framework/actions.cpp.o
+
+Framework/actions.i: Framework/actions.cpp.i
+.PHONY : Framework/actions.i
+
+# target to preprocess a source file
+Framework/actions.cpp.i:
+	$(MAKE) -f CMakeFiles/paulsframework.dir/build.make CMakeFiles/paulsframework.dir/Framework/actions.cpp.i
+.PHONY : Framework/actions.cpp.i
+
+Framework/actions.s: Framework/actions.cpp.s
+.PHONY : Framework/actions.s
+
+# target to generate assembly for a file
+Framework/actions.cpp.s:
+	$(MAKE) -f CMakeFiles/paulsframework.dir/build.make CMakeFiles/paulsframework.dir/Framework/actions.cpp.s
+.PHONY : Framework/actions.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -321,6 +417,12 @@ help:
 	@echo "... Example/testcomponent.o"
 	@echo "... Example/testcomponent.i"
 	@echo "... Example/testcomponent.s"
+	@echo "... Framework/Actions/keyboard.o"
+	@echo "... Framework/Actions/keyboard.i"
+	@echo "... Framework/Actions/keyboard.s"
+	@echo "... Framework/Actions/mouse.o"
+	@echo "... Framework/Actions/mouse.i"
+	@echo "... Framework/Actions/mouse.s"
 	@echo "... Framework/Content.o"
 	@echo "... Framework/Content.i"
 	@echo "... Framework/Content.s"
@@ -336,6 +438,12 @@ help:
 	@echo "... Framework/Lua/luaScriptHelper.o"
 	@echo "... Framework/Lua/luaScriptHelper.i"
 	@echo "... Framework/Lua/luaScriptHelper.s"
+	@echo "... Framework/action.o"
+	@echo "... Framework/action.i"
+	@echo "... Framework/action.s"
+	@echo "... Framework/actions.o"
+	@echo "... Framework/actions.i"
+	@echo "... Framework/actions.s"
 .PHONY : help
 
 

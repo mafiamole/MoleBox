@@ -1,4 +1,8 @@
 FILE(REMOVE_RECURSE
+  "CMakeFiles/paulsframework.dir/Framework/Actions/keyboard.cpp.o"
+  "CMakeFiles/paulsframework.dir/Framework/Actions/mouse.cpp.o"
+  "CMakeFiles/paulsframework.dir/Framework/action.cpp.o"
+  "CMakeFiles/paulsframework.dir/Framework/actions.cpp.o"
   "CMakeFiles/paulsframework.dir/Framework/Lua/luaScriptHelper.cpp.o"
   "CMakeFiles/paulsframework.dir/Framework/Lua/Component.cpp.o"
   "CMakeFiles/paulsframework.dir/Framework/GameComponent.cpp.o"

@@ -29,6 +29,7 @@
 
 #include <SFML/Graphics.hpp>
 #include "ContainerDefinitions.h"
+#include "actions.h"
 namespace MB {
   /**
   * Forward declarations
@@ -46,6 +47,7 @@ namespace MB {
     * Pointer to the game object.
     * This is to allow the component to access the window object for rendering purposes.
     */
+    Actions		*actions;
     Game 		*game;
       
   public:
@@ -63,6 +65,7 @@ namespace MB {
     * This function is used to render to the screen. 
     */
     virtual void 	Draw			();
+    
     /**
     * Does nothing.
     * 

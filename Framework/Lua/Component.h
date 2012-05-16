@@ -47,6 +47,7 @@ extern "C" {
  * 
  */
 namespace MB {
+  
   static const luaL_reg sprite[] =
   {
     { "Load", MB_Lua::Sprites::Load},
@@ -62,7 +63,9 @@ namespace MB {
     
     { NULL, NULL }
   };
-
+  
+  void ActionsToLua(lua_State* L, MB::Actions* actions);
+  
   class LuaComponent : public GameComponent
   {
   private:
@@ -80,7 +83,8 @@ namespace MB {
     virtual void Update(EventList* events);
     virtual void Draw();
     virtual ~LuaComponent();
-    
+
   };
+  
 }
 #endif // LUACOMPONENT_H

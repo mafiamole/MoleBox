@@ -27,9 +27,12 @@
 #ifndef GAME_H
 #define GAME_H
 #include <stdlib.h>
+
 #include "../Framework/Game.h"
-#include "testcomponent.h"
 #include "../Framework/Lua/Lua.h"
+
+#include "testcomponent.h"
+
 
 class Game : public MB::Game
 {

@@ -7,11 +7,15 @@ SET(CMAKE_DEPENDS_CHECK_CXX
   "/home/mafiamole/projects/paulsFramework/Example/game.cpp" "/home/mafiamole/projects/paulsFramework/build/Linux/CMakeFiles/paulsframework.dir/Example/game.cpp.o"
   "/home/mafiamole/projects/paulsFramework/Example/main.cpp" "/home/mafiamole/projects/paulsFramework/build/Linux/CMakeFiles/paulsframework.dir/Example/main.cpp.o"
   "/home/mafiamole/projects/paulsFramework/Example/testcomponent.cpp" "/home/mafiamole/projects/paulsFramework/build/Linux/CMakeFiles/paulsframework.dir/Example/testcomponent.cpp.o"
+  "/home/mafiamole/projects/paulsFramework/Framework/Actions/keyboard.cpp" "/home/mafiamole/projects/paulsFramework/build/Linux/CMakeFiles/paulsframework.dir/Framework/Actions/keyboard.cpp.o"
+  "/home/mafiamole/projects/paulsFramework/Framework/Actions/mouse.cpp" "/home/mafiamole/projects/paulsFramework/build/Linux/CMakeFiles/paulsframework.dir/Framework/Actions/mouse.cpp.o"
   "/home/mafiamole/projects/paulsFramework/Framework/Content.cpp" "/home/mafiamole/projects/paulsFramework/build/Linux/CMakeFiles/paulsframework.dir/Framework/Content.cpp.o"
   "/home/mafiamole/projects/paulsFramework/Framework/Game.cpp" "/home/mafiamole/projects/paulsFramework/build/Linux/CMakeFiles/paulsframework.dir/Framework/Game.cpp.o"
   "/home/mafiamole/projects/paulsFramework/Framework/GameComponent.cpp" "/home/mafiamole/projects/paulsFramework/build/Linux/CMakeFiles/paulsframework.dir/Framework/GameComponent.cpp.o"
   "/home/mafiamole/projects/paulsFramework/Framework/Lua/Component.cpp" "/home/mafiamole/projects/paulsFramework/build/Linux/CMakeFiles/paulsframework.dir/Framework/Lua/Component.cpp.o"
   "/home/mafiamole/projects/paulsFramework/Framework/Lua/luaScriptHelper.cpp" "/home/mafiamole/projects/paulsFramework/build/Linux/CMakeFiles/paulsframework.dir/Framework/Lua/luaScriptHelper.cpp.o"
+  "/home/mafiamole/projects/paulsFramework/Framework/action.cpp" "/home/mafiamole/projects/paulsFramework/build/Linux/CMakeFiles/paulsframework.dir/Framework/action.cpp.o"
+  "/home/mafiamole/projects/paulsFramework/Framework/actions.cpp" "/home/mafiamole/projects/paulsFramework/build/Linux/CMakeFiles/paulsframework.dir/Framework/actions.cpp.o"
   )
 SET(CMAKE_CXX_COMPILER_ID "GNU")
 

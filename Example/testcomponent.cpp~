@@ -22,64 +22,56 @@
     FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
     OTHER DEALINGS IN THE SOFTWARE.
 */
-
-
 #include "testcomponent.h"
+#include "../Framework/Actions/keyboard.h"
 #include <iostream>
 
 TestComponent::TestComponent(MB::Game* game): MB::GameComponent(game)
 {
+  
   texture 	= MB::Content< sf::Texture >::Load( "test.png" );
   sprite 	= sf::Sprite(texture);
   sprite2	= sf::Sprite(texture);
   sprite2.move(sprite.getTextureRect().width,0);
   music		= MB::Content< sf::Music >::Open( "menu.ogg" );
-  musicPaused  = true;
+  musicPaused  	= true;
   spriteBatch	= new MB::SpriteBatch(this->game->Window());
   sound		= sf::Sound(MB::Content< sf::SoundBuffer >::Load( "mouthpop.wav" ));
+  
   spriteBatch->push_back(&sprite);
   spriteBatch->push_back(&sprite2);
 }
 
 TestComponent::~TestComponent()
 {
+  
   delete spriteBatch;
+  
   music->stop();
 
 }
 
 void TestComponent::Update(MB::EventList* events)
 {
-    MB::GameComponent::Update(events);
-    
-    MB::EventList::iterator found = events->find(sf::Event::KeyReleased);
-    if (found != events->end())
-    {
-      if ((*found).second.key.code == sf::Keyboard::Space)
-      {
-	  
-	  if (musicPaused) {
-	    music->play();
-	    musicPaused = false;
-	    std::cout << "Music playing" << std::endl;
-	  }
-	  else {
-	    music->pause();
-	    musicPaused = true;
-	    std::cout << "Music paused" << std::endl;
-	  }
-      }
-      
-    }
-    found = events->find(sf::Event::KeyPressed);
-    if (found != events->end())
-    {
-      if ( ( (*found).second.key.code == sf::Keyboard::Return ) )
-      {
-	sound.play();
-      } 
-    }
   
+  MB::GameComponent::Update(events);
+
+  MB::Action* tempAction = this->actions->Get("Play Music");
+  
+  if ( !tempAction->Check() && tempAction->Change() )
+  {
+    musicPaused = !musicPaused;
+    if (musicPaused) {
+      music->pause();
+    }
+    else {
+      music->play();
+    }      
+  }
+
+  if ( !this->actions->Get("Play Sound")->Check() && this->actions->Get("Play Sound")->Change() )
+    sound.play();
+
 }
 
 void TestComponent::Draw()
@@ -87,8 +79,8 @@ void TestComponent::Draw()
   
   this->spriteBatch->Draw();
 
-   MB::SFMLGameComponent::Draw();
-    
+  MB::GameComponent::Draw();
+
 }
 
 
