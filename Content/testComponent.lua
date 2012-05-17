@@ -3,7 +3,7 @@ direction    = 1
 
 function init()
   Sprites.Load("Test","ufpdfLogo.png")
-  --Sounds.Load("mouthpop.wav")
+  Sounds.Load("mouthpop.wav")
   Sprites.Move("Test",10,10)
 end
 

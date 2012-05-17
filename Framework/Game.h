@@ -45,7 +45,19 @@ class GameComponent;
  * Those generic containers can be rather verbose
  */
   typedef std::vector<GameComponent *> ComponentVector;
+#ifdef LUA_EDITOR
+  
 
+ struct args {
+  int argc;
+  char **argv;
+  std::vector<std::string> scriptList;
+  std::string startScript;
+ };
+ 
+  void LuaGUIThread ( args argList );
+#endif  
+  
   class Game
   {
     
@@ -109,8 +121,12 @@ class GameComponent;
     /**
     * Contains the game loop
     */
-    virtual void 		Run		();
-
+    virtual void 		Run		(int argc, char** argv);
+    
+#ifdef LUA_EDITOR    
+    virtual std::vector<std::string>		GetScripts	();
+    virtual std::string				GetScript	(std::string name);
+#endif
   };
 }
 #endif // SFMLGAME_H

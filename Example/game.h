@@ -29,10 +29,13 @@
 #include <stdlib.h>
 
 #include "../Framework/Game.h"
-#include "../Framework/Lua/Lua.h"
+#include "lua.hpp"
 
 #include "testcomponent.h"
 
+#ifdef LUA_EDITOR
+  #include "../Framework/Lua/luascripts.h"
+#endif
 
 class Game : public MB::Game
 {
@@ -41,7 +44,7 @@ public:
     Game();
     void Update(MB::EventList* events);
     void Draw();
-    void Run();
+    void Run(int argc,char** argv);
     virtual ~Game();
 
 };

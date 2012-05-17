@@ -30,11 +30,14 @@ TestComponent::TestComponent(MB::Game* game): MB::GameComponent(game)
 {
   
   texture 	= MB::Content< sf::Texture >::Load( "test.png" );
+  
   sprite 	= sf::Sprite(texture);
   sprite2	= sf::Sprite(texture);
   sprite2.move(sprite.getTextureRect().width,0);
+  
   music		= MB::Content< sf::Music >::Open( "menu.ogg" );
   musicPaused  	= true;
+  
   spriteBatch	= new MB::SpriteBatch(this->game->Window());
   sound		= sf::Sound(MB::Content< sf::SoundBuffer >::Load( "mouthpop.wav" ));
   
@@ -58,7 +61,7 @@ void TestComponent::Update(MB::EventList* events)
 
   MB::Action* tempAction = this->actions->Get("Play Music");
   
-  if ( !tempAction->Check() && tempAction->Change() )
+  if ( !tempAction->IsActive() && tempAction->HasChanged() )
   {
     musicPaused = !musicPaused;
     if (musicPaused) {
@@ -68,10 +71,10 @@ void TestComponent::Update(MB::EventList* events)
       music->play();
     }      
   }
-
-  if ( !this->actions->Get("Play Sound")->Check() && this->actions->Get("Play Sound")->Change() )
+/*
+  if ( !this->actions->Get("Play Sound")->IsActive() && this->actions->Get("Play Sound")->HasChanged() )
     sound.play();
-
+*/
 }
 
 void TestComponent::Draw()

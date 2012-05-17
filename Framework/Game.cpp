@@ -26,11 +26,32 @@
 
 #include "Game.h"
 #include "GameComponent.h"
+#include "Lua/luaeditor.h"
+#include "Lua/LuaScriptHelper.h"
 #include <iostream>
+
+#ifdef LUA_EDITOR
+ #include <QtGui/QApplication>
+
+ void MB::LuaGUIThread ( args argList )
+ {
+  
+  QApplication app(argList.argc,argList.argv);
+  LuaEditor luaEditor;
+  luaEditor.SetScripts(argList.scriptList);
+  luaEditor.SetScript(argList.startScript);
+  luaEditor.show();
+  
+  int result = app.exec();
+  
+ }
+ 
+#endif
 
 MB::Game::Game(std::string windowName)
 {
   window = new sf::RenderWindow( sf::VideoMode( 800, 600 ), windowName );
+
 }
 
 MB::Game::~Game()
@@ -43,7 +64,6 @@ MB::Game::~Game()
   }
   // empty pointers from container.
   components.clear();
- ///std::cout << "finished clearing up!" << std::endl;
 
 }
 
@@ -78,11 +98,21 @@ sf::RenderWindow* MB::Game::Window()
 }
 
 
-void MB::Game::Run()
+void MB::Game::Run(int argc, char** argv)
 {
-
   EventList eventList;
+#ifdef LUA_EDITOR
+  args argList;
+  argList.argc = argc;
+  argList.argv = argv;
+  argList.scriptList = this->GetScripts();
+  argList.startScript = this->GetScript(argList.scriptList[0]);
+  sf::Thread qtThread( &MB::LuaGUIThread,argList);
+  qtThread.launch();
+#endif
+
   
+ 
   while ( this->window->isOpen() )
   {
     sf::Event event;
@@ -107,6 +137,10 @@ void MB::Game::Run()
     eventList.clear();
     
   }
+  
+#ifdef LUA_EDITOR
+  qtThread.wait();
+#endif
 }
 
 void MB::Game::AddComponent(GameComponent* component)
@@ -128,3 +162,18 @@ MB::Actions* MB::Game::GetActions()
 {
   return &this->actionList;
 }
+
+#ifdef LUA_EDITOR
+
+std::vector< std::string > MB::Game::GetScripts()
+{
+  return LuaHelper::LuaScripts::Instance().ScriptList();
+}
+
+std::string MB::Game::GetScript(std::string name)
+{
+  return LuaHelper::LuaScripts::Instance().GrabScript( name );
+}
+
+
+#endif

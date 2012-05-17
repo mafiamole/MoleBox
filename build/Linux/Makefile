@@ -207,6 +207,54 @@ Framework/Actions/keyboard.cpp.s:
 	$(MAKE) -f CMakeFiles/paulsframework.dir/build.make CMakeFiles/paulsframework.dir/Framework/Actions/keyboard.cpp.s
 .PHONY : Framework/Actions/keyboard.cpp.s
 
+Framework/Actions/moc_keyboard.o: Framework/Actions/moc_keyboard.cxx.o
+.PHONY : Framework/Actions/moc_keyboard.o
+
+# target to build an object file
+Framework/Actions/moc_keyboard.cxx.o:
+	$(MAKE) -f CMakeFiles/paulsframework.dir/build.make CMakeFiles/paulsframework.dir/Framework/Actions/moc_keyboard.cxx.o
+.PHONY : Framework/Actions/moc_keyboard.cxx.o
+
+Framework/Actions/moc_keyboard.i: Framework/Actions/moc_keyboard.cxx.i
+.PHONY : Framework/Actions/moc_keyboard.i
+
+# target to preprocess a source file
+Framework/Actions/moc_keyboard.cxx.i:
+	$(MAKE) -f CMakeFiles/paulsframework.dir/build.make CMakeFiles/paulsframework.dir/Framework/Actions/moc_keyboard.cxx.i
+.PHONY : Framework/Actions/moc_keyboard.cxx.i
+
+Framework/Actions/moc_keyboard.s: Framework/Actions/moc_keyboard.cxx.s
+.PHONY : Framework/Actions/moc_keyboard.s
+
+# target to generate assembly for a file
+Framework/Actions/moc_keyboard.cxx.s:
+	$(MAKE) -f CMakeFiles/paulsframework.dir/build.make CMakeFiles/paulsframework.dir/Framework/Actions/moc_keyboard.cxx.s
+.PHONY : Framework/Actions/moc_keyboard.cxx.s
+
+Framework/Actions/moc_mouse.o: Framework/Actions/moc_mouse.cxx.o
+.PHONY : Framework/Actions/moc_mouse.o
+
+# target to build an object file
+Framework/Actions/moc_mouse.cxx.o:
+	$(MAKE) -f CMakeFiles/paulsframework.dir/build.make CMakeFiles/paulsframework.dir/Framework/Actions/moc_mouse.cxx.o
+.PHONY : Framework/Actions/moc_mouse.cxx.o
+
+Framework/Actions/moc_mouse.i: Framework/Actions/moc_mouse.cxx.i
+.PHONY : Framework/Actions/moc_mouse.i
+
+# target to preprocess a source file
+Framework/Actions/moc_mouse.cxx.i:
+	$(MAKE) -f CMakeFiles/paulsframework.dir/build.make CMakeFiles/paulsframework.dir/Framework/Actions/moc_mouse.cxx.i
+.PHONY : Framework/Actions/moc_mouse.cxx.i
+
+Framework/Actions/moc_mouse.s: Framework/Actions/moc_mouse.cxx.s
+.PHONY : Framework/Actions/moc_mouse.s
+
+# target to generate assembly for a file
+Framework/Actions/moc_mouse.cxx.s:
+	$(MAKE) -f CMakeFiles/paulsframework.dir/build.make CMakeFiles/paulsframework.dir/Framework/Actions/moc_mouse.cxx.s
+.PHONY : Framework/Actions/moc_mouse.cxx.s
+
 Framework/Actions/mouse.o: Framework/Actions/mouse.cpp.o
 .PHONY : Framework/Actions/mouse.o
 
@@ -351,6 +399,198 @@ Framework/Lua/luaScriptHelper.cpp.s:
 	$(MAKE) -f CMakeFiles/paulsframework.dir/build.make CMakeFiles/paulsframework.dir/Framework/Lua/luaScriptHelper.cpp.s
 .PHONY : Framework/Lua/luaScriptHelper.cpp.s
 
+Framework/Lua/luaeditor.o: Framework/Lua/luaeditor.cpp.o
+.PHONY : Framework/Lua/luaeditor.o
+
+# target to build an object file
+Framework/Lua/luaeditor.cpp.o:
+	$(MAKE) -f CMakeFiles/paulsframework.dir/build.make CMakeFiles/paulsframework.dir/Framework/Lua/luaeditor.cpp.o
+.PHONY : Framework/Lua/luaeditor.cpp.o
+
+Framework/Lua/luaeditor.i: Framework/Lua/luaeditor.cpp.i
+.PHONY : Framework/Lua/luaeditor.i
+
+# target to preprocess a source file
+Framework/Lua/luaeditor.cpp.i:
+	$(MAKE) -f CMakeFiles/paulsframework.dir/build.make CMakeFiles/paulsframework.dir/Framework/Lua/luaeditor.cpp.i
+.PHONY : Framework/Lua/luaeditor.cpp.i
+
+Framework/Lua/luaeditor.s: Framework/Lua/luaeditor.cpp.s
+.PHONY : Framework/Lua/luaeditor.s
+
+# target to generate assembly for a file
+Framework/Lua/luaeditor.cpp.s:
+	$(MAKE) -f CMakeFiles/paulsframework.dir/build.make CMakeFiles/paulsframework.dir/Framework/Lua/luaeditor.cpp.s
+.PHONY : Framework/Lua/luaeditor.cpp.s
+
+Framework/Lua/luascript.o: Framework/Lua/luascript.cpp.o
+.PHONY : Framework/Lua/luascript.o
+
+# target to build an object file
+Framework/Lua/luascript.cpp.o:
+	$(MAKE) -f CMakeFiles/paulsframework.dir/build.make CMakeFiles/paulsframework.dir/Framework/Lua/luascript.cpp.o
+.PHONY : Framework/Lua/luascript.cpp.o
+
+Framework/Lua/luascript.i: Framework/Lua/luascript.cpp.i
+.PHONY : Framework/Lua/luascript.i
+
+# target to preprocess a source file
+Framework/Lua/luascript.cpp.i:
+	$(MAKE) -f CMakeFiles/paulsframework.dir/build.make CMakeFiles/paulsframework.dir/Framework/Lua/luascript.cpp.i
+.PHONY : Framework/Lua/luascript.cpp.i
+
+Framework/Lua/luascript.s: Framework/Lua/luascript.cpp.s
+.PHONY : Framework/Lua/luascript.s
+
+# target to generate assembly for a file
+Framework/Lua/luascript.cpp.s:
+	$(MAKE) -f CMakeFiles/paulsframework.dir/build.make CMakeFiles/paulsframework.dir/Framework/Lua/luascript.cpp.s
+.PHONY : Framework/Lua/luascript.cpp.s
+
+Framework/Lua/luascripts.o: Framework/Lua/luascripts.cpp.o
+.PHONY : Framework/Lua/luascripts.o
+
+# target to build an object file
+Framework/Lua/luascripts.cpp.o:
+	$(MAKE) -f CMakeFiles/paulsframework.dir/build.make CMakeFiles/paulsframework.dir/Framework/Lua/luascripts.cpp.o
+.PHONY : Framework/Lua/luascripts.cpp.o
+
+Framework/Lua/luascripts.i: Framework/Lua/luascripts.cpp.i
+.PHONY : Framework/Lua/luascripts.i
+
+# target to preprocess a source file
+Framework/Lua/luascripts.cpp.i:
+	$(MAKE) -f CMakeFiles/paulsframework.dir/build.make CMakeFiles/paulsframework.dir/Framework/Lua/luascripts.cpp.i
+.PHONY : Framework/Lua/luascripts.cpp.i
+
+Framework/Lua/luascripts.s: Framework/Lua/luascripts.cpp.s
+.PHONY : Framework/Lua/luascripts.s
+
+# target to generate assembly for a file
+Framework/Lua/luascripts.cpp.s:
+	$(MAKE) -f CMakeFiles/paulsframework.dir/build.make CMakeFiles/paulsframework.dir/Framework/Lua/luascripts.cpp.s
+.PHONY : Framework/Lua/luascripts.cpp.s
+
+Framework/Lua/moc_Component.o: Framework/Lua/moc_Component.cxx.o
+.PHONY : Framework/Lua/moc_Component.o
+
+# target to build an object file
+Framework/Lua/moc_Component.cxx.o:
+	$(MAKE) -f CMakeFiles/paulsframework.dir/build.make CMakeFiles/paulsframework.dir/Framework/Lua/moc_Component.cxx.o
+.PHONY : Framework/Lua/moc_Component.cxx.o
+
+Framework/Lua/moc_Component.i: Framework/Lua/moc_Component.cxx.i
+.PHONY : Framework/Lua/moc_Component.i
+
+# target to preprocess a source file
+Framework/Lua/moc_Component.cxx.i:
+	$(MAKE) -f CMakeFiles/paulsframework.dir/build.make CMakeFiles/paulsframework.dir/Framework/Lua/moc_Component.cxx.i
+.PHONY : Framework/Lua/moc_Component.cxx.i
+
+Framework/Lua/moc_Component.s: Framework/Lua/moc_Component.cxx.s
+.PHONY : Framework/Lua/moc_Component.s
+
+# target to generate assembly for a file
+Framework/Lua/moc_Component.cxx.s:
+	$(MAKE) -f CMakeFiles/paulsframework.dir/build.make CMakeFiles/paulsframework.dir/Framework/Lua/moc_Component.cxx.s
+.PHONY : Framework/Lua/moc_Component.cxx.s
+
+Framework/Lua/moc_LuaScriptHelper.o: Framework/Lua/moc_LuaScriptHelper.cxx.o
+.PHONY : Framework/Lua/moc_LuaScriptHelper.o
+
+# target to build an object file
+Framework/Lua/moc_LuaScriptHelper.cxx.o:
+	$(MAKE) -f CMakeFiles/paulsframework.dir/build.make CMakeFiles/paulsframework.dir/Framework/Lua/moc_LuaScriptHelper.cxx.o
+.PHONY : Framework/Lua/moc_LuaScriptHelper.cxx.o
+
+Framework/Lua/moc_LuaScriptHelper.i: Framework/Lua/moc_LuaScriptHelper.cxx.i
+.PHONY : Framework/Lua/moc_LuaScriptHelper.i
+
+# target to preprocess a source file
+Framework/Lua/moc_LuaScriptHelper.cxx.i:
+	$(MAKE) -f CMakeFiles/paulsframework.dir/build.make CMakeFiles/paulsframework.dir/Framework/Lua/moc_LuaScriptHelper.cxx.i
+.PHONY : Framework/Lua/moc_LuaScriptHelper.cxx.i
+
+Framework/Lua/moc_LuaScriptHelper.s: Framework/Lua/moc_LuaScriptHelper.cxx.s
+.PHONY : Framework/Lua/moc_LuaScriptHelper.s
+
+# target to generate assembly for a file
+Framework/Lua/moc_LuaScriptHelper.cxx.s:
+	$(MAKE) -f CMakeFiles/paulsframework.dir/build.make CMakeFiles/paulsframework.dir/Framework/Lua/moc_LuaScriptHelper.cxx.s
+.PHONY : Framework/Lua/moc_LuaScriptHelper.cxx.s
+
+Framework/Lua/moc_luaeditor.o: Framework/Lua/moc_luaeditor.cxx.o
+.PHONY : Framework/Lua/moc_luaeditor.o
+
+# target to build an object file
+Framework/Lua/moc_luaeditor.cxx.o:
+	$(MAKE) -f CMakeFiles/paulsframework.dir/build.make CMakeFiles/paulsframework.dir/Framework/Lua/moc_luaeditor.cxx.o
+.PHONY : Framework/Lua/moc_luaeditor.cxx.o
+
+Framework/Lua/moc_luaeditor.i: Framework/Lua/moc_luaeditor.cxx.i
+.PHONY : Framework/Lua/moc_luaeditor.i
+
+# target to preprocess a source file
+Framework/Lua/moc_luaeditor.cxx.i:
+	$(MAKE) -f CMakeFiles/paulsframework.dir/build.make CMakeFiles/paulsframework.dir/Framework/Lua/moc_luaeditor.cxx.i
+.PHONY : Framework/Lua/moc_luaeditor.cxx.i
+
+Framework/Lua/moc_luaeditor.s: Framework/Lua/moc_luaeditor.cxx.s
+.PHONY : Framework/Lua/moc_luaeditor.s
+
+# target to generate assembly for a file
+Framework/Lua/moc_luaeditor.cxx.s:
+	$(MAKE) -f CMakeFiles/paulsframework.dir/build.make CMakeFiles/paulsframework.dir/Framework/Lua/moc_luaeditor.cxx.s
+.PHONY : Framework/Lua/moc_luaeditor.cxx.s
+
+Framework/Lua/moc_luascript.o: Framework/Lua/moc_luascript.cxx.o
+.PHONY : Framework/Lua/moc_luascript.o
+
+# target to build an object file
+Framework/Lua/moc_luascript.cxx.o:
+	$(MAKE) -f CMakeFiles/paulsframework.dir/build.make CMakeFiles/paulsframework.dir/Framework/Lua/moc_luascript.cxx.o
+.PHONY : Framework/Lua/moc_luascript.cxx.o
+
+Framework/Lua/moc_luascript.i: Framework/Lua/moc_luascript.cxx.i
+.PHONY : Framework/Lua/moc_luascript.i
+
+# target to preprocess a source file
+Framework/Lua/moc_luascript.cxx.i:
+	$(MAKE) -f CMakeFiles/paulsframework.dir/build.make CMakeFiles/paulsframework.dir/Framework/Lua/moc_luascript.cxx.i
+.PHONY : Framework/Lua/moc_luascript.cxx.i
+
+Framework/Lua/moc_luascript.s: Framework/Lua/moc_luascript.cxx.s
+.PHONY : Framework/Lua/moc_luascript.s
+
+# target to generate assembly for a file
+Framework/Lua/moc_luascript.cxx.s:
+	$(MAKE) -f CMakeFiles/paulsframework.dir/build.make CMakeFiles/paulsframework.dir/Framework/Lua/moc_luascript.cxx.s
+.PHONY : Framework/Lua/moc_luascript.cxx.s
+
+Framework/Lua/moc_luascripts.o: Framework/Lua/moc_luascripts.cxx.o
+.PHONY : Framework/Lua/moc_luascripts.o
+
+# target to build an object file
+Framework/Lua/moc_luascripts.cxx.o:
+	$(MAKE) -f CMakeFiles/paulsframework.dir/build.make CMakeFiles/paulsframework.dir/Framework/Lua/moc_luascripts.cxx.o
+.PHONY : Framework/Lua/moc_luascripts.cxx.o
+
+Framework/Lua/moc_luascripts.i: Framework/Lua/moc_luascripts.cxx.i
+.PHONY : Framework/Lua/moc_luascripts.i
+
+# target to preprocess a source file
+Framework/Lua/moc_luascripts.cxx.i:
+	$(MAKE) -f CMakeFiles/paulsframework.dir/build.make CMakeFiles/paulsframework.dir/Framework/Lua/moc_luascripts.cxx.i
+.PHONY : Framework/Lua/moc_luascripts.cxx.i
+
+Framework/Lua/moc_luascripts.s: Framework/Lua/moc_luascripts.cxx.s
+.PHONY : Framework/Lua/moc_luascripts.s
+
+# target to generate assembly for a file
+Framework/Lua/moc_luascripts.cxx.s:
+	$(MAKE) -f CMakeFiles/paulsframework.dir/build.make CMakeFiles/paulsframework.dir/Framework/Lua/moc_luascripts.cxx.s
+.PHONY : Framework/Lua/moc_luascripts.cxx.s
+
 Framework/action.o: Framework/action.cpp.o
 .PHONY : Framework/action.o
 
@@ -399,6 +639,150 @@ Framework/actions.cpp.s:
 	$(MAKE) -f CMakeFiles/paulsframework.dir/build.make CMakeFiles/paulsframework.dir/Framework/actions.cpp.s
 .PHONY : Framework/actions.cpp.s
 
+Framework/moc_ContainerDefinitions.o: Framework/moc_ContainerDefinitions.cxx.o
+.PHONY : Framework/moc_ContainerDefinitions.o
+
+# target to build an object file
+Framework/moc_ContainerDefinitions.cxx.o:
+	$(MAKE) -f CMakeFiles/paulsframework.dir/build.make CMakeFiles/paulsframework.dir/Framework/moc_ContainerDefinitions.cxx.o
+.PHONY : Framework/moc_ContainerDefinitions.cxx.o
+
+Framework/moc_ContainerDefinitions.i: Framework/moc_ContainerDefinitions.cxx.i
+.PHONY : Framework/moc_ContainerDefinitions.i
+
+# target to preprocess a source file
+Framework/moc_ContainerDefinitions.cxx.i:
+	$(MAKE) -f CMakeFiles/paulsframework.dir/build.make CMakeFiles/paulsframework.dir/Framework/moc_ContainerDefinitions.cxx.i
+.PHONY : Framework/moc_ContainerDefinitions.cxx.i
+
+Framework/moc_ContainerDefinitions.s: Framework/moc_ContainerDefinitions.cxx.s
+.PHONY : Framework/moc_ContainerDefinitions.s
+
+# target to generate assembly for a file
+Framework/moc_ContainerDefinitions.cxx.s:
+	$(MAKE) -f CMakeFiles/paulsframework.dir/build.make CMakeFiles/paulsframework.dir/Framework/moc_ContainerDefinitions.cxx.s
+.PHONY : Framework/moc_ContainerDefinitions.cxx.s
+
+Framework/moc_Content.o: Framework/moc_Content.cxx.o
+.PHONY : Framework/moc_Content.o
+
+# target to build an object file
+Framework/moc_Content.cxx.o:
+	$(MAKE) -f CMakeFiles/paulsframework.dir/build.make CMakeFiles/paulsframework.dir/Framework/moc_Content.cxx.o
+.PHONY : Framework/moc_Content.cxx.o
+
+Framework/moc_Content.i: Framework/moc_Content.cxx.i
+.PHONY : Framework/moc_Content.i
+
+# target to preprocess a source file
+Framework/moc_Content.cxx.i:
+	$(MAKE) -f CMakeFiles/paulsframework.dir/build.make CMakeFiles/paulsframework.dir/Framework/moc_Content.cxx.i
+.PHONY : Framework/moc_Content.cxx.i
+
+Framework/moc_Content.s: Framework/moc_Content.cxx.s
+.PHONY : Framework/moc_Content.s
+
+# target to generate assembly for a file
+Framework/moc_Content.cxx.s:
+	$(MAKE) -f CMakeFiles/paulsframework.dir/build.make CMakeFiles/paulsframework.dir/Framework/moc_Content.cxx.s
+.PHONY : Framework/moc_Content.cxx.s
+
+Framework/moc_Game.o: Framework/moc_Game.cxx.o
+.PHONY : Framework/moc_Game.o
+
+# target to build an object file
+Framework/moc_Game.cxx.o:
+	$(MAKE) -f CMakeFiles/paulsframework.dir/build.make CMakeFiles/paulsframework.dir/Framework/moc_Game.cxx.o
+.PHONY : Framework/moc_Game.cxx.o
+
+Framework/moc_Game.i: Framework/moc_Game.cxx.i
+.PHONY : Framework/moc_Game.i
+
+# target to preprocess a source file
+Framework/moc_Game.cxx.i:
+	$(MAKE) -f CMakeFiles/paulsframework.dir/build.make CMakeFiles/paulsframework.dir/Framework/moc_Game.cxx.i
+.PHONY : Framework/moc_Game.cxx.i
+
+Framework/moc_Game.s: Framework/moc_Game.cxx.s
+.PHONY : Framework/moc_Game.s
+
+# target to generate assembly for a file
+Framework/moc_Game.cxx.s:
+	$(MAKE) -f CMakeFiles/paulsframework.dir/build.make CMakeFiles/paulsframework.dir/Framework/moc_Game.cxx.s
+.PHONY : Framework/moc_Game.cxx.s
+
+Framework/moc_GameComponent.o: Framework/moc_GameComponent.cxx.o
+.PHONY : Framework/moc_GameComponent.o
+
+# target to build an object file
+Framework/moc_GameComponent.cxx.o:
+	$(MAKE) -f CMakeFiles/paulsframework.dir/build.make CMakeFiles/paulsframework.dir/Framework/moc_GameComponent.cxx.o
+.PHONY : Framework/moc_GameComponent.cxx.o
+
+Framework/moc_GameComponent.i: Framework/moc_GameComponent.cxx.i
+.PHONY : Framework/moc_GameComponent.i
+
+# target to preprocess a source file
+Framework/moc_GameComponent.cxx.i:
+	$(MAKE) -f CMakeFiles/paulsframework.dir/build.make CMakeFiles/paulsframework.dir/Framework/moc_GameComponent.cxx.i
+.PHONY : Framework/moc_GameComponent.cxx.i
+
+Framework/moc_GameComponent.s: Framework/moc_GameComponent.cxx.s
+.PHONY : Framework/moc_GameComponent.s
+
+# target to generate assembly for a file
+Framework/moc_GameComponent.cxx.s:
+	$(MAKE) -f CMakeFiles/paulsframework.dir/build.make CMakeFiles/paulsframework.dir/Framework/moc_GameComponent.cxx.s
+.PHONY : Framework/moc_GameComponent.cxx.s
+
+Framework/moc_action.o: Framework/moc_action.cxx.o
+.PHONY : Framework/moc_action.o
+
+# target to build an object file
+Framework/moc_action.cxx.o:
+	$(MAKE) -f CMakeFiles/paulsframework.dir/build.make CMakeFiles/paulsframework.dir/Framework/moc_action.cxx.o
+.PHONY : Framework/moc_action.cxx.o
+
+Framework/moc_action.i: Framework/moc_action.cxx.i
+.PHONY : Framework/moc_action.i
+
+# target to preprocess a source file
+Framework/moc_action.cxx.i:
+	$(MAKE) -f CMakeFiles/paulsframework.dir/build.make CMakeFiles/paulsframework.dir/Framework/moc_action.cxx.i
+.PHONY : Framework/moc_action.cxx.i
+
+Framework/moc_action.s: Framework/moc_action.cxx.s
+.PHONY : Framework/moc_action.s
+
+# target to generate assembly for a file
+Framework/moc_action.cxx.s:
+	$(MAKE) -f CMakeFiles/paulsframework.dir/build.make CMakeFiles/paulsframework.dir/Framework/moc_action.cxx.s
+.PHONY : Framework/moc_action.cxx.s
+
+Framework/moc_actions.o: Framework/moc_actions.cxx.o
+.PHONY : Framework/moc_actions.o
+
+# target to build an object file
+Framework/moc_actions.cxx.o:
+	$(MAKE) -f CMakeFiles/paulsframework.dir/build.make CMakeFiles/paulsframework.dir/Framework/moc_actions.cxx.o
+.PHONY : Framework/moc_actions.cxx.o
+
+Framework/moc_actions.i: Framework/moc_actions.cxx.i
+.PHONY : Framework/moc_actions.i
+
+# target to preprocess a source file
+Framework/moc_actions.cxx.i:
+	$(MAKE) -f CMakeFiles/paulsframework.dir/build.make CMakeFiles/paulsframework.dir/Framework/moc_actions.cxx.i
+.PHONY : Framework/moc_actions.cxx.i
+
+Framework/moc_actions.s: Framework/moc_actions.cxx.s
+.PHONY : Framework/moc_actions.s
+
+# target to generate assembly for a file
+Framework/moc_actions.cxx.s:
+	$(MAKE) -f CMakeFiles/paulsframework.dir/build.make CMakeFiles/paulsframework.dir/Framework/moc_actions.cxx.s
+.PHONY : Framework/moc_actions.cxx.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -420,6 +804,12 @@ help:
 	@echo "... Framework/Actions/keyboard.o"
 	@echo "... Framework/Actions/keyboard.i"
 	@echo "... Framework/Actions/keyboard.s"
+	@echo "... Framework/Actions/moc_keyboard.o"
+	@echo "... Framework/Actions/moc_keyboard.i"
+	@echo "... Framework/Actions/moc_keyboard.s"
+	@echo "... Framework/Actions/moc_mouse.o"
+	@echo "... Framework/Actions/moc_mouse.i"
+	@echo "... Framework/Actions/moc_mouse.s"
 	@echo "... Framework/Actions/mouse.o"
 	@echo "... Framework/Actions/mouse.i"
 	@echo "... Framework/Actions/mouse.s"
@@ -438,12 +828,54 @@ help:
 	@echo "... Framework/Lua/luaScriptHelper.o"
 	@echo "... Framework/Lua/luaScriptHelper.i"
 	@echo "... Framework/Lua/luaScriptHelper.s"
+	@echo "... Framework/Lua/luaeditor.o"
+	@echo "... Framework/Lua/luaeditor.i"
+	@echo "... Framework/Lua/luaeditor.s"
+	@echo "... Framework/Lua/luascript.o"
+	@echo "... Framework/Lua/luascript.i"
+	@echo "... Framework/Lua/luascript.s"
+	@echo "... Framework/Lua/luascripts.o"
+	@echo "... Framework/Lua/luascripts.i"
+	@echo "... Framework/Lua/luascripts.s"
+	@echo "... Framework/Lua/moc_Component.o"
+	@echo "... Framework/Lua/moc_Component.i"
+	@echo "... Framework/Lua/moc_Component.s"
+	@echo "... Framework/Lua/moc_LuaScriptHelper.o"
+	@echo "... Framework/Lua/moc_LuaScriptHelper.i"
+	@echo "... Framework/Lua/moc_LuaScriptHelper.s"
+	@echo "... Framework/Lua/moc_luaeditor.o"
+	@echo "... Framework/Lua/moc_luaeditor.i"
+	@echo "... Framework/Lua/moc_luaeditor.s"
+	@echo "... Framework/Lua/moc_luascript.o"
+	@echo "... Framework/Lua/moc_luascript.i"
+	@echo "... Framework/Lua/moc_luascript.s"
+	@echo "... Framework/Lua/moc_luascripts.o"
+	@echo "... Framework/Lua/moc_luascripts.i"
+	@echo "... Framework/Lua/moc_luascripts.s"
 	@echo "... Framework/action.o"
 	@echo "... Framework/action.i"
 	@echo "... Framework/action.s"
 	@echo "... Framework/actions.o"
 	@echo "... Framework/actions.i"
 	@echo "... Framework/actions.s"
+	@echo "... Framework/moc_ContainerDefinitions.o"
+	@echo "... Framework/moc_ContainerDefinitions.i"
+	@echo "... Framework/moc_ContainerDefinitions.s"
+	@echo "... Framework/moc_Content.o"
+	@echo "... Framework/moc_Content.i"
+	@echo "... Framework/moc_Content.s"
+	@echo "... Framework/moc_Game.o"
+	@echo "... Framework/moc_Game.i"
+	@echo "... Framework/moc_Game.s"
+	@echo "... Framework/moc_GameComponent.o"
+	@echo "... Framework/moc_GameComponent.i"
+	@echo "... Framework/moc_GameComponent.s"
+	@echo "... Framework/moc_action.o"
+	@echo "... Framework/moc_action.i"
+	@echo "... Framework/moc_action.s"
+	@echo "... Framework/moc_actions.o"
+	@echo "... Framework/moc_actions.i"
+	@echo "... Framework/moc_actions.s"
 .PHONY : help
 
 

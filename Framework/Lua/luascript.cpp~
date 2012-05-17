@@ -25,104 +25,157 @@
 
 
 #include "luascript.h"
-// extracts a table into a std::map with provided types
+#include <iostream>
+#include <fstream>
 
-bool TypeCheck(lua_State *L,int index,int type) {
-
-  return lua_type(L,-1) == type;
-  
-}
-
-void HandelError(int status) {
-  
-  if ( status!=0 ) {
-    
-    std::cerr << "Script error: " << lua_tostring(this->L, -1) << std::endl;
-
-    lua_pop(this->L, 1); // remove error message
-    
-  }
-  
-}
-
-template <class K,class Y> std::map<K,Y> LuaMapTable(lua_State *L,std::string name,int valueType,int keyType) {
-  
-  lua_getglobal(L,name.c_str());
-  
-  if ( lua_istable(L,-1) )
-  {
-    for (lua_pushnil(L);lua_next(L,-2);lua_pop(L,1) )
-    {
-      if ( TypeCheck(L,-1,valueType) ) {
-	throw std::string("Value type for" + name + " was not expected");
-      }
-      if ( TypeCheck(L,-1,keyType) ) {
-	throw std::string("Key type for" + name + " was not expected");
-      }
-
-    } 
-  }
-  else
-  {
-    throw std::string(name + " is not a table");
-  }  
-  
-}
- 
-LuaScript::LuaScript(std::string file)
+LuaScript::LuaScript(bool debug) : debug(debug)
 {
- this->L = lua_open();
- luaL_openlibs(this->L);
- 
- int success = luaL_loadfile(this->L,file.c_str());
- this->HandelError(success);
- 
- // run script to initalise it.
- success = lua_pcall(this->L,0,0,0);
- this->HandelError(success);
+
 }
 
 LuaScript::~LuaScript()
 {
-
+  lua_close(L);
 }
 
-bool LuaScript::TypeCheck(int index, int type)
+bool LuaScript::HandleError( int State)
 {
-  return lua_type(L,-1) == type;
+  if ( State > 0)
+  {
+    std::string error = lua_tostring(L, -1);
+    lua_pop(L, 1);
+    std::cerr << error << std::endl;
+    return false;
+  }
+  else {
+    return true;
+  }
 }
 
-
-void LuaScript::GetTable(std::string name,int valueType,int keyType)
+void LuaScript::RegisterComponentFunctions()
 {
-  lua_getglobal(this->L,name.c_str());
+  luaL_register(L,"Sprites",sprite);
   
-  if ( lua_istable(this->L,-1) )
-  {
-    for (lua_pushnil(L);lua_next(L,-2);lua_pop(L,1) )
-    {
-      if ( this->TypeCheck(-1,valueType) ) {
-	throw std::string("Value type for" + name + " was not expected");
-      }
-      if ( this->TypeCheck(-1,keyType) ) {
-	throw std::string("Key type for" + name + " was not expected");
-      }
-
-    } 
-  }
-  else
-  {
-    throw std::string(name + " is not a table");
-  }
+  luaL_register(L,"Sounds",sound);
+}
+void LuaScript::RegisterDummyComponentFuncs()
+{
+  luaL_register(L,"Sprites",sprite_DUMMY);
+  
+  luaL_register(L,"Sounds",sound_DUMMY);
 }
 
 
-void LuaScript::HandelError(int status)
+bool LuaScript::LoadFromFile(std::string file)
 {
-  if ( status!=0 ) {
-    std::cerr << "Script error: " << lua_tostring(this->L, -1) << std::endl;
-    lua_pop(this->L, 1); // remove error message
+  
+
+  int success;
+  
+  L = luaL_newstate();
+  
+  luaL_openlibs(L);
+  
+  if (debug) {
+    this->RegisterDummyComponentFuncs();
   }
+  else {
+    
+    this->RegisterComponentFunctions();    
+  }
+  
+#ifdef LUA_EDITOR
+  success = LuaHelper::LuaScripts::Instance().LoadFromFile(L,file);
+#else  
+  success = luaL_loadfile(this->L,scriptFile.c_str());
+#endif
+  
+  
+  if ( this->HandleError( success ) )
+  {
+    success = lua_pcall(this->L,0,0,0); //execute script so we can grab functions;
+  
+    if (this->HandleError(success))
+    {
+      return true;
+    }
+    else
+    {
+      return false;
+    }
+    
+  }
+  
+  return false;
+}
+
+bool LuaScript::LoadFromString(std::string contents,std::string remarks)
+{
+  int success;
+  std::cout << "loading from string" << remarks << std::endl;
+  L = luaL_newstate();
+  
+  luaL_openlibs(L);
+  if (debug) {
+    this->RegisterDummyComponentFuncs();
+  }
+  else {
+    
+    this->RegisterComponentFunctions();    
+  }
+  success = luaL_loadstring(L,contents.c_str());
+  
+  if ( this->HandleError( success ) )
+  {
+    success = lua_pcall(this->L,0,0,0); //execute script so we can grab functions;
+  
+    if (this->HandleError(success))
+    {
+
+      return true;
+    }
+    else
+    {
+      return false;
+    }
+    
+  }
+  
+  return false;
+}
+
+bool LuaScript::RunFunction(std::string name)
+{
+  lua_getglobal(L,name.c_str());
+  
+  if ( !lua_isfunction( L,-1 ) )
+  {
+    std::cout << "Init is not a function!" << std::endl;
+    return false;
+  } 
+  
+  int success =  lua_pcall( L, 0,0,0 );
+  
+
+  
+  return this->HandleError(success);
+}
+
+bool LuaScript::LookForFunction(std::string name)
+{
+  lua_getglobal(L,name.c_str());
+  
+  if ( !lua_isfunction( L,-1 ) )
+  {
+    return false;
+  }
+  return true;
+}
+
+
+lua_State* LuaScript::GetState()
+{
+  return L;
 }
 
 

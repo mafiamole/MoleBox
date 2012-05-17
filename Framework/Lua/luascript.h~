@@ -27,24 +27,82 @@
 #ifndef LUASCRIPT_H
 #define LUASCRIPT_H
 
-extern "C" {
-  #include "lua.hpp"
-  #include "lualib.h"
-  #include "lauxlib.h"
+#include "LuaScriptHelper.h"
+#include "luascripts.h"
 
+#ifndef LUA_SFML_API
+#define LUA_SFML_API
+
+#ifdef LUA_EDITOR
+template <int T> static int voidLuaEmptyFunction(lua_State *L) {
+  
+  int n = lua_gettop(L);
+  
+  if ( n != T)
+  {
+    std::string error;
+    error = "Incorrect number of arguments, this function takes ";
+    error =+ T;
+    error =+ ".";
+    lua_pushstring(L,error.c_str());
+    lua_error(L);
+  }
+  
 }
-#include <string>
-#include <iostream>
+
+static const luaL_reg sprite_DUMMY[] =
+{
+  { "Load", voidLuaEmptyFunction<2> },
+  { "Draw", voidLuaEmptyFunction<1> },
+  { "Move", voidLuaEmptyFunction<2> },
+  { "SetPosition", voidLuaEmptyFunction<2> },
+  { NULL, NULL }
+};
+
+static const luaL_Reg sound_DUMMY[] =
+{
+  { "Load", voidLuaEmptyFunction<1>},
+  { "Play", voidLuaEmptyFunction<1>},
+  { NULL, NULL }
+};
+
+#endif
+
+static const luaL_reg sprite[] =
+{
+  { "Load", MB_Lua::Sprites::Load},
+  { "Draw", MB_Lua::Sprites::Draw},
+  { "Move", MB_Lua::Sprites::Move},
+  { "SetPosition", MB_Lua::Sprites::SetPosition},
+  { NULL, NULL }
+};
+
+static const luaL_Reg sound[] =
+{
+  { "Load", MB_Lua::Sounds::Load},
+  { "Play", MB_Lua::Sounds::Play},
+  
+  { NULL, NULL }
+};
+#endif
+  
 class LuaScript
 {
 private:
   lua_State *L;
+  bool debug;
 public:
-    LuaScript(std::string file);
-    void HandelError(int status);
-    void GetTable(std::string name, int valueType, int keyType = 1);
-    bool TypeCheck(int index,int type);
+    LuaScript(bool debug = false);
+    bool LoadFromFile(std::string file);
+    bool LoadFromString(std::string contents, std::string remarks = "");
+    bool HandleError(int State);
+    void RegisterComponentFunctions();
+    void RegisterDummyComponentFuncs();
+    bool RunFunction(std::string name);
+    bool LookForFunction( std::string name );
+    lua_State* GetState();
     virtual ~LuaScript();
+
 };
 
 #endif // LUASCRIPT_H

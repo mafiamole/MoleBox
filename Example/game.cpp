@@ -36,11 +36,12 @@ Game::Game() : MB::Game("Game Title")
     
   this->AddComponent(new TestComponent(this));
   this->AddComponent(new MB::LuaComponent(this,"testComponent.lua"));
+  //this->AddComponent(new MB::LuaComponent(this,"testComponent2.lua"));
   this->actionList.Register("Play Sound",new MB::Keyboard(sf::Keyboard::Space));
   this->actionList.Register("Play Music",new MB::Mouse(sf::Mouse::Left));
   this->actionList.Register("Player Move Left",new MB::Keyboard(sf::Keyboard::Left));
   this->actionList.Register("Player Move Right",new MB::Keyboard(sf::Keyboard::Left));
-
+  
 }
 
 Game::~Game()
@@ -59,7 +60,7 @@ void Game::Update(MB::EventList* events)
 
 }
 
-void Game::Run()
+void Game::Run(int argc,char **argv)
 {
-  MB::Game::Run();
+  MB::Game::Run(argc,argv);
 }

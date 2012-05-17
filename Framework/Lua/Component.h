@@ -35,6 +35,11 @@ extern "C" {
 #include "../GameComponent.h"
 #include "../Game.h"
 #include "LuaScriptHelper.h"
+#ifdef LUA_EDITOR
+  #include "luascripts.h"
+#include "luascript.h"
+#endif
+
 #include <map>
 /**
  * Aimed to provide functionality to scripts.
@@ -47,39 +52,18 @@ extern "C" {
  * 
  */
 namespace MB {
-  
-  static const luaL_reg sprite[] =
-  {
-    { "Load", MB_Lua::Sprites::Load},
-    { "Draw", MB_Lua::Sprites::Draw},
-    { "Move", MB_Lua::Sprites::Move},
-    { NULL, NULL }
-  };
 
-  static const luaL_Reg sound[] =
-  {
-    { "Load", MB_Lua::Sounds::Load},
-    { "Play", MB_Lua::Sounds::Play},
-    
-    { NULL, NULL }
-  };
-  
   void ActionsToLua(lua_State* L, MB::Actions* actions);
   
   class LuaComponent : public GameComponent
   {
   private:
-    lua_State *L;
-    std::string scriptFile;
-    bool LoadScript(std::string file);
-    static LuaComponent* CurrentWorkingInstance; // lazy
+
+    std::string 		scriptFile;
+    LuaScript			script;
+
   public:
     LuaComponent(MB::Game* game, std::string file);
-    static void SetInstance(LuaComponent* differentInstance);
-    static LuaComponent* GetInstance();
-    static int LoadTexture(lua_State *L);
-    lua_CFunction Test(lua_State *L);
-    void HandelError(lua_State* L, int status);
     virtual void Update(EventList* events);
     virtual void Draw();
     virtual ~LuaComponent();

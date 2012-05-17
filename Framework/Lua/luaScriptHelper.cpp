@@ -147,10 +147,16 @@ int MB_Lua::Sounds::Play(lua_State* L)
   std::string file;
   
   file = lua_tostring(L,1);
-  
+
   if ( Sounds::Instance().sounds.find(file) != Sounds::Instance().sounds.end() )
   {
     Sounds().Instance().sounds[file].play();
+  }
+  else
+  {
+    std::string error;
+    error = "Sound " +  file + " was not found.";
+    LuaHelper::PushError( L, error );
   }
   
 }
@@ -293,4 +299,22 @@ int MB_Lua::Sprites::Move(lua_State* L)
   float y 		= lua_tonumber( L, 3 );
   
   Sprites::Instance().luaSprites[sprite].move(x,y);
+}
+
+int MB_Lua::Sprites::SetPosition(lua_State *L)
+{
+  if ( Sprites::Instance().GetWindow() == NULL )
+    
+    LuaHelper::PushError( L, "INTERNAL ERROR: No handle on window." );
+  
+  int n = lua_gettop( L );
+  
+  if ( n != 3 )
+    
+    LuaHelper::PushError(  L, "Move requires three arguments: (sprite name, x change in pixels, y change in pixels )");
+    
+  std::string sprite 	= lua_tostring( L, 1 );
+  float x 		= lua_tonumber( L, 2 );
+  float y 		= lua_tonumber( L, 3 );  
+  Sprites::Instance().luaSprites[sprite].setPosition(x,y);  
 }

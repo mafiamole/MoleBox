@@ -35,6 +35,7 @@ extern "C" {
 #include <iostream>
 #include <string>
 #include <map>
+
 #include "../Content.h"
 
 namespace MB_Lua {
@@ -80,6 +81,7 @@ class Sprites {
     static int 				Load				( lua_State *L );
     static int 				Draw				( lua_State *L );
     static int				Move				( lua_State *L );
+    static int				SetPosition			( lua_State *L );
     
   };
    
@@ -131,5 +133,8 @@ namespace LuaHelper {
     return outputMap;
     
   }
+
+
+  
 }
 #endif

@@ -47,113 +47,58 @@ void MB::ActionsToLua(lua_State* L,MB::Actions* actions)
 
 
 
-MB::LuaComponent::LuaComponent(Game* game,std::string file) : GameComponent(game)
+MB::LuaComponent::LuaComponent(Game* game,std::string file) : GameComponent(game), script()
 {
   MB_Lua::Sprites::Instance().SetWindow(game->Window());
-  this->LoadScript(file);
   
-  scriptFile = file;
-
-}
-
-bool MB::LuaComponent::LoadScript(std::string file)
-{
+  //this->LoadScript(file);
   int success;
+  bool loadedScript = this->script.LoadFromFile(file);
   
-  L = lua_open();
+  if (loadedScript) {
+    this->scriptFile = file;
+    this->script.RunFunction("init");
+    
+    }
 
-  luaL_openlibs(this->L);
-  
-  luaL_register(L,"Sprites",sprite);
-  
-  luaL_register(L,"Sounds",sound);
-  
-  success = luaL_loadfile(this->L,file.c_str());
-  
-  this->HandelError(this->L,success);
-  
-  success = lua_pcall(this->L,0,0,0); //execute script so we can grab functions;
-  
-  this->HandelError(this->L,success);
-  
-  std::map< int, std::string > textures;
+}
 
-  lua_getglobal(this->L,"init");
-  
-  if (!lua_isfunction(L,-1))
+void MB::LuaComponent::Update( EventList* events )
+{
+#ifdef LUA_EDITOR
+
+  if ( LuaHelper::LuaScripts::Instance().NeedToUpdate(scriptFile) )
   {
-    std::cout << "Init is not a function!" << std::endl;
-  }
-  success = lua_pcall(this->L,0,0,0);
-  
-  this->HandelError(this->L,success);
- 
-}
-
-void MB::LuaComponent::HandelError(lua_State* L, int status)
-{
-  if ( status!=0 ) {
+    std::string newscript = LuaHelper::LuaScripts::Instance().GrabUpdate(this->scriptFile);
     
-    std::cerr << "Script error: " << lua_tostring(L, -1) << std::endl;
-    
-    lua_pop(L, 1); // remove error message
+    this->script.LoadFromString(newscript);
+    this->script.RunFunction("init");
     
   }
+#endif
+  lua_State* L = this->script.GetState();
   
-}
+  lua_getglobal(L,"update");
 
-
-lua_CFunction MB::LuaComponent::Test(lua_State* L)
-{
+  ActionsToLua( L, this->game->GetActions() );
   
-return 0;
-
-}
-
-
-
-void MB::LuaComponent::Update(EventList* events)
-{
+  int s = lua_pcall( L , 1, 0 ,0);
   
-  lua_getglobal(this->L,"update");
-  /*
-  lua_newtable(L);
-  EventList::iterator eventItr;
-  for (eventItr = events->begin();eventItr != events->end();eventItr++)
-  {
-    sf::Event ev = (*eventItr).second;
-    lua_pushinteger(L,(*eventItr).first); // key
-    lua_pushstring(L,"blarg"); // value
-    lua_settable(L,-3);    
-  }
-*/
-  ActionsToLua(L,this->game->GetActions());
-  int s = lua_pcall(this->L,1,0,0);
-  HandelError(L,s);
+  this->script.HandleError(s);
   
-  
-  
-  GameComponent::Update(events);
+  GameComponent::Update( events );
 
 }
 
 void MB::LuaComponent::Draw()
 {
   
-  lua_getglobal(this->L,"draw");
-  
-  int s = lua_pcall(this->L,0,1,0);
-  
-  std::map<int,std::string> spriteList;
-  
-  HandelError(L,s);
+  this->script.RunFunction("draw");
 
   GameComponent::Draw();
 }
 
 MB::LuaComponent::~LuaComponent()
 {
-  lua_close(L);
+
 }
-
-

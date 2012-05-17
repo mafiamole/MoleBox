@@ -28,18 +28,18 @@
 #include "SFML/Graphics.hpp"
 
 int main(int argc, char **argv) {
-
-  
+   
   try {
     
     Game game;
   
-    game.Run();   
- 
-  
+    game.Run(argc,argv);   
+   
   }
   catch (std::string error) {
+    
     std::cout << error << std::endl;
+    
   }
   
   return EXIT_SUCCESS;
