@@ -115,14 +115,16 @@ void MB::Game::Run(int argc, char** argv)
  
   while ( this->window->isOpen() )
   {
+    
     sf::Event event;
+    
     while ( window->pollEvent(event) )
     {
+      
       if ( event.type == sf::Event::Closed )
 	window->close();
       else
 	eventList.insert( std::pair< sf::Event::EventType,sf::Event >( event.type,event ) );
-      
 
     }
     

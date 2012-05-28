@@ -47,21 +47,37 @@ void MB::ActionsToLua(lua_State* L,MB::Actions* actions)
 
 
 
-MB::LuaComponent::LuaComponent(Game* game,std::string file) : GameComponent(game), script()
+MB::LuaComponent::LuaComponent(Game* game,std::string file) : GameComponent(game), script() , soundKey(0), spriteKey(0), scriptFile(file)
 {
-  MB_Lua::Sprites::Instance().SetWindow(game->Window());
   
   //this->LoadScript(file);
   int success;
+    
   bool loadedScript = this->script.LoadFromFile(file);
+
   
   if (loadedScript) {
-    this->scriptFile = file;
-    this->script.RunFunction("init");
     
+    lua_State* L = this->script.GetState();
+    
+    lua_pushstring(L,"MB_GAME_COMPONENT");
+    lua_pushlightuserdata(L,(void*)this);
+    lua_settable(L,LUA_REGISTRYINDEX);    
+    
+    bool runscript = this->script.RunScript();
+    bool runinit = this->script.RunFunction("init");
+
     }
 
+  else {
+   
+    throw "Script was unable to be loaded.";
+    
+  }
+
 }
+
+
 
 void MB::LuaComponent::Update( EventList* events )
 {
@@ -72,6 +88,11 @@ void MB::LuaComponent::Update( EventList* events )
     std::string newscript = LuaHelper::LuaScripts::Instance().GrabUpdate(this->scriptFile);
     
     this->script.LoadFromString(newscript);
+        lua_State* L = this->script.GetState();
+    lua_pushstring(L,"MB_GAME_COMPONENT");
+    lua_pushlightuserdata(L,(void*)this);
+    lua_settable(L,LUA_REGISTRYINDEX);  
+    this->script.RunScript();
     this->script.RunFunction("init");
     
   }
@@ -90,11 +111,77 @@ void MB::LuaComponent::Update( EventList* events )
 
 }
 
+int MB::LuaComponent::AddSounds(std::string file)
+{
+  int key = this->soundKey;  
+  this->sounds.insert(std::pair <int,sf::Sound>(key, sf::Sound( Content< sf::SoundBuffer >::Load(file)) ) );
+  this->soundKey++;
+  return key;
+}
+
+int MB::LuaComponent::AddSprite(std::string file)
+{
+  
+  int key = this->spriteKey;
+  this->sprites.insert( std::pair <int,sf::Sprite>( key, sf::Sprite( Content< sf::Texture >::Load (file) ) ) );
+  this->spriteKey++;
+  return key;
+}
+
+void MB::LuaComponent::AddSpriteToDrawList(int ref)
+{
+  this->spriteBatch.push_back(ref);
+}
+
+
+sf::Sound* MB::LuaComponent::GetSound(int ref)
+{
+  if ( this->sounds.find(ref) != this->sounds.end() )
+  {
+    return &this->sounds[ref];
+  }
+  else
+  {
+    throw "Unable to find sound";
+  }
+}
+
+sf::Sprite* MB::LuaComponent::GetSprite(int ref)
+{
+  if ( this->sprites.find(ref) != this->sprites.end() )
+  {
+    return &this->sprites[ref];
+  }
+  else
+  {
+    throw "Unable to find sprite";
+  }
+}
+
+
+
 void MB::LuaComponent::Draw()
 {
   
-  this->script.RunFunction("draw");
+  bool success = this->script.RunFunction("draw");
 
+  if ( success ) {
+
+  std::vector<int>::iterator spriteItr;
+  
+  for (spriteItr = this->spriteBatch.begin(); spriteItr != this->spriteBatch.end(); spriteItr++)
+  {
+    if (this->sprites.find((*spriteItr)) != this->sprites.end())
+    {
+      this->game->Window()->draw (this->sprites[(*spriteItr)]);
+    }
+  }
+  spriteBatch.clear();
+  }
+  else
+  {
+    std::cout << "Was unable to run draw function in script:" << this->scriptFile  << std::endl;
+  }
   GameComponent::Draw();
 }
 

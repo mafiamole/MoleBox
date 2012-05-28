@@ -375,29 +375,53 @@ Framework/Lua/Component.cpp.s:
 	$(MAKE) -f CMakeFiles/paulsframework.dir/build.make CMakeFiles/paulsframework.dir/Framework/Lua/Component.cpp.s
 .PHONY : Framework/Lua/Component.cpp.s
 
-Framework/Lua/luaScriptHelper.o: Framework/Lua/luaScriptHelper.cpp.o
-.PHONY : Framework/Lua/luaScriptHelper.o
+Framework/Lua/LuaScriptHelper.o: Framework/Lua/LuaScriptHelper.cpp.o
+.PHONY : Framework/Lua/LuaScriptHelper.o
 
 # target to build an object file
-Framework/Lua/luaScriptHelper.cpp.o:
-	$(MAKE) -f CMakeFiles/paulsframework.dir/build.make CMakeFiles/paulsframework.dir/Framework/Lua/luaScriptHelper.cpp.o
-.PHONY : Framework/Lua/luaScriptHelper.cpp.o
+Framework/Lua/LuaScriptHelper.cpp.o:
+	$(MAKE) -f CMakeFiles/paulsframework.dir/build.make CMakeFiles/paulsframework.dir/Framework/Lua/LuaScriptHelper.cpp.o
+.PHONY : Framework/Lua/LuaScriptHelper.cpp.o
 
-Framework/Lua/luaScriptHelper.i: Framework/Lua/luaScriptHelper.cpp.i
-.PHONY : Framework/Lua/luaScriptHelper.i
+Framework/Lua/LuaScriptHelper.i: Framework/Lua/LuaScriptHelper.cpp.i
+.PHONY : Framework/Lua/LuaScriptHelper.i
 
 # target to preprocess a source file
-Framework/Lua/luaScriptHelper.cpp.i:
-	$(MAKE) -f CMakeFiles/paulsframework.dir/build.make CMakeFiles/paulsframework.dir/Framework/Lua/luaScriptHelper.cpp.i
-.PHONY : Framework/Lua/luaScriptHelper.cpp.i
+Framework/Lua/LuaScriptHelper.cpp.i:
+	$(MAKE) -f CMakeFiles/paulsframework.dir/build.make CMakeFiles/paulsframework.dir/Framework/Lua/LuaScriptHelper.cpp.i
+.PHONY : Framework/Lua/LuaScriptHelper.cpp.i
 
-Framework/Lua/luaScriptHelper.s: Framework/Lua/luaScriptHelper.cpp.s
-.PHONY : Framework/Lua/luaScriptHelper.s
+Framework/Lua/LuaScriptHelper.s: Framework/Lua/LuaScriptHelper.cpp.s
+.PHONY : Framework/Lua/LuaScriptHelper.s
 
 # target to generate assembly for a file
-Framework/Lua/luaScriptHelper.cpp.s:
-	$(MAKE) -f CMakeFiles/paulsframework.dir/build.make CMakeFiles/paulsframework.dir/Framework/Lua/luaScriptHelper.cpp.s
-.PHONY : Framework/Lua/luaScriptHelper.cpp.s
+Framework/Lua/LuaScriptHelper.cpp.s:
+	$(MAKE) -f CMakeFiles/paulsframework.dir/build.make CMakeFiles/paulsframework.dir/Framework/Lua/LuaScriptHelper.cpp.s
+.PHONY : Framework/Lua/LuaScriptHelper.cpp.s
+
+Framework/Lua/content.o: Framework/Lua/content.cpp.o
+.PHONY : Framework/Lua/content.o
+
+# target to build an object file
+Framework/Lua/content.cpp.o:
+	$(MAKE) -f CMakeFiles/paulsframework.dir/build.make CMakeFiles/paulsframework.dir/Framework/Lua/content.cpp.o
+.PHONY : Framework/Lua/content.cpp.o
+
+Framework/Lua/content.i: Framework/Lua/content.cpp.i
+.PHONY : Framework/Lua/content.i
+
+# target to preprocess a source file
+Framework/Lua/content.cpp.i:
+	$(MAKE) -f CMakeFiles/paulsframework.dir/build.make CMakeFiles/paulsframework.dir/Framework/Lua/content.cpp.i
+.PHONY : Framework/Lua/content.cpp.i
+
+Framework/Lua/content.s: Framework/Lua/content.cpp.s
+.PHONY : Framework/Lua/content.s
+
+# target to generate assembly for a file
+Framework/Lua/content.cpp.s:
+	$(MAKE) -f CMakeFiles/paulsframework.dir/build.make CMakeFiles/paulsframework.dir/Framework/Lua/content.cpp.s
+.PHONY : Framework/Lua/content.cpp.s
 
 Framework/Lua/luaeditor.o: Framework/Lua/luaeditor.cpp.o
 .PHONY : Framework/Lua/luaeditor.o
@@ -687,6 +711,30 @@ Framework/moc_Content.cxx.s:
 	$(MAKE) -f CMakeFiles/paulsframework.dir/build.make CMakeFiles/paulsframework.dir/Framework/moc_Content.cxx.s
 .PHONY : Framework/moc_Content.cxx.s
 
+Framework/moc_ContentTemplate.o: Framework/moc_ContentTemplate.cxx.o
+.PHONY : Framework/moc_ContentTemplate.o
+
+# target to build an object file
+Framework/moc_ContentTemplate.cxx.o:
+	$(MAKE) -f CMakeFiles/paulsframework.dir/build.make CMakeFiles/paulsframework.dir/Framework/moc_ContentTemplate.cxx.o
+.PHONY : Framework/moc_ContentTemplate.cxx.o
+
+Framework/moc_ContentTemplate.i: Framework/moc_ContentTemplate.cxx.i
+.PHONY : Framework/moc_ContentTemplate.i
+
+# target to preprocess a source file
+Framework/moc_ContentTemplate.cxx.i:
+	$(MAKE) -f CMakeFiles/paulsframework.dir/build.make CMakeFiles/paulsframework.dir/Framework/moc_ContentTemplate.cxx.i
+.PHONY : Framework/moc_ContentTemplate.cxx.i
+
+Framework/moc_ContentTemplate.s: Framework/moc_ContentTemplate.cxx.s
+.PHONY : Framework/moc_ContentTemplate.s
+
+# target to generate assembly for a file
+Framework/moc_ContentTemplate.cxx.s:
+	$(MAKE) -f CMakeFiles/paulsframework.dir/build.make CMakeFiles/paulsframework.dir/Framework/moc_ContentTemplate.cxx.s
+.PHONY : Framework/moc_ContentTemplate.cxx.s
+
 Framework/moc_Game.o: Framework/moc_Game.cxx.o
 .PHONY : Framework/moc_Game.o
 
@@ -825,9 +873,12 @@ help:
 	@echo "... Framework/Lua/Component.o"
 	@echo "... Framework/Lua/Component.i"
 	@echo "... Framework/Lua/Component.s"
-	@echo "... Framework/Lua/luaScriptHelper.o"
-	@echo "... Framework/Lua/luaScriptHelper.i"
-	@echo "... Framework/Lua/luaScriptHelper.s"
+	@echo "... Framework/Lua/LuaScriptHelper.o"
+	@echo "... Framework/Lua/LuaScriptHelper.i"
+	@echo "... Framework/Lua/LuaScriptHelper.s"
+	@echo "... Framework/Lua/content.o"
+	@echo "... Framework/Lua/content.i"
+	@echo "... Framework/Lua/content.s"
 	@echo "... Framework/Lua/luaeditor.o"
 	@echo "... Framework/Lua/luaeditor.i"
 	@echo "... Framework/Lua/luaeditor.s"
@@ -864,6 +915,9 @@ help:
 	@echo "... Framework/moc_Content.o"
 	@echo "... Framework/moc_Content.i"
 	@echo "... Framework/moc_Content.s"
+	@echo "... Framework/moc_ContentTemplate.o"
+	@echo "... Framework/moc_ContentTemplate.i"
+	@echo "... Framework/moc_ContentTemplate.s"
 	@echo "... Framework/moc_Game.o"
 	@echo "... Framework/moc_Game.i"
 	@echo "... Framework/moc_Game.s"

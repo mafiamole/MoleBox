@@ -27,24 +27,29 @@
 #ifndef LUASCRIPT_H
 #define LUASCRIPT_H
 
-#include "LuaScriptHelper.h"
+#include "content.h"
 #include "luascripts.h"
-
+#include <lua.hpp>
 #ifndef LUA_SFML_API
 #define LUA_SFML_API
+#include <sstream>
 
-#ifdef LUA_EDITOR
 template <int T> static int voidLuaEmptyFunction(lua_State *L) {
   
   int n = lua_gettop(L);
   
-  if ( n != T)
+  int numberOfArgs = T;
+  
+  if ( numberOfArgs != T)
   {
+    
     std::string error;
-    error = "Incorrect number of arguments, this function takes ";
-    error =+ T;
-    error =+ ".";
-    lua_pushstring(L,error.c_str());
+    error << "Incorrect number of arguments, this function takes ";
+    error << numberOfArgs;
+    error << ".";
+    std::string err;
+    err = error.str();
+    lua_pushstring(L,err.c_str());
     lua_error(L);
   }
   
@@ -52,10 +57,11 @@ template <int T> static int voidLuaEmptyFunction(lua_State *L) {
 
 static const luaL_reg sprite_DUMMY[] =
 {
-  { "Load", voidLuaEmptyFunction<2> },
+  { "Load", voidLuaEmptyFunction<1> },
   { "Draw", voidLuaEmptyFunction<1> },
-  { "Move", voidLuaEmptyFunction<2> },
-  { "SetPosition", voidLuaEmptyFunction<2> },
+  { "Move", voidLuaEmptyFunction<3> },
+  { "SetPosition", voidLuaEmptyFunction<3> },
+  { "GetPosition", voidLuaEmptyFunction<0>},
   { NULL, NULL }
 };
 
@@ -74,6 +80,7 @@ static const luaL_reg sprite[] =
   { "Draw", MB_Lua::Sprites::Draw},
   { "Move", MB_Lua::Sprites::Move},
   { "SetPosition", MB_Lua::Sprites::SetPosition},
+  { "GetPosition", MB_Lua::Sprites::GetPosition},
   { NULL, NULL }
 };
 
@@ -84,7 +91,6 @@ static const luaL_Reg sound[] =
   
   { NULL, NULL }
 };
-#endif
   
 class LuaScript
 {
@@ -98,8 +104,10 @@ public:
     bool HandleError(int State);
     void RegisterComponentFunctions();
     void RegisterDummyComponentFuncs();
+    bool RunScript();
     bool RunFunction(std::string name);
     bool LookForFunction( std::string name );
+    std::string ErrorTypeName(int state);
     lua_State* GetState();
     virtual ~LuaScript();
 

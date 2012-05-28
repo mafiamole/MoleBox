@@ -1,0 +1,16 @@
+# Hashes of file build rules.
+71945e0e48ddb052635fa5a0153694db Framework/Actions/moc_keyboard.cxx
+1fbeed91603798198b45aa756b1bda45 Framework/Actions/moc_mouse.cxx
+7eca09b0bb29ad6a652fc85e6ca53df2 Framework/Lua/moc_Component.cxx
+e7de1d874f1f5105aa8a424df7bda5aa Framework/Lua/moc_LuaScriptHelper.cxx
+b9089157a60be2241233be706e93e5e7 Framework/Lua/moc_luaeditor.cxx
+c74ad64e057ed307bf34a165e8e1f752 Framework/Lua/moc_luascript.cxx
+e15265c30584d76dbb62c25e71125cbe Framework/Lua/moc_luascripts.cxx
+3a61477381e62f45840cea5c3053513e Framework/moc_ContainerDefinitions.cxx
+ffc44ac0fd1753508e56e1abff5e5224 Framework/moc_Content.cxx
+e27a1e549bda8fadb6c7734f3bac34d6 Framework/moc_ContentTemplate.cxx
+6254fa18fbbe2b6035547110f925cc31 Framework/moc_Game.cxx
+e83c0c9291007297a9c85c980cad7f71 Framework/moc_GameComponent.cxx
+912f4986ed3e512354241d71bac3c297 Framework/moc_action.cxx
+1885ab4ca30eea5f82859a72760da249 Framework/moc_actions.cxx
+a2df8f8a0c4d24d946754d8c2f186382 ui_GameLuaEditor.h

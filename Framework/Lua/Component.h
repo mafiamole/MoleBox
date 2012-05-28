@@ -34,10 +34,11 @@ extern "C" {
 
 #include "../GameComponent.h"
 #include "../Game.h"
-#include "LuaScriptHelper.h"
+#include "content.h"
+#include "luascript.h"
 #ifdef LUA_EDITOR
   #include "luascripts.h"
-#include "luascript.h"
+
 #endif
 
 #include <map>
@@ -55,20 +56,39 @@ namespace MB {
 
   void ActionsToLua(lua_State* L, MB::Actions* actions);
   
+  
+  
   class LuaComponent : public GameComponent
   {
   private:
 
     std::string 		scriptFile;
     LuaScript			script;
-
+    std::map<int,sf::Sprite>	sprites;
+    std::map<int,sf::Sound>	sounds;
+    int spriteKey;
+    int soundKey;
+    std::vector<int>		spriteBatch;
+    
   public:
     LuaComponent(MB::Game* game, std::string file);
+    
+    int	AddSprite(std::string file);
+    int	AddSounds(std::string file);
+    
+    void AddSpriteToDrawList(int ref);
+    
+    sf::Sprite* GetSprite(int ref);
+    sf::Sound*	GetSound(int ref);
+    
     virtual void Update(EventList* events);
     virtual void Draw();
+    
     virtual ~LuaComponent();
-
   };
   
 }
+
+
+
 #endif // LUACOMPONENT_H

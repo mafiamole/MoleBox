@@ -301,3 +301,20 @@ int MB_Lua::Sprites::Move(lua_State* L)
   Sprites::Instance().luaSprites[sprite].move(x,y);
 }
 
+int MB_Lua::Sprites::SetPosition(lua_State *L)
+{
+  if ( Sprites::Instance().GetWindow() == NULL )
+    
+    LuaHelper::PushError( L, "INTERNAL ERROR: No handle on window." );
+  
+  int n = lua_gettop( L );
+  
+  if ( n != 3 )
+    
+    LuaHelper::PushError(  L, "Move requires three arguments: (sprite name, x change in pixels, y change in pixels )");
+    
+  std::string sprite 	= lua_tostring( L, 1 );
+  float x 		= lua_tonumber( L, 2 );
+  float y 		= lua_tonumber( L, 3 );  
+  Sprites::Instance().luaSprites[sprite].setPosition(x,y);  
+}

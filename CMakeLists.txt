@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 2.8)
 project(paulsframework)
-
+#set (CMAKE_CXX_COMPILER             "/usr/bin/clang++")
 option(LUA_EDITOR_TOOL "Enable the Lua live editor" OFF)
 
 find_package(SFML 2.0 REQUIRED system window graphics audio)
@@ -15,16 +15,17 @@ endif()
 
 find_package(Lua51)
 
-  set ( paulsframework_SOURCES
-	      Framework/Lua/luascript.cpp
-	      Framework/Lua/luascripts.cpp
-	      Framework/Lua/luaeditor.cpp 
+  set ( paulsframework_SOURCES 
+	      Framework/Lua/content.cpp
 	      Framework/Actions/keyboard.cpp 
 	      Framework/Actions/mouse.cpp 
 	      Framework/action.cpp 
 	      Framework/actions.cpp
-	      Framework/Lua/luaScriptHelper.cpp
+	      Framework/Lua/LuaScriptHelper.cpp
 	      Framework/Lua/Component.cpp
+	      Framework/Lua/luascript.cpp
+	      Framework/Lua/luascripts.cpp
+	      Framework/Lua/luaeditor.cpp 
 	      Framework/GameComponent.cpp
 	      Framework/Game.cpp
 	      Framework/Content.cpp
@@ -34,8 +35,12 @@ find_package(Lua51)
       )
 
   set ( paulsframework_HEADERS
+	      Framework/Lua/luaeditor.h
+	      Framework/Lua/LuaScriptHelper.h
+	      Framework/Lua/Component.h
 	      Framework/Lua/luascript.h
 	      Framework/Lua/luascripts.h
+	      Framework/ContentTemplate.h
 	      Framework/Content.h
 	      Framework/action.h
 	      Framework/actions.h
@@ -45,10 +50,6 @@ find_package(Lua51)
 	      Framework/GameComponent.h
 	      Framework/Actions/keyboard.h
 	      Framework/Actions/mouse.h
-	      Framework/Lua/luaeditor.h
-	      Framework/Lua/LuaScriptHelper.h
-	      Framework/Lua/Component.h
-
       )
 
   set ( paulsframework_FORMS 

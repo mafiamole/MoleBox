@@ -2,7 +2,7 @@
 BuildItems=@Variant(\x00\x00\x00\t\x00\x00\x00\x00\x02\x00\x00\x00\x0b\x00\x00\x00\x00\x01\x00\x00\x00\x1c\x00p\x00a\x00u\x00l\x00s\x00F\x00r\x00a\x00m\x00e\x00w\x00o\x00r\x00k\x00\x00\x00\x0b\x00\x00\x00\x00\x02\x00\x00\x00\x1c\x00p\x00a\x00u\x00l\x00s\x00F\x00r\x00a\x00m\x00e\x00w\x00o\x00r\x00k\x00\x00\x00\x12\x00F\x00r\x00a\x00m\x00e\x00w\x00o\x00r\x00k)
 
 [CMake]
-BuildDirs[$e]=$HOME/projects/paulsFramework/build,$HOME/projects/paulsFramework/build/Linux
+BuildDirs[$e]=$HOME/projects/paulsFramework/build/Linux
 CMakeDir=/usr/share/cmake/Modules
 Current CMake Binary=file:///usr/bin/cmake
 CurrentBuildDir=file:///home/mafiamole/projects/paulsFramework/build/Linux
@@ -26,8 +26,8 @@ Arguments=
 Debugger Shell=
 Dependencies=@Variant(\x00\x00\x00\t\x00\x00\x00\x00\x00)
 Dependency Action=Nothing
-Display Demangle Names=true
-Display Static Members=true
+Display Demangle Names=false
+Display Static Members=false
 EnvironmentGroup=default
 Executable=
 External Terminal=konsole --noclose --workdir %workdir -e %exe

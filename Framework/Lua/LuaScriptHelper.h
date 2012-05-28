@@ -38,54 +38,7 @@ extern "C" {
 
 #include "../Content.h"
 
-namespace MB_Lua {
 
-class Sounds {
-  
-  private:
-    Sounds								();
-    ~Sounds								(); 
-    void operator=							(Sounds const&);
-    
-  protected:
-    std::map <std::string,sf::Sound> sounds;
-    
-  public:
-    static Sounds& 			Instance			(); 
-    static int 				Load				( lua_State *L );
-    static int 				Play				( lua_State *L );
-    static int 				PauseUnPause			( lua_State *l );
-    static int 				Stop				( lua_State *l );
-
-  };
-  
-class Sprites {
-  
-  private:
-    Sprites								();
-    ~Sprites								();
-    void operator=							(Sprites const&);
-    
-  protected:
-    std::map<std::string, sf::Sprite> 	luaSprites;
-    sf::RenderWindow* 			window;
-    
-   public:
-    static Sprites& 			Instance			();
-    
-    void 				SetWindow			( sf::RenderWindow* window );
-    
-    sf::RenderWindow* 			GetWindow			();
-    sf::Sprite 				GetSprite			( std::string name );
-    
-    static int 				Load				( lua_State *L );
-    static int 				Draw				( lua_State *L );
-    static int				Move				( lua_State *L );
-    static int				SetPosition			( lua_State *L );
-    
-  };
-   
-}
 
 namespace LuaHelper {
   

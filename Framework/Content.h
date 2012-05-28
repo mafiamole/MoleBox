@@ -30,16 +30,14 @@
 #include <SFML/Graphics.hpp>
 #include <SFML/Audio.hpp>
 
-
 #include "ContentTemplate.h"
-
-
 
 /**
  * Template class to add sf::Texture as a loadable content.
  * 
  */
 namespace MB {
+  
   template <> class ContentContainer <sf::Texture> {
     
   private:

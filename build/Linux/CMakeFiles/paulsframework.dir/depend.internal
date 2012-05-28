@@ -15,6 +15,7 @@ CMakeFiles/paulsframework.dir/Example/game.cpp.o
  /home/mafiamole/projects/paulsFramework/Example/../Framework/Lua/../GameComponent.h
  /home/mafiamole/projects/paulsFramework/Example/../Framework/Lua/Component.h
  /home/mafiamole/projects/paulsFramework/Example/../Framework/Lua/LuaScriptHelper.h
+ /home/mafiamole/projects/paulsFramework/Example/../Framework/Lua/content.h
  /home/mafiamole/projects/paulsFramework/Example/../Framework/Lua/luascript.h
  /home/mafiamole/projects/paulsFramework/Example/../Framework/Lua/luascripts.h
  /home/mafiamole/projects/paulsFramework/Example/../Framework/action.h
@@ -575,6 +576,7 @@ CMakeFiles/paulsframework.dir/Framework/Lua/Component.cpp.o
  /home/mafiamole/projects/paulsFramework/Framework/Lua/Component.cpp
  /home/mafiamole/projects/paulsFramework/Framework/Lua/Component.h
  /home/mafiamole/projects/paulsFramework/Framework/Lua/LuaScriptHelper.h
+ /home/mafiamole/projects/paulsFramework/Framework/Lua/content.h
  /home/mafiamole/projects/paulsFramework/Framework/Lua/luascript.h
  /home/mafiamole/projects/paulsFramework/Framework/Lua/luascripts.h
  /usr/local/include/SFML/Audio.hpp
@@ -651,11 +653,99 @@ CMakeFiles/paulsframework.dir/Framework/Lua/Component.cpp.o
  /usr/local/include/SFML/Window/Window.hpp
  /usr/local/include/SFML/Window/WindowHandle.hpp
  /usr/local/include/SFML/Window/WindowStyle.hpp
-CMakeFiles/paulsframework.dir/Framework/Lua/luaScriptHelper.cpp.o
+CMakeFiles/paulsframework.dir/Framework/Lua/LuaScriptHelper.cpp.o
  /home/mafiamole/projects/paulsFramework/Framework/Lua/../Content.h
  /home/mafiamole/projects/paulsFramework/Framework/Lua/../ContentTemplate.h
+ /home/mafiamole/projects/paulsFramework/Framework/Lua/LuaScriptHelper.cpp
  /home/mafiamole/projects/paulsFramework/Framework/Lua/LuaScriptHelper.h
- /home/mafiamole/projects/paulsFramework/Framework/Lua/luaScriptHelper.cpp
+ /usr/local/include/SFML/Audio.hpp
+ /usr/local/include/SFML/Audio/Export.hpp
+ /usr/local/include/SFML/Audio/Listener.hpp
+ /usr/local/include/SFML/Audio/Music.hpp
+ /usr/local/include/SFML/Audio/Sound.hpp
+ /usr/local/include/SFML/Audio/SoundBuffer.hpp
+ /usr/local/include/SFML/Audio/SoundBufferRecorder.hpp
+ /usr/local/include/SFML/Audio/SoundRecorder.hpp
+ /usr/local/include/SFML/Audio/SoundSource.hpp
+ /usr/local/include/SFML/Audio/SoundStream.hpp
+ /usr/local/include/SFML/Config.hpp
+ /usr/local/include/SFML/Graphics.hpp
+ /usr/local/include/SFML/Graphics/BlendMode.hpp
+ /usr/local/include/SFML/Graphics/CircleShape.hpp
+ /usr/local/include/SFML/Graphics/Color.hpp
+ /usr/local/include/SFML/Graphics/ConvexShape.hpp
+ /usr/local/include/SFML/Graphics/Drawable.hpp
+ /usr/local/include/SFML/Graphics/Export.hpp
+ /usr/local/include/SFML/Graphics/Font.hpp
+ /usr/local/include/SFML/Graphics/Glyph.hpp
+ /usr/local/include/SFML/Graphics/Image.hpp
+ /usr/local/include/SFML/Graphics/PrimitiveType.hpp
+ /usr/local/include/SFML/Graphics/Rect.hpp
+ /usr/local/include/SFML/Graphics/Rect.inl
+ /usr/local/include/SFML/Graphics/RectangleShape.hpp
+ /usr/local/include/SFML/Graphics/RenderStates.hpp
+ /usr/local/include/SFML/Graphics/RenderTarget.hpp
+ /usr/local/include/SFML/Graphics/RenderTexture.hpp
+ /usr/local/include/SFML/Graphics/RenderWindow.hpp
+ /usr/local/include/SFML/Graphics/Shader.hpp
+ /usr/local/include/SFML/Graphics/Shape.hpp
+ /usr/local/include/SFML/Graphics/Sprite.hpp
+ /usr/local/include/SFML/Graphics/Text.hpp
+ /usr/local/include/SFML/Graphics/Texture.hpp
+ /usr/local/include/SFML/Graphics/Transform.hpp
+ /usr/local/include/SFML/Graphics/Transformable.hpp
+ /usr/local/include/SFML/Graphics/Vertex.hpp
+ /usr/local/include/SFML/Graphics/VertexArray.hpp
+ /usr/local/include/SFML/Graphics/View.hpp
+ /usr/local/include/SFML/System.hpp
+ /usr/local/include/SFML/System/Clock.hpp
+ /usr/local/include/SFML/System/Err.hpp
+ /usr/local/include/SFML/System/Export.hpp
+ /usr/local/include/SFML/System/InputStream.hpp
+ /usr/local/include/SFML/System/Lock.hpp
+ /usr/local/include/SFML/System/Mutex.hpp
+ /usr/local/include/SFML/System/NonCopyable.hpp
+ /usr/local/include/SFML/System/Sleep.hpp
+ /usr/local/include/SFML/System/String.hpp
+ /usr/local/include/SFML/System/Thread.hpp
+ /usr/local/include/SFML/System/Thread.inl
+ /usr/local/include/SFML/System/ThreadLocal.hpp
+ /usr/local/include/SFML/System/ThreadLocalPtr.hpp
+ /usr/local/include/SFML/System/ThreadLocalPtr.inl
+ /usr/local/include/SFML/System/Time.hpp
+ /usr/local/include/SFML/System/Utf.hpp
+ /usr/local/include/SFML/System/Utf.inl
+ /usr/local/include/SFML/System/Vector2.hpp
+ /usr/local/include/SFML/System/Vector2.inl
+ /usr/local/include/SFML/System/Vector3.hpp
+ /usr/local/include/SFML/System/Vector3.inl
+ /usr/local/include/SFML/Window.hpp
+ /usr/local/include/SFML/Window/Context.hpp
+ /usr/local/include/SFML/Window/ContextSettings.hpp
+ /usr/local/include/SFML/Window/Event.hpp
+ /usr/local/include/SFML/Window/Export.hpp
+ /usr/local/include/SFML/Window/GlResource.hpp
+ /usr/local/include/SFML/Window/Joystick.hpp
+ /usr/local/include/SFML/Window/Keyboard.hpp
+ /usr/local/include/SFML/Window/Mouse.hpp
+ /usr/local/include/SFML/Window/VideoMode.hpp
+ /usr/local/include/SFML/Window/Window.hpp
+ /usr/local/include/SFML/Window/WindowHandle.hpp
+ /usr/local/include/SFML/Window/WindowStyle.hpp
+CMakeFiles/paulsframework.dir/Framework/Lua/content.cpp.o
+ /home/mafiamole/projects/paulsFramework/Framework/Lua/../ContainerDefinitions.h
+ /home/mafiamole/projects/paulsFramework/Framework/Lua/../Content.h
+ /home/mafiamole/projects/paulsFramework/Framework/Lua/../ContentTemplate.h
+ /home/mafiamole/projects/paulsFramework/Framework/Lua/../Game.h
+ /home/mafiamole/projects/paulsFramework/Framework/Lua/../GameComponent.h
+ /home/mafiamole/projects/paulsFramework/Framework/Lua/../action.h
+ /home/mafiamole/projects/paulsFramework/Framework/Lua/../actions.h
+ /home/mafiamole/projects/paulsFramework/Framework/Lua/Component.h
+ /home/mafiamole/projects/paulsFramework/Framework/Lua/LuaScriptHelper.h
+ /home/mafiamole/projects/paulsFramework/Framework/Lua/content.cpp
+ /home/mafiamole/projects/paulsFramework/Framework/Lua/content.h
+ /home/mafiamole/projects/paulsFramework/Framework/Lua/luascript.h
+ /home/mafiamole/projects/paulsFramework/Framework/Lua/luascripts.h
  /usr/local/include/SFML/Audio.hpp
  /usr/local/include/SFML/Audio/Export.hpp
  /usr/local/include/SFML/Audio/Listener.hpp
@@ -734,6 +824,7 @@ CMakeFiles/paulsframework.dir/Framework/Lua/luaeditor.cpp.o
  /home/mafiamole/projects/paulsFramework/Framework/Lua/../Content.h
  /home/mafiamole/projects/paulsFramework/Framework/Lua/../ContentTemplate.h
  /home/mafiamole/projects/paulsFramework/Framework/Lua/LuaScriptHelper.h
+ /home/mafiamole/projects/paulsFramework/Framework/Lua/content.h
  /home/mafiamole/projects/paulsFramework/Framework/Lua/luaeditor.cpp
  /home/mafiamole/projects/paulsFramework/Framework/Lua/luaeditor.h
  /home/mafiamole/projects/paulsFramework/Framework/Lua/luascript.h
@@ -819,6 +910,7 @@ CMakeFiles/paulsframework.dir/Framework/Lua/luascript.cpp.o
  /home/mafiamole/projects/paulsFramework/Framework/Lua/../Content.h
  /home/mafiamole/projects/paulsFramework/Framework/Lua/../ContentTemplate.h
  /home/mafiamole/projects/paulsFramework/Framework/Lua/LuaScriptHelper.h
+ /home/mafiamole/projects/paulsFramework/Framework/Lua/content.h
  /home/mafiamole/projects/paulsFramework/Framework/Lua/luascript.cpp
  /home/mafiamole/projects/paulsFramework/Framework/Lua/luascript.h
  /home/mafiamole/projects/paulsFramework/Framework/Lua/luascripts.h
@@ -1043,6 +1135,8 @@ CMakeFiles/paulsframework.dir/Framework/moc_ContainerDefinitions.cxx.o
  /home/mafiamole/projects/paulsFramework/build/Linux/Framework/moc_ContainerDefinitions.cxx
 CMakeFiles/paulsframework.dir/Framework/moc_Content.cxx.o
  /home/mafiamole/projects/paulsFramework/build/Linux/Framework/moc_Content.cxx
+CMakeFiles/paulsframework.dir/Framework/moc_ContentTemplate.cxx.o
+ /home/mafiamole/projects/paulsFramework/build/Linux/Framework/moc_ContentTemplate.cxx
 CMakeFiles/paulsframework.dir/Framework/moc_Game.cxx.o
  /home/mafiamole/projects/paulsFramework/build/Linux/Framework/moc_Game.cxx
 CMakeFiles/paulsframework.dir/Framework/moc_GameComponent.cxx.o
