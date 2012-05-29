@@ -1,5 +1,0 @@
-#ifndef SFMLGAMETD_H
-#define SFMLGAMETD_H
-typedef std::vector<SFMLGameComponent *> ComponentVector;
-typedef std::map<sf::Event::EventType,sf::Event> EventList;
-#endif

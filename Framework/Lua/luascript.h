@@ -50,6 +50,8 @@ template <int T> static int voidLuaEmptyFunction(lua_State *L) {
     lua_pushstring(L,error.c_str());
     lua_error(L);
   }
+ 
+  return 0;
   
 }
 

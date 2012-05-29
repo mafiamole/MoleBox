@@ -151,7 +151,10 @@ int MB_Lua::Sounds::PauseUnPause(lua_State* L)
   {
     LuaHelper::PushError( L, e );
   }
-  
+
+
+  return 0;
+
 }
 
 
@@ -214,6 +217,8 @@ int MB_Lua::Sprites::Move(lua_State* L)
   MB::LuaComponent* _this = getComponentFromUserData(L);
   
   _this->GetSprite(sprite)->move(x,y);
+
+  return 0;
 }
 
 int MB_Lua::Sprites::SetPosition(lua_State *L)
