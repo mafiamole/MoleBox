@@ -1,93 +1,114 @@
 cmake_minimum_required(VERSION 2.8)
-project(paulsframework)
-#set (CMAKE_CXX_COMPILER             "/usr/bin/clang++")
+project(molebox)
+
+#option(MB_LUA "Enable the use of Lua components in your application" ON)
 option(LUA_EDITOR_TOOL "Enable the Lua live editor" OFF)
 
-find_package(SFML 2.0 REQUIRED system window graphics audio)
+if (UNIX)
+	set ( COMPILE_STRICT_ARGS " -Wall -Wno-long-long -pedantic -Weffc++ -Wextra" )
+else
+	set ( COMPILE_STRICT_ARGS "")
+endif()
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS}" "${COMPILE_STRICT_ARGS}" )
 
+
+#
+#	Find the relevent packages
+#
+message("Finding packages")
+find_package(SFML 2.0 COMPONENTS system window graphics audio REQUIRED)
 find_package(OpenGL REQUIRED)
 find_package(GLU REQUIRED)
-
+#if (MB_LUA)
+find_package(Lua51)
+#endif()
 if (LUA_EDITOR_TOOL)
   find_package(Qt4)
+  include(${QT_USE_FILE})
   add_definitions( "-DLUA_EDITOR" )
 endif()
 
-find_package(Lua51)
+#
+#	Set the Sources and headers and forms
+#
+set ( paulsframework_SOURCES 
 
-  set ( paulsframework_SOURCES 
-	      Framework/Lua/content.cpp
-	      Framework/Actions/keyboard.cpp 
-	      Framework/Actions/mouse.cpp 
-	      Framework/action.cpp 
-	      Framework/actions.cpp
-	      Framework/Lua/LuaScriptHelper.cpp
-	      Framework/Lua/Component.cpp
-	      Framework/Lua/luascript.cpp
-	      Framework/Lua/luascripts.cpp
-	      Framework/Lua/luaeditor.cpp 
-	      Framework/GameComponent.cpp
-	      Framework/Game.cpp
-	      Framework/Content.cpp
-	      Example/testcomponent.cpp 
-	      Example/game.cpp
-	      Example/main.cpp
-      )
+	  Framework/Actions/keyboard.cpp 
+	  Framework/Actions/mouse.cpp 
+	  Framework/action.cpp 
+	  Framework/actions.cpp
+	  Framework/Lua/content.cpp	  
+	  Framework/Lua/LuaScriptHelper.cpp
+	  Framework/Lua/Component.cpp
+	  Framework/Lua/luascript.cpp
+	  Framework/Lua/luascripts.cpp
+	  Framework/Lua/luaeditor.cpp 
+	  Framework/GameComponent.cpp
+	  Framework/Game.cpp
+	  Framework/Content.cpp
+	  Example/testcomponent.cpp 
+	  Example/game.cpp
+	  Example/main.cpp
+  )
 
-  set ( paulsframework_HEADERS
-	      Framework/Lua/luaeditor.h
-	      Framework/Lua/LuaScriptHelper.h
-	      Framework/Lua/Component.h
-	      Framework/Lua/luascript.h
-	      Framework/Lua/luascripts.h
-	      Framework/ContentTemplate.h
-	      Framework/Content.h
-	      Framework/action.h
-	      Framework/actions.h
-	      Framework/ContainerDefinitions.h
-	      Framework/Content.h
-	      Framework/Game.h
-	      Framework/GameComponent.h
-	      Framework/Actions/keyboard.h
-	      Framework/Actions/mouse.h
-      )
-
-  set ( paulsframework_FORMS 
-	      Framework/Lua/GameLuaEditor.ui
-      )
-
+set ( paulsframework_HEADERS
+	  Framework/Lua/luaeditor.h
+	  Framework/Lua/LuaScriptHelper.h
+	  Framework/Lua/Component.h
+	  Framework/Lua/luascript.h
+	  Framework/Lua/luascripts.h
+	  Framework/ContentTemplate.h
+	  Framework/Content.h
+	  Framework/action.h
+	  Framework/actions.h
+	  Framework/ContainerDefinitions.h
+	  Framework/Content.h
+	  Framework/Game.h
+	  Framework/GameComponent.h
+	  Framework/Actions/keyboard.h
+	  Framework/Actions/mouse.h
+  )
+ 
+#
+#	Sets up everything related compiling with the Lua Editor enabled.
+#
 if (LUA_EDITOR_TOOL)
 
-#  SET ( paulsframework_RESOURCES )
- 
-  qt4_wrap_cpp( paulsframework_HEADERS_MOC ${paulsframework_HEADERS} )
-  qt4_wrap_ui( paulsframework_FORMS_HEADERS ${paulsframework_FORMS} )
-# qt_add_resources( paulsframework_RESOURCES_RCC ${paulsframework_RESOURCES} )
+	set ( paulsframework_FORMS 
+	      Framework/Lua/GameLuaEditor.ui
+		)
 
-  add_executable(paulsframework ${paulsframework_SOURCES}
-	      ${paulsframework_HEADERS_MOC}
-	      ${paulsframework_FORMS_HEADERS}
-	      #${paulsframework_RESOURCES_RCC}
-	      )
-  include_directories(${CMAKE_CURRENT_BINARY_DIR})
-  include(${QT_USE_FILE})
-  add_definitions(${QT_DEFINITIONS})
-  target_link_libraries(paulsframework ${QT_LIBRARIES})
+	#set ( paulsframework_RESOURCES )
+ 
+	qt4_wrap_cpp( paulsframework_HEADERS_MOC ${paulsframework_HEADERS} )
+	qt4_wrap_ui( paulsframework_FORMS_HEADERS ${paulsframework_FORMS} )
+
+	# qt_add_resources( paulsframework_RESOURCES_RCC ${paulsframework_RESOURCES} )
+
+	add_executable(paulsframework ${paulsframework_SOURCES}
+		${paulsframework_HEADERS_MOC}
+		${paulsframework_FORMS_HEADERS}
+		#${paulsframework_RESOURCES_RCC}
+	    )
+	include_directories(${CMAKE_CURRENT_BINARY_DIR})
+	include(${QT_USE_FILE})
+	add_definitions(${QT_DEFINITIONS})
+	target_link_libraries(paulsframework ${QT_LIBRARIES})
+#
+#	Sets up everything related compiling with the Lua Editor disabled.
+#  
 else ()
 
-  add_executable(paulsframework 
-	      ${paulsframework_SOURCES}
-	      )
+	add_executable(paulsframework 
+	    ${paulsframework_SOURCES}
+	    )
 
 endif()
-
 
 if(SFML_FOUND)
-  include_directories(${SFML_INCLUDE_DIR} ${OPENGL_INCLUDE_DIR} ${GLU_INCLUDE_PATH})
-  target_link_libraries(paulsframework ${SFML_LIBRARIES} ${OPENGL_gl_LIBRARY} ${GLU_LIBRARY} ${LUA_LIBRARY})
+	include_directories(${SFML_INCLUDE_DIR} ${OPENGL_INCLUDE_DIR} ${GLU_INCLUDE_PATH} ${LUA_INCLUDE_DIR})
+	target_link_libraries(paulsframework ${SFML_LIBRARIES} ${OPENGL_gl_LIBRARY} ${GLU_LIBRARY} ${LUA_LIBRARY})
 endif()
-
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS}  -Wall -Wno-long-long -pedantic -Weffc++ -Wextra")
 
 add_subdirectory(Example)
 add_subdirectory(Framework)
