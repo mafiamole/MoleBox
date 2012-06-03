@@ -4,12 +4,6 @@ project(molebox)
 #option(MB_LUA "Enable the use of Lua components in your application" ON)
 option(LUA_EDITOR_TOOL "Enable the Lua live editor" OFF)
 
-if (UNIX)
-	set ( COMPILE_STRICT_ARGS " -Wall -Wno-long-long -pedantic -Weffc++ -Wextra" )
-else ()
-	set ( COMPILE_STRICT_ARGS "")
-endif()
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS}" "${COMPILE_STRICT_ARGS}" )
 
 
 #
@@ -109,6 +103,13 @@ if(SFML_FOUND)
 	include_directories(${SFML_INCLUDE_DIR} ${OPENGL_INCLUDE_DIR} ${GLU_INCLUDE_PATH} ${LUA_INCLUDE_DIR})
 	target_link_libraries(paulsframework ${SFML_LIBRARIES} ${OPENGL_gl_LIBRARY} ${GLU_LIBRARY} ${LUA_LIBRARY})
 endif()
+
+# if (UNIX)
+# 	set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS}" "  -Wall -Wno-long-long -pedantic -Weffc++ -Wextra")
+# else ()
+# 	set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS}")
+# endif()
+
 
 add_subdirectory(Example)
 add_subdirectory(Framework)
