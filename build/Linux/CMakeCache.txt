@@ -1011,8 +1011,6 @@ paulsframework_SOURCE_DIR:STATIC=/home/mafiamole/projects/paulsFramework
 
 //ADVANCED property for variable: CMAKE_AR
 CMAKE_AR-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CMAKE_BUILD_TOOL
-CMAKE_BUILD_TOOL-ADVANCED:INTERNAL=1
 //What is the target build tool cmake is generating for.
 CMAKE_BUILD_TOOL:INTERNAL=/usr/bin/gmake
 //This is the directory where this CMakeCache.txt was created
@@ -1111,7 +1109,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_LOCAL_GENERATORS:INTERNAL=5
+CMAKE_NUMBER_OF_LOCAL_GENERATORS:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
@@ -1190,8 +1188,6 @@ QT_DOC_DIR-ADVANCED:INTERNAL=1
 QT_HEADERS_DIR:INTERNAL=/usr/include
 //ADVANCED property for variable: QT_IMPORTS_DIR
 QT_IMPORTS_DIR-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_LIBRARY_DIR
-QT_LIBRARY_DIR-ADVANCED:INTERNAL=1
 //Qt library dir
 QT_LIBRARY_DIR:INTERNAL=/usr/lib64
 //ADVANCED property for variable: QT_LINGUIST_EXECUTABLE

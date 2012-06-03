@@ -6,7 +6,7 @@ option(LUA_EDITOR_TOOL "Enable the Lua live editor" OFF)
 
 if (UNIX)
 	set ( COMPILE_STRICT_ARGS " -Wall -Wno-long-long -pedantic -Weffc++ -Wextra" )
-else
+else ()
 	set ( COMPILE_STRICT_ARGS "")
 endif()
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS}" "${COMPILE_STRICT_ARGS}" )
