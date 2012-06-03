@@ -54,13 +54,13 @@ TestComponent::~TestComponent()
 
 }
 
-void TestComponent::Update(MB::EventList* events)
+void TestComponent::Update(sf::Time elapsed, MB::EventList* events)
 {
   
   MB::GameComponent::Update(events);
 
   MB::Action* tempAction = this->actions->Get("Play Music");
-  
+/*  
   if ( !tempAction->IsActive() && tempAction->HasChanged() )
   {
     musicPaused = !musicPaused;
@@ -71,6 +71,7 @@ void TestComponent::Update(MB::EventList* events)
       music->play();
     }      
   }
+*/
 /*
   if ( !this->actions->Get("Play Sound")->IsActive() && this->actions->Get("Play Sound")->HasChanged() )
     sound.play();

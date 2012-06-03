@@ -44,12 +44,10 @@ template <int T> static int voidLuaEmptyFunction(lua_State *L) {
   {
     
     std::string error;
-    error << "Incorrect number of arguments, this function takes ";
-    error << numberOfArgs;
-    error << ".";
-    std::string err;
-    err = error.str();
-    lua_pushstring(L,err.c_str());
+    error = "Incorrect number of arguments, this function takes ";
+    error += numberOfArgs;
+    error += ".";
+    lua_pushstring(L,error.c_str());
     lua_error(L);
   }
   
@@ -58,7 +56,7 @@ template <int T> static int voidLuaEmptyFunction(lua_State *L) {
 static const luaL_reg sprite_DUMMY[] =
 {
   { "Load", voidLuaEmptyFunction<1> },
-  { "Draw", voidLuaEmptyFunction<1> },
+  { "Draw", voidLuaEmptyFunction<2> },
   { "Move", voidLuaEmptyFunction<3> },
   { "SetPosition", voidLuaEmptyFunction<3> },
   { "GetPosition", voidLuaEmptyFunction<0>},

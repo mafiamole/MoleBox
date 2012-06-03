@@ -59,7 +59,7 @@ namespace MB {
     * Called every game loop.
     * This function is used for changing the components state.
     */
-    virtual void 	Update			(EventList* events);
+    virtual void 	Update			( sf::Time elapsed,EventList* events);
     /**
     * Called every game loop.
     * This function is used to render to the screen. 

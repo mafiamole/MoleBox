@@ -70,6 +70,8 @@ class GameComponent;
     
   protected:
     
+    sf::Clock 			clock;
+    
     Actions 			actionList;
     /**
     * Components container contains an list of components.
@@ -112,7 +114,7 @@ class GameComponent;
     * The update function accepts events from the window poll event loop construct.
     * It also calls the update method of each component.
     */
-    virtual void 		Update		( EventList *events );
+    virtual void 		Update		( sf::Time elapsed, EventList *events );
     /**
     * Called once per loop.
     * This calls the Draw method of each component.

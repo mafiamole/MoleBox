@@ -54,10 +54,10 @@ TestComponent::~TestComponent()
 
 }
 
-void TestComponent::Update(MB::EventList* events)
+void TestComponent::Update(sf::Time elapsed, MB::EventList* events)
 {
   
-  MB::GameComponent::Update(events);
+  MB::GameComponent::Update(elapsed,events);
 
   MB::Action* tempAction = this->actions->Get("Play Music");
 /*  

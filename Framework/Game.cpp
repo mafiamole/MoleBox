@@ -79,13 +79,13 @@ void MB::Game::Draw()
   
 }
 
-void MB::Game::Update(EventList* events)
+void MB::Game::Update(sf::Time elapsed, MB::EventList* events)
 {
   ComponentVector::iterator componentItr;
   
   for ( componentItr = components.begin(); componentItr != components.end(); componentItr++ )
   {
-    ( *componentItr )->Update( events );
+    ( *componentItr )->Update( elapsed, events );
   }
   
   this->actionList.Update();
@@ -117,7 +117,7 @@ void MB::Game::Run(int argc, char** argv)
   {
     
     sf::Event event;
-    
+    sf::Time elapsed = clock.restart();
     while ( window->pollEvent(event) )
     {
       
@@ -130,7 +130,7 @@ void MB::Game::Run(int argc, char** argv)
     
     window->clear();
     
-    this->Update( &eventList );
+    this->Update( elapsed, &eventList );
     
     this->Draw();
 

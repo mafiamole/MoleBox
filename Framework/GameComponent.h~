@@ -47,6 +47,7 @@ namespace MB {
     * Pointer to the game object.
     * This is to allow the component to access the window object for rendering purposes.
     */
+    Actions		*actions;
     Game 		*game;
       
   public:
@@ -65,7 +66,6 @@ namespace MB {
     */
     virtual void 	Draw			();
     
-    Actions*		ActionList();
     /**
     * Does nothing.
     * 

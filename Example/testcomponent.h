@@ -35,7 +35,7 @@ class TestComponent : public MB::GameComponent
 		TestComponent(MB::Game* game);
     virtual 	~TestComponent();
     
-    void 	Update(MB::EventList* events);
+    void 	Update( sf::Time elapsed, MB::EventList* events);
     void 	Draw();
 
 private:

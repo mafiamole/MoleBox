@@ -48,6 +48,7 @@ private:
     MB::SpriteBatch* 	spriteBatch;
     sf::Music* 		music;
     sf::Sound 		sound;
+    
 };
 
 #endif // TESTCOMPONENT_H

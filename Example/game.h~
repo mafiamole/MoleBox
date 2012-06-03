@@ -29,7 +29,7 @@
 #include <stdlib.h>
 
 #include "../Framework/Game.h"
-#include "../Framework/Lua/Lua.h"
+#include "lua.hpp"
 
 #include "testcomponent.h"
 

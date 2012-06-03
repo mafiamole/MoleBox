@@ -44,7 +44,7 @@ void MB::GameComponent::Draw()
 }
 
 
-void MB::GameComponent::Update (EventList* events )
+void MB::GameComponent::Update (sf::Time elapsed, MB::EventList* events )
 {
 
 }

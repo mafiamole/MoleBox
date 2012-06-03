@@ -174,12 +174,8 @@ void LuaEditor::UpdateScript()
   
     bool success = script.LoadFromString(changedScript);
       script.RunScript();
-      this->ui.listWidget_errors->addItem(QString("Running methods."));
-      this->ui.listWidget_errors->addItem(QString("Running init"));
       script.RunFunction("init");
-      this->ui.listWidget_errors->addItem(QString("Running update"));      
       script.RunFunction("update");
-      this->ui.listWidget_errors->addItem(QString("Running draw"));      
       script.RunFunction("draw");
   
       LuaHelper::LuaScripts::Instance().UpdateScript( scriptFile, changedScript );

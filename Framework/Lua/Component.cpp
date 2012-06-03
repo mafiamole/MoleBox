@@ -79,7 +79,7 @@ MB::LuaComponent::LuaComponent(Game* game,std::string file) : GameComponent(game
 
 
 
-void MB::LuaComponent::Update( EventList* events )
+void MB::LuaComponent::Update( sf::Time elapsed, MB::EventList* events )
 {
 #ifdef LUA_EDITOR
 
@@ -99,15 +99,21 @@ void MB::LuaComponent::Update( EventList* events )
 #endif
   lua_State* L = this->script.GetState();
   
-  lua_getglobal(L,"update");
 
-  ActionsToLua( L, this->game->GetActions() );
   
-  int s = lua_pcall( L , 1, 0 ,0);
+  lua_getglobal(L,"update");
+  
+  
+  
+  ActionsToLua( L, this->game->GetActions() );
+
+  lua_pushnumber(L, (int)elapsed.asMilliseconds() );
+  
+  int s = lua_pcall( L , 2, 0 ,0);
   
   this->script.HandleError(s);
   
-  GameComponent::Update( events );
+  GameComponent::Update( elapsed, events );
 
 }
 

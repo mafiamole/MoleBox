@@ -9,9 +9,9 @@ function init()
   Sprites.SetPosition(mySprite,10,10)
 end
 
-function update(events)
+function update( elapsed, events)
  --Sounds.Play("mouthpop.wav")-- o yea!
-   delta = 0.2 * direction  
+   delta = 0.2 * direction * elapsed
    logoPosition = (logoPosition * direction) + delta
    if logoPosition > 15 then
      direction = -1

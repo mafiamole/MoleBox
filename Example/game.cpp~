@@ -42,7 +42,7 @@ Game::Game() : MB::Game("Game Title")
   this->actionList.Register("Player Move Right",new MB::Keyboard(sf::Keyboard::Left));
     
   this->AddComponent(new TestComponent(this));
-  this->AddComponent(new LuaComponent(this,"testComponent.lua"));
+  this->AddComponent(new MB::LuaComponent(this,"testComponent.lua"));
   //this->AddComponent(new MB::LuaComponent(this,"testComponent2.lua")); 
 }
 
@@ -56,7 +56,7 @@ void Game::Draw()
   MB::Game::Draw();
 }
 
-void Game::Update(MB::EventList* events)
+void Game::Update( sf::Time elapsed, MB::EventList* events)
 {
   MB::Game::Update(events);
 

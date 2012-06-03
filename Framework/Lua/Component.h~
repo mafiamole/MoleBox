@@ -35,10 +35,10 @@ extern "C" {
 #include "../GameComponent.h"
 #include "../Game.h"
 #include "content.h"
-
+#include "luascript.h"
 #ifdef LUA_EDITOR
   #include "luascripts.h"
-#include "luascript.h"
+
 #endif
 
 #include <map>
