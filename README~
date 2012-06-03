@@ -1,8 +1,0 @@
-This is a small 'play' framework that uses SFML.
-
-Folder structure
-
-  - Content: 	This contains a set of assets for the example
-  - Example: 	Code for an example of the framework in use
-  - Framework: 	bulk of the framework is contained in this folder.
-    - Lua:	Contains the extra stuff relating to the Lua scripting language bindings.

@@ -43,7 +43,7 @@ bool MB::Action::IsActive()
 
 bool MB::Action::HasChanged()
 {
-
+  return false;
 }
 
 
