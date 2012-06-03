@@ -1,10 +1,8 @@
 cmake_minimum_required(VERSION 2.8)
 project(molebox)
-
+project(Example)
 #option(MB_LUA "Enable the use of Lua components in your application" ON)
 option(LUA_EDITOR_TOOL "Enable the Lua live editor" OFF)
-
-
 
 #
 #	Find the relevent packages

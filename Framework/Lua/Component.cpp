@@ -103,10 +103,8 @@ void MB::LuaComponent::Update( sf::Time elapsed, MB::EventList* events )
   
   lua_getglobal(L,"update");
   
-  
-  
   ActionsToLua( L, this->game->GetActions() );
-
+  std::cout << "Numbre: " << (int)elapsed.asMilliseconds() << std::endl;
   lua_pushnumber(L, (int)elapsed.asMilliseconds() );
   
   int s = lua_pcall( L , 2, 0 ,0);

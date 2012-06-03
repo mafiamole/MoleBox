@@ -111,7 +111,7 @@ void MB::Game::Run(int argc, char** argv)
   qtThread.launch();
 #endif
 
-  
+  clock.restart();
  
   while ( this->window->isOpen() )
   {

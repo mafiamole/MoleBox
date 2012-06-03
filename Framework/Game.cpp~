@@ -85,7 +85,7 @@ void MB::Game::Update(sf::Time elapsed, MB::EventList* events)
   
   for ( componentItr = components.begin(); componentItr != components.end(); componentItr++ )
   {
-    ( *componentItr )->Update(sf::Time elapsed, events );
+    ( *componentItr )->Update( elapsed, events );
   }
   
   this->actionList.Update();
