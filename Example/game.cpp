@@ -40,10 +40,15 @@ Game::Game() : MB::Game("Game Title")
   this->actionList.Register("Play Music",new MB::Mouse(sf::Mouse::Left));
   this->actionList.Register("Player Move Left",new MB::Keyboard(sf::Keyboard::Left));
   this->actionList.Register("Player Move Right",new MB::Keyboard(sf::Keyboard::Left));
-    
-  this->AddComponent(new TestComponent(this));
-  this->AddComponent(new MB::LuaComponent(this,"testComponent.lua"));
+  try {  
+	this->AddComponent(new TestComponent(this));
+	this->AddComponent(new MB::LuaComponent(this,"../testComponent.lua"));
   //this->AddComponent(new MB::LuaComponent(this,"testComponent2.lua")); 
+  }
+  catch (std::string e)
+  {
+	  std::cout << e << std::endl;
+  }
 }
 
 Game::~Game()

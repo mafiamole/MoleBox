@@ -52,7 +52,7 @@ MB::LuaComponent::LuaComponent(Game* game,std::string file) : GameComponent(game
   
   //this->LoadScript(file);
   int success;
-    
+
   bool loadedScript = this->script.LoadFromFile(file);
 
   
@@ -74,6 +74,7 @@ MB::LuaComponent::LuaComponent(Game* game,std::string file) : GameComponent(game
     throw "Script was unable to be loaded.";
     
   }
+
 
 }
 
