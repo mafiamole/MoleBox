@@ -1,0 +1,1 @@
+/usr/bin/c++   -g    CMakeFiles/Example2.dir/main.cpp.o  -o Example2 -rdynamic ../libMoleBox.so /usr/local/lib64/libsfml-system.so /usr/local/lib64/libsfml-window.so /usr/local/lib64/libsfml-graphics.so /usr/local/lib64/libsfml-audio.so -lGL -lGLU -lGL -lGLU -lSM -lICE -lX11 -lXext -llua-5.1 -Wl,-rpath,/home/mafiamole/projects/paulsFramework/build/Linux:/usr/local/lib64 
