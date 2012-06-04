@@ -28,13 +28,13 @@
 #define GAME_H
 #include <stdlib.h>
 
-#include "../Framework/Game.h"
+#include "../src/Molebox/Game.h"
 #include "lua.hpp"
 
 #include "testcomponent.h"
 
 #ifdef LUA_EDITOR
-  #include "../Framework/Lua/luascripts.h"
+  #include "../src/Molebox/Lua/luascripts.h"
 #endif
 
 class Game : public MB::Game
@@ -42,7 +42,7 @@ class Game : public MB::Game
 
 public:
     Game();
-    void Update(MB::EventList* events);
+    void Update( sf::Time elapsed, MB::EventList* events);
     void Draw();
     void Run(int argc,char** argv);
     virtual ~Game();

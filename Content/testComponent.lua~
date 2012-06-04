@@ -9,7 +9,7 @@ function init()
   Sprites.SetPosition(mySprite,10,10)
 end
 
-function update( events, elapsed )
+function update( elapsed )
    Sounds.Play("mouthpop.wav")-- o yea!
    delta = 0.2 * direction
    logoPosition = (logoPosition * direction) + delta

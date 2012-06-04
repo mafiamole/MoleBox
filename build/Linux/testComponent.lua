@@ -25,7 +25,7 @@ function update( events, elapsed )
      
      direction = 1
    end
-
+  x y = 
   Sprites.Move(mySprite,logoPosition,logoPosition)
   
 end

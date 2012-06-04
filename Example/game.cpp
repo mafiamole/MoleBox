@@ -25,12 +25,12 @@
 
 #include "game.h"
 
-#include "../Framework/Actions/keyboard.h"
-#include "../Framework/Actions/mouse.h"
-
 #include <iostream>
 
-#include "../Framework/Lua/Component.h"
+#include "../src/MoleBox/Actions/keyboard.h"
+#include "../src/MoleBox/Actions/mouse.h"
+
+#include "../src/MoleBox/Lua/Component.h"
 
 Game::Game() : MB::Game("Game Title")
 {

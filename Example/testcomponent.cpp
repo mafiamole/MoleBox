@@ -23,7 +23,7 @@
     OTHER DEALINGS IN THE SOFTWARE.
 */
 #include "testcomponent.h"
-#include "../Framework/Actions/keyboard.h"
+#include "../src/MoleBox/Actions/keyboard.h"
 #include <iostream>
 
 TestComponent::TestComponent(MB::Game* game): MB::GameComponent(game)

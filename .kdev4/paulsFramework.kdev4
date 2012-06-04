@@ -13,12 +13,12 @@ Extra Arguments=
 ProjectRootRelative=./
 
 [Launch]
-Launch Configurations=Launch Configuration 0
+Launch Configurations=Launch Configuration 0,Launch Configuration 1
 
 [Launch][Launch Configuration 0]
 Configured Launch Modes=execute
 Configured Launchers=nativeAppLauncher
-Name=Linux Build
+Name=Example 1
 Type=Native Application
 
 [Launch][Launch Configuration 0][Data]
@@ -32,10 +32,28 @@ EnvironmentGroup=default
 Executable=
 External Terminal=konsole --noclose --workdir %workdir -e %exe
 GDB Path=
-Project Target=paulsFramework,paulsframework
+Project Target=paulsFramework,Example,ExampleA
 Remote GDB Config Script=
 Remote GDB Run Script=
 Remote GDB Shell Script=
+Use External Terminal=false
+Working Directory=
+isExecutable=false
+
+[Launch][Launch Configuration 1]
+Configured Launch Modes=execute
+Configured Launchers=nativeAppLauncher
+Name=Example 2
+Type=Native Application
+
+[Launch][Launch Configuration 1][Data]
+Arguments=
+Dependencies=@Variant(\x00\x00\x00\t\x00\x00\x00\x00\x00)
+Dependency Action=Nothing
+EnvironmentGroup=default
+Executable=
+External Terminal=konsole --noclose --workdir %workdir -e %exe
+Project Target=paulsFramework,Example2,Example2
 Use External Terminal=false
 Working Directory=
 isExecutable=false

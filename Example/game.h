@@ -28,13 +28,13 @@
 #define GAME_H
 #include <stdlib.h>
 
-#include "../Framework/Game.h"
+#include "../src/MoleBox/Game.h"
 #include "lua.hpp"
 
 #include "testcomponent.h"
 
 #ifdef LUA_EDITOR
-  #include "../Framework/Lua/luascripts.h"
+  #include "../src/Molebox/Lua/luascripts.h"
 #endif
 
 class Game : public MB::Game

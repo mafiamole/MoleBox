@@ -25,12 +25,12 @@
 
 #include "game.h"
 
-#include "../Framework/Actions/keyboard.h"
-#include "../Framework/Actions/mouse.h"
-
 #include <iostream>
 
-#include "../Framework/Lua/Component.h"
+#include "../src/Molebox/Actions/keyboard.h"
+#include "../src/Molebox/Actions/mouse.h"
+
+#include "../src/Molebox//Lua/Component.h"
 
 Game::Game() : MB::Game("Game Title")
 {
@@ -58,7 +58,7 @@ void Game::Draw()
 
 void Game::Update( sf::Time elapsed, MB::EventList* events)
 {
-  MB::Game::Update(events);
+  MB::Game::Update(elapsed,events);
 
 }
 

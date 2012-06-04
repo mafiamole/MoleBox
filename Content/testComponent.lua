@@ -1,27 +1,31 @@
-logoPosition = 0
+logoPosition = 1
 direction    = 1
 mySprite     = 0
-
+sound	     = 0
 
 function init()
   mySprite =  Sprites.Load("ufpdfLogo.png")
-  Sounds.Load("mouthpop.wav")
+  sound = Sounds.Load("mouthpop.wav")
   Sprites.SetPosition(mySprite,10,10)
 end
 
-function update( elapsed )
-   Sounds.Play("mouthpop.wav")-- o yea!
-   delta = 0.2 * direction
+function update( events, elapsed )
+
+
+   delta = 0.2 * direction * elapsed
    logoPosition = (logoPosition * direction) + delta
+   
+   print (logoPosition)
+   
    if logoPosition > 15 then
      direction = -1
-     --Sounds.Play("mouthpop.wav")
+     Sounds.Play(sound)
    end
    if logoPosition < 1 then
      
      direction = 1
    end
-
+  x y = 
   Sprites.Move(mySprite,logoPosition,logoPosition)
   
 end

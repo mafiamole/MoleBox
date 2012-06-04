@@ -26,16 +26,16 @@
 
 #ifndef TESTCOMPONENT_H
 #define TESTCOMPONENT_H
-#include "../Framework/GameComponent.h"
-#include "../Framework/Content.h"
-#include "../Framework/Game.h"
+#include "../src/MoleBox/GameComponent.h"
+#include "../src/Molebox/Content.h"
+#include "../src/Molebox/Game.h"
 class TestComponent : public MB::GameComponent
 {
   public:
 		TestComponent(MB::Game* game);
     virtual 	~TestComponent();
     
-    void 	Update(MB::EventList* events);
+    void 	Update( sf::Time elapsed, MB::EventList* events);
     void 	Draw();
 
 private:

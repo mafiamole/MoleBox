@@ -1,6 +1,7 @@
 cmake_minimum_required(VERSION 2.8)
-project(molebox)
-project(Example)
+
+project(MoleBox)
+include(${CMAKE_CURRENT_SOURCE_DIR}/CMake/Macros.cmake)
 #option(MB_LUA "Enable the use of Lua components in your application" ON)
 option(LUA_EDITOR_TOOL "Enable the Lua live editor" OFF)
 
@@ -23,42 +24,42 @@ endif()
 #
 #	Set the Sources and headers and forms
 #
-set ( paulsframework_SOURCES 
+set ( MoleBox_SOURCES
 
-	  Framework/Actions/keyboard.cpp 
-	  Framework/Actions/mouse.cpp 
-	  Framework/action.cpp 
-	  Framework/actions.cpp
-	  Framework/Lua/content.cpp	  
-	  Framework/Lua/LuaScriptHelper.cpp
-	  Framework/Lua/Component.cpp
-	  Framework/Lua/luascript.cpp
-	  Framework/Lua/luascripts.cpp
-	  Framework/Lua/luaeditor.cpp 
-	  Framework/GameComponent.cpp
-	  Framework/Game.cpp
-	  Framework/Content.cpp
-	  Example/testcomponent.cpp 
-	  Example/game.cpp
-	  Example/main.cpp
+  src/MoleBox/Actions/keyboard.cpp 
+  src/MoleBox/Actions/mouse.cpp 
+  src/MoleBox/action.cpp 
+  src/MoleBox/actions.cpp
+  src/MoleBox/Lua/content.cpp	  
+  src/MoleBox/Lua/LuaScriptHelper.cpp
+  src/MoleBox/Lua/Component.cpp
+  src/MoleBox/Lua/luascript.cpp
+  src/MoleBox/Lua/luascripts.cpp
+  src/MoleBox/Lua/luaeditor.cpp 
+  src/MoleBox/GameComponent.cpp
+  src/MoleBox/Game.cpp
+  src/MoleBox/Content.cpp
+
   )
 
-set ( paulsframework_HEADERS
-	  Framework/Lua/luaeditor.h
-	  Framework/Lua/LuaScriptHelper.h
-	  Framework/Lua/Component.h
-	  Framework/Lua/luascript.h
-	  Framework/Lua/luascripts.h
-	  Framework/ContentTemplate.h
-	  Framework/Content.h
-	  Framework/action.h
-	  Framework/actions.h
-	  Framework/ContainerDefinitions.h
-	  Framework/Content.h
-	  Framework/Game.h
-	  Framework/GameComponent.h
-	  Framework/Actions/keyboard.h
-	  Framework/Actions/mouse.h
+set ( MoleBox_HEADERS
+
+  src/MoleBox/Lua/luaeditor.h
+  src/MoleBox/Lua/LuaScriptHelper.h
+  src/MoleBox/Lua/Component.h
+  src/MoleBox/Lua/luascript.h
+  src/MoleBox/Lua/luascripts.h
+  src/MoleBox/ContentTemplate.h
+  src/MoleBox/Content.h
+  src/MoleBox/action.h
+  src/MoleBox/actions.h
+  src/MoleBox/ContainerDefinitions.h
+  src/MoleBox/Content.h
+  src/MoleBox/Game.h
+  src/MoleBox/GameComponent.h
+  src/MoleBox/Actions/keyboard.h
+  src/MoleBox/Actions/mouse.h
+
   )
  
 #
@@ -66,50 +67,48 @@ set ( paulsframework_HEADERS
 #
 if (LUA_EDITOR_TOOL)
 
-	set ( paulsframework_FORMS 
-	      Framework/Lua/GameLuaEditor.ui
+	set ( MoleBox_FORMS 
+	      src/MoleBox//Lua/GameLuaEditor.ui
 		)
 
 	#set ( paulsframework_RESOURCES )
  
-	qt4_wrap_cpp( paulsframework_HEADERS_MOC ${paulsframework_HEADERS} )
-	qt4_wrap_ui( paulsframework_FORMS_HEADERS ${paulsframework_FORMS} )
+	qt4_wrap_cpp( MoleBox_HEADERS_MOC ${MoleBox_HEADERS} )
+	qt4_wrap_ui( MoleBox_FORMS_HEADERS ${MoleBox_FORMS} )
 
 	# qt_add_resources( paulsframework_RESOURCES_RCC ${paulsframework_RESOURCES} )
 
-	add_executable(paulsframework ${paulsframework_SOURCES}
-		${paulsframework_HEADERS_MOC}
-		${paulsframework_FORMS_HEADERS}
+	add_library(MoleBox SHARED
+		${MoleBox_SOURCES}
+		${MoleBox_HEADERS_MOC}
+		${MoleBox_FORMS_HEADERS}
 		#${paulsframework_RESOURCES_RCC}
 	    )
+
 	include_directories(${CMAKE_CURRENT_BINARY_DIR})
 	include(${QT_USE_FILE})
 	add_definitions(${QT_DEFINITIONS})
-	target_link_libraries(paulsframework ${QT_LIBRARIES})
+	target_link_libraries(MoleBox ${QT_LIBRARIES})
 #
 #	Sets up everything related compiling with the Lua Editor disabled.
 #  
 else ()
 
-	add_executable(paulsframework 
-	    ${paulsframework_SOURCES}
+	add_library(MoleBox SHARED
+	    ${MoleBox_SOURCES}
 	    )
 
 endif()
 
 if(SFML_FOUND)
-	include_directories(${SFML_INCLUDE_DIR} ${OPENGL_INCLUDE_DIR} ${GLU_INCLUDE_PATH} ${LUA_INCLUDE_DIR})
-	target_link_libraries(paulsframework ${SFML_LIBRARIES} ${OPENGL_gl_LIBRARY} ${GLU_LIBRARY} ${LUA_LIBRARY})
+  include_directories(${SFML_INCLUDE_DIR} ${OPENGL_INCLUDE_DIR} ${GLU_INCLUDE_PATH} ${LUA_INCLUDE_DIR})
+  target_link_libraries(MoleBox ${SFML_LIBRARIES} ${OPENGL_gl_LIBRARY} ${GLU_LIBRARY} ${LUA_LIBRARY})
 endif()
 
-# if (UNIX)
-# 	set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS}" "  -Wall -Wno-long-long -pedantic -Weffc++ -Wextra")
-# else ()
-# 	set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS}")
-# endif()
 
-
+add_subdirectory(src/MoleBox)
 add_subdirectory(Example)
-add_subdirectory(Framework)
+
+add_subdirectory(Example2)
 # Copy content to output directiory
 file(COPY Content/ DESTINATION ${CMAKE_BINARY_DIR})

@@ -98,14 +98,110 @@ depend:
 	cd /home/mafiamole/projects/paulsFramework/build/Linux && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
+# Convenience name for target.
+Example/CMakeFiles/ExampleA.dir/rule:
+	cd /home/mafiamole/projects/paulsFramework/build/Linux && $(MAKE) -f CMakeFiles/Makefile2 Example/CMakeFiles/ExampleA.dir/rule
+.PHONY : Example/CMakeFiles/ExampleA.dir/rule
+
+# Convenience name for target.
+ExampleA: Example/CMakeFiles/ExampleA.dir/rule
+.PHONY : ExampleA
+
+# fast build rule for target.
+ExampleA/fast:
+	cd /home/mafiamole/projects/paulsFramework/build/Linux && $(MAKE) -f Example/CMakeFiles/ExampleA.dir/build.make Example/CMakeFiles/ExampleA.dir/build
+.PHONY : ExampleA/fast
+
+game.o: game.cpp.o
+.PHONY : game.o
+
+# target to build an object file
+game.cpp.o:
+	cd /home/mafiamole/projects/paulsFramework/build/Linux && $(MAKE) -f Example/CMakeFiles/ExampleA.dir/build.make Example/CMakeFiles/ExampleA.dir/game.cpp.o
+.PHONY : game.cpp.o
+
+game.i: game.cpp.i
+.PHONY : game.i
+
+# target to preprocess a source file
+game.cpp.i:
+	cd /home/mafiamole/projects/paulsFramework/build/Linux && $(MAKE) -f Example/CMakeFiles/ExampleA.dir/build.make Example/CMakeFiles/ExampleA.dir/game.cpp.i
+.PHONY : game.cpp.i
+
+game.s: game.cpp.s
+.PHONY : game.s
+
+# target to generate assembly for a file
+game.cpp.s:
+	cd /home/mafiamole/projects/paulsFramework/build/Linux && $(MAKE) -f Example/CMakeFiles/ExampleA.dir/build.make Example/CMakeFiles/ExampleA.dir/game.cpp.s
+.PHONY : game.cpp.s
+
+main.o: main.cpp.o
+.PHONY : main.o
+
+# target to build an object file
+main.cpp.o:
+	cd /home/mafiamole/projects/paulsFramework/build/Linux && $(MAKE) -f Example/CMakeFiles/ExampleA.dir/build.make Example/CMakeFiles/ExampleA.dir/main.cpp.o
+.PHONY : main.cpp.o
+
+main.i: main.cpp.i
+.PHONY : main.i
+
+# target to preprocess a source file
+main.cpp.i:
+	cd /home/mafiamole/projects/paulsFramework/build/Linux && $(MAKE) -f Example/CMakeFiles/ExampleA.dir/build.make Example/CMakeFiles/ExampleA.dir/main.cpp.i
+.PHONY : main.cpp.i
+
+main.s: main.cpp.s
+.PHONY : main.s
+
+# target to generate assembly for a file
+main.cpp.s:
+	cd /home/mafiamole/projects/paulsFramework/build/Linux && $(MAKE) -f Example/CMakeFiles/ExampleA.dir/build.make Example/CMakeFiles/ExampleA.dir/main.cpp.s
+.PHONY : main.cpp.s
+
+testcomponent.o: testcomponent.cpp.o
+.PHONY : testcomponent.o
+
+# target to build an object file
+testcomponent.cpp.o:
+	cd /home/mafiamole/projects/paulsFramework/build/Linux && $(MAKE) -f Example/CMakeFiles/ExampleA.dir/build.make Example/CMakeFiles/ExampleA.dir/testcomponent.cpp.o
+.PHONY : testcomponent.cpp.o
+
+testcomponent.i: testcomponent.cpp.i
+.PHONY : testcomponent.i
+
+# target to preprocess a source file
+testcomponent.cpp.i:
+	cd /home/mafiamole/projects/paulsFramework/build/Linux && $(MAKE) -f Example/CMakeFiles/ExampleA.dir/build.make Example/CMakeFiles/ExampleA.dir/testcomponent.cpp.i
+.PHONY : testcomponent.cpp.i
+
+testcomponent.s: testcomponent.cpp.s
+.PHONY : testcomponent.s
+
+# target to generate assembly for a file
+testcomponent.cpp.s:
+	cd /home/mafiamole/projects/paulsFramework/build/Linux && $(MAKE) -f Example/CMakeFiles/ExampleA.dir/build.make Example/CMakeFiles/ExampleA.dir/testcomponent.cpp.s
+.PHONY : testcomponent.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
+	@echo "... ExampleA"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... game.o"
+	@echo "... game.i"
+	@echo "... game.s"
+	@echo "... main.o"
+	@echo "... main.i"
+	@echo "... main.s"
+	@echo "... testcomponent.o"
+	@echo "... testcomponent.i"
+	@echo "... testcomponent.s"
 .PHONY : help
 
 
