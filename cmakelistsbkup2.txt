@@ -109,5 +109,6 @@ endif()
 add_subdirectory(src/MoleBox)
 add_subdirectory(Example)
 
+add_subdirectory(Example2)
 # Copy content to output directiory
-file(COPY Content/ DESTINATION ${CMAKE_BINARY_DIR})
+# file(COPY Content/ DESTINATION ${CMAKE_BINARY_DIR})

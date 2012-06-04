@@ -14,22 +14,21 @@ function update( events, elapsed )
 
    delta = 0.2 * direction * elapsed
    logoPosition = (logoPosition * direction) + delta
-   
+
    print (logoPosition)
-   
+
    if logoPosition > 15 then
      direction = -1
      Sounds.Play(sound)
    end
    if logoPosition < 1 then
-     
+
      direction = 1
    end
-  x y = 
   Sprites.Move(mySprite,logoPosition,logoPosition)
-  
+
 end
 
 function draw()
   Sprites.Draw(mySprite)
-end 
+end
