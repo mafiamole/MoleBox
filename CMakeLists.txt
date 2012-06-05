@@ -24,6 +24,11 @@ endif()
 #include the relevant files to compile both the framework and examples
 include_directories(${SFML_INCLUDE_DIR} ${OPENGL_INCLUDE_DIR} ${GLU_INCLUDE_PATH} ${LUA_INCLUDE_DIR})
 
+if (LUA_EDITOR_TOOL)
+
+
+endif()
+
 add_subdirectory(src/MoleBox)
 
 add_subdirectory(Example)

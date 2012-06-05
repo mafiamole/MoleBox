@@ -28,7 +28,7 @@
 #define GAME_H
 #include <stdlib.h>
 
-#include "../src/Molebox/Game.h"
+#include "../src/MoleBox/Game.h"
 #include "lua.hpp"
 
 #include "testcomponent.h"

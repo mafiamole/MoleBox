@@ -53,7 +53,7 @@ set ( MoleBox_SOURCES
   if (LUA_EDITOR_TOOL)
   
 	set ( MoleBox_FORMS 
-	      /Lua/GameLuaEditor.ui
+	      Lua/GameLuaEditor.ui
 		)
 	
 	#set ( paulsframework_RESOURCES )
@@ -81,6 +81,6 @@ set ( MoleBox_SOURCES
   	add_library(MoleBox SHARED ${MB_FILE_LIST})
 
 	include_directories(${CMAKE_CURRENT_BINARY_DIR} ${SFML_INCLUDE_DIR} ${OPENGL_INCLUDE_DIR} ${GLU_INCLUDE_PATH} ${LUA_INCLUDE_DIR})
-	target_link_libraries(MoleBox ${SFML_LIBRARIES} ${OPENGL_gl_LIBRARY} ${GLU_LIBRARY} ${LUA_LIBRARY})
+	target_link_libraries(MoleBox ${MB_LIBS})
 
   endif()
