@@ -18,7 +18,7 @@ find_package(Lua51)
 if (LUA_EDITOR_TOOL)
   find_package(Qt4)
   include(${QT_USE_FILE})
-  add_definitions( "-DLUA_EDITOR" )
+
 endif()
 
 #include the relevant files to compile both the framework and examples
