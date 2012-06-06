@@ -1,0 +1,112 @@
+/*
+    Copyright (c) 2012 Paul Brown <email>
+
+    Permission is hereby granted, free of charge, to any person
+    obtaining a copy of this software and associated documentation
+    files (the "Software"), to deal in the Software without
+    restriction, including without limitation the rights to use,
+    copy, modify, merge, publish, distribute, sublicense, and/or sell
+    copies of the Software, and to permit persons to whom the
+    Software is furnished to do so, subject to the following
+    conditions:
+
+    The above copyright notice and this permission notice shall be
+    included in all copies or substantial portions of the Software.
+
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+    EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
+    OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+    NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
+    HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+    WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+    FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+    OTHER DEALINGS IN THE SOFTWARE.
+*/
+
+
+#include "animatedsprite.h"
+#include <SFML/Graphics.hpp>
+
+AnimatedSprite::AnimatedSprite() : 
+    sf::Sprite(),
+    CurrentFrame(0),
+    loopStart(0),
+    loopEnd(0),
+    frameGridCount(0,0),
+    frame(0,0,0,0),
+    frameCount(0),
+    fps(1),
+    isPlaying(false)
+{
+
+  
+}
+
+AnimatedSprite::AnimatedSprite(const sf::Texture& texture, unsigned int frameCountx, unsigned int frameCounty)
+: 
+    sf::Sprite(texture),
+    CurrentFrame(0),
+    loopStart(0),
+    loopEnd(0),
+    frameGridCount(frameCountx,frameCounty),
+    frame(0,0,texture.getSize().x/frameCountx,texture.getSize().y/frameCounty),
+    frameCount(0),
+    fps(1),
+    isPlaying(false)
+{
+
+  
+  
+}
+
+AnimatedSprite::~AnimatedSprite()
+{
+
+}
+
+
+sf::Rect< int > AnimatedSprite::GetFramePosition(unsigned int frame)
+{
+  unsigned int row = this->frameGridCount / frame;
+  //
+  // FIGURE OUT PROPER BOZSO!
+  //
+  this->frame.top = row * this->frame.height;
+  this->frame.left = row * frame * this->frame.width;
+  return this->frame;
+}
+
+
+
+
+int AnimatedSprite::GetFrameCount()
+{
+  return this->frameGridCount.first * this->frameGridCount.second;
+}
+
+void AnimatedSprite::Play()
+{
+
+}
+
+void AnimatedSprite::Play(int start, int end)
+{
+
+}
+
+void AnimatedSprite::SetFrame(unsigned int frame)
+{
+
+}
+
+void AnimatedSprite::Stop()
+{
+
+}
+
+void AnimatedSprite::Update()
+{
+
+}
+
+

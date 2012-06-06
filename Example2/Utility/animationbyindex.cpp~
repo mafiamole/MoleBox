@@ -1,6 +1,5 @@
-
 /*
-    Copyright (c) 2012 Paul Brown mafiamole@gmail.com
+    Copyright (c) 2012 Paul Brown <email>
 
     Permission is hereby granted, free of charge, to any person
     obtaining a copy of this software and associated documentation
@@ -24,19 +23,16 @@
     OTHER DEALINGS IN THE SOFTWARE.
 */
 
-#include <iostream>
-#include "SFML/Graphics.hpp"
 
-int main(int argc, char **argv) {
+#include "animationbyindex.h"
 
-  
-  try {
-    
-  }
-  catch(std::string error)
-  {
-   std::cout << error << std::endl; 
-  }
-  return EXIT_SUCCESS;
-  
+AnimationByIndex::AnimationByIndex()
+{
+
 }
+
+AnimationByIndex::~AnimationByIndex()
+{
+
+}
+

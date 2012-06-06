@@ -1,6 +1,5 @@
-
 /*
-    Copyright (c) 2012 Paul Brown mafiamole@gmail.com
+    Copyright (c) 2012 Paul Brown <email>
 
     Permission is hereby granted, free of charge, to any person
     obtaining a copy of this software and associated documentation
@@ -24,19 +23,49 @@
     OTHER DEALINGS IN THE SOFTWARE.
 */
 
-#include <iostream>
-#include "SFML/Graphics.hpp"
 
-int main(int argc, char **argv) {
+#ifndef ANIMATEDSPRITE_H
+#define ANIMATEDSPRITE_H
 
+#include <SFML/Graphics/Sprite.hpp>
+#include <SFML/System/Clock.hpp>
+
+
+class AnimatedSprite : public sf::Sprite
+{
+private:
+  sf::Clock clock; 
+  unsigned int CurrentFrame;
+  unsigned int loopStart;
+  unsigned int loopEnd;
+  std::pair<int,int>frameGridCount;
+  sf::Rect<int> frame;
+  unsigned int frameCount;
+  unsigned int fps;
+  bool isPlaying;
+
+public:
   
-  try {
+    AnimatedSprite();
+  
+    AnimatedSprite(const sf::Texture& texture,unsigned int frameCountx,unsigned int frameCounty);
     
-  }
-  catch(std::string error)
-  {
-   std::cout << error << std::endl; 
-  }
-  return EXIT_SUCCESS;
-  
-}
+    virtual ~AnimatedSprite();
+    
+    sf::Rect<int> AnimatedSprite::GetFramePosition(unsigned int frame);
+    
+    int GetFrameCount();
+      
+    void SetFrame(unsigned int frame);
+    
+    void Play();
+    
+    void Play(int start, int end);
+    
+    void Stop();
+    
+    void Update();
+    
+};
+
+#endif // ANIMATEDSPRITE_H

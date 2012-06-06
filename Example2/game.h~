@@ -1,6 +1,5 @@
-
 /*
-    Copyright (c) 2012 Paul Brown mafiamole@gmail.com
+    Copyright (c) 2012 Paul Brown <email>
 
     Permission is hereby granted, free of charge, to any person
     obtaining a copy of this software and associated documentation
@@ -24,19 +23,27 @@
     OTHER DEALINGS IN THE SOFTWARE.
 */
 
-#include <iostream>
-#include "SFML/Graphics.hpp"
 
-int main(int argc, char **argv) {
+#ifndef GAME_H
+#define GAME_H
 
-  
-  try {
-    
-  }
-  catch(std::string error)
-  {
-   std::cout << error << std::endl; 
-  }
-  return EXIT_SUCCESS;
-  
-}
+#include "../src/MoleBox/Game.h"
+
+#ifdef LUA_EDITOR
+  #include "../src/MoleBox/Lua/luascripts.h"
+#include "player.h"
+#endif
+
+class Game : public MB::Game
+{
+
+public:
+    Game(std::string windowName);
+    virtual ~Game();
+    virtual void Update(sf::Time elapsed, MB::EventList* events);
+    virtual void Draw();
+    virtual void Run(int argc, char** argv);
+
+};
+
+#endif // GAME_H

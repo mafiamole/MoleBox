@@ -1,6 +1,5 @@
-
 /*
-    Copyright (c) 2012 Paul Brown mafiamole@gmail.com
+    Copyright (c) 2012 Paul Brown <email>
 
     Permission is hereby granted, free of charge, to any person
     obtaining a copy of this software and associated documentation
@@ -24,19 +23,25 @@
     OTHER DEALINGS IN THE SOFTWARE.
 */
 
-#include <iostream>
-#include "SFML/Graphics.hpp"
 
-int main(int argc, char **argv) {
+#ifndef PLAYER_H
+#define PLAYER_H
 
-  
-  try {
-    
-  }
-  catch(std::string error)
-  {
-   std::cout << error << std::endl; 
-  }
-  return EXIT_SUCCESS;
-  
-}
+#include "../src/MoleBox/GameComponent.h"
+#include "../src/MoleBox/Content.h"
+#include "Utility/spritesheet.h"
+#include "Utility/spritesheetanimator.h"
+
+class Player : public MB::GameComponent
+{
+    int direction;
+    SpriteSheet 	sprite;
+    SpriteSheetAnimator animator;
+public:
+    Player(MB::Game* game);
+    virtual void Update(sf::Time elapsed, MB::EventList* events);
+    virtual void Draw();
+    virtual ~Player();
+};
+
+#endif // PLAYER_H

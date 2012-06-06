@@ -26,9 +26,19 @@
 
 #include <iostream>
 #include "SFML/Graphics.hpp"
+#include "game.h"
 
 int main(int argc, char **argv) {
 
+  
+  try {
+    Game game("Example 2");
+    game.Run(argc,argv);
+  }
+  catch(std::string error)
+  {
+   std::cout << error << std::endl; 
+  }
   return EXIT_SUCCESS;
   
 }

@@ -1,0 +1,64 @@
+[Buildset]
+BuildItems=@Variant(\x00\x00\x00\t\x00\x00\x00\x00\x01\x00\x00\x00\x0b\x00\x00\x00\x00\x01\x00\x00\x00\x0e\x00M\x00o\x00l\x00e\x00B\x00o\x00x)
+
+[CMake]
+BuildDirs=/home/mafiamole/projects/MoleBox/build/linux
+CMakeDir=/usr/share/cmake/Modules
+Current CMake Binary=file:///usr/bin/cmake
+CurrentBuildDir=file:///home/mafiamole/projects/MoleBox/build/linux
+CurrentBuildType=Debug
+CurrentInstallDir=file:///usr/local
+Extra Arguments=
+ProjectRootRelative=./
+
+[Launch]
+Launch Configurations=Launch Configuration 0,Launch Configuration 1
+
+[Launch][Launch Configuration 0]
+Configured Launch Modes=execute
+Configured Launchers=nativeAppLauncher
+Name=ExampleA
+Type=Native Application
+
+[Launch][Launch Configuration 0][Data]
+Arguments=
+Debugger Shell=
+Dependencies=@Variant(\x00\x00\x00\t\x00\x00\x00\x00\x00)
+Dependency Action=Nothing
+Display Demangle Names=true
+Display Static Members=false
+EnvironmentGroup=default
+Executable=
+External Terminal=konsole --noclose --workdir %workdir -e %exe
+GDB Path=
+Project Target=MoleBox,Example,ExampleA
+Remote GDB Config Script=
+Remote GDB Run Script=
+Remote GDB Shell Script=
+Use External Terminal=false
+Working Directory=
+isExecutable=false
+
+[Launch][Launch Configuration 1]
+Configured Launch Modes=execute
+Configured Launchers=nativeAppLauncher
+Name=Example 2
+Type=Native Application
+
+[Launch][Launch Configuration 1][Data]
+Arguments=
+Dependencies=@Variant(\x00\x00\x00\t\x00\x00\x00\x00\x00)
+Dependency Action=Nothing
+EnvironmentGroup=default
+Executable=
+External Terminal=konsole --noclose --workdir %workdir -e %exe
+Project Target=MoleBox,Example2,Example2
+Use External Terminal=false
+Working Directory=
+isExecutable=false
+
+[MakeBuilder]
+Number Of Jobs=1
+
+[Project]
+VersionControlSupport=kdevgit

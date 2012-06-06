@@ -1,0 +1,16 @@
+# Hashes of file build rules.
+4a8b86b6012631de53095da68cccf949 src/MoleBox/Actions/moc_keyboard.cxx
+d8051176ff2bd5c84b0a5bc7698cba76 src/MoleBox/Actions/moc_mouse.cxx
+5f8f709163810be3e6560e562dd2fc6a src/MoleBox/Lua/moc_Component.cxx
+cd5734c331716170ec5e4cebb61d9a92 src/MoleBox/Lua/moc_LuaScriptHelper.cxx
+04b330d6578a3d1524add00dfc586526 src/MoleBox/Lua/moc_luaeditor.cxx
+f45c768265647b82abd34b7661282e41 src/MoleBox/Lua/moc_luascript.cxx
+bfd3199e73d4a07003dbbc4686a64e78 src/MoleBox/Lua/moc_luascripts.cxx
+489016f480d94cb85a8cf95a704d1d7a src/MoleBox/moc_ContainerDefinitions.cxx
+1577a5d85be8afecbc737cd4a8a23e97 src/MoleBox/moc_Content.cxx
+9c51b4bc83b9bcb85363d27f4933662c src/MoleBox/moc_ContentTemplate.cxx
+e84d0c178860d6665d36faf7432b0d2e src/MoleBox/moc_Game.cxx
+cc9b0bbe803d9a720e586869ccba2f0f src/MoleBox/moc_GameComponent.cxx
+6812c5a6e4b27b2003283c4e6335c817 src/MoleBox/moc_action.cxx
+e0e40e762592399320323f4db91b8412 src/MoleBox/moc_actions.cxx
+241bb2d70f1daebbf82fdd2c3209bbf7 src/MoleBox/ui_GameLuaEditor.h

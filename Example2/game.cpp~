@@ -1,6 +1,5 @@
-
 /*
-    Copyright (c) 2012 Paul Brown mafiamole@gmail.com
+    Copyright (c) 2012 Paul Brown <email>
 
     Permission is hereby granted, free of charge, to any person
     obtaining a copy of this software and associated documentation
@@ -24,19 +23,38 @@
     OTHER DEALINGS IN THE SOFTWARE.
 */
 
-#include <iostream>
-#include "SFML/Graphics.hpp"
 
-int main(int argc, char **argv) {
+#include "game.h"
+#include "../src/MoleBox/Actions/keyboard.h"
+#include "../src/MoleBox/Actions/mouse.h"
 
-  
-  try {
-    
-  }
-  catch(std::string error)
-  {
-   std::cout << error << std::endl; 
-  }
-  return EXIT_SUCCESS;
-  
+Game::Game(std::string windowName) :  MB::Game(windowName)
+{
+  this->actionList.Register("Player Move Left",new MB::Keyboard(sf::Keyboard::A));
+  this->actionList.Register("Player Move Right",new MB::Keyboard(sf::Keyboard::D));
+  this->actionList.Register("Player Shoot", new MB::Keyboard( sf::Keyboard::LControl) );
+  this->actionList.Register("Player Jump", new MB::Keyboard( sf::Keyboard::Space ) );
+  this->components.push_back(new Player(this));
 }
+
+Game::~Game()
+{
+
+}
+
+void Game::Update(sf::Time elapsed, MB::EventList* events)
+{
+    MB::Game::Update(elapsed, events);
+    
+}
+
+void Game::Draw()
+{
+    MB::Game::Draw();
+}
+
+void Game::Run(int argc, char** argv)
+{
+    MB::Game::Run(argc, argv);
+}
+

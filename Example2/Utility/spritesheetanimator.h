@@ -1,6 +1,5 @@
-
 /*
-    Copyright (c) 2012 Paul Brown mafiamole@gmail.com
+    Copyright (c) 2012 Paul Brown <email>
 
     Permission is hereby granted, free of charge, to any person
     obtaining a copy of this software and associated documentation
@@ -24,19 +23,38 @@
     OTHER DEALINGS IN THE SOFTWARE.
 */
 
-#include <iostream>
-#include "SFML/Graphics.hpp"
 
-int main(int argc, char **argv) {
+#ifndef SPRITESHEETANIMATOR_H
+#define SPRITESHEETANIMATOR_H
+#include "spritesheet.h"
+#include <vector>
+#include <map>
+#include <cstdarg>
 
+typedef std::map< std::string,std::vector<int> > FrameLists;
+
+class SpriteSheetAnimator
+{
+private:
   
-  try {
-    
-  }
-  catch(std::string error)
-  {
-   std::cout << error << std::endl; 
-  }
-  return EXIT_SUCCESS;
+  SpriteSheet* 				spriteSheet;
+  FrameLists 				animationLists;
+  sf::Clock 				clock;
+  float 				fps;
+  bool 					isPlaying;
+  int					currentIndex;
+  std::string 				currentAnimation;
+  int					frameCount;
   
-}
+public:
+
+    SpriteSheetAnimator			(SpriteSheet* spriteSheet);
+    virtual ~SpriteSheetAnimator	();
+    void AddAnimation			(std::string animation,int argCount, ...);
+    void Play				(std::string animation);
+    void Stop				();
+    void SetLoopSpeed			( float fps);
+    void Update				();
+};
+
+#endif // SPRITESHEETANIMATOR_H

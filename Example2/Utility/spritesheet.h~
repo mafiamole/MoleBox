@@ -1,6 +1,5 @@
-
 /*
-    Copyright (c) 2012 Paul Brown mafiamole@gmail.com
+    Copyright (c) 2012 Paul Brown <email>
 
     Permission is hereby granted, free of charge, to any person
     obtaining a copy of this software and associated documentation
@@ -24,19 +23,36 @@
     OTHER DEALINGS IN THE SOFTWARE.
 */
 
-#include <iostream>
-#include "SFML/Graphics.hpp"
 
-int main(int argc, char **argv) {
+#ifndef SPRITESHEET_H
+#define SPRITESHEET_H
 
+#include <SFML/Graphics.hpp>
+
+
+class SpriteSheet : public sf::Sprite
+{
+  private:
+    unsigned int rowCount;
+    unsigned int columnCount;
+    unsigned int frameCount;
+    unsigned int currentFrame;
+    sf::IntRect currentFrameRect;
   
-  try {
+  public:
+    SpriteSheet(const sf::Texture& texture, unsigned int spriteWidth,unsigned int spriteHeight);
     
-  }
-  catch(std::string error)
-  {
-   std::cout << error << std::endl; 
-  }
-  return EXIT_SUCCESS;
-  
-}
+    unsigned int GetRowCount();
+    unsigned int GetColumnCount();
+    unsigned int GetFrameCount();
+    
+    sf::IntRect GetFramePostion(unsigned int frame);
+    sf::IntRect GetCurrentFramePosition();
+    
+    void SetFrame(unsigned int frame);
+    void move(float offsetX, float offsetY);
+    void move(const Vector2f& offset);
+    virtual ~SpriteSheet();
+};
+
+#endif // SPRITESHEET_H
