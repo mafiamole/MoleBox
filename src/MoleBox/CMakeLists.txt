@@ -1,5 +1,3 @@
-add_subdirectory(Lua)
-add_subdirectory(Actions)
 
 #option(MB_LUA "Enable the use of Lua components in your application" ON)
 option(LUA_EDITOR_TOOL "Enable the Lua live editor" OFF)
@@ -62,7 +60,7 @@ set ( MoleBox_SOURCES
 	qt4_wrap_ui( MoleBox_FORMS_HEADERS ${MoleBox_FORMS} )
 	# qt_add_resources( paulsframework_RESOURCES_RCC ${paulsframework_RESOURCES} )
 
-	
+	add_definitions( "-DLUA_EDITOR" )
 	#include_directories(${CMAKE_CURRENT_BINARY_DIR})
 	add_definitions(${QT_DEFINITIONS})
 	#set (MB_INC_DIR ${MB_INC_DIR} )
@@ -84,3 +82,6 @@ set ( MoleBox_SOURCES
 	target_link_libraries(MoleBox ${MB_LIBS})
 
   endif()
+
+  add_subdirectory(Lua)
+add_subdirectory(Actions)
