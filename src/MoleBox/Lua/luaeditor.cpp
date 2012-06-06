@@ -27,6 +27,8 @@
 #include "luaeditor.h"
 #include "LuaScriptHelper.h"
 #include "luascript.h"
+#include  <time.h>
+
 #ifdef LUA_EDITOR
 
 LuaHighlighter::LuaHighlighter(QObject* parent): QSyntaxHighlighter(parent)
@@ -71,6 +73,11 @@ void LuaHighlighter::highlightBlock(const QString& text)
      QRegExp commentMatch("--.*");
      int index;
      
+	 QTextCharFormat globalFormat;
+     globalFormat.setForeground(Qt::blue);     
+     int len = text.length();
+     setFormat(0,len,globalFormat);
+
      index = text.indexOf(propertiesMatch);
      while (index >= 0) {
          int length = propertiesMatch.matchedLength();
@@ -106,20 +113,22 @@ void LuaHighlighter::highlightBlock(const QString& text)
          index = text.indexOf(commentMatch, index + length);
      }     
 
+
+
           
 }
 
 
 LuaEditor::LuaEditor(QWidget *parent) : QWidget(parent)
 {
-  ui.setupUi(this);
-  luaHighlight = new LuaHighlighter(ui.textEdit_code->document());
+  ui.setupUi(this); 
   
-  QTextCharFormat format;
-  format.setForeground(Qt::blue);
-  ui.textEdit_code->setCurrentCharFormat(format);
+  		
+
   QApplication::connect( ui.comboBox_scriptSelection, SIGNAL(currentIndexChanged(QString)), this, SLOT(ChangeScript(QString)));
-  QApplication::connect( ui.textEdit_code, SIGNAL(textChanged()), this, SLOT(UpdateScript()) ); // updates script on changes.
+  connect(ui.tabCodeWindow, SIGNAL(currentChanged(int)), this, SLOT(TabChanged(int)));  
+  connect(ui.tabCodeWindow,SIGNAL(tabCloseRequested(int)),this,SLOT(CloseTab(int)));
+
   connect(
         ui.listWidget_errors->model(),
        SIGNAL(rowsInserted ( const QModelIndex &, int, int ) ),
@@ -152,27 +161,69 @@ void LuaEditor::SetScripts( std::vector< std::string > scripts )
 
 
 void LuaEditor::SetScript(std::string script)
-{
-  ui.textEdit_code->setText( script.c_str() );
-    luaHighlight->rehighlight();
+{	
+	
+		((QTextEdit*)ui.tabCodeWindow->currentWidget())->setText( script.c_str() );
+		luaHighlight->rehighlight();
+	
+    
 }
+
+void LuaEditor::TabChanged(int index){
+	// Update current tab formatting
+	luaHighlight = new LuaHighlighter(((QTextEdit*)ui.tabCodeWindow->currentWidget())->document());
+			
+	QApplication::connect((QTextEdit*)ui.tabCodeWindow->currentWidget(), SIGNAL(textChanged()), this, SLOT(UpdateScript()) ); // updates script on changes.
+
+}
+
+void LuaEditor::CloseTab(int index)
+	{
+		if(ui.tabCodeWindow->count() != 1){
+			//Handle tabCloseRequested Signal and Close the Tab
+			ui.tabCodeWindow->removeTab(index);	
+		}	    	
+	};
 
 void LuaEditor::ChangeScript(QString scriptFile)
 {
-  
- std::string script = LuaHelper::LuaScripts::Instance().GrabScript(scriptFile.toStdString());
- 
- ui.textEdit_code->setText( script.c_str() );
- luaHighlight->rehighlight();
+
+		bool needNew = false;
+
+		for(int i=0;i<ui.tabCodeWindow->count();i++){
+		
+			if(ui.tabCodeWindow->tabText(i).compare(ui.comboBox_scriptSelection->currentText()) == 0){
+				// Switch to
+				needNew = false;					
+				ui.tabCodeWindow->setCurrentIndex(i);
+				break;
+		}	else{
+				// Mark as needing a new tab created
+				needNew = true;
+			}
+		}
+
+		if (needNew){
+				// Create new tab, load, then switch to.
+				
+				int index = ui.tabCodeWindow->addTab(new QTextEdit(),scriptFile);
+				std::string script = LuaHelper::LuaScripts::Instance().GrabScript(scriptFile.toStdString());
+				ui.tabCodeWindow->setCurrentIndex(ui.tabCodeWindow->count()-1);
+				QTextEdit* editor = (QTextEdit*)ui.tabCodeWindow->widget(index);
+				editor->setText(script.c_str());
+
+				if(ui.tabCodeWindow->tabText(0).compare("Sprites") == 0){
+					ui.tabCodeWindow->removeTab(0);
+				}
+		}
  
 }
 
 void LuaEditor::UpdateScript()
 {
   
-  std::string scriptFile	= ui.comboBox_scriptSelection->itemText( ui.comboBox_scriptSelection->currentIndex() ).toStdString();
-  
-  std::string changedScript 	= ui.textEdit_code->toPlainText().toStdString();
+  std::string scriptFile	= ui.comboBox_scriptSelection->itemText( ui.comboBox_scriptSelection->currentIndex() ).toStdString();  
+  std::string changedScript = ((QTextEdit*)ui.tabCodeWindow->currentWidget())->toPlainText().toStdString();
   
   try {
 
@@ -194,7 +245,13 @@ void LuaEditor::UpdateScript()
   }
 
 
+
   
 }
 
 #endif
+
+
+
+
+

@@ -28,6 +28,7 @@
 #define LUAEDITOR_H
 #ifdef LUA_EDITOR
 #include <QtGui/QWidget>
+#include <QtGui/QTextEdit>
 #include <QSyntaxHighlighter>
 #include "ui_GameLuaEditor.h"
 
@@ -57,10 +58,13 @@ public:
     void SetScript( std::string script );
     LuaEditor(QWidget* parent = 0);
     virtual ~LuaEditor();
+	int lastTime;
     
 public slots:   
     void ChangeScript(QString scriptFile);
     void UpdateScript();
+	void TabChanged(int index);
+	void CloseTab(int index);
 };
 
 #endif // LUAEDITOR_H
