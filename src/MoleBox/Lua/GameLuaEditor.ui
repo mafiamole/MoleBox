@@ -80,7 +80,7 @@
        <string>Save</string>
       </property>
      </widget>
-     <widget class="QPushButton" name="pushButton">
+     <widget class="QPushButton" name="pushButton_New">
       <property name="geometry">
        <rect>
         <x>170</x>
@@ -99,7 +99,7 @@
        <string>New</string>
       </property>
      </widget>
-     <widget class="QPushButton" name="pushButton_Save_2">
+     <widget class="QPushButton" name="pushButton_SaveAs">
       <property name="geometry">
        <rect>
         <x>90</x>

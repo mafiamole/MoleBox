@@ -68,6 +68,9 @@ public slots:
     void UpdateScript();
     void TabChanged(int index);
     void CloseTab(int index);
+	void pushButton_Save_Click();
+	void pushButton_SaveAs_Click();
+	void pushButton_New_Click();
 };
 
 #endif // LUAEDITOR_H
