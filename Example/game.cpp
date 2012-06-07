@@ -43,7 +43,7 @@ Game::Game() : MB::Game("Game Title")
   try {  
 	this->AddComponent(new TestComponent(this));
 	this->AddComponent(new MB::LuaComponent(this,"../testComponent.lua"));
-  //this->AddComponent(new MB::LuaComponent(this,"testComponent2.lua")); 
+	this->AddComponent(new MB::LuaComponent(this,"testComponent2.lua")); 
   }
   catch (std::string e)
   {

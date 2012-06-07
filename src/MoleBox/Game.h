@@ -52,7 +52,6 @@ class GameComponent;
   int argc;
   char **argv;
   std::vector<std::string> scriptList;
-  std::string startScript;
  };
  
   void LuaGUIThread ( args argList );

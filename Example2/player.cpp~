@@ -29,13 +29,11 @@
 
 Player::Player(MB::Game* game) : MB::GameComponent(game), sprite(MB::Content<sf::Texture>::Load("player.png"),60,60), animator(&this->sprite)
 {
-//     this->sprite = sf::Sprite(MB::Content<sf::Texture>::Load("player.png"));a
-//     this->sprite.setPosition(20,200);
-
-    //this->sprite = SpriteSheet(MB::Content<sf::Texture>::Load("player.png"),60,60);
-    //this->animator = SpriteSheetAnimator(&this->sprite);
-    this->animator.AddAnimation("Left", 4,0,1,2,3);
-    this->animator.AddAnimation("Right",4,3,2,1,0);
+  this->sprite.setPosition(0,200);
+    this->animator.SetLoopSpeed(200);
+    this->animator.AddAnimation("Left", 6,0,1,2,3,4,5);
+    this->animator.AddAnimation("Right",6,5,4,3,2,1,0);
+    std::cout << sf::Texture::getMaximumSize( ) << std::endl;
 }
 
 void Player::Update(sf::Time elapsed, MB::EventList* events)
@@ -50,13 +48,17 @@ void Player::Update(sf::Time elapsed, MB::EventList* events)
   
   if (moveLeft->IsActive() && !moveRight->IsActive())
   {
-    this->animator.Play("Left");
-    direction = 1;
+    if (moveLeft->HasChanged()) {
+      this->animator.Play("Left");
+    }
+    direction = -1;
   }
   else if (!moveLeft->IsActive() && moveRight->IsActive())
   {
-    this->animator.Play("Right");
-    direction = -1;
+    if (moveRight->HasChanged()) {
+      this->animator.Play("Right");
+    }
+    direction = 1;
   }
   else
   {
@@ -66,7 +68,7 @@ void Player::Update(sf::Time elapsed, MB::EventList* events)
   this->animator.Update();
  
   this->sprite.move(newX,0.0f);
-    
+ 
 }
 
 void Player::Draw()

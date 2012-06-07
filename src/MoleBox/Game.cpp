@@ -37,9 +37,7 @@
  {
   
   QApplication app(argList.argc,argList.argv);
-  LuaEditor luaEditor;
-  luaEditor.SetScripts(argList.scriptList);
-  luaEditor.SetScript(argList.startScript);
+  LuaEditor luaEditor(argList.scriptList);
   luaEditor.show();
   
   int result = app.exec();
@@ -106,9 +104,8 @@ void MB::Game::Run(int argc, char** argv)
   argList.argc = argc;
   argList.argv = argv;
   argList.scriptList = this->GetScripts();
-  argList.startScript = this->GetScript(argList.scriptList[0]);
   sf::Thread qtThread( &MB::LuaGUIThread,argList);
-  qtThread.launch();
+  qtThread.launch(); 
 #endif
 
   clock.restart();
@@ -176,6 +173,5 @@ std::string MB::Game::GetScript(std::string name)
 {
   return LuaHelper::LuaScripts::Instance().GrabScript( name );
 }
-
 
 #endif

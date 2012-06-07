@@ -31,9 +31,9 @@
 
 #ifdef LUA_EDITOR
   #include "../src/MoleBox/Lua/luascripts.h"
-#include "player.h"
-#endif
 
+#endif
+#include "player.h"
 class Game : public MB::Game
 {
 

@@ -133,7 +133,7 @@
      </property>
      <widget class="QWidget" name="tab">
       <attribute name="title">
-       <string>Sprites</string>
+       <string>Resources</string>
       </attribute>
      </widget>
     </widget>

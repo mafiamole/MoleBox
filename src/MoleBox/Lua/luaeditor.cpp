@@ -119,12 +119,11 @@ void LuaHighlighter::highlightBlock(const QString& text)
 }
 
 
-LuaEditor::LuaEditor(QWidget *parent) : QWidget(parent)
+LuaEditor::LuaEditor(std::vector<std::string> scripts,QWidget *parent) : QWidget(parent)
 {
   ui.setupUi(this); 
-  
-  		
 
+  this->SetScripts(scripts);
   QApplication::connect( ui.comboBox_scriptSelection, SIGNAL(currentIndexChanged(QString)), this, SLOT(ChangeScript(QString)));
   connect(ui.tabCodeWindow, SIGNAL(currentChanged(int)), this, SLOT(TabChanged(int)));  
   connect(ui.tabCodeWindow,SIGNAL(tabCloseRequested(int)),this,SLOT(CloseTab(int)));
@@ -135,6 +134,7 @@ LuaEditor::LuaEditor(QWidget *parent) : QWidget(parent)
        ui.listWidget_errors,
        SLOT(scrollToBottom ())
     );
+  this->ChangeScript(scripts[0].c_str());
 }
 
 LuaEditor::~LuaEditor()
@@ -156,24 +156,21 @@ void LuaEditor::SetScripts( std::vector< std::string > scripts )
     list << (*itr).c_str();
   }
   
+  
   ui.comboBox_scriptSelection->addItems(list);
 }
 
 
-void LuaEditor::SetScript(std::string script)
-{	
-	
-		((QTextEdit*)ui.tabCodeWindow->currentWidget())->setText( script.c_str() );
-		luaHighlight->rehighlight();
-	
-    
-}
 
-void LuaEditor::TabChanged(int index){
+
+void LuaEditor::TabChanged(int index)
+{
 	// Update current tab formatting
-	luaHighlight = new LuaHighlighter(((QTextEdit*)ui.tabCodeWindow->currentWidget())->document());
+	QTextEdit* currentTextEdit = (QTextEdit*)ui.tabCodeWindow->currentWidget();
+	
+	luaHighlight = new LuaHighlighter(currentTextEdit->document());
 			
-	QApplication::connect((QTextEdit*)ui.tabCodeWindow->currentWidget(), SIGNAL(textChanged()), this, SLOT(UpdateScript()) ); // updates script on changes.
+	QApplication::connect(currentTextEdit, SIGNAL(textChanged()), this, SLOT(UpdateScript()) ); // updates script on changes.
 
 }
 
@@ -185,44 +182,49 @@ void LuaEditor::CloseTab(int index)
 		}	    	
 	};
 
+bool LuaEditor::FindTab(QString scriptFile)
+{
+  bool needNew = false;
+
+  for(int i=0;i<ui.tabCodeWindow->count();i++){
+
+	  if(ui.tabCodeWindow->tabText(i).compare(ui.comboBox_scriptSelection->currentText()) == 0){
+		  // Switch to
+		  needNew = false;					
+		  ui.tabCodeWindow->setCurrentIndex(i);
+		  break;
+  }	else{
+		  // Mark as needing a new tab created
+		  needNew = true;
+	  }
+  }
+  return needNew;
+}
+
+	
 void LuaEditor::ChangeScript(QString scriptFile)
 {
 
-		bool needNew = false;
+  if (this->FindTab(scriptFile)){
+		  // Create new tab, load, then switch to.
 
-		for(int i=0;i<ui.tabCodeWindow->count();i++){
-		
-			if(ui.tabCodeWindow->tabText(i).compare(ui.comboBox_scriptSelection->currentText()) == 0){
-				// Switch to
-				needNew = false;					
-				ui.tabCodeWindow->setCurrentIndex(i);
-				break;
-		}	else{
-				// Mark as needing a new tab created
-				needNew = true;
-			}
-		}
+      int index = ui.tabCodeWindow->addTab(new QTextEdit(),scriptFile);
+      std::string script = LuaHelper::LuaScripts::Instance().GrabScript(scriptFile.toStdString());
+      ui.tabCodeWindow->setCurrentIndex(ui.tabCodeWindow->count()-1);
+      QTextEdit* editor = (QTextEdit*)ui.tabCodeWindow->widget(index);
+      editor->setText(script.c_str());
 
-		if (needNew){
-				// Create new tab, load, then switch to.
-				
-				int index = ui.tabCodeWindow->addTab(new QTextEdit(),scriptFile);
-				std::string script = LuaHelper::LuaScripts::Instance().GrabScript(scriptFile.toStdString());
-				ui.tabCodeWindow->setCurrentIndex(ui.tabCodeWindow->count()-1);
-				QTextEdit* editor = (QTextEdit*)ui.tabCodeWindow->widget(index);
-				editor->setText(script.c_str());
-
-				if(ui.tabCodeWindow->tabText(0).compare("Sprites") == 0){
-					ui.tabCodeWindow->removeTab(0);
-				}
-		}
+      if(ui.tabCodeWindow->tabText(0).compare("Sprites") == 0){
+	      ui.tabCodeWindow->removeTab(0);
+      }
+  }
  
 }
 
 void LuaEditor::UpdateScript()
 {
   
-  std::string scriptFile	= ui.comboBox_scriptSelection->itemText( ui.comboBox_scriptSelection->currentIndex() ).toStdString();  
+  std::string scriptFile    = ui.comboBox_scriptSelection->itemText( ui.comboBox_scriptSelection->currentIndex() ).toStdString();  
   std::string changedScript = ((QTextEdit*)ui.tabCodeWindow->currentWidget())->toPlainText().toStdString();
   
   try {

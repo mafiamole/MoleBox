@@ -27,6 +27,7 @@
 #ifndef LUAEDITOR_H
 #define LUAEDITOR_H
 #ifdef LUA_EDITOR
+
 #include <QtGui/QWidget>
 #include <QtGui/QTextEdit>
 #include <QSyntaxHighlighter>
@@ -53,18 +54,20 @@ private:
   LuaHighlighter *luaHighlight;
   Ui_ScriptEditor ui;
   std::vector< std::string > scripts;
+protected:
+  
+  void SetScripts( std::vector< std::string > scripts );
+  bool FindTab(QString scriptFile);
 public:
-    void SetScripts( std::vector< std::string > scripts );
-    void SetScript( std::string script );
-    LuaEditor(QWidget* parent = 0);
+    LuaEditor(std::vector<std::string> scripts,QWidget* parent = 0);
     virtual ~LuaEditor();
-	int lastTime;
+    int lastTime;
     
 public slots:   
     void ChangeScript(QString scriptFile);
     void UpdateScript();
-	void TabChanged(int index);
-	void CloseTab(int index);
+    void TabChanged(int index);
+    void CloseTab(int index);
 };
 
 #endif // LUAEDITOR_H

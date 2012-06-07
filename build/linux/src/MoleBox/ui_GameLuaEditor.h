@@ -151,7 +151,7 @@ public:
         pushButton_Save->setText(QApplication::translate("ScriptEditor", "Save", 0, QApplication::UnicodeUTF8));
         pushButton->setText(QApplication::translate("ScriptEditor", "New", 0, QApplication::UnicodeUTF8));
         pushButton_Save_2->setText(QApplication::translate("ScriptEditor", "Save As", 0, QApplication::UnicodeUTF8));
-        tabCodeWindow->setTabText(tabCodeWindow->indexOf(tab), QApplication::translate("ScriptEditor", "Sprites", 0, QApplication::UnicodeUTF8));
+        tabCodeWindow->setTabText(tabCodeWindow->indexOf(tab), QApplication::translate("ScriptEditor", "Resources", 0, QApplication::UnicodeUTF8));
         label_2->setText(QApplication::translate("ScriptEditor", "Errors.", 0, QApplication::UnicodeUTF8));
     } // retranslateUi
 

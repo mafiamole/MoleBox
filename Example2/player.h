@@ -34,14 +34,14 @@
 
 class Player : public MB::GameComponent
 {
-    int direction;
+    int 		direction;
     SpriteSheet 	sprite;
     SpriteSheetAnimator animator;
 public:
-    Player(MB::Game* game);
-    virtual void Update(sf::Time elapsed, MB::EventList* events);
-    virtual void Draw();
-    virtual ~Player();
+    Player		(MB::Game* game);
+    virtual void 	Update(sf::Time elapsed, MB::EventList* events);
+    virtual void 	Draw();
+    virtual 		~Player();
 };
 
 #endif // PLAYER_H

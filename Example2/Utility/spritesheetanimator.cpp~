@@ -66,10 +66,13 @@ void SpriteSheetAnimator::Play(std::string animation)
 {
   if ( this->animationLists.find(animation) != this->animationLists.end() )
   {
+    if ( !(this->currentAnimation == animation) )
+    {
     this->frameCount = this->animationLists[animation].size();
     this->currentAnimation = animation;
     this->currentIndex = 0;
     this->isPlaying = true;
+    }
   }
   else
   {
@@ -89,27 +92,22 @@ void SpriteSheetAnimator::Stop()
 
 void SpriteSheetAnimator::Update()
 {
+  
   if (isPlaying)
   {
 
   float timePosition = (clock.getElapsedTime().asSeconds() * fps);
-  clock.restart();
-  //currentIndex = 0 + (int)timePosition % this->animationLists[this->currentAnimation].size();
-  
-  //currentIndex = currentIndex + ((int)timePosition % this->animationLists[this->currentAnimation].size());
-  
-  //std::cout << (int)timePosition << std::endl;
+
+  int temp1 = (currentIndex + ((int)timePosition) % this->frameCount);
+
+
+    currentIndex = (int)timePosition % this->frameCount;
 
   
-  int temp1 = (currentIndex + (int)timePosition);
-  //int temp2 = (((int)timePosition % this->frameCount  ) * ( temp1 > this->frameCount) );
-  //int temp2 = this->frameCount - ;
-  currentIndex = temp1 - temp2;
-  
+  std::cout << "Using frame " << currentIndex << " " << " " << (int)timePosition << std::endl;
 
   this->spriteSheet->SetFrame( this->animationLists[this->currentAnimation][currentIndex] );
-    
+   
   }
 }
-
 

@@ -25,7 +25,7 @@
 
 
 #include "spritesheet.h"
-
+#include <iostream>
 SpriteSheet::SpriteSheet(const sf::Texture& texture, unsigned int spriteWidth, unsigned int spriteHeight) : sf::Sprite(texture), 
   columnCount( 0 ),
   rowCount(0),
@@ -35,6 +35,7 @@ SpriteSheet::SpriteSheet(const sf::Texture& texture, unsigned int spriteWidth, u
 {
   columnCount 	= texture.getSize().x / spriteWidth;
   rowCount 	= texture.getSize().y / spriteHeight;
+  std::cout << columnCount << "-" << rowCount << std::endl;
   frameCount	= rowCount * columnCount;
   this->SetFrame(0);
 }
@@ -62,24 +63,24 @@ unsigned int SpriteSheet::GetFrameCount()
 void SpriteSheet::SetFrame(unsigned int frame)
 {
   this->currentFrame = frame;
-  unsigned int tileXPosition = frame % this->columnCount;
-  unsigned int tileYPosition = frame / this->columnCount;
-  this->currentFrameRect.top = tileXPosition * this->currentFrameRect.width;
-  this->currentFrameRect.left = tileXPosition * this->currentFrameRect.height;
-  this->setTextureRect(this->currentFrameRect);
+
+  this->setTextureRect(this->GetFramePostion(frame));
 }
 
 sf::IntRect SpriteSheet::GetFramePostion(unsigned int frame)
 {
   unsigned int tileXPosition = frame % this->columnCount;
   unsigned int tileYPosition = frame / this->columnCount;
-  
+  //unsigned int xPos = tileXPosition * this->currentFrameRect.width;
+  //unsigned int yPos = tileYPosition * this->currentFrameRect.height;
+  //std::cout << xPos << " " << yPos << std::endl;
   sf::IntRect result (
 	      tileXPosition * this->currentFrameRect.width,
 	      tileYPosition * this->currentFrameRect.height,
 	      this->currentFrameRect.width,
 	      this->currentFrameRect.height
 	      );
+  return result;
 }
 
 sf::IntRect SpriteSheet::GetCurrentFramePosition()
