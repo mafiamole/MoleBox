@@ -28,7 +28,13 @@
 #include "LuaScriptHelper.h"
 #include "luascript.h"
 #include  <time.h>
+<<<<<<< HEAD
 #include <unistd.h>
+=======
+#include <qfile.h>
+#include <qtextstream.h>
+
+>>>>>>> 5d7d36b0052140611e4ffd1a40f724f5bcd373a5
 #ifdef LUA_EDITOR
 
 LuaHighlighter::LuaHighlighter(QObject* parent): QSyntaxHighlighter(parent)
@@ -127,6 +133,10 @@ LuaEditor::LuaEditor(std::vector<std::string> scripts,QWidget *parent) : QWidget
   QApplication::connect( ui.comboBox_scriptSelection, SIGNAL(currentIndexChanged(QString)), this, SLOT(ChangeScript(QString)));
   connect(ui.tabCodeWindow, SIGNAL(currentChanged(int)), this, SLOT(TabChanged(int)));  
   connect(ui.tabCodeWindow,SIGNAL(tabCloseRequested(int)),this,SLOT(CloseTab(int)));
+    
+  connect ( ui.pushButton_Save, SIGNAL( clicked() ), this, SLOT( pushButton_Save_Click() ) );
+  connect ( ui.pushButton_SaveAs, SIGNAL( clicked() ), this, SLOT( pushButton_SaveAs_Click() ) );
+  connect ( ui.pushButton_New, SIGNAL( clicked() ), this, SLOT( pushButton_New_Click() ) );
 
   connect(
       ui.listWidget_errors->model(),
@@ -145,6 +155,49 @@ LuaEditor::LuaEditor(std::vector<std::string> scripts,QWidget *parent) : QWidget
 LuaEditor::~LuaEditor()
 {
 
+}
+
+
+void LuaEditor::pushButton_Save_Click(){
+	if ((QTextEdit*)ui.tabCodeWindow->currentIndex() != 0){
+		// Not resources tab, so can save
+	
+		QFile file(ui.comboBox_scriptSelection->currentText());
+ 
+		if (file.open(QIODevice::WriteOnly|QIODevice::Text)) {
+			QTextStream stream(&file); 
+			stream << ((QTextEdit*)ui.tabCodeWindow->currentWidget())->toPlainText();
+			file.flush();
+			file.close();
+		}
+		else {
+			// Error
+		return;
+		}
+	}
+
+}
+
+
+void LuaEditor::pushButton_SaveAs_Click(){
+//	if (nomeFile != "") {
+//QFile file(nomeFile);
+// 
+//if (file.open(QIODevice::WriteOnly|QIODevice::Text)) {
+//---> QTextStream stream(&file); <-----
+//stream << ui->editaTesto->toPlainText();
+//file.flush();
+//file.close();
+//}
+//else {
+//QMessageBox::critical(this, tr("Errore"), tr("Non posso salvare il file"));
+//return;
+//}
+//}
+}
+
+void LuaEditor::pushButton_New_Click(){
+	
 }
 
 void LuaEditor::SetScripts( std::vector< std::string > scripts )
@@ -170,22 +223,38 @@ void LuaEditor::SetScripts( std::vector< std::string > scripts )
 
 void LuaEditor::TabChanged(int index)
 {
+<<<<<<< HEAD
 	// Update current tab formatting
 	
 	if ( ui.tabCodeWindow->tabText(index) != this->ResourcesTabTitle) {
 	
 	QTextEdit* currentTextEdit = (QTextEdit*)ui.tabCodeWindow->widget(index);
+=======
+	if(ui.tabCodeWindow->tabText(index).compare("Resources") == 0){
+		// Code to update Resources
+		
+		
+      }else{
+
+		// Update current script tab
+		QTextEdit* currentTextEdit = (QTextEdit*)ui.tabCodeWindow->currentWidget();
+>>>>>>> 5d7d36b0052140611e4ffd1a40f724f5bcd373a5
 	
-	luaHighlight = new LuaHighlighter(currentTextEdit->document());
+		luaHighlight = new LuaHighlighter(currentTextEdit->document());
 			
+<<<<<<< HEAD
 	QApplication::connect(currentTextEdit, SIGNAL(textChanged()), this, SLOT(UpdateScript()) ); // updates script on changes.
 	}
 
+=======
+		QApplication::connect(currentTextEdit, SIGNAL(textChanged()), this, SLOT(UpdateScript()) ); // updates script on changes.
+	}
+>>>>>>> 5d7d36b0052140611e4ffd1a40f724f5bcd373a5
 }
 
 void LuaEditor::CloseTab(int index)
 	{
-		if(ui.tabCodeWindow->count() != 1){
+		if((ui.tabCodeWindow->count() != 1) && (index != 0)){
 			//Handle tabCloseRequested Signal and Close the Tab
 			ui.tabCodeWindow->removeTab(index);	
 		}	    	
@@ -222,10 +291,7 @@ void LuaEditor::ChangeScript(QString scriptFile)
       ui.tabCodeWindow->setCurrentIndex(ui.tabCodeWindow->count()-1);
       QTextEdit* editor = (QTextEdit*)ui.tabCodeWindow->widget(index);
       editor->setText(script.c_str());
-
-      if(ui.tabCodeWindow->tabText(0).compare("Sprites") == 0){
-	      ui.tabCodeWindow->removeTab(0);
-      }
+    
   }
  
 }
