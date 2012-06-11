@@ -27,6 +27,10 @@ SFML/Config.hpp
 /home/mafiamole/projects/MoleBox/Example2/../src/MoleBox/ContainerDefinitions.h
 map
 -
+vector
+-
+string
+-
 
 /home/mafiamole/projects/MoleBox/Example2/../src/MoleBox/Content/Content.h
 iostream

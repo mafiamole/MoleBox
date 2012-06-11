@@ -40,7 +40,7 @@ class Game : public MB::Game
 public:
     Game(std::string windowName);
     virtual ~Game();
-    virtual void Update(sf::Time elapsed, MB::EventList* events);
+    virtual void Update(sf::Time elapsed, MB::Types::EventList* events);
     virtual void Draw();
     virtual void Run(int argc, char** argv);
 

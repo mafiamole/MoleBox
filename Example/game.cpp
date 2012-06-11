@@ -63,7 +63,7 @@ void Game::Draw()
   MB::Game::Draw();
 }
 
-void Game::Update( sf::Time elapsed, MB::EventList* events)
+void Game::Update( sf::Time elapsed, MB::Types::EventList* events)
 {
   MB::Game::Update(elapsed,events);
 

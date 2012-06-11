@@ -34,7 +34,7 @@
 #include "testcomponent.h"
 
 #ifdef LUA_EDITOR
-  #include "../src/Molebox/Lua/luascripts.h"
+  #include "../src/MoleBox/Lua/luascripts.h"
 #endif
 
 class Game : public MB::Game

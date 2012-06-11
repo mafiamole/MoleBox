@@ -28,7 +28,7 @@
 #define PLAYER_H
 
 #include "../src/MoleBox/GameComponent.h"
-#include "../src/MoleBox/Content.h"
+#include "../src/MoleBox/Content/Content.h"
 #include "Utility/spritesheet.h"
 #include "Utility/spritesheetanimator.h"
 

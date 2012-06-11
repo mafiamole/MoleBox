@@ -127,7 +127,6 @@ class GameComponent;
 #ifdef LUA_EDITOR    
     virtual std::vector<std::string>		GetScripts	();
     virtual std::string				GetScript	(std::string name);
-    virtual void				LoadEditor	();
 #endif
   };
 }

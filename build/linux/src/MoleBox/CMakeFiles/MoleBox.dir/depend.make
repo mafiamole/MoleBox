@@ -61,6 +61,7 @@ src/MoleBox/CMakeFiles/MoleBox.dir/Actions/mouse.cpp.o: /usr/local/include/SFML/
 
 src/MoleBox/CMakeFiles/MoleBox.dir/Content/Content.cpp.o: ../../src/MoleBox/Content/Content.cpp
 src/MoleBox/CMakeFiles/MoleBox.dir/Content/Content.cpp.o: ../../src/MoleBox/Content/Content.h
+src/MoleBox/CMakeFiles/MoleBox.dir/Content/Content.cpp.o: ../../src/MoleBox/Content/ContentTemplate.h
 src/MoleBox/CMakeFiles/MoleBox.dir/Content/Content.cpp.o: /usr/local/include/SFML/Audio.hpp
 src/MoleBox/CMakeFiles/MoleBox.dir/Content/Content.cpp.o: /usr/local/include/SFML/Audio/Export.hpp
 src/MoleBox/CMakeFiles/MoleBox.dir/Content/Content.cpp.o: /usr/local/include/SFML/Audio/Listener.hpp
@@ -301,6 +302,8 @@ src/MoleBox/CMakeFiles/MoleBox.dir/GameComponent.cpp.o: /usr/local/include/SFML/
 src/MoleBox/CMakeFiles/MoleBox.dir/GameComponent.cpp.o: /usr/local/include/SFML/Window/WindowStyle.hpp
 
 src/MoleBox/CMakeFiles/MoleBox.dir/Lua/Component.cpp.o: ../../src/MoleBox/Lua/../ContainerDefinitions.h
+src/MoleBox/CMakeFiles/MoleBox.dir/Lua/Component.cpp.o: ../../src/MoleBox/Lua/../Content/Content.h
+src/MoleBox/CMakeFiles/MoleBox.dir/Lua/Component.cpp.o: ../../src/MoleBox/Lua/../Content/ContentTemplate.h
 src/MoleBox/CMakeFiles/MoleBox.dir/Lua/Component.cpp.o: ../../src/MoleBox/Lua/../Game.h
 src/MoleBox/CMakeFiles/MoleBox.dir/Lua/Component.cpp.o: ../../src/MoleBox/Lua/../GameComponent.h
 src/MoleBox/CMakeFiles/MoleBox.dir/Lua/Component.cpp.o: ../../src/MoleBox/Lua/../action.h
@@ -311,6 +314,16 @@ src/MoleBox/CMakeFiles/MoleBox.dir/Lua/Component.cpp.o: ../../src/MoleBox/Lua/Lu
 src/MoleBox/CMakeFiles/MoleBox.dir/Lua/Component.cpp.o: ../../src/MoleBox/Lua/content.h
 src/MoleBox/CMakeFiles/MoleBox.dir/Lua/Component.cpp.o: ../../src/MoleBox/Lua/luascript.h
 src/MoleBox/CMakeFiles/MoleBox.dir/Lua/Component.cpp.o: ../../src/MoleBox/Lua/luascripts.h
+src/MoleBox/CMakeFiles/MoleBox.dir/Lua/Component.cpp.o: /usr/local/include/SFML/Audio.hpp
+src/MoleBox/CMakeFiles/MoleBox.dir/Lua/Component.cpp.o: /usr/local/include/SFML/Audio/Export.hpp
+src/MoleBox/CMakeFiles/MoleBox.dir/Lua/Component.cpp.o: /usr/local/include/SFML/Audio/Listener.hpp
+src/MoleBox/CMakeFiles/MoleBox.dir/Lua/Component.cpp.o: /usr/local/include/SFML/Audio/Music.hpp
+src/MoleBox/CMakeFiles/MoleBox.dir/Lua/Component.cpp.o: /usr/local/include/SFML/Audio/Sound.hpp
+src/MoleBox/CMakeFiles/MoleBox.dir/Lua/Component.cpp.o: /usr/local/include/SFML/Audio/SoundBuffer.hpp
+src/MoleBox/CMakeFiles/MoleBox.dir/Lua/Component.cpp.o: /usr/local/include/SFML/Audio/SoundBufferRecorder.hpp
+src/MoleBox/CMakeFiles/MoleBox.dir/Lua/Component.cpp.o: /usr/local/include/SFML/Audio/SoundRecorder.hpp
+src/MoleBox/CMakeFiles/MoleBox.dir/Lua/Component.cpp.o: /usr/local/include/SFML/Audio/SoundSource.hpp
+src/MoleBox/CMakeFiles/MoleBox.dir/Lua/Component.cpp.o: /usr/local/include/SFML/Audio/SoundStream.hpp
 src/MoleBox/CMakeFiles/MoleBox.dir/Lua/Component.cpp.o: /usr/local/include/SFML/Config.hpp
 src/MoleBox/CMakeFiles/MoleBox.dir/Lua/Component.cpp.o: /usr/local/include/SFML/Graphics.hpp
 src/MoleBox/CMakeFiles/MoleBox.dir/Lua/Component.cpp.o: /usr/local/include/SFML/Graphics/BlendMode.hpp
@@ -380,6 +393,8 @@ src/MoleBox/CMakeFiles/MoleBox.dir/Lua/LuaScriptHelper.cpp.o: ../../src/MoleBox/
 src/MoleBox/CMakeFiles/MoleBox.dir/Lua/LuaScriptHelper.cpp.o: ../../src/MoleBox/Lua/LuaScriptHelper.h
 
 src/MoleBox/CMakeFiles/MoleBox.dir/Lua/content.cpp.o: ../../src/MoleBox/Lua/../ContainerDefinitions.h
+src/MoleBox/CMakeFiles/MoleBox.dir/Lua/content.cpp.o: ../../src/MoleBox/Lua/../Content/Content.h
+src/MoleBox/CMakeFiles/MoleBox.dir/Lua/content.cpp.o: ../../src/MoleBox/Lua/../Content/ContentTemplate.h
 src/MoleBox/CMakeFiles/MoleBox.dir/Lua/content.cpp.o: ../../src/MoleBox/Lua/../Game.h
 src/MoleBox/CMakeFiles/MoleBox.dir/Lua/content.cpp.o: ../../src/MoleBox/Lua/../GameComponent.h
 src/MoleBox/CMakeFiles/MoleBox.dir/Lua/content.cpp.o: ../../src/MoleBox/Lua/../action.h
@@ -390,6 +405,16 @@ src/MoleBox/CMakeFiles/MoleBox.dir/Lua/content.cpp.o: ../../src/MoleBox/Lua/cont
 src/MoleBox/CMakeFiles/MoleBox.dir/Lua/content.cpp.o: ../../src/MoleBox/Lua/content.h
 src/MoleBox/CMakeFiles/MoleBox.dir/Lua/content.cpp.o: ../../src/MoleBox/Lua/luascript.h
 src/MoleBox/CMakeFiles/MoleBox.dir/Lua/content.cpp.o: ../../src/MoleBox/Lua/luascripts.h
+src/MoleBox/CMakeFiles/MoleBox.dir/Lua/content.cpp.o: /usr/local/include/SFML/Audio.hpp
+src/MoleBox/CMakeFiles/MoleBox.dir/Lua/content.cpp.o: /usr/local/include/SFML/Audio/Export.hpp
+src/MoleBox/CMakeFiles/MoleBox.dir/Lua/content.cpp.o: /usr/local/include/SFML/Audio/Listener.hpp
+src/MoleBox/CMakeFiles/MoleBox.dir/Lua/content.cpp.o: /usr/local/include/SFML/Audio/Music.hpp
+src/MoleBox/CMakeFiles/MoleBox.dir/Lua/content.cpp.o: /usr/local/include/SFML/Audio/Sound.hpp
+src/MoleBox/CMakeFiles/MoleBox.dir/Lua/content.cpp.o: /usr/local/include/SFML/Audio/SoundBuffer.hpp
+src/MoleBox/CMakeFiles/MoleBox.dir/Lua/content.cpp.o: /usr/local/include/SFML/Audio/SoundBufferRecorder.hpp
+src/MoleBox/CMakeFiles/MoleBox.dir/Lua/content.cpp.o: /usr/local/include/SFML/Audio/SoundRecorder.hpp
+src/MoleBox/CMakeFiles/MoleBox.dir/Lua/content.cpp.o: /usr/local/include/SFML/Audio/SoundSource.hpp
+src/MoleBox/CMakeFiles/MoleBox.dir/Lua/content.cpp.o: /usr/local/include/SFML/Audio/SoundStream.hpp
 src/MoleBox/CMakeFiles/MoleBox.dir/Lua/content.cpp.o: /usr/local/include/SFML/Config.hpp
 src/MoleBox/CMakeFiles/MoleBox.dir/Lua/content.cpp.o: /usr/local/include/SFML/Graphics.hpp
 src/MoleBox/CMakeFiles/MoleBox.dir/Lua/content.cpp.o: /usr/local/include/SFML/Graphics/BlendMode.hpp

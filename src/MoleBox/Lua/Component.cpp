@@ -80,7 +80,7 @@ MB::LuaComponent::LuaComponent(Game* game,std::string file) : GameComponent(game
 
 
 
-void MB::LuaComponent::Update( sf::Time elapsed, MB::EventList* events )
+void MB::LuaComponent::Update( sf::Time elapsed, MB::Types::EventList* events )
 {
 #ifdef LUA_EDITOR
 

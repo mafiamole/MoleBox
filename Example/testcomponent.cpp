@@ -54,7 +54,7 @@ TestComponent::~TestComponent()
 
 }
 
-void TestComponent::Update(sf::Time elapsed, MB::EventList* events)
+void TestComponent::Update(sf::Time elapsed, MB::Types::EventList* events)
 {
   
   MB::GameComponent::Update(elapsed,events);

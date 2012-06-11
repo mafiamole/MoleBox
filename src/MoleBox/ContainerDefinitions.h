@@ -26,11 +26,16 @@
 #ifndef SFML_CONTAINERDEF_H
 #define SFML_CONTAINERDEF_H
 #include <map>
+#include <vector>
+#include <string>
 /**
  * This definition is used by the SFMLGame and SFMLGameComponent classes and their subclasses.
  * It holds a list of events and uses the event type as a key to allow simple locating by the user.
  */
 namespace MB {
-  typedef std::map<sf::Event::EventType,sf::Event> EventList;
+  namespace Types {
+    typedef std::map<sf::Event::EventType,sf::Event> 	EventList;
+    typedef std::vector<std::string>			StrVect;
+  }
 }
 #endif

@@ -42,7 +42,7 @@ class Game : public MB::Game
 
 public:
     Game();
-    void Update( sf::Time elapsed, MB::EventList* events);
+    void Update( sf::Time elapsed, MB::Types::EventList* events);
     void Draw();
     void Run(int argc,char** argv);
     virtual ~Game();

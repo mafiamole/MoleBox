@@ -50,7 +50,7 @@ Game::Game() : MB::Game("Game Title")
 	  std::cout << e << std::endl;
   }
   
-  MB::Content< sf::Texture >::List();
+
 }
 
 Game::~Game()

@@ -29,7 +29,7 @@
 
 Player::Player(MB::Game* game) : MB::GameComponent(game), animator(&this->sprite)
 {
-  sf::Texture text = MB::Content::Loader<sf::Texture>("player.png");
+  sf::Texture text = MB::Content::Load<sf::Texture>("player.png");
   this->sprite = SpriteSheet(text,60,60);
   this->sprite.setPosition(0,200);
     this->animator.SetLoopSpeed(200);

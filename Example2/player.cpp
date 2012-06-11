@@ -38,7 +38,7 @@ Player::Player(MB::Game* game) : MB::GameComponent(game), animator(&this->sprite
     std::cout << sf::Texture::getMaximumSize( ) << std::endl;
 }
 
-void Player::Update(sf::Time elapsed, MB::EventList* events)
+void Player::Update(sf::Time elapsed, MB::Types::EventList* events)
 {
 
   MB::GameComponent::Update(elapsed, events);

@@ -78,7 +78,7 @@ void MB::Game::Draw()
   
 }
 
-void MB::Game::Update(sf::Time elapsed, MB::EventList* events)
+void MB::Game::Update(sf::Time elapsed, MB::Types::EventList* events)
 {
   ComponentVector::iterator componentItr;
   
@@ -99,7 +99,7 @@ sf::RenderWindow* MB::Game::Window()
 
 void MB::Game::Run(int argc, char** argv)
 {
-  EventList eventList;
+  Types::EventList eventList;
 #ifdef LUA_EDITOR
   args argList;
   argList.argc = argc;

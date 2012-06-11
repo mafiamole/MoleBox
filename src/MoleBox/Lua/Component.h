@@ -81,7 +81,7 @@ namespace MB {
     sf::Sprite* GetSprite(int ref);
     sf::Sound*	GetSound(int ref);
     
-    virtual void Update(sf::Time elapsed,EventList* events);
+    virtual void Update(sf::Time elapsed,Types::EventList* events);
     virtual void Draw();
     
     virtual ~LuaComponent();

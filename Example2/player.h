@@ -39,7 +39,7 @@ class Player : public MB::GameComponent
     SpriteSheetAnimator animator;
 public:
     Player		(MB::Game* game);
-    virtual void 	Update(sf::Time elapsed, MB::EventList* events);
+    virtual void 	Update(sf::Time elapsed, MB::Types::EventList* events);
     virtual void 	Draw();
     virtual 		~Player();
 };
