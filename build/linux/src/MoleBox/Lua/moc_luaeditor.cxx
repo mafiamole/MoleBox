@@ -83,7 +83,7 @@ static const uint qt_meta_data_LuaEditor[] = {
        6,       // revision
        0,       // classname
        0,    0, // classinfo
-       4,   14, // methods
+       7,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -95,6 +95,9 @@ static const uint qt_meta_data_LuaEditor[] = {
       44,   10,   10,   10, 0x0a,
       65,   59,   10,   10, 0x0a,
       81,   59,   10,   10, 0x0a,
+      95,   10,   10,   10, 0x0a,
+     119,   10,   10,   10, 0x0a,
+     145,   10,   10,   10, 0x0a,
 
        0        // eod
 };
@@ -102,7 +105,9 @@ static const uint qt_meta_data_LuaEditor[] = {
 static const char qt_meta_stringdata_LuaEditor[] = {
     "LuaEditor\0\0scriptFile\0ChangeScript(QString)\0"
     "UpdateScript()\0index\0TabChanged(int)\0"
-    "CloseTab(int)\0"
+    "CloseTab(int)\0pushButton_Save_Click()\0"
+    "pushButton_SaveAs_Click()\0"
+    "pushButton_New_Click()\0"
 };
 
 void LuaEditor::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
@@ -115,6 +120,9 @@ void LuaEditor::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, v
         case 1: _t->UpdateScript(); break;
         case 2: _t->TabChanged((*reinterpret_cast< int(*)>(_a[1]))); break;
         case 3: _t->CloseTab((*reinterpret_cast< int(*)>(_a[1]))); break;
+        case 4: _t->pushButton_Save_Click(); break;
+        case 5: _t->pushButton_SaveAs_Click(); break;
+        case 6: _t->pushButton_New_Click(); break;
         default: ;
         }
     }
@@ -152,9 +160,9 @@ int LuaEditor::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 4)
+        if (_id < 7)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 4;
+        _id -= 7;
     }
     return _id;
 }

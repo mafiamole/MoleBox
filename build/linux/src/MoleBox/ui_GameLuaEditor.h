@@ -36,8 +36,8 @@ public:
     QHBoxLayout *horizontalLayout_2;
     QGroupBox *groupBox;
     QPushButton *pushButton_Save;
-    QPushButton *pushButton;
-    QPushButton *pushButton_Save_2;
+    QPushButton *pushButton_New;
+    QPushButton *pushButton_SaveAs;
     QTabWidget *tabCodeWindow;
     QWidget *tab;
     QLabel *label_2;
@@ -93,19 +93,19 @@ public:
         sizePolicy2.setVerticalStretch(0);
         sizePolicy2.setHeightForWidth(pushButton_Save->sizePolicy().hasHeightForWidth());
         pushButton_Save->setSizePolicy(sizePolicy2);
-        pushButton = new QPushButton(groupBox);
-        pushButton->setObjectName(QString::fromUtf8("pushButton"));
-        pushButton->setGeometry(QRect(170, 0, 75, 23));
+        pushButton_New = new QPushButton(groupBox);
+        pushButton_New->setObjectName(QString::fromUtf8("pushButton_New"));
+        pushButton_New->setGeometry(QRect(170, 0, 75, 23));
         QSizePolicy sizePolicy3(QSizePolicy::Expanding, QSizePolicy::Fixed);
         sizePolicy3.setHorizontalStretch(0);
         sizePolicy3.setVerticalStretch(0);
-        sizePolicy3.setHeightForWidth(pushButton->sizePolicy().hasHeightForWidth());
-        pushButton->setSizePolicy(sizePolicy3);
-        pushButton_Save_2 = new QPushButton(groupBox);
-        pushButton_Save_2->setObjectName(QString::fromUtf8("pushButton_Save_2"));
-        pushButton_Save_2->setGeometry(QRect(90, 0, 75, 23));
-        sizePolicy2.setHeightForWidth(pushButton_Save_2->sizePolicy().hasHeightForWidth());
-        pushButton_Save_2->setSizePolicy(sizePolicy2);
+        sizePolicy3.setHeightForWidth(pushButton_New->sizePolicy().hasHeightForWidth());
+        pushButton_New->setSizePolicy(sizePolicy3);
+        pushButton_SaveAs = new QPushButton(groupBox);
+        pushButton_SaveAs->setObjectName(QString::fromUtf8("pushButton_SaveAs"));
+        pushButton_SaveAs->setGeometry(QRect(90, 0, 75, 23));
+        sizePolicy2.setHeightForWidth(pushButton_SaveAs->sizePolicy().hasHeightForWidth());
+        pushButton_SaveAs->setSizePolicy(sizePolicy2);
 
         verticalLayout->addWidget(groupBox);
 
@@ -149,8 +149,8 @@ public:
         label->setText(QApplication::translate("ScriptEditor", "Select Script", 0, QApplication::UnicodeUTF8));
         groupBox->setTitle(QString());
         pushButton_Save->setText(QApplication::translate("ScriptEditor", "Save", 0, QApplication::UnicodeUTF8));
-        pushButton->setText(QApplication::translate("ScriptEditor", "New", 0, QApplication::UnicodeUTF8));
-        pushButton_Save_2->setText(QApplication::translate("ScriptEditor", "Save As", 0, QApplication::UnicodeUTF8));
+        pushButton_New->setText(QApplication::translate("ScriptEditor", "New", 0, QApplication::UnicodeUTF8));
+        pushButton_SaveAs->setText(QApplication::translate("ScriptEditor", "Save As", 0, QApplication::UnicodeUTF8));
         tabCodeWindow->setTabText(tabCodeWindow->indexOf(tab), QApplication::translate("ScriptEditor", "Resources", 0, QApplication::UnicodeUTF8));
         label_2->setText(QApplication::translate("ScriptEditor", "Errors.", 0, QApplication::UnicodeUTF8));
     } // retranslateUi

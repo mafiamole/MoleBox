@@ -145,6 +145,8 @@ src/MoleBox/CMakeFiles/MoleBox.dir/Game.cpp.o
  /home/mafiamole/projects/MoleBox/src/MoleBox/Game.cpp
  /home/mafiamole/projects/MoleBox/src/MoleBox/Game.h
  /home/mafiamole/projects/MoleBox/src/MoleBox/GameComponent.h
+ /home/mafiamole/projects/MoleBox/src/MoleBox/Lua/../Content/Content.h
+ /home/mafiamole/projects/MoleBox/src/MoleBox/Lua/../Content/ContentTemplate.h
  /home/mafiamole/projects/MoleBox/src/MoleBox/Lua/LuaScriptHelper.h
  /home/mafiamole/projects/MoleBox/src/MoleBox/Lua/luaeditor.h
  /home/mafiamole/projects/MoleBox/src/MoleBox/Lua/luascripts.h
@@ -152,6 +154,16 @@ src/MoleBox/CMakeFiles/MoleBox.dir/Game.cpp.o
  /home/mafiamole/projects/MoleBox/src/MoleBox/actions.h
  /usr/include/QtGui/QSyntaxHighlighter
  /usr/include/QtGui/qsyntaxhighlighter.h
+ /usr/local/include/SFML/Audio.hpp
+ /usr/local/include/SFML/Audio/Export.hpp
+ /usr/local/include/SFML/Audio/Listener.hpp
+ /usr/local/include/SFML/Audio/Music.hpp
+ /usr/local/include/SFML/Audio/Sound.hpp
+ /usr/local/include/SFML/Audio/SoundBuffer.hpp
+ /usr/local/include/SFML/Audio/SoundBufferRecorder.hpp
+ /usr/local/include/SFML/Audio/SoundRecorder.hpp
+ /usr/local/include/SFML/Audio/SoundSource.hpp
+ /usr/local/include/SFML/Audio/SoundStream.hpp
  /usr/local/include/SFML/Config.hpp
  /usr/local/include/SFML/Graphics.hpp
  /usr/local/include/SFML/Graphics/BlendMode.hpp
@@ -444,6 +456,8 @@ src/MoleBox/CMakeFiles/MoleBox.dir/Lua/content.cpp.o
  /usr/local/include/SFML/Window/WindowHandle.hpp
  /usr/local/include/SFML/Window/WindowStyle.hpp
 src/MoleBox/CMakeFiles/MoleBox.dir/Lua/luaeditor.cpp.o
+ /home/mafiamole/projects/MoleBox/src/MoleBox/Lua/../Content/Content.h
+ /home/mafiamole/projects/MoleBox/src/MoleBox/Lua/../Content/ContentTemplate.h
  /home/mafiamole/projects/MoleBox/src/MoleBox/Lua/LuaScriptHelper.h
  /home/mafiamole/projects/MoleBox/src/MoleBox/Lua/content.h
  /home/mafiamole/projects/MoleBox/src/MoleBox/Lua/luaeditor.cpp
@@ -452,7 +466,45 @@ src/MoleBox/CMakeFiles/MoleBox.dir/Lua/luaeditor.cpp.o
  /home/mafiamole/projects/MoleBox/src/MoleBox/Lua/luascripts.h
  /usr/include/QtGui/QSyntaxHighlighter
  /usr/include/QtGui/qsyntaxhighlighter.h
+ /usr/local/include/SFML/Audio.hpp
+ /usr/local/include/SFML/Audio/Export.hpp
+ /usr/local/include/SFML/Audio/Listener.hpp
+ /usr/local/include/SFML/Audio/Music.hpp
+ /usr/local/include/SFML/Audio/Sound.hpp
+ /usr/local/include/SFML/Audio/SoundBuffer.hpp
+ /usr/local/include/SFML/Audio/SoundBufferRecorder.hpp
+ /usr/local/include/SFML/Audio/SoundRecorder.hpp
+ /usr/local/include/SFML/Audio/SoundSource.hpp
+ /usr/local/include/SFML/Audio/SoundStream.hpp
  /usr/local/include/SFML/Config.hpp
+ /usr/local/include/SFML/Graphics.hpp
+ /usr/local/include/SFML/Graphics/BlendMode.hpp
+ /usr/local/include/SFML/Graphics/CircleShape.hpp
+ /usr/local/include/SFML/Graphics/Color.hpp
+ /usr/local/include/SFML/Graphics/ConvexShape.hpp
+ /usr/local/include/SFML/Graphics/Drawable.hpp
+ /usr/local/include/SFML/Graphics/Export.hpp
+ /usr/local/include/SFML/Graphics/Font.hpp
+ /usr/local/include/SFML/Graphics/Glyph.hpp
+ /usr/local/include/SFML/Graphics/Image.hpp
+ /usr/local/include/SFML/Graphics/PrimitiveType.hpp
+ /usr/local/include/SFML/Graphics/Rect.hpp
+ /usr/local/include/SFML/Graphics/Rect.inl
+ /usr/local/include/SFML/Graphics/RectangleShape.hpp
+ /usr/local/include/SFML/Graphics/RenderStates.hpp
+ /usr/local/include/SFML/Graphics/RenderTarget.hpp
+ /usr/local/include/SFML/Graphics/RenderTexture.hpp
+ /usr/local/include/SFML/Graphics/RenderWindow.hpp
+ /usr/local/include/SFML/Graphics/Shader.hpp
+ /usr/local/include/SFML/Graphics/Shape.hpp
+ /usr/local/include/SFML/Graphics/Sprite.hpp
+ /usr/local/include/SFML/Graphics/Text.hpp
+ /usr/local/include/SFML/Graphics/Texture.hpp
+ /usr/local/include/SFML/Graphics/Transform.hpp
+ /usr/local/include/SFML/Graphics/Transformable.hpp
+ /usr/local/include/SFML/Graphics/Vertex.hpp
+ /usr/local/include/SFML/Graphics/VertexArray.hpp
+ /usr/local/include/SFML/Graphics/View.hpp
  /usr/local/include/SFML/System.hpp
  /usr/local/include/SFML/System/Clock.hpp
  /usr/local/include/SFML/System/Err.hpp
@@ -475,6 +527,19 @@ src/MoleBox/CMakeFiles/MoleBox.dir/Lua/luaeditor.cpp.o
  /usr/local/include/SFML/System/Vector2.inl
  /usr/local/include/SFML/System/Vector3.hpp
  /usr/local/include/SFML/System/Vector3.inl
+ /usr/local/include/SFML/Window.hpp
+ /usr/local/include/SFML/Window/Context.hpp
+ /usr/local/include/SFML/Window/ContextSettings.hpp
+ /usr/local/include/SFML/Window/Event.hpp
+ /usr/local/include/SFML/Window/Export.hpp
+ /usr/local/include/SFML/Window/GlResource.hpp
+ /usr/local/include/SFML/Window/Joystick.hpp
+ /usr/local/include/SFML/Window/Keyboard.hpp
+ /usr/local/include/SFML/Window/Mouse.hpp
+ /usr/local/include/SFML/Window/VideoMode.hpp
+ /usr/local/include/SFML/Window/Window.hpp
+ /usr/local/include/SFML/Window/WindowHandle.hpp
+ /usr/local/include/SFML/Window/WindowStyle.hpp
  src/MoleBox/ui_GameLuaEditor.h
 src/MoleBox/CMakeFiles/MoleBox.dir/Lua/luascript.cpp.o
  /home/mafiamole/projects/MoleBox/src/MoleBox/Lua/LuaScriptHelper.h
@@ -536,13 +601,53 @@ src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_Component.cxx.o
 src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_LuaScriptHelper.cxx.o
  /home/mafiamole/projects/MoleBox/build/linux/src/MoleBox/Lua/moc_LuaScriptHelper.cxx
 src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_luaeditor.cxx.o
+ /home/mafiamole/projects/MoleBox/build/linux/src/MoleBox/Lua/../../../../../src/MoleBox/Lua/../Content/Content.h
+ /home/mafiamole/projects/MoleBox/build/linux/src/MoleBox/Lua/../../../../../src/MoleBox/Lua/../Content/ContentTemplate.h
  /home/mafiamole/projects/MoleBox/build/linux/src/MoleBox/Lua/../../../../../src/MoleBox/Lua/LuaScriptHelper.h
  /home/mafiamole/projects/MoleBox/build/linux/src/MoleBox/Lua/../../../../../src/MoleBox/Lua/luaeditor.h
  /home/mafiamole/projects/MoleBox/build/linux/src/MoleBox/Lua/../../../../../src/MoleBox/Lua/luascripts.h
  /home/mafiamole/projects/MoleBox/build/linux/src/MoleBox/Lua/moc_luaeditor.cxx
  /usr/include/QtGui/QSyntaxHighlighter
  /usr/include/QtGui/qsyntaxhighlighter.h
+ /usr/local/include/SFML/Audio.hpp
+ /usr/local/include/SFML/Audio/Export.hpp
+ /usr/local/include/SFML/Audio/Listener.hpp
+ /usr/local/include/SFML/Audio/Music.hpp
+ /usr/local/include/SFML/Audio/Sound.hpp
+ /usr/local/include/SFML/Audio/SoundBuffer.hpp
+ /usr/local/include/SFML/Audio/SoundBufferRecorder.hpp
+ /usr/local/include/SFML/Audio/SoundRecorder.hpp
+ /usr/local/include/SFML/Audio/SoundSource.hpp
+ /usr/local/include/SFML/Audio/SoundStream.hpp
  /usr/local/include/SFML/Config.hpp
+ /usr/local/include/SFML/Graphics.hpp
+ /usr/local/include/SFML/Graphics/BlendMode.hpp
+ /usr/local/include/SFML/Graphics/CircleShape.hpp
+ /usr/local/include/SFML/Graphics/Color.hpp
+ /usr/local/include/SFML/Graphics/ConvexShape.hpp
+ /usr/local/include/SFML/Graphics/Drawable.hpp
+ /usr/local/include/SFML/Graphics/Export.hpp
+ /usr/local/include/SFML/Graphics/Font.hpp
+ /usr/local/include/SFML/Graphics/Glyph.hpp
+ /usr/local/include/SFML/Graphics/Image.hpp
+ /usr/local/include/SFML/Graphics/PrimitiveType.hpp
+ /usr/local/include/SFML/Graphics/Rect.hpp
+ /usr/local/include/SFML/Graphics/Rect.inl
+ /usr/local/include/SFML/Graphics/RectangleShape.hpp
+ /usr/local/include/SFML/Graphics/RenderStates.hpp
+ /usr/local/include/SFML/Graphics/RenderTarget.hpp
+ /usr/local/include/SFML/Graphics/RenderTexture.hpp
+ /usr/local/include/SFML/Graphics/RenderWindow.hpp
+ /usr/local/include/SFML/Graphics/Shader.hpp
+ /usr/local/include/SFML/Graphics/Shape.hpp
+ /usr/local/include/SFML/Graphics/Sprite.hpp
+ /usr/local/include/SFML/Graphics/Text.hpp
+ /usr/local/include/SFML/Graphics/Texture.hpp
+ /usr/local/include/SFML/Graphics/Transform.hpp
+ /usr/local/include/SFML/Graphics/Transformable.hpp
+ /usr/local/include/SFML/Graphics/Vertex.hpp
+ /usr/local/include/SFML/Graphics/VertexArray.hpp
+ /usr/local/include/SFML/Graphics/View.hpp
  /usr/local/include/SFML/System.hpp
  /usr/local/include/SFML/System/Clock.hpp
  /usr/local/include/SFML/System/Err.hpp
@@ -565,6 +670,19 @@ src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_luaeditor.cxx.o
  /usr/local/include/SFML/System/Vector2.inl
  /usr/local/include/SFML/System/Vector3.hpp
  /usr/local/include/SFML/System/Vector3.inl
+ /usr/local/include/SFML/Window.hpp
+ /usr/local/include/SFML/Window/Context.hpp
+ /usr/local/include/SFML/Window/ContextSettings.hpp
+ /usr/local/include/SFML/Window/Event.hpp
+ /usr/local/include/SFML/Window/Export.hpp
+ /usr/local/include/SFML/Window/GlResource.hpp
+ /usr/local/include/SFML/Window/Joystick.hpp
+ /usr/local/include/SFML/Window/Keyboard.hpp
+ /usr/local/include/SFML/Window/Mouse.hpp
+ /usr/local/include/SFML/Window/VideoMode.hpp
+ /usr/local/include/SFML/Window/Window.hpp
+ /usr/local/include/SFML/Window/WindowHandle.hpp
+ /usr/local/include/SFML/Window/WindowStyle.hpp
  src/MoleBox/ui_GameLuaEditor.h
 src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_luascript.cxx.o
  /home/mafiamole/projects/MoleBox/build/linux/src/MoleBox/Lua/moc_luascript.cxx
