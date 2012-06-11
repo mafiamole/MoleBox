@@ -38,16 +38,15 @@ namespace MB {
 
     template<> class Container<sf::Texture>
     {
-
       
       Container_Base<sf::Texture,const sf::Texture> base;
-      
-      
+ 
       public:
 
 	
       const sf::Texture& Load(std::string reference)
       {
+
 	if ( this->base.contents.find(reference) == this->base.contents.end())
 	{
 	  sf::Texture texture;
@@ -189,7 +188,7 @@ class SpriteBatch : public sf::Drawable, public std::vector<sf::Drawable *> {
     
     void SetRenderState(sf::RenderStates states = sf::RenderStates::Default);
     void Draw();
-    void draw(sf::RenderTarget& target,const sf::RenderStates states = sf::RenderStates::Default) const;
+    virtual void draw(sf::RenderTarget& target,const sf::RenderStates states = sf::RenderStates::Default) const;
   };
 }
 #endif

@@ -29,7 +29,6 @@
 #include "luascript.h"
 #include  <time.h>
 
-#include <unistd.h>
 
 #include <Qt/qfile.h>
 #include <Qt/qtextstream.h>
