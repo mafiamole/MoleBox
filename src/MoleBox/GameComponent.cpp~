@@ -23,21 +23,29 @@
     OTHER DEALINGS IN THE SOFTWARE.
 */
 
-#ifndef SFML_CONTAINERDEF_H
-#define SFML_CONTAINERDEF_H
-#include <map>
-#include <vector>
-#include <string>
-/**
- * A set of common type definintions used through out.
- * 
- */
-namespace MB {
-  
-  namespace Types {
-    typedef std::map<sf::Event::EventType,sf::Event> 	EventList;
-    typedef std::vector<std::string>			StrVect;
-  }
-  
+
+#include "GameComponent.h"
+#include "Game.h"
+
+MB::GameComponent::GameComponent( Game *game ) : game( game ), actions( game->GetActions() )
+{
+
+
 }
-#endif
+
+MB::GameComponent::~GameComponent()
+{
+
+}
+
+void MB::GameComponent::Draw()
+{
+
+}
+
+
+void MB::GameComponent::Update (sf::Time elapsed, MB::EventList* events )
+{
+
+}
+

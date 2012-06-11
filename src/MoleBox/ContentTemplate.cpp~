@@ -1,0 +1,24 @@
+#include "ContainerDefinitions.h"
+
+
+namespace MB {
+  
+  
+  namespace Content {
+
+     template<> sf::Texture Container<sf::Texture>::Load(std::string reference)
+      {
+
+	if ( this->contents.find(reference) != this->contents.end()) {
+	std::pair<std::string,sf::Texture> newTexture;
+	this->contents.insert(newTexture);
+	}
+	
+	return this->contents[reference];
+      }
+      
+ 
+  }
+  
+    
+}

@@ -29,8 +29,8 @@
 #include <vector>
 #include <string>
 /**
- * A set of common type definintions used through out.
- * 
+ * This definition is used by the SFMLGame and SFMLGameComponent classes and their subclasses.
+ * It holds a list of events and uses the event type as a key to allow simple locating by the user.
  */
 namespace MB {
   
