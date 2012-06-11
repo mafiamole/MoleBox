@@ -28,7 +28,7 @@ SFML/Config.hpp
 map
 -
 
-/home/mafiamole/projects/MoleBox/Example2/../src/MoleBox/Content.h
+/home/mafiamole/projects/MoleBox/Example2/../src/MoleBox/Content/Content.h
 iostream
 -
 SFML/Graphics.hpp
@@ -36,16 +36,20 @@ SFML/Graphics.hpp
 SFML/Audio.hpp
 -
 ContentTemplate.h
-/home/mafiamole/projects/MoleBox/Example2/../src/MoleBox/ContentTemplate.h
+/home/mafiamole/projects/MoleBox/Example2/../src/MoleBox/Content/ContentTemplate.h
 
-/home/mafiamole/projects/MoleBox/Example2/../src/MoleBox/ContentTemplate.h
+/home/mafiamole/projects/MoleBox/Example2/../src/MoleBox/Content/ContentTemplate.h
 map
 -
 string
 -
 functional
 -
+vector
+-
 stdlib.h
+-
+SFML/System/Mutex.hpp
 -
 
 /home/mafiamole/projects/MoleBox/Example2/../src/MoleBox/Game.h
@@ -145,8 +149,8 @@ player.h
 /home/mafiamole/projects/MoleBox/Example2/player.h
 ../src/MoleBox/GameComponent.h
 /home/mafiamole/projects/MoleBox/Example2/../src/MoleBox/GameComponent.h
-../src/MoleBox/Content.h
-/home/mafiamole/projects/MoleBox/Example2/../src/MoleBox/Content.h
+../src/MoleBox/Content/Content.h
+/home/mafiamole/projects/MoleBox/Example2/../src/MoleBox/Content/Content.h
 Utility/spritesheet.h
 /home/mafiamole/projects/MoleBox/Example2/Utility/spritesheet.h
 Utility/spritesheetanimator.h

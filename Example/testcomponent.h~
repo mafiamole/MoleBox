@@ -27,8 +27,8 @@
 #ifndef TESTCOMPONENT_H
 #define TESTCOMPONENT_H
 #include "../src/MoleBox/GameComponent.h"
-#include "../src/Molebox/Content.h"
-#include "../src/Molebox/Game.h"
+#include "../src/MoleBox/Content.h"
+#include "../src/MoleBox/Game.h"
 class TestComponent : public MB::GameComponent
 {
   public:

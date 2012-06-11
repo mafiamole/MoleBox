@@ -208,29 +208,77 @@ Actions/mouse.cpp.s:
 	cd /home/mafiamole/projects/MoleBox/build/linux && $(MAKE) -f src/MoleBox/CMakeFiles/MoleBox.dir/build.make src/MoleBox/CMakeFiles/MoleBox.dir/Actions/mouse.cpp.s
 .PHONY : Actions/mouse.cpp.s
 
-Content.o: Content.cpp.o
-.PHONY : Content.o
+Content/Content.o: Content/Content.cpp.o
+.PHONY : Content/Content.o
 
 # target to build an object file
-Content.cpp.o:
-	cd /home/mafiamole/projects/MoleBox/build/linux && $(MAKE) -f src/MoleBox/CMakeFiles/MoleBox.dir/build.make src/MoleBox/CMakeFiles/MoleBox.dir/Content.cpp.o
-.PHONY : Content.cpp.o
+Content/Content.cpp.o:
+	cd /home/mafiamole/projects/MoleBox/build/linux && $(MAKE) -f src/MoleBox/CMakeFiles/MoleBox.dir/build.make src/MoleBox/CMakeFiles/MoleBox.dir/Content/Content.cpp.o
+.PHONY : Content/Content.cpp.o
 
-Content.i: Content.cpp.i
-.PHONY : Content.i
+Content/Content.i: Content/Content.cpp.i
+.PHONY : Content/Content.i
 
 # target to preprocess a source file
-Content.cpp.i:
-	cd /home/mafiamole/projects/MoleBox/build/linux && $(MAKE) -f src/MoleBox/CMakeFiles/MoleBox.dir/build.make src/MoleBox/CMakeFiles/MoleBox.dir/Content.cpp.i
-.PHONY : Content.cpp.i
+Content/Content.cpp.i:
+	cd /home/mafiamole/projects/MoleBox/build/linux && $(MAKE) -f src/MoleBox/CMakeFiles/MoleBox.dir/build.make src/MoleBox/CMakeFiles/MoleBox.dir/Content/Content.cpp.i
+.PHONY : Content/Content.cpp.i
 
-Content.s: Content.cpp.s
-.PHONY : Content.s
+Content/Content.s: Content/Content.cpp.s
+.PHONY : Content/Content.s
 
 # target to generate assembly for a file
-Content.cpp.s:
-	cd /home/mafiamole/projects/MoleBox/build/linux && $(MAKE) -f src/MoleBox/CMakeFiles/MoleBox.dir/build.make src/MoleBox/CMakeFiles/MoleBox.dir/Content.cpp.s
-.PHONY : Content.cpp.s
+Content/Content.cpp.s:
+	cd /home/mafiamole/projects/MoleBox/build/linux && $(MAKE) -f src/MoleBox/CMakeFiles/MoleBox.dir/build.make src/MoleBox/CMakeFiles/MoleBox.dir/Content/Content.cpp.s
+.PHONY : Content/Content.cpp.s
+
+Content/moc_Content.o: Content/moc_Content.cxx.o
+.PHONY : Content/moc_Content.o
+
+# target to build an object file
+Content/moc_Content.cxx.o:
+	cd /home/mafiamole/projects/MoleBox/build/linux && $(MAKE) -f src/MoleBox/CMakeFiles/MoleBox.dir/build.make src/MoleBox/CMakeFiles/MoleBox.dir/Content/moc_Content.cxx.o
+.PHONY : Content/moc_Content.cxx.o
+
+Content/moc_Content.i: Content/moc_Content.cxx.i
+.PHONY : Content/moc_Content.i
+
+# target to preprocess a source file
+Content/moc_Content.cxx.i:
+	cd /home/mafiamole/projects/MoleBox/build/linux && $(MAKE) -f src/MoleBox/CMakeFiles/MoleBox.dir/build.make src/MoleBox/CMakeFiles/MoleBox.dir/Content/moc_Content.cxx.i
+.PHONY : Content/moc_Content.cxx.i
+
+Content/moc_Content.s: Content/moc_Content.cxx.s
+.PHONY : Content/moc_Content.s
+
+# target to generate assembly for a file
+Content/moc_Content.cxx.s:
+	cd /home/mafiamole/projects/MoleBox/build/linux && $(MAKE) -f src/MoleBox/CMakeFiles/MoleBox.dir/build.make src/MoleBox/CMakeFiles/MoleBox.dir/Content/moc_Content.cxx.s
+.PHONY : Content/moc_Content.cxx.s
+
+Content/moc_ContentTemplate.o: Content/moc_ContentTemplate.cxx.o
+.PHONY : Content/moc_ContentTemplate.o
+
+# target to build an object file
+Content/moc_ContentTemplate.cxx.o:
+	cd /home/mafiamole/projects/MoleBox/build/linux && $(MAKE) -f src/MoleBox/CMakeFiles/MoleBox.dir/build.make src/MoleBox/CMakeFiles/MoleBox.dir/Content/moc_ContentTemplate.cxx.o
+.PHONY : Content/moc_ContentTemplate.cxx.o
+
+Content/moc_ContentTemplate.i: Content/moc_ContentTemplate.cxx.i
+.PHONY : Content/moc_ContentTemplate.i
+
+# target to preprocess a source file
+Content/moc_ContentTemplate.cxx.i:
+	cd /home/mafiamole/projects/MoleBox/build/linux && $(MAKE) -f src/MoleBox/CMakeFiles/MoleBox.dir/build.make src/MoleBox/CMakeFiles/MoleBox.dir/Content/moc_ContentTemplate.cxx.i
+.PHONY : Content/moc_ContentTemplate.cxx.i
+
+Content/moc_ContentTemplate.s: Content/moc_ContentTemplate.cxx.s
+.PHONY : Content/moc_ContentTemplate.s
+
+# target to generate assembly for a file
+Content/moc_ContentTemplate.cxx.s:
+	cd /home/mafiamole/projects/MoleBox/build/linux && $(MAKE) -f src/MoleBox/CMakeFiles/MoleBox.dir/build.make src/MoleBox/CMakeFiles/MoleBox.dir/Content/moc_ContentTemplate.cxx.s
+.PHONY : Content/moc_ContentTemplate.cxx.s
 
 Game.o: Game.cpp.o
 .PHONY : Game.o
@@ -616,54 +664,6 @@ moc_ContainerDefinitions.cxx.s:
 	cd /home/mafiamole/projects/MoleBox/build/linux && $(MAKE) -f src/MoleBox/CMakeFiles/MoleBox.dir/build.make src/MoleBox/CMakeFiles/MoleBox.dir/moc_ContainerDefinitions.cxx.s
 .PHONY : moc_ContainerDefinitions.cxx.s
 
-moc_Content.o: moc_Content.cxx.o
-.PHONY : moc_Content.o
-
-# target to build an object file
-moc_Content.cxx.o:
-	cd /home/mafiamole/projects/MoleBox/build/linux && $(MAKE) -f src/MoleBox/CMakeFiles/MoleBox.dir/build.make src/MoleBox/CMakeFiles/MoleBox.dir/moc_Content.cxx.o
-.PHONY : moc_Content.cxx.o
-
-moc_Content.i: moc_Content.cxx.i
-.PHONY : moc_Content.i
-
-# target to preprocess a source file
-moc_Content.cxx.i:
-	cd /home/mafiamole/projects/MoleBox/build/linux && $(MAKE) -f src/MoleBox/CMakeFiles/MoleBox.dir/build.make src/MoleBox/CMakeFiles/MoleBox.dir/moc_Content.cxx.i
-.PHONY : moc_Content.cxx.i
-
-moc_Content.s: moc_Content.cxx.s
-.PHONY : moc_Content.s
-
-# target to generate assembly for a file
-moc_Content.cxx.s:
-	cd /home/mafiamole/projects/MoleBox/build/linux && $(MAKE) -f src/MoleBox/CMakeFiles/MoleBox.dir/build.make src/MoleBox/CMakeFiles/MoleBox.dir/moc_Content.cxx.s
-.PHONY : moc_Content.cxx.s
-
-moc_ContentTemplate.o: moc_ContentTemplate.cxx.o
-.PHONY : moc_ContentTemplate.o
-
-# target to build an object file
-moc_ContentTemplate.cxx.o:
-	cd /home/mafiamole/projects/MoleBox/build/linux && $(MAKE) -f src/MoleBox/CMakeFiles/MoleBox.dir/build.make src/MoleBox/CMakeFiles/MoleBox.dir/moc_ContentTemplate.cxx.o
-.PHONY : moc_ContentTemplate.cxx.o
-
-moc_ContentTemplate.i: moc_ContentTemplate.cxx.i
-.PHONY : moc_ContentTemplate.i
-
-# target to preprocess a source file
-moc_ContentTemplate.cxx.i:
-	cd /home/mafiamole/projects/MoleBox/build/linux && $(MAKE) -f src/MoleBox/CMakeFiles/MoleBox.dir/build.make src/MoleBox/CMakeFiles/MoleBox.dir/moc_ContentTemplate.cxx.i
-.PHONY : moc_ContentTemplate.cxx.i
-
-moc_ContentTemplate.s: moc_ContentTemplate.cxx.s
-.PHONY : moc_ContentTemplate.s
-
-# target to generate assembly for a file
-moc_ContentTemplate.cxx.s:
-	cd /home/mafiamole/projects/MoleBox/build/linux && $(MAKE) -f src/MoleBox/CMakeFiles/MoleBox.dir/build.make src/MoleBox/CMakeFiles/MoleBox.dir/moc_ContentTemplate.cxx.s
-.PHONY : moc_ContentTemplate.cxx.s
-
 moc_Game.o: moc_Game.cxx.o
 .PHONY : moc_Game.o
 
@@ -781,9 +781,15 @@ help:
 	@echo "... Actions/mouse.o"
 	@echo "... Actions/mouse.i"
 	@echo "... Actions/mouse.s"
-	@echo "... Content.o"
-	@echo "... Content.i"
-	@echo "... Content.s"
+	@echo "... Content/Content.o"
+	@echo "... Content/Content.i"
+	@echo "... Content/Content.s"
+	@echo "... Content/moc_Content.o"
+	@echo "... Content/moc_Content.i"
+	@echo "... Content/moc_Content.s"
+	@echo "... Content/moc_ContentTemplate.o"
+	@echo "... Content/moc_ContentTemplate.i"
+	@echo "... Content/moc_ContentTemplate.s"
 	@echo "... Game.o"
 	@echo "... Game.i"
 	@echo "... Game.s"
@@ -832,12 +838,6 @@ help:
 	@echo "... moc_ContainerDefinitions.o"
 	@echo "... moc_ContainerDefinitions.i"
 	@echo "... moc_ContainerDefinitions.s"
-	@echo "... moc_Content.o"
-	@echo "... moc_Content.i"
-	@echo "... moc_Content.s"
-	@echo "... moc_ContentTemplate.o"
-	@echo "... moc_ContentTemplate.i"
-	@echo "... moc_ContentTemplate.s"
 	@echo "... moc_Game.o"
 	@echo "... moc_Game.i"
 	@echo "... moc_Game.s"

@@ -5,11 +5,11 @@ Example/CMakeFiles/ExampleA.dir/game.cpp.o: ../../Example/../src/MoleBox/Actions
 Example/CMakeFiles/ExampleA.dir/game.cpp.o: ../../Example/../src/MoleBox/Actions/keyboard.h
 Example/CMakeFiles/ExampleA.dir/game.cpp.o: ../../Example/../src/MoleBox/Actions/mouse.h
 Example/CMakeFiles/ExampleA.dir/game.cpp.o: ../../Example/../src/MoleBox/ContainerDefinitions.h
-Example/CMakeFiles/ExampleA.dir/game.cpp.o: ../../Example/../src/MoleBox/Content.h
-Example/CMakeFiles/ExampleA.dir/game.cpp.o: ../../Example/../src/MoleBox/ContentTemplate.h
+Example/CMakeFiles/ExampleA.dir/game.cpp.o: ../../Example/../src/MoleBox/Content/Content.h
+Example/CMakeFiles/ExampleA.dir/game.cpp.o: ../../Example/../src/MoleBox/Content/ContentTemplate.h
 Example/CMakeFiles/ExampleA.dir/game.cpp.o: ../../Example/../src/MoleBox/Game.h
 Example/CMakeFiles/ExampleA.dir/game.cpp.o: ../../Example/../src/MoleBox/GameComponent.h
-Example/CMakeFiles/ExampleA.dir/game.cpp.o: ../../Example/../src/MoleBox/Lua/../Content.h
+Example/CMakeFiles/ExampleA.dir/game.cpp.o: ../../Example/../src/MoleBox/Lua/../Content/Content.h
 Example/CMakeFiles/ExampleA.dir/game.cpp.o: ../../Example/../src/MoleBox/Lua/../Game.h
 Example/CMakeFiles/ExampleA.dir/game.cpp.o: ../../Example/../src/MoleBox/Lua/../GameComponent.h
 Example/CMakeFiles/ExampleA.dir/game.cpp.o: ../../Example/../src/MoleBox/Lua/Component.h
@@ -98,8 +98,8 @@ Example/CMakeFiles/ExampleA.dir/game.cpp.o: /usr/local/include/SFML/Window/Windo
 Example/CMakeFiles/ExampleA.dir/game.cpp.o: /usr/local/include/SFML/Window/WindowStyle.hpp
 
 Example/CMakeFiles/ExampleA.dir/main.cpp.o: ../../Example/../src/MoleBox/ContainerDefinitions.h
-Example/CMakeFiles/ExampleA.dir/main.cpp.o: ../../Example/../src/MoleBox/Content.h
-Example/CMakeFiles/ExampleA.dir/main.cpp.o: ../../Example/../src/MoleBox/ContentTemplate.h
+Example/CMakeFiles/ExampleA.dir/main.cpp.o: ../../Example/../src/MoleBox/Content/Content.h
+Example/CMakeFiles/ExampleA.dir/main.cpp.o: ../../Example/../src/MoleBox/Content/ContentTemplate.h
 Example/CMakeFiles/ExampleA.dir/main.cpp.o: ../../Example/../src/MoleBox/Game.h
 Example/CMakeFiles/ExampleA.dir/main.cpp.o: ../../Example/../src/MoleBox/GameComponent.h
 Example/CMakeFiles/ExampleA.dir/main.cpp.o: ../../Example/../src/MoleBox/Lua/luascripts.h
@@ -186,8 +186,8 @@ Example/CMakeFiles/ExampleA.dir/main.cpp.o: /usr/local/include/SFML/Window/Windo
 Example/CMakeFiles/ExampleA.dir/testcomponent.cpp.o: ../../Example/../src/MoleBox/Actions/../action.h
 Example/CMakeFiles/ExampleA.dir/testcomponent.cpp.o: ../../Example/../src/MoleBox/Actions/keyboard.h
 Example/CMakeFiles/ExampleA.dir/testcomponent.cpp.o: ../../Example/../src/MoleBox/ContainerDefinitions.h
-Example/CMakeFiles/ExampleA.dir/testcomponent.cpp.o: ../../Example/../src/MoleBox/Content.h
-Example/CMakeFiles/ExampleA.dir/testcomponent.cpp.o: ../../Example/../src/MoleBox/ContentTemplate.h
+Example/CMakeFiles/ExampleA.dir/testcomponent.cpp.o: ../../Example/../src/MoleBox/Content/Content.h
+Example/CMakeFiles/ExampleA.dir/testcomponent.cpp.o: ../../Example/../src/MoleBox/Content/ContentTemplate.h
 Example/CMakeFiles/ExampleA.dir/testcomponent.cpp.o: ../../Example/../src/MoleBox/Game.h
 Example/CMakeFiles/ExampleA.dir/testcomponent.cpp.o: ../../Example/../src/MoleBox/GameComponent.h
 Example/CMakeFiles/ExampleA.dir/testcomponent.cpp.o: ../../Example/../src/MoleBox/action.h

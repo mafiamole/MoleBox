@@ -1,6 +1,8 @@
 # Hashes of file build rules.
 4a8b86b6012631de53095da68cccf949 src/MoleBox/Actions/moc_keyboard.cxx
 d8051176ff2bd5c84b0a5bc7698cba76 src/MoleBox/Actions/moc_mouse.cxx
+8c04546e0fd4a180556f645529231c07 src/MoleBox/Content/moc_Content.cxx
+08ec63d2169acf86681b543709d3ea8d src/MoleBox/Content/moc_ContentTemplate.cxx
 5f8f709163810be3e6560e562dd2fc6a src/MoleBox/Lua/moc_Component.cxx
 cd5734c331716170ec5e4cebb61d9a92 src/MoleBox/Lua/moc_LuaScriptHelper.cxx
 04b330d6578a3d1524add00dfc586526 src/MoleBox/Lua/moc_luaeditor.cxx

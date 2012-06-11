@@ -71,8 +71,8 @@ sf::IntRect SpriteSheet::GetFramePostion(unsigned int frame)
 {
   unsigned int tileXPosition = frame % this->columnCount;
   unsigned int tileYPosition = frame / this->columnCount;
-  unsigned int xPos = tileXPosition * this->currentFrameRect.width;
-  unsigned int yPos = tileYPosition * this->currentFrameRect.height;
+  //unsigned int xPos = tileXPosition * this->currentFrameRect.width;
+  //unsigned int yPos = tileYPosition * this->currentFrameRect.height;
   //std::cout << xPos << " " << yPos << std::endl;
   sf::IntRect result (
 	      tileXPosition * this->currentFrameRect.width,

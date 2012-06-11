@@ -49,7 +49,6 @@
 MB::Game::Game(std::string windowName)
 {
   window = new sf::RenderWindow( sf::VideoMode( 800, 600 ), windowName );
-
 }
 
 MB::Game::~Game()
@@ -172,16 +171,6 @@ std::vector< std::string > MB::Game::GetScripts()
 std::string MB::Game::GetScript(std::string name)
 {
   return LuaHelper::LuaScripts::Instance().GrabScript( name );
-}
-
-void MB::Game::LoadEditor()
-{
-  args argList;
-  argList.argc = argc;
-  argList.argv = argv;
-  argList.scriptList = this->GetScripts();
-  sf::Thread qtThread( &MB::LuaGUIThread,argList);
-  qtThread.launch(); 
 }
 
 #endif

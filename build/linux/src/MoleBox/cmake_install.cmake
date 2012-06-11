@@ -36,6 +36,7 @@ IF(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   INCLUDE("/home/mafiamole/projects/MoleBox/build/linux/src/MoleBox/Lua/cmake_install.cmake")
   INCLUDE("/home/mafiamole/projects/MoleBox/build/linux/src/MoleBox/Actions/cmake_install.cmake")
+  INCLUDE("/home/mafiamole/projects/MoleBox/build/linux/src/MoleBox/Content/cmake_install.cmake")
 
 ENDIF(NOT CMAKE_INSTALL_LOCAL_ONLY)
 

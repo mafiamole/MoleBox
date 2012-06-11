@@ -28,7 +28,7 @@
 #include "LuaScriptHelper.h"
 #include "luascript.h"
 #include  <time.h>
-
+#include <unistd.h>
 #ifdef LUA_EDITOR
 
 LuaHighlighter::LuaHighlighter(QObject* parent): QSyntaxHighlighter(parent)
@@ -129,11 +129,16 @@ LuaEditor::LuaEditor(std::vector<std::string> scripts,QWidget *parent) : QWidget
   connect(ui.tabCodeWindow,SIGNAL(tabCloseRequested(int)),this,SLOT(CloseTab(int)));
 
   connect(
-        ui.listWidget_errors->model(),
-       SIGNAL(rowsInserted ( const QModelIndex &, int, int ) ),
-       ui.listWidget_errors,
-       SLOT(scrollToBottom ())
+      ui.listWidget_errors->model(),
+      SIGNAL(rowsInserted ( const QModelIndex &, int, int ) ),
+      ui.listWidget_errors,
+      SLOT(scrollToBottom ())
     );
+  
+  // We are assuming the first tab is the resource tab.
+  if ( ui.tabCodeWindow->count() > 0 ) { 
+    this->ResourcesTabTitle = ui.tabCodeWindow->tabText(0);
+  }
   this->ChangeScript(scripts[0].c_str());
 }
 
@@ -166,11 +171,15 @@ void LuaEditor::SetScripts( std::vector< std::string > scripts )
 void LuaEditor::TabChanged(int index)
 {
 	// Update current tab formatting
-	QTextEdit* currentTextEdit = (QTextEdit*)ui.tabCodeWindow->currentWidget();
+	
+	if ( ui.tabCodeWindow->tabText(index) != this->ResourcesTabTitle) {
+	
+	QTextEdit* currentTextEdit = (QTextEdit*)ui.tabCodeWindow->widget(index);
 	
 	luaHighlight = new LuaHighlighter(currentTextEdit->document());
 			
 	QApplication::connect(currentTextEdit, SIGNAL(textChanged()), this, SLOT(UpdateScript()) ); // updates script on changes.
+	}
 
 }
 

@@ -26,6 +26,13 @@
 
 #include "spritesheet.h"
 #include <iostream>
+
+SpriteSheet::SpriteSheet()
+{
+
+}
+
+
 SpriteSheet::SpriteSheet(const sf::Texture& texture, unsigned int spriteWidth, unsigned int spriteHeight) : sf::Sprite(texture), 
   columnCount( 0 ),
   rowCount(0),

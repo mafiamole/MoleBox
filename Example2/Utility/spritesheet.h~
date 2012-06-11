@@ -50,8 +50,7 @@ class SpriteSheet : public sf::Sprite
     sf::IntRect GetCurrentFramePosition();
     
     void SetFrame(unsigned int frame);
-    void move(float offsetX, float offsetY);
-    void move(const Vector2f& offset);
+
     virtual ~SpriteSheet();
 };
 

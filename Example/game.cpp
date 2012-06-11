@@ -49,6 +49,8 @@ Game::Game() : MB::Game("Game Title")
   {
 	  std::cout << e << std::endl;
   }
+  
+
 }
 
 Game::~Game()

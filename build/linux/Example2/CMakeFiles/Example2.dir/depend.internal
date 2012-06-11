@@ -141,8 +141,8 @@ Example2/CMakeFiles/Example2.dir/game.cpp.o
  /home/mafiamole/projects/MoleBox/Example2/../src/MoleBox/Actions/keyboard.h
  /home/mafiamole/projects/MoleBox/Example2/../src/MoleBox/Actions/mouse.h
  /home/mafiamole/projects/MoleBox/Example2/../src/MoleBox/ContainerDefinitions.h
- /home/mafiamole/projects/MoleBox/Example2/../src/MoleBox/Content.h
- /home/mafiamole/projects/MoleBox/Example2/../src/MoleBox/ContentTemplate.h
+ /home/mafiamole/projects/MoleBox/Example2/../src/MoleBox/Content/Content.h
+ /home/mafiamole/projects/MoleBox/Example2/../src/MoleBox/Content/ContentTemplate.h
  /home/mafiamole/projects/MoleBox/Example2/../src/MoleBox/Game.h
  /home/mafiamole/projects/MoleBox/Example2/../src/MoleBox/GameComponent.h
  /home/mafiamole/projects/MoleBox/Example2/../src/MoleBox/Lua/luascripts.h
@@ -229,8 +229,8 @@ Example2/CMakeFiles/Example2.dir/game.cpp.o
  /usr/local/include/SFML/Window/WindowStyle.hpp
 Example2/CMakeFiles/Example2.dir/main.cpp.o
  /home/mafiamole/projects/MoleBox/Example2/../src/MoleBox/ContainerDefinitions.h
- /home/mafiamole/projects/MoleBox/Example2/../src/MoleBox/Content.h
- /home/mafiamole/projects/MoleBox/Example2/../src/MoleBox/ContentTemplate.h
+ /home/mafiamole/projects/MoleBox/Example2/../src/MoleBox/Content/Content.h
+ /home/mafiamole/projects/MoleBox/Example2/../src/MoleBox/Content/ContentTemplate.h
  /home/mafiamole/projects/MoleBox/Example2/../src/MoleBox/Game.h
  /home/mafiamole/projects/MoleBox/Example2/../src/MoleBox/GameComponent.h
  /home/mafiamole/projects/MoleBox/Example2/../src/MoleBox/Lua/luascripts.h
@@ -317,8 +317,8 @@ Example2/CMakeFiles/Example2.dir/main.cpp.o
  /usr/local/include/SFML/Window/WindowStyle.hpp
 Example2/CMakeFiles/Example2.dir/player.cpp.o
  /home/mafiamole/projects/MoleBox/Example2/../src/MoleBox/ContainerDefinitions.h
- /home/mafiamole/projects/MoleBox/Example2/../src/MoleBox/Content.h
- /home/mafiamole/projects/MoleBox/Example2/../src/MoleBox/ContentTemplate.h
+ /home/mafiamole/projects/MoleBox/Example2/../src/MoleBox/Content/Content.h
+ /home/mafiamole/projects/MoleBox/Example2/../src/MoleBox/Content/ContentTemplate.h
  /home/mafiamole/projects/MoleBox/Example2/../src/MoleBox/Game.h
  /home/mafiamole/projects/MoleBox/Example2/../src/MoleBox/GameComponent.h
  /home/mafiamole/projects/MoleBox/Example2/../src/MoleBox/action.h

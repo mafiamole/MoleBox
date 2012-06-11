@@ -59,17 +59,20 @@ CMAKE_BINARY_DIR = /home/mafiamole/projects/MoleBox/build/linux
 src/MoleBox/all: src/MoleBox/CMakeFiles/MoleBox.dir/all
 src/MoleBox/all: src/MoleBox/Lua/all
 src/MoleBox/all: src/MoleBox/Actions/all
+src/MoleBox/all: src/MoleBox/Content/all
 .PHONY : src/MoleBox/all
 
 # Convenience name for "clean" pass in the directory.
 src/MoleBox/clean: src/MoleBox/CMakeFiles/MoleBox.dir/clean
 src/MoleBox/clean: src/MoleBox/Lua/clean
 src/MoleBox/clean: src/MoleBox/Actions/clean
+src/MoleBox/clean: src/MoleBox/Content/clean
 .PHONY : src/MoleBox/clean
 
 # Convenience name for "preinstall" pass in the directory.
 src/MoleBox/preinstall: src/MoleBox/Lua/preinstall
 src/MoleBox/preinstall: src/MoleBox/Actions/preinstall
+src/MoleBox/preinstall: src/MoleBox/Content/preinstall
 .PHONY : src/MoleBox/preinstall
 
 #=============================================================================
@@ -136,6 +139,21 @@ src/MoleBox/Actions/clean:
 # Convenience name for "preinstall" pass in the directory.
 src/MoleBox/Actions/preinstall:
 .PHONY : src/MoleBox/Actions/preinstall
+
+#=============================================================================
+# Directory level rules for directory src/MoleBox/Content
+
+# Convenience name for "all" pass in the directory.
+src/MoleBox/Content/all:
+.PHONY : src/MoleBox/Content/all
+
+# Convenience name for "clean" pass in the directory.
+src/MoleBox/Content/clean:
+.PHONY : src/MoleBox/Content/clean
+
+# Convenience name for "preinstall" pass in the directory.
+src/MoleBox/Content/preinstall:
+.PHONY : src/MoleBox/Content/preinstall
 
 #=============================================================================
 # Directory level rules for directory Example

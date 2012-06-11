@@ -47,7 +47,7 @@ public:
     {
         if (ScriptEditor->objectName().isEmpty())
             ScriptEditor->setObjectName(QString::fromUtf8("ScriptEditor"));
-        ScriptEditor->resize(989, 596);
+        ScriptEditor->resize(568, 596);
         QSizePolicy sizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
         sizePolicy.setHorizontalStretch(0);
         sizePolicy.setVerticalStretch(0);

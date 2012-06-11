@@ -55,7 +55,7 @@ private:
   Ui_ScriptEditor ui;
   std::vector< std::string > scripts;
 protected:
-  
+  QString ResourcesTabTitle;
   void SetScripts( std::vector< std::string > scripts );
   bool FindTab(QString scriptFile);
 public:

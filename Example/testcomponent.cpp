@@ -29,20 +29,20 @@
 TestComponent::TestComponent(MB::Game* game): MB::GameComponent(game)
 {
   
-  texture 	= MB::Content< sf::Texture >::Load( "test.png" );
-  
-  sprite 	= sf::Sprite(texture);
-  sprite2	= sf::Sprite(texture);
+  sprite 	= MB::Content::NewSprite("test.png");
+  sprite2	= MB::Content::NewSprite("test.png");
   sprite2.move(sprite.getTextureRect().width,0);
   
-  music		= MB::Content< sf::Music >::Open( "menu.ogg" );
+  music		= MB::Content::Load< sf::Music* >( "menu.ogg" );
   musicPaused  	= true;
   
   spriteBatch	= new MB::SpriteBatch(this->game->Window());
-  sound		= sf::Sound(MB::Content< sf::SoundBuffer >::Load( "mouthpop.wav" ));
+  sound		=  MB::Content::NewSound("mouthpop.wav");
   
   spriteBatch->push_back(&sprite);
   spriteBatch->push_back(&sprite2);
+  
+  
 }
 
 TestComponent::~TestComponent()
@@ -60,7 +60,7 @@ void TestComponent::Update(sf::Time elapsed, MB::EventList* events)
   MB::GameComponent::Update(elapsed,events);
 
   MB::Action* tempAction = this->actions->Get("Play Music");
-/*  
+
   if ( !tempAction->IsActive() && tempAction->HasChanged() )
   {
     musicPaused = !musicPaused;
@@ -71,7 +71,7 @@ void TestComponent::Update(sf::Time elapsed, MB::EventList* events)
       music->play();
     }      
   }
-*/
+
 /*
   if ( !this->actions->Get("Play Sound")->IsActive() && this->actions->Get("Play Sound")->HasChanged() )
     sound.play();

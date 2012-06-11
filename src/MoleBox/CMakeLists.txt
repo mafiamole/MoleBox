@@ -20,8 +20,7 @@ set ( MoleBox_SOURCES
   Lua/luaeditor.cpp 
   GameComponent.cpp
   Game.cpp
-  Content.cpp
-
+  Content/Content.cpp
   )
   
   set ( MoleBox_HEADERS
@@ -31,12 +30,12 @@ set ( MoleBox_SOURCES
   Lua/Component.h
   Lua/luascript.h
   Lua/luascripts.h
-  ContentTemplate.h
-  Content.h
+  Content/ContentTemplate.h
+  Content/Content.h
   action.h
   actions.h
   ContainerDefinitions.h
-  Content.h
+  Content/Content.h
   Game.h
   GameComponent.h
   Actions/keyboard.h
@@ -85,3 +84,4 @@ set ( MoleBox_SOURCES
 
   add_subdirectory(Lua)
 add_subdirectory(Actions)
+add_subdirectory(Content)

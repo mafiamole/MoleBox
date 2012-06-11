@@ -24,7 +24,7 @@
 */
 
 #include "Component.h"
-#include "../Content.h"
+#include "../Content/Content.h"
 #include "LuaScriptHelper.h"
 
 void MB::ActionsToLua(lua_State* L,MB::Actions* actions)
@@ -105,7 +105,7 @@ void MB::LuaComponent::Update( sf::Time elapsed, MB::EventList* events )
   lua_getglobal(L,"update");
   
   ActionsToLua( L, this->game->GetActions() );
-  std::cout << "Numbre: " << (int)elapsed.asMilliseconds() << std::endl;
+
   lua_pushnumber(L, (int)elapsed.asMilliseconds() );
   
   int s = lua_pcall( L , 2, 0 ,0);
@@ -119,7 +119,7 @@ void MB::LuaComponent::Update( sf::Time elapsed, MB::EventList* events )
 int MB::LuaComponent::AddSounds(std::string file)
 {
   int key = this->soundKey;  
-  this->sounds.insert(std::pair <int,sf::Sound>(key, sf::Sound( Content< sf::SoundBuffer >::Load(file)) ) );
+  this->sounds.insert(std::pair <int,sf::Sound>(key, sf::Sound( Content::Load< sf::SoundBuffer >(file)) ) );
   this->soundKey++;
   return key;
 }
@@ -128,7 +128,7 @@ int MB::LuaComponent::AddSprite(std::string file)
 {
   
   int key = this->spriteKey;
-  this->sprites.insert( std::pair <int,sf::Sprite>( key, sf::Sprite( Content< sf::Texture >::Load (file) ) ) );
+  this->sprites.insert( std::pair <int,sf::Sprite>( key, sf::Sprite( Content::Load< sf::Texture > (file) ) ) );
   this->spriteKey++;
   return key;
 }

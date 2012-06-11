@@ -140,8 +140,8 @@ Example2/CMakeFiles/Example2.dir/game.cpp.o: ../../Example2/../src/MoleBox/Actio
 Example2/CMakeFiles/Example2.dir/game.cpp.o: ../../Example2/../src/MoleBox/Actions/keyboard.h
 Example2/CMakeFiles/Example2.dir/game.cpp.o: ../../Example2/../src/MoleBox/Actions/mouse.h
 Example2/CMakeFiles/Example2.dir/game.cpp.o: ../../Example2/../src/MoleBox/ContainerDefinitions.h
-Example2/CMakeFiles/Example2.dir/game.cpp.o: ../../Example2/../src/MoleBox/Content.h
-Example2/CMakeFiles/Example2.dir/game.cpp.o: ../../Example2/../src/MoleBox/ContentTemplate.h
+Example2/CMakeFiles/Example2.dir/game.cpp.o: ../../Example2/../src/MoleBox/Content/Content.h
+Example2/CMakeFiles/Example2.dir/game.cpp.o: ../../Example2/../src/MoleBox/Content/ContentTemplate.h
 Example2/CMakeFiles/Example2.dir/game.cpp.o: ../../Example2/../src/MoleBox/Game.h
 Example2/CMakeFiles/Example2.dir/game.cpp.o: ../../Example2/../src/MoleBox/GameComponent.h
 Example2/CMakeFiles/Example2.dir/game.cpp.o: ../../Example2/../src/MoleBox/Lua/luascripts.h
@@ -228,8 +228,8 @@ Example2/CMakeFiles/Example2.dir/game.cpp.o: /usr/local/include/SFML/Window/Wind
 Example2/CMakeFiles/Example2.dir/game.cpp.o: /usr/local/include/SFML/Window/WindowStyle.hpp
 
 Example2/CMakeFiles/Example2.dir/main.cpp.o: ../../Example2/../src/MoleBox/ContainerDefinitions.h
-Example2/CMakeFiles/Example2.dir/main.cpp.o: ../../Example2/../src/MoleBox/Content.h
-Example2/CMakeFiles/Example2.dir/main.cpp.o: ../../Example2/../src/MoleBox/ContentTemplate.h
+Example2/CMakeFiles/Example2.dir/main.cpp.o: ../../Example2/../src/MoleBox/Content/Content.h
+Example2/CMakeFiles/Example2.dir/main.cpp.o: ../../Example2/../src/MoleBox/Content/ContentTemplate.h
 Example2/CMakeFiles/Example2.dir/main.cpp.o: ../../Example2/../src/MoleBox/Game.h
 Example2/CMakeFiles/Example2.dir/main.cpp.o: ../../Example2/../src/MoleBox/GameComponent.h
 Example2/CMakeFiles/Example2.dir/main.cpp.o: ../../Example2/../src/MoleBox/Lua/luascripts.h
@@ -316,8 +316,8 @@ Example2/CMakeFiles/Example2.dir/main.cpp.o: /usr/local/include/SFML/Window/Wind
 Example2/CMakeFiles/Example2.dir/main.cpp.o: /usr/local/include/SFML/Window/WindowStyle.hpp
 
 Example2/CMakeFiles/Example2.dir/player.cpp.o: ../../Example2/../src/MoleBox/ContainerDefinitions.h
-Example2/CMakeFiles/Example2.dir/player.cpp.o: ../../Example2/../src/MoleBox/Content.h
-Example2/CMakeFiles/Example2.dir/player.cpp.o: ../../Example2/../src/MoleBox/ContentTemplate.h
+Example2/CMakeFiles/Example2.dir/player.cpp.o: ../../Example2/../src/MoleBox/Content/Content.h
+Example2/CMakeFiles/Example2.dir/player.cpp.o: ../../Example2/../src/MoleBox/Content/ContentTemplate.h
 Example2/CMakeFiles/Example2.dir/player.cpp.o: ../../Example2/../src/MoleBox/Game.h
 Example2/CMakeFiles/Example2.dir/player.cpp.o: ../../Example2/../src/MoleBox/GameComponent.h
 Example2/CMakeFiles/Example2.dir/player.cpp.o: ../../Example2/../src/MoleBox/action.h

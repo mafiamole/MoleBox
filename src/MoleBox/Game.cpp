@@ -50,6 +50,7 @@ MB::Game::Game(std::string windowName)
 {
   window = new sf::RenderWindow( sf::VideoMode( 800, 600 ), windowName );
 
+  
 }
 
 MB::Game::~Game()

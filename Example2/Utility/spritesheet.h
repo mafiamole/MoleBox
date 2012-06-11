@@ -40,6 +40,7 @@ class SpriteSheet : public sf::Sprite
     sf::IntRect currentFrameRect;
   
   public:
+    SpriteSheet();
     SpriteSheet(const sf::Texture& texture, unsigned int spriteWidth,unsigned int spriteHeight);
     
     unsigned int GetRowCount();

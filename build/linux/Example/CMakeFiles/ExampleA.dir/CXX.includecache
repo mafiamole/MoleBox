@@ -28,7 +28,7 @@ SFML/Config.hpp
 map
 -
 
-/home/mafiamole/projects/MoleBox/Example/../src/MoleBox/Content.h
+/home/mafiamole/projects/MoleBox/Example/../src/MoleBox/Content/Content.h
 iostream
 -
 SFML/Graphics.hpp
@@ -36,16 +36,20 @@ SFML/Graphics.hpp
 SFML/Audio.hpp
 -
 ContentTemplate.h
-/home/mafiamole/projects/MoleBox/Example/../src/MoleBox/ContentTemplate.h
+/home/mafiamole/projects/MoleBox/Example/../src/MoleBox/Content/ContentTemplate.h
 
-/home/mafiamole/projects/MoleBox/Example/../src/MoleBox/ContentTemplate.h
+/home/mafiamole/projects/MoleBox/Example/../src/MoleBox/Content/ContentTemplate.h
 map
 -
 string
 -
 functional
 -
+vector
+-
 stdlib.h
+-
+SFML/System/Mutex.hpp
 -
 
 /home/mafiamole/projects/MoleBox/Example/../src/MoleBox/Game.h
@@ -68,7 +72,7 @@ ContainerDefinitions.h
 actions.h
 /home/mafiamole/projects/MoleBox/Example/../src/MoleBox/actions.h
 
-/home/mafiamole/projects/MoleBox/Example/../src/MoleBox/Lua/../Content.h
+/home/mafiamole/projects/MoleBox/Example/../src/MoleBox/Lua/../Content/Content.h
 iostream
 -
 SFML/Graphics.hpp
@@ -76,7 +80,7 @@ SFML/Graphics.hpp
 SFML/Audio.hpp
 -
 ContentTemplate.h
-/home/mafiamole/projects/MoleBox/Example/../src/MoleBox/Lua/../ContentTemplate.h
+/home/mafiamole/projects/MoleBox/Example/../src/MoleBox/Lua/../Content/ContentTemplate.h
 
 /home/mafiamole/projects/MoleBox/Example/../src/MoleBox/Lua/../Game.h
 vector
@@ -131,8 +135,8 @@ string
 -
 map
 -
-../Content.h
-/home/mafiamole/projects/MoleBox/Example/../src/MoleBox/Lua/../Content.h
+../Content/Content.h
+/home/mafiamole/projects/MoleBox/Example/../src/MoleBox/Lua/../Content/Content.h
 
 /home/mafiamole/projects/MoleBox/Example/../src/MoleBox/Lua/content.h
 LuaScriptHelper.h
@@ -221,8 +225,8 @@ iostream
 /home/mafiamole/projects/MoleBox/Example/testcomponent.h
 ../src/MoleBox/GameComponent.h
 /home/mafiamole/projects/MoleBox/Example/../src/MoleBox/GameComponent.h
-../src/MoleBox/Content.h
-/home/mafiamole/projects/MoleBox/Example/../src/MoleBox/Content.h
+../src/MoleBox/Content/Content.h
+/home/mafiamole/projects/MoleBox/Example/../src/MoleBox/Content/Content.h
 ../src/MoleBox/Game.h
 /home/mafiamole/projects/MoleBox/Example/../src/MoleBox/Game.h
 

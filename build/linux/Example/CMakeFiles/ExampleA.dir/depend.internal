@@ -6,11 +6,11 @@ Example/CMakeFiles/ExampleA.dir/game.cpp.o
  /home/mafiamole/projects/MoleBox/Example/../src/MoleBox/Actions/keyboard.h
  /home/mafiamole/projects/MoleBox/Example/../src/MoleBox/Actions/mouse.h
  /home/mafiamole/projects/MoleBox/Example/../src/MoleBox/ContainerDefinitions.h
- /home/mafiamole/projects/MoleBox/Example/../src/MoleBox/Content.h
- /home/mafiamole/projects/MoleBox/Example/../src/MoleBox/ContentTemplate.h
+ /home/mafiamole/projects/MoleBox/Example/../src/MoleBox/Content/Content.h
+ /home/mafiamole/projects/MoleBox/Example/../src/MoleBox/Content/ContentTemplate.h
  /home/mafiamole/projects/MoleBox/Example/../src/MoleBox/Game.h
  /home/mafiamole/projects/MoleBox/Example/../src/MoleBox/GameComponent.h
- /home/mafiamole/projects/MoleBox/Example/../src/MoleBox/Lua/../Content.h
+ /home/mafiamole/projects/MoleBox/Example/../src/MoleBox/Lua/../Content/Content.h
  /home/mafiamole/projects/MoleBox/Example/../src/MoleBox/Lua/../Game.h
  /home/mafiamole/projects/MoleBox/Example/../src/MoleBox/Lua/../GameComponent.h
  /home/mafiamole/projects/MoleBox/Example/../src/MoleBox/Lua/Component.h
@@ -99,8 +99,8 @@ Example/CMakeFiles/ExampleA.dir/game.cpp.o
  /usr/local/include/SFML/Window/WindowStyle.hpp
 Example/CMakeFiles/ExampleA.dir/main.cpp.o
  /home/mafiamole/projects/MoleBox/Example/../src/MoleBox/ContainerDefinitions.h
- /home/mafiamole/projects/MoleBox/Example/../src/MoleBox/Content.h
- /home/mafiamole/projects/MoleBox/Example/../src/MoleBox/ContentTemplate.h
+ /home/mafiamole/projects/MoleBox/Example/../src/MoleBox/Content/Content.h
+ /home/mafiamole/projects/MoleBox/Example/../src/MoleBox/Content/ContentTemplate.h
  /home/mafiamole/projects/MoleBox/Example/../src/MoleBox/Game.h
  /home/mafiamole/projects/MoleBox/Example/../src/MoleBox/GameComponent.h
  /home/mafiamole/projects/MoleBox/Example/../src/MoleBox/Lua/luascripts.h
@@ -187,8 +187,8 @@ Example/CMakeFiles/ExampleA.dir/testcomponent.cpp.o
  /home/mafiamole/projects/MoleBox/Example/../src/MoleBox/Actions/../action.h
  /home/mafiamole/projects/MoleBox/Example/../src/MoleBox/Actions/keyboard.h
  /home/mafiamole/projects/MoleBox/Example/../src/MoleBox/ContainerDefinitions.h
- /home/mafiamole/projects/MoleBox/Example/../src/MoleBox/Content.h
- /home/mafiamole/projects/MoleBox/Example/../src/MoleBox/ContentTemplate.h
+ /home/mafiamole/projects/MoleBox/Example/../src/MoleBox/Content/Content.h
+ /home/mafiamole/projects/MoleBox/Example/../src/MoleBox/Content/ContentTemplate.h
  /home/mafiamole/projects/MoleBox/Example/../src/MoleBox/Game.h
  /home/mafiamole/projects/MoleBox/Example/../src/MoleBox/GameComponent.h
  /home/mafiamole/projects/MoleBox/Example/../src/MoleBox/action.h
