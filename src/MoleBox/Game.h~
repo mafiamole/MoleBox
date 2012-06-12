@@ -78,8 +78,9 @@ class GameComponent;
     ComponentVector 		components;  
     /**
     * Method that is used to add a new game component to the game loop
+    * Returns the components pointer.
     */
-    void 			AddComponent	( GameComponent * component );
+    GameComponent * 		AddComponent	( GameComponent * component );
     /**
     * Method that returns the number of components already assigned to the game loop.
     */
@@ -113,7 +114,7 @@ class GameComponent;
     * The update function accepts events from the window poll event loop construct.
     * It also calls the update method of each component.
     */
-    virtual void 		Update		( sf::Time elapsed, EventList *events );
+    virtual void 		Update		( sf::Time elapsed, Types::EventList *events );
     /**
     * Called once per loop.
     * This calls the Draw method of each component.

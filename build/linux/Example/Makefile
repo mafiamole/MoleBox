@@ -112,6 +112,54 @@ ExampleA/fast:
 	cd /home/mafiamole/projects/MoleBox/build/linux && $(MAKE) -f Example/CMakeFiles/ExampleA.dir/build.make Example/CMakeFiles/ExampleA.dir/build
 .PHONY : ExampleA/fast
 
+ball.o: ball.cpp.o
+.PHONY : ball.o
+
+# target to build an object file
+ball.cpp.o:
+	cd /home/mafiamole/projects/MoleBox/build/linux && $(MAKE) -f Example/CMakeFiles/ExampleA.dir/build.make Example/CMakeFiles/ExampleA.dir/ball.cpp.o
+.PHONY : ball.cpp.o
+
+ball.i: ball.cpp.i
+.PHONY : ball.i
+
+# target to preprocess a source file
+ball.cpp.i:
+	cd /home/mafiamole/projects/MoleBox/build/linux && $(MAKE) -f Example/CMakeFiles/ExampleA.dir/build.make Example/CMakeFiles/ExampleA.dir/ball.cpp.i
+.PHONY : ball.cpp.i
+
+ball.s: ball.cpp.s
+.PHONY : ball.s
+
+# target to generate assembly for a file
+ball.cpp.s:
+	cd /home/mafiamole/projects/MoleBox/build/linux && $(MAKE) -f Example/CMakeFiles/ExampleA.dir/build.make Example/CMakeFiles/ExampleA.dir/ball.cpp.s
+.PHONY : ball.cpp.s
+
+enemy.o: enemy.cpp.o
+.PHONY : enemy.o
+
+# target to build an object file
+enemy.cpp.o:
+	cd /home/mafiamole/projects/MoleBox/build/linux && $(MAKE) -f Example/CMakeFiles/ExampleA.dir/build.make Example/CMakeFiles/ExampleA.dir/enemy.cpp.o
+.PHONY : enemy.cpp.o
+
+enemy.i: enemy.cpp.i
+.PHONY : enemy.i
+
+# target to preprocess a source file
+enemy.cpp.i:
+	cd /home/mafiamole/projects/MoleBox/build/linux && $(MAKE) -f Example/CMakeFiles/ExampleA.dir/build.make Example/CMakeFiles/ExampleA.dir/enemy.cpp.i
+.PHONY : enemy.cpp.i
+
+enemy.s: enemy.cpp.s
+.PHONY : enemy.s
+
+# target to generate assembly for a file
+enemy.cpp.s:
+	cd /home/mafiamole/projects/MoleBox/build/linux && $(MAKE) -f Example/CMakeFiles/ExampleA.dir/build.make Example/CMakeFiles/ExampleA.dir/enemy.cpp.s
+.PHONY : enemy.cpp.s
+
 game.o: game.cpp.o
 .PHONY : game.o
 
@@ -160,6 +208,30 @@ main.cpp.s:
 	cd /home/mafiamole/projects/MoleBox/build/linux && $(MAKE) -f Example/CMakeFiles/ExampleA.dir/build.make Example/CMakeFiles/ExampleA.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+player.o: player.cpp.o
+.PHONY : player.o
+
+# target to build an object file
+player.cpp.o:
+	cd /home/mafiamole/projects/MoleBox/build/linux && $(MAKE) -f Example/CMakeFiles/ExampleA.dir/build.make Example/CMakeFiles/ExampleA.dir/player.cpp.o
+.PHONY : player.cpp.o
+
+player.i: player.cpp.i
+.PHONY : player.i
+
+# target to preprocess a source file
+player.cpp.i:
+	cd /home/mafiamole/projects/MoleBox/build/linux && $(MAKE) -f Example/CMakeFiles/ExampleA.dir/build.make Example/CMakeFiles/ExampleA.dir/player.cpp.i
+.PHONY : player.cpp.i
+
+player.s: player.cpp.s
+.PHONY : player.s
+
+# target to generate assembly for a file
+player.cpp.s:
+	cd /home/mafiamole/projects/MoleBox/build/linux && $(MAKE) -f Example/CMakeFiles/ExampleA.dir/build.make Example/CMakeFiles/ExampleA.dir/player.cpp.s
+.PHONY : player.cpp.s
+
 testcomponent.o: testcomponent.cpp.o
 .PHONY : testcomponent.o
 
@@ -193,12 +265,21 @@ help:
 	@echo "... ExampleA"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... ball.o"
+	@echo "... ball.i"
+	@echo "... ball.s"
+	@echo "... enemy.o"
+	@echo "... enemy.i"
+	@echo "... enemy.s"
 	@echo "... game.o"
 	@echo "... game.i"
 	@echo "... game.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... player.o"
+	@echo "... player.i"
+	@echo "... player.s"
 	@echo "... testcomponent.o"
 	@echo "... testcomponent.i"
 	@echo "... testcomponent.s"

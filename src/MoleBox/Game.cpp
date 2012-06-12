@@ -143,9 +143,10 @@ void MB::Game::Run(int argc, char** argv)
 #endif
 }
 
-void MB::Game::AddComponent(GameComponent* component)
+MB::GameComponent* MB::Game::AddComponent(GameComponent* component)
 {
   this->components.push_back(component);
+  return this->components.back();
 }
 
 int MB::Game::ComponentCount()

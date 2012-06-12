@@ -31,7 +31,9 @@
 #include "../src/MoleBox/Game.h"
 #include "lua.hpp"
 
-#include "testcomponent.h"
+#include "ball.h"
+#include "enemy.h"
+#include "player.h"
 
 #ifdef LUA_EDITOR
   #include "../src/MoleBox/Lua/luascripts.h"
@@ -39,6 +41,7 @@
 
 class Game : public MB::Game
 {
+protected:
 
 public:
     Game();
@@ -46,6 +49,7 @@ public:
     void Draw();
     void Run(int argc,char** argv);
     virtual ~Game();
+   
 
 };
 

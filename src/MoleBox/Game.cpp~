@@ -99,7 +99,7 @@ sf::RenderWindow* MB::Game::Window()
 
 void MB::Game::Run(int argc, char** argv)
 {
-  EventList eventList;
+  Types::EventList eventList;
 #ifdef LUA_EDITOR
   args argList;
   argList.argc = argc;
@@ -143,9 +143,10 @@ void MB::Game::Run(int argc, char** argv)
 #endif
 }
 
-void MB::Game::AddComponent(GameComponent* component)
+MB::GameComponent* MB::Game::AddComponent(GameComponent* component)
 {
   this->components.push_back(component);
+  this->components.push_back();
 }
 
 int MB::Game::ComponentCount()

@@ -78,18 +78,13 @@ class GameComponent;
     ComponentVector 		components;  
     /**
     * Method that is used to add a new game component to the game loop
+    * Returns the components pointer.
     */
-    void 			AddComponent	( GameComponent * component );
+    GameComponent * 		AddComponent	( GameComponent * component );
     /**
     * Method that returns the number of components already assigned to the game loop.
     */
     int 			ComponentCount	();
-    /**
-    * 
-    * Used to render the sprite to the screen.
-    * 
-    */
-    void			DrawSprite(const sf::Drawable& drawable, const sf::RenderStates& states = sf::RenderStates::Default);
     
   public:
     
@@ -123,6 +118,12 @@ class GameComponent;
     * Contains the game loop
     */
     virtual void 		Run		(int argc, char** argv);
+    /**
+    * 
+    * Used to render the sprite to the screen.
+    * 
+    */
+    void			DrawSprite(const sf::Drawable& drawable, const sf::RenderStates& states = sf::RenderStates::Default);
     
 #ifdef LUA_EDITOR    
     virtual std::vector<std::string>		GetScripts	();

@@ -22,9 +22,6 @@
     FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
     OTHER DEALINGS IN THE SOFTWARE.
 */
-
-#include "game.h"
-
 #include <iostream>
 
 #include "../src/MoleBox/Actions/keyboard.h"
@@ -32,18 +29,26 @@
 
 #include "../src/MoleBox/Lua/Component.h"
 
+#include "game.h"
+
+
+
+
 Game::Game() : MB::Game("Game Title")
 {
 
-  
-  this->actionList.Register("Play Sound",new MB::Keyboard(sf::Keyboard::Space));
-  this->actionList.Register("Play Music",new MB::Mouse(sf::Mouse::Left));
-  this->actionList.Register("Player Move Left",new MB::Keyboard(sf::Keyboard::Left));
-  this->actionList.Register("Player Move Right",new MB::Keyboard(sf::Keyboard::Left));
+  this->actionList.Register("Player Move Up",new MB::Keyboard(sf::Keyboard::W));
+  this->actionList.Register("Player Move Down",new MB::Keyboard(sf::Keyboard::S));
   try {  
-	this->AddComponent(new TestComponent(this));
-	this->AddComponent(new MB::LuaComponent(this,"../testComponent.lua"));
-	this->AddComponent(new MB::LuaComponent(this,"testComponent2.lua")); 
+// 	this->AddComponent(new TestComponent(this));
+// 	this->AddComponent(new MB::LuaComponent(this,"../testComponent.lua"));
+// 	this->AddComponent(new MB::LuaComponent(this,"testComponent2.lua"));
+
+  Player* player = this->AddComponent( new Player(this) );
+  Enemy* enemy = (Enemy*)this->AddComponent( new Enemy(this) );
+  Ball* ball = (Ball*)this->AddComponent( new Ball(this) );
+  enemy->SetBall(ball);
+  ball->SetOpponents(player,enemy);
   }
   catch (std::string e)
   {
@@ -63,7 +68,7 @@ void Game::Draw()
   MB::Game::Draw();
 }
 
-void Game::Update( sf::Time elapsed, MB::EventList* events)
+void Game::Update( sf::Time elapsed, MB::Types::EventList* events)
 {
   MB::Game::Update(elapsed,events);
 
@@ -73,3 +78,6 @@ void Game::Run(int argc,char **argv)
 {
   MB::Game::Run(argc,argv);
 }
+
+
+
