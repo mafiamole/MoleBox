@@ -50,6 +50,7 @@ Game::Game() : MB::Game("Game Title")
   this->ui		= (UI*)this->AddComponent( new UI(this,"ui.lua") );
   enemy->SetBall(ball);
   ball->SetOpponents(player,enemy);
+  ui->SetBall(ball);
   
   }
   catch (std::string e)

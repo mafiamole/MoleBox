@@ -37,8 +37,8 @@
 Game::Game() : MB::Game("Game Title")
 {
 
-  this->actionList.Register("Player Move Up",new MB::Keyboard(sf::Keyboard::W));
-  this->actionList.Register("Player Move Down",new MB::Keyboard(sf::Keyboard::S));
+  this->actionList.Register("Player Move Up",new MB::Keyboard(sf::Keyboard::Up));
+  this->actionList.Register("Player Move Down",new MB::Keyboard(sf::Keyboard::Down));
   try {  
 // 	this->AddComponent(new TestComponent(this));
 // 	this->AddComponent(new MB::LuaComponent(this,"../testComponent.lua"));
