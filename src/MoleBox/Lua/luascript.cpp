@@ -93,14 +93,14 @@ bool LuaScript::HandleError(int State)
 void LuaScript::RegisterComponentFunctions()
 {
   luaL_register(L,"Sprites",sprite);
-  
+  luaL_register(L,"Text",text);  
   luaL_register(L,"Sounds",sound);
 }
 
 void LuaScript::RegisterDummyComponentFuncs()
 {
   luaL_register(L,"Sprites",sprite_DUMMY);
-  
+  luaL_register(L,"Text",text);    
   luaL_register(L,"Sounds",sound_DUMMY);
 }
 

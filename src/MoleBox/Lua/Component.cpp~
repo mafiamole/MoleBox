@@ -46,8 +46,7 @@ void MB::ActionsToLua(lua_State* L,MB::Actions* actions)
 }
 
 
-
-MB::LuaComponent::LuaComponent(Game* game,std::string file) : GameComponent(game), script() , soundKey(0), spriteKey(0), scriptFile(file)
+MB::LuaComponent::LuaComponent(Game* game,std::string file) : GameComponent(game), script() , soundKey(0), spriteKey(0), textKey(0), scriptFile(file)
 {
   
   //this->LoadScript(file);
@@ -79,8 +78,14 @@ MB::LuaComponent::LuaComponent(Game* game,std::string file) : GameComponent(game
 }
 
 
+void MB::LuaComponent::UpdateScriptPreCall(lua_State* L)
+{
 
-void MB::LuaComponent::Update( sf::Time elapsed, MB::EventList* events )
+}
+
+
+
+void MB::LuaComponent::Update( sf::Time elapsed, MB::Types::EventList* events )
 {
 #ifdef LUA_EDITOR
 
@@ -100,13 +105,13 @@ void MB::LuaComponent::Update( sf::Time elapsed, MB::EventList* events )
 #endif
   lua_State* L = this->script.GetState();
   
-
-  
   lua_getglobal(L,"update");
   
   ActionsToLua( L, this->game->GetActions() );
 
   lua_pushnumber(L, (int)elapsed.asMilliseconds() );
+  
+  this->UpdateScriptPreCall(L);
   
   int s = lua_pcall( L , 2, 0 ,0);
   
@@ -138,6 +143,18 @@ void MB::LuaComponent::AddSpriteToDrawList(int ref)
   this->spriteBatch.push_back(ref);
 }
 
+int MB::LuaComponent::AddText(std::string value)
+{
+  int key = this->textKey;
+    this->text.insert( std::pair <int,sf::Text>( key, sf::Text(value) )  );
+  return key;
+}
+
+void MB::LuaComponent::AddTextToDrawList(int ref)
+{
+  this->textBatch.push_back(ref);
+}
+
 
 sf::Sound* MB::LuaComponent::GetSound(int ref)
 {
@@ -163,6 +180,18 @@ sf::Sprite* MB::LuaComponent::GetSprite(int ref)
   }
 }
 
+sf::Text* MB::LuaComponent::GetText(int ref)
+{
+  if ( this->text.find(ref) != this->text.end() )
+  {
+    return &this->text[ref];
+  }
+  else
+  {
+    throw "Unable to find text";
+  }  
+}
+
 
 
 void MB::LuaComponent::Draw()
@@ -182,6 +211,16 @@ void MB::LuaComponent::Draw()
     }
   }
   spriteBatch.clear();
+  
+  std::vector<int>::iterator textItr;
+  for (textItr = this->textBatch.begin(); textItr != this->textBatch.end(); textItr++)
+  {
+    if (this->text.find((*spriteItr)) != this->text.end())
+    {
+      this->game->Window()->draw (this->text[(*textItr)]);
+    }
+  }
+  spriteBatch.clear();  
   }
   else
   {

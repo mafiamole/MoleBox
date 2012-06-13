@@ -7,6 +7,13 @@ Example/CMakeFiles/ExampleA.dir/ball.cpp.o
  /home/mafiamole/projects/MoleBox/Example/../src/MoleBox/Content/ContentTemplate.h
  /home/mafiamole/projects/MoleBox/Example/../src/MoleBox/Game.h
  /home/mafiamole/projects/MoleBox/Example/../src/MoleBox/GameComponent.h
+ /home/mafiamole/projects/MoleBox/Example/../src/MoleBox/Lua/../Content/Content.h
+ /home/mafiamole/projects/MoleBox/Example/../src/MoleBox/Lua/../Game.h
+ /home/mafiamole/projects/MoleBox/Example/../src/MoleBox/Lua/../GameComponent.h
+ /home/mafiamole/projects/MoleBox/Example/../src/MoleBox/Lua/Component.h
+ /home/mafiamole/projects/MoleBox/Example/../src/MoleBox/Lua/LuaScriptHelper.h
+ /home/mafiamole/projects/MoleBox/Example/../src/MoleBox/Lua/content.h
+ /home/mafiamole/projects/MoleBox/Example/../src/MoleBox/Lua/luascript.h
  /home/mafiamole/projects/MoleBox/Example/../src/MoleBox/Lua/luascripts.h
  /home/mafiamole/projects/MoleBox/Example/../src/MoleBox/action.h
  /home/mafiamole/projects/MoleBox/Example/../src/MoleBox/actions.h
@@ -15,6 +22,7 @@ Example/CMakeFiles/ExampleA.dir/ball.cpp.o
  /home/mafiamole/projects/MoleBox/Example/enemy.h
  /home/mafiamole/projects/MoleBox/Example/game.h
  /home/mafiamole/projects/MoleBox/Example/player.h
+ /home/mafiamole/projects/MoleBox/Example/ui.h
  /usr/local/include/SFML/Audio.hpp
  /usr/local/include/SFML/Audio/Export.hpp
  /usr/local/include/SFML/Audio/Listener.hpp
@@ -95,6 +103,13 @@ Example/CMakeFiles/ExampleA.dir/enemy.cpp.o
  /home/mafiamole/projects/MoleBox/Example/../src/MoleBox/Content/ContentTemplate.h
  /home/mafiamole/projects/MoleBox/Example/../src/MoleBox/Game.h
  /home/mafiamole/projects/MoleBox/Example/../src/MoleBox/GameComponent.h
+ /home/mafiamole/projects/MoleBox/Example/../src/MoleBox/Lua/../Content/Content.h
+ /home/mafiamole/projects/MoleBox/Example/../src/MoleBox/Lua/../Game.h
+ /home/mafiamole/projects/MoleBox/Example/../src/MoleBox/Lua/../GameComponent.h
+ /home/mafiamole/projects/MoleBox/Example/../src/MoleBox/Lua/Component.h
+ /home/mafiamole/projects/MoleBox/Example/../src/MoleBox/Lua/LuaScriptHelper.h
+ /home/mafiamole/projects/MoleBox/Example/../src/MoleBox/Lua/content.h
+ /home/mafiamole/projects/MoleBox/Example/../src/MoleBox/Lua/luascript.h
  /home/mafiamole/projects/MoleBox/Example/../src/MoleBox/Lua/luascripts.h
  /home/mafiamole/projects/MoleBox/Example/../src/MoleBox/action.h
  /home/mafiamole/projects/MoleBox/Example/../src/MoleBox/actions.h
@@ -103,6 +118,7 @@ Example/CMakeFiles/ExampleA.dir/enemy.cpp.o
  /home/mafiamole/projects/MoleBox/Example/enemy.h
  /home/mafiamole/projects/MoleBox/Example/game.h
  /home/mafiamole/projects/MoleBox/Example/player.h
+ /home/mafiamole/projects/MoleBox/Example/ui.h
  /usr/local/include/SFML/Audio.hpp
  /usr/local/include/SFML/Audio/Export.hpp
  /usr/local/include/SFML/Audio/Listener.hpp
@@ -182,10 +198,11 @@ Example/CMakeFiles/ExampleA.dir/game.cpp.o
  /home/mafiamole/projects/MoleBox/Example/../src/MoleBox/Actions/../action.h
  /home/mafiamole/projects/MoleBox/Example/../src/MoleBox/Actions/keyboard.h
  /home/mafiamole/projects/MoleBox/Example/../src/MoleBox/Actions/mouse.h
+ /home/mafiamole/projects/MoleBox/Example/../src/MoleBox/Content/Content.h
+ /home/mafiamole/projects/MoleBox/Example/../src/MoleBox/Content/ContentTemplate.h
  /home/mafiamole/projects/MoleBox/Example/../src/MoleBox/Game.h
  /home/mafiamole/projects/MoleBox/Example/../src/MoleBox/GameComponent.h
  /home/mafiamole/projects/MoleBox/Example/../src/MoleBox/Lua/../Content/Content.h
- /home/mafiamole/projects/MoleBox/Example/../src/MoleBox/Lua/../Content/ContentTemplate.h
  /home/mafiamole/projects/MoleBox/Example/../src/MoleBox/Lua/../Game.h
  /home/mafiamole/projects/MoleBox/Example/../src/MoleBox/Lua/../GameComponent.h
  /home/mafiamole/projects/MoleBox/Example/../src/MoleBox/Lua/../action.h
@@ -200,6 +217,7 @@ Example/CMakeFiles/ExampleA.dir/game.cpp.o
  /home/mafiamole/projects/MoleBox/Example/game.cpp
  /home/mafiamole/projects/MoleBox/Example/game.h
  /home/mafiamole/projects/MoleBox/Example/player.h
+ /home/mafiamole/projects/MoleBox/Example/ui.h
  /usr/local/include/SFML/Audio.hpp
  /usr/local/include/SFML/Audio/Export.hpp
  /usr/local/include/SFML/Audio/Listener.hpp
@@ -276,8 +294,17 @@ Example/CMakeFiles/ExampleA.dir/game.cpp.o
  /usr/local/include/SFML/Window/WindowStyle.hpp
 Example/CMakeFiles/ExampleA.dir/main.cpp.o
  /home/mafiamole/projects/MoleBox/Example/../src/MoleBox/ContainerDefinitions.h
+ /home/mafiamole/projects/MoleBox/Example/../src/MoleBox/Content/Content.h
+ /home/mafiamole/projects/MoleBox/Example/../src/MoleBox/Content/ContentTemplate.h
  /home/mafiamole/projects/MoleBox/Example/../src/MoleBox/Game.h
  /home/mafiamole/projects/MoleBox/Example/../src/MoleBox/GameComponent.h
+ /home/mafiamole/projects/MoleBox/Example/../src/MoleBox/Lua/../Content/Content.h
+ /home/mafiamole/projects/MoleBox/Example/../src/MoleBox/Lua/../Game.h
+ /home/mafiamole/projects/MoleBox/Example/../src/MoleBox/Lua/../GameComponent.h
+ /home/mafiamole/projects/MoleBox/Example/../src/MoleBox/Lua/Component.h
+ /home/mafiamole/projects/MoleBox/Example/../src/MoleBox/Lua/LuaScriptHelper.h
+ /home/mafiamole/projects/MoleBox/Example/../src/MoleBox/Lua/content.h
+ /home/mafiamole/projects/MoleBox/Example/../src/MoleBox/Lua/luascript.h
  /home/mafiamole/projects/MoleBox/Example/../src/MoleBox/Lua/luascripts.h
  /home/mafiamole/projects/MoleBox/Example/../src/MoleBox/action.h
  /home/mafiamole/projects/MoleBox/Example/../src/MoleBox/actions.h
@@ -286,6 +313,17 @@ Example/CMakeFiles/ExampleA.dir/main.cpp.o
  /home/mafiamole/projects/MoleBox/Example/game.h
  /home/mafiamole/projects/MoleBox/Example/main.cpp
  /home/mafiamole/projects/MoleBox/Example/player.h
+ /home/mafiamole/projects/MoleBox/Example/ui.h
+ /usr/local/include/SFML/Audio.hpp
+ /usr/local/include/SFML/Audio/Export.hpp
+ /usr/local/include/SFML/Audio/Listener.hpp
+ /usr/local/include/SFML/Audio/Music.hpp
+ /usr/local/include/SFML/Audio/Sound.hpp
+ /usr/local/include/SFML/Audio/SoundBuffer.hpp
+ /usr/local/include/SFML/Audio/SoundBufferRecorder.hpp
+ /usr/local/include/SFML/Audio/SoundRecorder.hpp
+ /usr/local/include/SFML/Audio/SoundSource.hpp
+ /usr/local/include/SFML/Audio/SoundStream.hpp
  /usr/local/include/SFML/Config.hpp
  /usr/local/include/SFML/Graphics.hpp
  /usr/local/include/SFML/Graphics/BlendMode.hpp
@@ -356,6 +394,13 @@ Example/CMakeFiles/ExampleA.dir/player.cpp.o
  /home/mafiamole/projects/MoleBox/Example/../src/MoleBox/Content/ContentTemplate.h
  /home/mafiamole/projects/MoleBox/Example/../src/MoleBox/Game.h
  /home/mafiamole/projects/MoleBox/Example/../src/MoleBox/GameComponent.h
+ /home/mafiamole/projects/MoleBox/Example/../src/MoleBox/Lua/../Content/Content.h
+ /home/mafiamole/projects/MoleBox/Example/../src/MoleBox/Lua/../Game.h
+ /home/mafiamole/projects/MoleBox/Example/../src/MoleBox/Lua/../GameComponent.h
+ /home/mafiamole/projects/MoleBox/Example/../src/MoleBox/Lua/Component.h
+ /home/mafiamole/projects/MoleBox/Example/../src/MoleBox/Lua/LuaScriptHelper.h
+ /home/mafiamole/projects/MoleBox/Example/../src/MoleBox/Lua/content.h
+ /home/mafiamole/projects/MoleBox/Example/../src/MoleBox/Lua/luascript.h
  /home/mafiamole/projects/MoleBox/Example/../src/MoleBox/Lua/luascripts.h
  /home/mafiamole/projects/MoleBox/Example/../src/MoleBox/action.h
  /home/mafiamole/projects/MoleBox/Example/../src/MoleBox/actions.h
@@ -364,6 +409,7 @@ Example/CMakeFiles/ExampleA.dir/player.cpp.o
  /home/mafiamole/projects/MoleBox/Example/game.h
  /home/mafiamole/projects/MoleBox/Example/player.cpp
  /home/mafiamole/projects/MoleBox/Example/player.h
+ /home/mafiamole/projects/MoleBox/Example/ui.h
  /usr/local/include/SFML/Audio.hpp
  /usr/local/include/SFML/Audio/Export.hpp
  /usr/local/include/SFML/Audio/Listener.hpp
@@ -450,6 +496,102 @@ Example/CMakeFiles/ExampleA.dir/testcomponent.cpp.o
  /home/mafiamole/projects/MoleBox/Example/../src/MoleBox/actions.h
  /home/mafiamole/projects/MoleBox/Example/testcomponent.cpp
  /home/mafiamole/projects/MoleBox/Example/testcomponent.h
+ /usr/local/include/SFML/Audio.hpp
+ /usr/local/include/SFML/Audio/Export.hpp
+ /usr/local/include/SFML/Audio/Listener.hpp
+ /usr/local/include/SFML/Audio/Music.hpp
+ /usr/local/include/SFML/Audio/Sound.hpp
+ /usr/local/include/SFML/Audio/SoundBuffer.hpp
+ /usr/local/include/SFML/Audio/SoundBufferRecorder.hpp
+ /usr/local/include/SFML/Audio/SoundRecorder.hpp
+ /usr/local/include/SFML/Audio/SoundSource.hpp
+ /usr/local/include/SFML/Audio/SoundStream.hpp
+ /usr/local/include/SFML/Config.hpp
+ /usr/local/include/SFML/Graphics.hpp
+ /usr/local/include/SFML/Graphics/BlendMode.hpp
+ /usr/local/include/SFML/Graphics/CircleShape.hpp
+ /usr/local/include/SFML/Graphics/Color.hpp
+ /usr/local/include/SFML/Graphics/ConvexShape.hpp
+ /usr/local/include/SFML/Graphics/Drawable.hpp
+ /usr/local/include/SFML/Graphics/Export.hpp
+ /usr/local/include/SFML/Graphics/Font.hpp
+ /usr/local/include/SFML/Graphics/Glyph.hpp
+ /usr/local/include/SFML/Graphics/Image.hpp
+ /usr/local/include/SFML/Graphics/PrimitiveType.hpp
+ /usr/local/include/SFML/Graphics/Rect.hpp
+ /usr/local/include/SFML/Graphics/Rect.inl
+ /usr/local/include/SFML/Graphics/RectangleShape.hpp
+ /usr/local/include/SFML/Graphics/RenderStates.hpp
+ /usr/local/include/SFML/Graphics/RenderTarget.hpp
+ /usr/local/include/SFML/Graphics/RenderTexture.hpp
+ /usr/local/include/SFML/Graphics/RenderWindow.hpp
+ /usr/local/include/SFML/Graphics/Shader.hpp
+ /usr/local/include/SFML/Graphics/Shape.hpp
+ /usr/local/include/SFML/Graphics/Sprite.hpp
+ /usr/local/include/SFML/Graphics/Text.hpp
+ /usr/local/include/SFML/Graphics/Texture.hpp
+ /usr/local/include/SFML/Graphics/Transform.hpp
+ /usr/local/include/SFML/Graphics/Transformable.hpp
+ /usr/local/include/SFML/Graphics/Vertex.hpp
+ /usr/local/include/SFML/Graphics/VertexArray.hpp
+ /usr/local/include/SFML/Graphics/View.hpp
+ /usr/local/include/SFML/System.hpp
+ /usr/local/include/SFML/System/Clock.hpp
+ /usr/local/include/SFML/System/Err.hpp
+ /usr/local/include/SFML/System/Export.hpp
+ /usr/local/include/SFML/System/InputStream.hpp
+ /usr/local/include/SFML/System/Lock.hpp
+ /usr/local/include/SFML/System/Mutex.hpp
+ /usr/local/include/SFML/System/NonCopyable.hpp
+ /usr/local/include/SFML/System/Sleep.hpp
+ /usr/local/include/SFML/System/String.hpp
+ /usr/local/include/SFML/System/Thread.hpp
+ /usr/local/include/SFML/System/Thread.inl
+ /usr/local/include/SFML/System/ThreadLocal.hpp
+ /usr/local/include/SFML/System/ThreadLocalPtr.hpp
+ /usr/local/include/SFML/System/ThreadLocalPtr.inl
+ /usr/local/include/SFML/System/Time.hpp
+ /usr/local/include/SFML/System/Utf.hpp
+ /usr/local/include/SFML/System/Utf.inl
+ /usr/local/include/SFML/System/Vector2.hpp
+ /usr/local/include/SFML/System/Vector2.inl
+ /usr/local/include/SFML/System/Vector3.hpp
+ /usr/local/include/SFML/System/Vector3.inl
+ /usr/local/include/SFML/Window.hpp
+ /usr/local/include/SFML/Window/Context.hpp
+ /usr/local/include/SFML/Window/ContextSettings.hpp
+ /usr/local/include/SFML/Window/Event.hpp
+ /usr/local/include/SFML/Window/Export.hpp
+ /usr/local/include/SFML/Window/GlResource.hpp
+ /usr/local/include/SFML/Window/Joystick.hpp
+ /usr/local/include/SFML/Window/Keyboard.hpp
+ /usr/local/include/SFML/Window/Mouse.hpp
+ /usr/local/include/SFML/Window/VideoMode.hpp
+ /usr/local/include/SFML/Window/Window.hpp
+ /usr/local/include/SFML/Window/WindowHandle.hpp
+ /usr/local/include/SFML/Window/WindowStyle.hpp
+Example/CMakeFiles/ExampleA.dir/ui.cpp.o
+ /home/mafiamole/projects/MoleBox/Example/../src/MoleBox/ContainerDefinitions.h
+ /home/mafiamole/projects/MoleBox/Example/../src/MoleBox/Content/Content.h
+ /home/mafiamole/projects/MoleBox/Example/../src/MoleBox/Content/ContentTemplate.h
+ /home/mafiamole/projects/MoleBox/Example/../src/MoleBox/Game.h
+ /home/mafiamole/projects/MoleBox/Example/../src/MoleBox/GameComponent.h
+ /home/mafiamole/projects/MoleBox/Example/../src/MoleBox/Lua/../Content/Content.h
+ /home/mafiamole/projects/MoleBox/Example/../src/MoleBox/Lua/../Game.h
+ /home/mafiamole/projects/MoleBox/Example/../src/MoleBox/Lua/../GameComponent.h
+ /home/mafiamole/projects/MoleBox/Example/../src/MoleBox/Lua/Component.h
+ /home/mafiamole/projects/MoleBox/Example/../src/MoleBox/Lua/LuaScriptHelper.h
+ /home/mafiamole/projects/MoleBox/Example/../src/MoleBox/Lua/content.h
+ /home/mafiamole/projects/MoleBox/Example/../src/MoleBox/Lua/luascript.h
+ /home/mafiamole/projects/MoleBox/Example/../src/MoleBox/Lua/luascripts.h
+ /home/mafiamole/projects/MoleBox/Example/../src/MoleBox/action.h
+ /home/mafiamole/projects/MoleBox/Example/../src/MoleBox/actions.h
+ /home/mafiamole/projects/MoleBox/Example/ball.h
+ /home/mafiamole/projects/MoleBox/Example/enemy.h
+ /home/mafiamole/projects/MoleBox/Example/game.h
+ /home/mafiamole/projects/MoleBox/Example/player.h
+ /home/mafiamole/projects/MoleBox/Example/ui.cpp
+ /home/mafiamole/projects/MoleBox/Example/ui.h
  /usr/local/include/SFML/Audio.hpp
  /usr/local/include/SFML/Audio/Export.hpp
  /usr/local/include/SFML/Audio/Listener.hpp

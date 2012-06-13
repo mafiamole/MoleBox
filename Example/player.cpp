@@ -27,9 +27,10 @@
 #include "player.h"
 #include "../src/MoleBox/Content/Content.h"
 #include "../src/MoleBox/Game.h"
+#include "game.h"
 #include <iostream>
 
-Player::Player(MB::Game* game) : MB::GameComponent(game),
+Player::Player(Game* game) : MB::GameComponent(game),
 				  upperBoundry(0),
 				  lowerBoundry( game->Window()->getSize().y )
 {

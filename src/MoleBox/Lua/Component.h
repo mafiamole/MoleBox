@@ -65,11 +65,15 @@ namespace MB {
     std::string 		scriptFile;
     LuaScript			script;
     std::map<int,sf::Sprite>	sprites;
+    std::map<int,sf::Text>	text;
     std::map<int,sf::Sound>	sounds;
     int spriteKey;
     int soundKey;
+    int textKey;
     std::vector<int>		spriteBatch;
-    
+    std::vector<int>		textBatch;
+  protected:
+    virtual void UpdateScriptPreCall(lua_State* L);
   public:
     LuaComponent(MB::Game* game, std::string file);
     
@@ -77,9 +81,13 @@ namespace MB {
     int	AddSounds(std::string file);
     
     void AddSpriteToDrawList(int ref);
+    void AddTextToDrawList(int ref);
+    
+    int AddText(std::string value);
     
     sf::Sprite* GetSprite(int ref);
     sf::Sound*	GetSound(int ref);
+    sf::Text* GetText(int ref);
     
     virtual void Update(sf::Time elapsed,Types::EventList* events);
     virtual void Draw();

@@ -26,10 +26,10 @@
 
 #ifndef ENEMY_H
 #define ENEMY_H
-
 #include "../src/MoleBox/GameComponent.h"
 
 class Ball;
+class Game;
 
 class Enemy : public MB::GameComponent
 {
@@ -37,10 +37,14 @@ class Enemy : public MB::GameComponent
   sf::Sprite enemySprite;
   int upperBoundry,lowerBoundry,horiziontalPos;
 public:
-    Enemy(MB::Game* game);
+    Enemy(Game* game);
     void SetBall(Ball *ball);
     const sf::Vector2f& getPosition();
     sf::IntRect getHitBox();
+    void PrintPositon();
+    int InterceptBall(float playerYCentre);
+    int ApprochCentre( float playerYCentre);
+    
     virtual void Update(sf::Time elapsed, MB::Types::EventList* events);
     virtual void Draw();
     virtual ~Enemy();

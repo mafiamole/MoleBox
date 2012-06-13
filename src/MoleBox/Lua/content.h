@@ -51,5 +51,17 @@ public:
     static int				GetPosition			( lua_State *L );
   };
    
+
+
+class Text {
+public:
+    static int 				Create				( lua_State *L );
+    static int 				Draw				( lua_State *L );
+    static int 				Modify				( lua_State *L );
+    static int				Move				( lua_State *L );
+    static int				SetPosition			( lua_State *L );
+    static int				GetPosition			( lua_State *L );
+  };
+   
 }
 #endif // CONTENT_H

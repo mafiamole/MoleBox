@@ -256,6 +256,30 @@ testcomponent.cpp.s:
 	cd /home/mafiamole/projects/MoleBox/build/linux && $(MAKE) -f Example/CMakeFiles/ExampleA.dir/build.make Example/CMakeFiles/ExampleA.dir/testcomponent.cpp.s
 .PHONY : testcomponent.cpp.s
 
+ui.o: ui.cpp.o
+.PHONY : ui.o
+
+# target to build an object file
+ui.cpp.o:
+	cd /home/mafiamole/projects/MoleBox/build/linux && $(MAKE) -f Example/CMakeFiles/ExampleA.dir/build.make Example/CMakeFiles/ExampleA.dir/ui.cpp.o
+.PHONY : ui.cpp.o
+
+ui.i: ui.cpp.i
+.PHONY : ui.i
+
+# target to preprocess a source file
+ui.cpp.i:
+	cd /home/mafiamole/projects/MoleBox/build/linux && $(MAKE) -f Example/CMakeFiles/ExampleA.dir/build.make Example/CMakeFiles/ExampleA.dir/ui.cpp.i
+.PHONY : ui.cpp.i
+
+ui.s: ui.cpp.s
+.PHONY : ui.s
+
+# target to generate assembly for a file
+ui.cpp.s:
+	cd /home/mafiamole/projects/MoleBox/build/linux && $(MAKE) -f Example/CMakeFiles/ExampleA.dir/build.make Example/CMakeFiles/ExampleA.dir/ui.cpp.s
+.PHONY : ui.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -283,6 +307,9 @@ help:
 	@echo "... testcomponent.o"
 	@echo "... testcomponent.i"
 	@echo "... testcomponent.s"
+	@echo "... ui.o"
+	@echo "... ui.i"
+	@echo "... ui.s"
 .PHONY : help
 
 

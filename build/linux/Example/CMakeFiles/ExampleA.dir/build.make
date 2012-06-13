@@ -49,9 +49,32 @@ include Example/CMakeFiles/ExampleA.dir/progress.make
 # Include the compile flags for this target's objects.
 include Example/CMakeFiles/ExampleA.dir/flags.make
 
+Example/CMakeFiles/ExampleA.dir/ui.cpp.o: Example/CMakeFiles/ExampleA.dir/flags.make
+Example/CMakeFiles/ExampleA.dir/ui.cpp.o: ../../Example/ui.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/mafiamole/projects/MoleBox/build/linux/CMakeFiles $(CMAKE_PROGRESS_1)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object Example/CMakeFiles/ExampleA.dir/ui.cpp.o"
+	cd /home/mafiamole/projects/MoleBox/build/linux/Example && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/ExampleA.dir/ui.cpp.o -c /home/mafiamole/projects/MoleBox/Example/ui.cpp
+
+Example/CMakeFiles/ExampleA.dir/ui.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ExampleA.dir/ui.cpp.i"
+	cd /home/mafiamole/projects/MoleBox/build/linux/Example && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/mafiamole/projects/MoleBox/Example/ui.cpp > CMakeFiles/ExampleA.dir/ui.cpp.i
+
+Example/CMakeFiles/ExampleA.dir/ui.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ExampleA.dir/ui.cpp.s"
+	cd /home/mafiamole/projects/MoleBox/build/linux/Example && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/mafiamole/projects/MoleBox/Example/ui.cpp -o CMakeFiles/ExampleA.dir/ui.cpp.s
+
+Example/CMakeFiles/ExampleA.dir/ui.cpp.o.requires:
+.PHONY : Example/CMakeFiles/ExampleA.dir/ui.cpp.o.requires
+
+Example/CMakeFiles/ExampleA.dir/ui.cpp.o.provides: Example/CMakeFiles/ExampleA.dir/ui.cpp.o.requires
+	$(MAKE) -f Example/CMakeFiles/ExampleA.dir/build.make Example/CMakeFiles/ExampleA.dir/ui.cpp.o.provides.build
+.PHONY : Example/CMakeFiles/ExampleA.dir/ui.cpp.o.provides
+
+Example/CMakeFiles/ExampleA.dir/ui.cpp.o.provides.build: Example/CMakeFiles/ExampleA.dir/ui.cpp.o
+
 Example/CMakeFiles/ExampleA.dir/ball.cpp.o: Example/CMakeFiles/ExampleA.dir/flags.make
 Example/CMakeFiles/ExampleA.dir/ball.cpp.o: ../../Example/ball.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/mafiamole/projects/MoleBox/build/linux/CMakeFiles $(CMAKE_PROGRESS_1)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/mafiamole/projects/MoleBox/build/linux/CMakeFiles $(CMAKE_PROGRESS_2)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object Example/CMakeFiles/ExampleA.dir/ball.cpp.o"
 	cd /home/mafiamole/projects/MoleBox/build/linux/Example && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/ExampleA.dir/ball.cpp.o -c /home/mafiamole/projects/MoleBox/Example/ball.cpp
 
@@ -74,7 +97,7 @@ Example/CMakeFiles/ExampleA.dir/ball.cpp.o.provides.build: Example/CMakeFiles/Ex
 
 Example/CMakeFiles/ExampleA.dir/enemy.cpp.o: Example/CMakeFiles/ExampleA.dir/flags.make
 Example/CMakeFiles/ExampleA.dir/enemy.cpp.o: ../../Example/enemy.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/mafiamole/projects/MoleBox/build/linux/CMakeFiles $(CMAKE_PROGRESS_2)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/mafiamole/projects/MoleBox/build/linux/CMakeFiles $(CMAKE_PROGRESS_3)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object Example/CMakeFiles/ExampleA.dir/enemy.cpp.o"
 	cd /home/mafiamole/projects/MoleBox/build/linux/Example && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/ExampleA.dir/enemy.cpp.o -c /home/mafiamole/projects/MoleBox/Example/enemy.cpp
 
@@ -97,7 +120,7 @@ Example/CMakeFiles/ExampleA.dir/enemy.cpp.o.provides.build: Example/CMakeFiles/E
 
 Example/CMakeFiles/ExampleA.dir/player.cpp.o: Example/CMakeFiles/ExampleA.dir/flags.make
 Example/CMakeFiles/ExampleA.dir/player.cpp.o: ../../Example/player.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/mafiamole/projects/MoleBox/build/linux/CMakeFiles $(CMAKE_PROGRESS_3)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/mafiamole/projects/MoleBox/build/linux/CMakeFiles $(CMAKE_PROGRESS_4)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object Example/CMakeFiles/ExampleA.dir/player.cpp.o"
 	cd /home/mafiamole/projects/MoleBox/build/linux/Example && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/ExampleA.dir/player.cpp.o -c /home/mafiamole/projects/MoleBox/Example/player.cpp
 
@@ -120,7 +143,7 @@ Example/CMakeFiles/ExampleA.dir/player.cpp.o.provides.build: Example/CMakeFiles/
 
 Example/CMakeFiles/ExampleA.dir/game.cpp.o: Example/CMakeFiles/ExampleA.dir/flags.make
 Example/CMakeFiles/ExampleA.dir/game.cpp.o: ../../Example/game.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/mafiamole/projects/MoleBox/build/linux/CMakeFiles $(CMAKE_PROGRESS_4)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/mafiamole/projects/MoleBox/build/linux/CMakeFiles $(CMAKE_PROGRESS_5)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object Example/CMakeFiles/ExampleA.dir/game.cpp.o"
 	cd /home/mafiamole/projects/MoleBox/build/linux/Example && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/ExampleA.dir/game.cpp.o -c /home/mafiamole/projects/MoleBox/Example/game.cpp
 
@@ -143,7 +166,7 @@ Example/CMakeFiles/ExampleA.dir/game.cpp.o.provides.build: Example/CMakeFiles/Ex
 
 Example/CMakeFiles/ExampleA.dir/main.cpp.o: Example/CMakeFiles/ExampleA.dir/flags.make
 Example/CMakeFiles/ExampleA.dir/main.cpp.o: ../../Example/main.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/mafiamole/projects/MoleBox/build/linux/CMakeFiles $(CMAKE_PROGRESS_5)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/mafiamole/projects/MoleBox/build/linux/CMakeFiles $(CMAKE_PROGRESS_6)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object Example/CMakeFiles/ExampleA.dir/main.cpp.o"
 	cd /home/mafiamole/projects/MoleBox/build/linux/Example && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/ExampleA.dir/main.cpp.o -c /home/mafiamole/projects/MoleBox/Example/main.cpp
 
@@ -166,7 +189,7 @@ Example/CMakeFiles/ExampleA.dir/main.cpp.o.provides.build: Example/CMakeFiles/Ex
 
 Example/CMakeFiles/ExampleA.dir/testcomponent.cpp.o: Example/CMakeFiles/ExampleA.dir/flags.make
 Example/CMakeFiles/ExampleA.dir/testcomponent.cpp.o: ../../Example/testcomponent.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/mafiamole/projects/MoleBox/build/linux/CMakeFiles $(CMAKE_PROGRESS_6)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/mafiamole/projects/MoleBox/build/linux/CMakeFiles $(CMAKE_PROGRESS_7)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object Example/CMakeFiles/ExampleA.dir/testcomponent.cpp.o"
 	cd /home/mafiamole/projects/MoleBox/build/linux/Example && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/ExampleA.dir/testcomponent.cpp.o -c /home/mafiamole/projects/MoleBox/Example/testcomponent.cpp
 
@@ -189,6 +212,7 @@ Example/CMakeFiles/ExampleA.dir/testcomponent.cpp.o.provides.build: Example/CMak
 
 # Object files for target ExampleA
 ExampleA_OBJECTS = \
+"CMakeFiles/ExampleA.dir/ui.cpp.o" \
 "CMakeFiles/ExampleA.dir/ball.cpp.o" \
 "CMakeFiles/ExampleA.dir/enemy.cpp.o" \
 "CMakeFiles/ExampleA.dir/player.cpp.o" \
@@ -199,6 +223,7 @@ ExampleA_OBJECTS = \
 # External object files for target ExampleA
 ExampleA_EXTERNAL_OBJECTS =
 
+Example/ExampleA: Example/CMakeFiles/ExampleA.dir/ui.cpp.o
 Example/ExampleA: Example/CMakeFiles/ExampleA.dir/ball.cpp.o
 Example/ExampleA: Example/CMakeFiles/ExampleA.dir/enemy.cpp.o
 Example/ExampleA: Example/CMakeFiles/ExampleA.dir/player.cpp.o
@@ -220,6 +245,8 @@ Example/ExampleA: /usr/lib64/libICE.so
 Example/ExampleA: /usr/lib64/libX11.so
 Example/ExampleA: /usr/lib64/libXext.so
 Example/ExampleA: /usr/lib64/liblua-5.1.so
+Example/ExampleA: /usr/lib64/libQtGui_debug.so
+Example/ExampleA: /usr/lib64/libQtCore_debug.so
 Example/ExampleA: Example/CMakeFiles/ExampleA.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking CXX executable ExampleA"
 	cd /home/mafiamole/projects/MoleBox/build/linux/Example && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ExampleA.dir/link.txt --verbose=$(VERBOSE)
@@ -228,6 +255,7 @@ Example/ExampleA: Example/CMakeFiles/ExampleA.dir/link.txt
 Example/CMakeFiles/ExampleA.dir/build: Example/ExampleA
 .PHONY : Example/CMakeFiles/ExampleA.dir/build
 
+Example/CMakeFiles/ExampleA.dir/requires: Example/CMakeFiles/ExampleA.dir/ui.cpp.o.requires
 Example/CMakeFiles/ExampleA.dir/requires: Example/CMakeFiles/ExampleA.dir/ball.cpp.o.requires
 Example/CMakeFiles/ExampleA.dir/requires: Example/CMakeFiles/ExampleA.dir/enemy.cpp.o.requires
 Example/CMakeFiles/ExampleA.dir/requires: Example/CMakeFiles/ExampleA.dir/player.cpp.o.requires

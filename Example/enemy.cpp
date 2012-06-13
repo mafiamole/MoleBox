@@ -29,15 +29,14 @@
 #include "../src/MoleBox/Game.h"
 #include "../src/MoleBox/Content/Content.h"
 
-Enemy::Enemy(MB::Game* game) : MB::GameComponent(game),
+Enemy::Enemy(Game* game) : MB::GameComponent(game),
 				  upperBoundry(0),
 				  lowerBoundry( game->Window()->getSize().y )
 {
   this->enemySprite = MB::Content::NewSprite("paddle.png");
   
   horiziontalPos = this->game->Window()->getSize().x - 30 - this->enemySprite.getTextureRect().width;
-  
-  this->enemySprite.setPosition(horiziontalPos,1);
+  this->enemySprite.setPosition(horiziontalPos,(this->game->Window()->getSize().y / 2) - (this->enemySprite.getTextureRect().height /2 ) );
 }
 
 void Enemy::SetBall(Ball* ball)
@@ -50,9 +49,78 @@ void Enemy::Update(sf::Time elapsed, MB::Types::EventList* events)
 {
     MB::GameComponent::Update(elapsed, events);
     
-    if (this->enemySprite.getPosition().y != this->ball->getPosition().y)
-      this->enemySprite.setPosition(horiziontalPos,this->ball->getPosition().y - (this->enemySprite.getTextureRect().height / 2));
+    int halfWayX = this->game->Window()->getSize().x / 2;
+    
+    int direction = 0;
+    
+    float centrePos = this->enemySprite.getPosition().y  + (this->enemySprite.getTextureRect().height / 2); 
+    
+    //determin the movement direction depending on if the ball is in the other half of the cort or not.
+    
+    if ( ball->getPosition().x < halfWayX)
+      direction = this->ApprochCentre(centrePos);
+    else
+      direction = this->InterceptBall(centrePos);
+    
+
+    // update position
+    
+    float dy =  (direction * (int)elapsed.asMilliseconds() * 0.5f );
+    
+    sf::Vector2f position = this->enemySprite.getPosition();
+    
+    position.y = position.y + dy;
+  
+    if ( position.y < upperBoundry)
+    {
+      enemySprite.setPosition(horiziontalPos,upperBoundry + 1 );
+      
+    }
+    else if ( (position.y + this->enemySprite.getTextureRect().height)
+	      > lowerBoundry )
+    {
+      enemySprite.setPosition(horiziontalPos,lowerBoundry - (this->enemySprite.getTextureRect().height + 1) );
+    }
+    else
+    {
+      this->enemySprite.setPosition(position);
+    }
+    
+
+  
 }
+
+int Enemy::ApprochCentre(float playerYCentre)
+{   
+    if ( playerYCentre  < ( (this->game->Window()->getSize().y / 2) - 10) )
+    {
+      return 1;
+    }
+    else if (playerYCentre  > ( (this->game->Window()->getSize().y / 2) + 10))
+    {
+      return -1;
+    }
+    else 
+    {
+      return 0;
+    }
+
+}
+
+int Enemy::InterceptBall(float playerYCentre)
+{
+  float ballyPos = this->ball->getPosition().y;
+  if ( playerYCentre > ballyPos)
+  {
+    return -1;
+  }
+  else
+  {
+    return 1;
+  }
+    
+}
+
 
 
 sf::IntRect Enemy::getHitBox()
@@ -82,5 +150,10 @@ void Enemy::Draw()
 Enemy::~Enemy()
 {
 
+}
+
+void Enemy::PrintPositon()
+{
+  std::cout << "Enemy Pos`:" << this->enemySprite.getPosition().x << "," << this->enemySprite.getPosition().y << std::endl;
 }
 

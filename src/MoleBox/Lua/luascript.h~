@@ -50,13 +50,15 @@ template <int T> static int voidLuaEmptyFunction(lua_State *L) {
     lua_pushstring(L,error.c_str());
     lua_error(L);
   }
+ 
+  return 0;
   
 }
 
 static const luaL_reg sprite_DUMMY[] =
 {
   { "Load", voidLuaEmptyFunction<1> },
-  { "Draw", voidLuaEmptyFunction<2> },
+  { "Draw", voidLuaEmptyFunction<1> },
   { "Move", voidLuaEmptyFunction<3> },
   { "SetPosition", voidLuaEmptyFunction<3> },
   { "GetPosition", voidLuaEmptyFunction<0>},
@@ -70,6 +72,17 @@ static const luaL_Reg sound_DUMMY[] =
   { NULL, NULL }
 };
 
+static const luaL_reg text_DUMMY[] =
+{
+  { "Create", voidLuaEmptyFunction<1>},
+  { "Draw", voidLuaEmptyFunction<1>},
+  { "Modify", voidLuaEmptyFunction<2>},
+  { "Move",voidLuaEmptyFunction<3>},
+  { "SetPosition", voidLuaEmptyFunction<3>},
+  { "GetPosition", voidLuaEmptyFunction<0>},
+  { NULL, NULL }
+};
+
 #endif
 
 static const luaL_reg sprite[] =
@@ -79,6 +92,17 @@ static const luaL_reg sprite[] =
   { "Move", MB_Lua::Sprites::Move},
   { "SetPosition", MB_Lua::Sprites::SetPosition},
   { "GetPosition", MB_Lua::Sprites::GetPosition},
+  { NULL, NULL }
+};
+
+static const luaL_reg text[] =
+{
+  { "Create", MB_Lua::Text::Load},
+  { "Draw", MB_Lua::Text::Draw},
+  { "Modify", MB_Lua::Text::Move},
+  { "Move", MB_Lua::Text::Move},
+  { "SetPosition", MB_Lua::Text::SetPosition},
+  { "GetPosition", MB_Lua::Text::GetPosition},
   { NULL, NULL }
 };
 

@@ -264,3 +264,72 @@ int MB_Lua::Sprites::GetPosition(lua_State* L)
   
   return 2;
 }
+
+
+int MB_Lua::Text::Create(lua_State* L)
+{
+  int n = lua_gettop( L ); 
+  
+  if ( n != 1 )
+    LuaHelper::PushError(  L, "Create requires one arguments: ( string to display )");
+  
+   MB::LuaComponent* _this = getComponentFromUserData(L);
+  
+  std::string text = lua_tostring(L,1);
+  
+  int key = _this->AddText(text);
+  
+  lua_pushnumber( L, key);
+
+  return 1;
+  
+}
+
+int MB_Lua::Text::Draw(lua_State* L)
+{
+  int n = lua_gettop( L ); 
+  
+  if ( n != 1 )
+    LuaHelper::PushError(  L, "Draw requires one arguments: ( text reference )");
+  
+  int text = lua_tointeger(L,1);
+  
+  MB::LuaComponent* _this = getComponentFromUserData(L);
+  
+  _this->AddTextToDrawList(text);
+
+  return 0;
+}
+
+int MB_Lua::Text::Modify(lua_State* L)
+{
+  int n = lua_gettop( L ); 
+  
+  if ( n != 2 )
+    LuaHelper::PushError(  L, "Create requires one arguments: ( string to display )");
+  
+   MB::LuaComponent* _this = getComponentFromUserData(L);
+  
+  int ref		= lua_tointeger(L,1);
+  std::string text 	= lua_tostring(L,2);
+  
+  _this->GetText(ref)->setString(text);
+ 
+  return 0;
+}
+
+
+int MB_Lua::Text::Move(lua_State* L)
+{
+
+}
+
+int MB_Lua::Text::GetPosition(lua_State* L)
+{
+
+}
+
+int MB_Lua::Text::SetPosition(lua_State* L)
+{
+
+}

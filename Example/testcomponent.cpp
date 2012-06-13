@@ -38,7 +38,7 @@ TestComponent::TestComponent(MB::Game* game): MB::GameComponent(game)
   
   spriteBatch	= new MB::SpriteBatch(this->game->Window());
   sound		=  MB::Content::NewSound("mouthpop.wav");
-  
+ 
   spriteBatch->push_back(&sprite);
   spriteBatch->push_back(&sprite2);
   

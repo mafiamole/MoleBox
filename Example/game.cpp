@@ -44,18 +44,20 @@ Game::Game() : MB::Game("Game Title")
 // 	this->AddComponent(new MB::LuaComponent(this,"../testComponent.lua"));
 // 	this->AddComponent(new MB::LuaComponent(this,"testComponent2.lua"));
 
-  Player* player = (Player*)this->AddComponent( new Player(this) );
-  Enemy* enemy = (Enemy*)this->AddComponent( new Enemy(this) );
-  Ball* ball = (Ball*)this->AddComponent( new Ball(this) );
+  this->player 		= (Player*)this->AddComponent( new Player(this) );
+  this->enemy		= (Enemy*)this->AddComponent( new Enemy(this) );
+  this->ball 		= (Ball*)this->AddComponent( new Ball(this) );
+  this->ui		= (UI*)this->AddComponent( new UI(this,"ui.lua") );
   enemy->SetBall(ball);
   ball->SetOpponents(player,enemy);
+  ui->SetBall(ball);
+  
   }
   catch (std::string e)
   {
-	  std::cout << e << std::endl;
+    std::cout << e << std::endl;
   }
   
-
 }
 
 Game::~Game()
@@ -71,7 +73,20 @@ void Game::Draw()
 void Game::Update( sf::Time elapsed, MB::Types::EventList* events)
 {
   MB::Game::Update(elapsed,events);
-
+  int pScore = ball->PlayerScore();
+  int cScore = ball->ComputerScore();
+  std::cout << pScore << "," << cScore << std::endl;
+  if (pScore >= 10)
+  {
+    std::cout << "Player has won!" << std::endl;
+    this->Window()->close();
+  }
+  
+  if (cScore >= 10)
+  {
+    std::cout << "Computer has won!" << std::endl;
+    this->Window()->close();
+  }
 }
 
 void Game::Run(int argc,char **argv)

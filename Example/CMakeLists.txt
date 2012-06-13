@@ -1,5 +1,5 @@
 
-set (SOURCES ball.cpp enemy.cpp player.cpp game.cpp main.cpp testcomponent.cpp)
+set (SOURCES ui.cpp ball.cpp enemy.cpp player.cpp game.cpp main.cpp testcomponent.cpp)
 
 add_executable(ExampleA ${SOURCES})
 

@@ -49,9 +49,84 @@ include src/MoleBox/CMakeFiles/MoleBox.dir/progress.make
 # Include the compile flags for this target's objects.
 include src/MoleBox/CMakeFiles/MoleBox.dir/flags.make
 
+src/MoleBox/Lua/moc_luaeditor.cxx: ../../src/MoleBox/Lua/luaeditor.h
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/mafiamole/projects/MoleBox/build/linux/CMakeFiles $(CMAKE_PROGRESS_1)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Lua/moc_luaeditor.cxx"
+	cd /home/mafiamole/projects/MoleBox/build/linux/src/MoleBox && /usr/lib64/qt4/bin/moc-qt4 -I/usr/include -I/usr/include/QtGui -I/usr/include/QtCore -I/usr/local/include -I/usr/include -I/usr/include -I/usr/include -DQT_GUI_LIB -DQT_CORE_LIB -DLUA_EDITOR -o /home/mafiamole/projects/MoleBox/build/linux/src/MoleBox/Lua/moc_luaeditor.cxx /home/mafiamole/projects/MoleBox/src/MoleBox/Lua/luaeditor.h
+
+src/MoleBox/Lua/moc_LuaScriptHelper.cxx: ../../src/MoleBox/Lua/LuaScriptHelper.h
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/mafiamole/projects/MoleBox/build/linux/CMakeFiles $(CMAKE_PROGRESS_2)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Lua/moc_LuaScriptHelper.cxx"
+	cd /home/mafiamole/projects/MoleBox/build/linux/src/MoleBox && /usr/lib64/qt4/bin/moc-qt4 -I/usr/include -I/usr/include/QtGui -I/usr/include/QtCore -I/usr/local/include -I/usr/include -I/usr/include -I/usr/include -DQT_GUI_LIB -DQT_CORE_LIB -DLUA_EDITOR -o /home/mafiamole/projects/MoleBox/build/linux/src/MoleBox/Lua/moc_LuaScriptHelper.cxx /home/mafiamole/projects/MoleBox/src/MoleBox/Lua/LuaScriptHelper.h
+
+src/MoleBox/Lua/moc_Component.cxx: ../../src/MoleBox/Lua/Component.h
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/mafiamole/projects/MoleBox/build/linux/CMakeFiles $(CMAKE_PROGRESS_3)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Lua/moc_Component.cxx"
+	cd /home/mafiamole/projects/MoleBox/build/linux/src/MoleBox && /usr/lib64/qt4/bin/moc-qt4 -I/usr/include -I/usr/include/QtGui -I/usr/include/QtCore -I/usr/local/include -I/usr/include -I/usr/include -I/usr/include -DQT_GUI_LIB -DQT_CORE_LIB -DLUA_EDITOR -o /home/mafiamole/projects/MoleBox/build/linux/src/MoleBox/Lua/moc_Component.cxx /home/mafiamole/projects/MoleBox/src/MoleBox/Lua/Component.h
+
+src/MoleBox/Lua/moc_luascript.cxx: ../../src/MoleBox/Lua/luascript.h
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/mafiamole/projects/MoleBox/build/linux/CMakeFiles $(CMAKE_PROGRESS_4)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Lua/moc_luascript.cxx"
+	cd /home/mafiamole/projects/MoleBox/build/linux/src/MoleBox && /usr/lib64/qt4/bin/moc-qt4 -I/usr/include -I/usr/include/QtGui -I/usr/include/QtCore -I/usr/local/include -I/usr/include -I/usr/include -I/usr/include -DQT_GUI_LIB -DQT_CORE_LIB -DLUA_EDITOR -o /home/mafiamole/projects/MoleBox/build/linux/src/MoleBox/Lua/moc_luascript.cxx /home/mafiamole/projects/MoleBox/src/MoleBox/Lua/luascript.h
+
+src/MoleBox/Lua/moc_luascripts.cxx: ../../src/MoleBox/Lua/luascripts.h
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/mafiamole/projects/MoleBox/build/linux/CMakeFiles $(CMAKE_PROGRESS_5)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Lua/moc_luascripts.cxx"
+	cd /home/mafiamole/projects/MoleBox/build/linux/src/MoleBox && /usr/lib64/qt4/bin/moc-qt4 -I/usr/include -I/usr/include/QtGui -I/usr/include/QtCore -I/usr/local/include -I/usr/include -I/usr/include -I/usr/include -DQT_GUI_LIB -DQT_CORE_LIB -DLUA_EDITOR -o /home/mafiamole/projects/MoleBox/build/linux/src/MoleBox/Lua/moc_luascripts.cxx /home/mafiamole/projects/MoleBox/src/MoleBox/Lua/luascripts.h
+
+src/MoleBox/Content/moc_ContentTemplate.cxx: ../../src/MoleBox/Content/ContentTemplate.h
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/mafiamole/projects/MoleBox/build/linux/CMakeFiles $(CMAKE_PROGRESS_6)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Content/moc_ContentTemplate.cxx"
+	cd /home/mafiamole/projects/MoleBox/build/linux/src/MoleBox && /usr/lib64/qt4/bin/moc-qt4 -I/usr/include -I/usr/include/QtGui -I/usr/include/QtCore -I/usr/local/include -I/usr/include -I/usr/include -I/usr/include -DQT_GUI_LIB -DQT_CORE_LIB -DLUA_EDITOR -o /home/mafiamole/projects/MoleBox/build/linux/src/MoleBox/Content/moc_ContentTemplate.cxx /home/mafiamole/projects/MoleBox/src/MoleBox/Content/ContentTemplate.h
+
+src/MoleBox/Content/moc_Content.cxx: ../../src/MoleBox/Content/Content.h
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/mafiamole/projects/MoleBox/build/linux/CMakeFiles $(CMAKE_PROGRESS_7)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Content/moc_Content.cxx"
+	cd /home/mafiamole/projects/MoleBox/build/linux/src/MoleBox && /usr/lib64/qt4/bin/moc-qt4 -I/usr/include -I/usr/include/QtGui -I/usr/include/QtCore -I/usr/local/include -I/usr/include -I/usr/include -I/usr/include -DQT_GUI_LIB -DQT_CORE_LIB -DLUA_EDITOR -o /home/mafiamole/projects/MoleBox/build/linux/src/MoleBox/Content/moc_Content.cxx /home/mafiamole/projects/MoleBox/src/MoleBox/Content/Content.h
+
+src/MoleBox/moc_action.cxx: ../../src/MoleBox/action.h
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/mafiamole/projects/MoleBox/build/linux/CMakeFiles $(CMAKE_PROGRESS_8)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating moc_action.cxx"
+	cd /home/mafiamole/projects/MoleBox/build/linux/src/MoleBox && /usr/lib64/qt4/bin/moc-qt4 -I/usr/include -I/usr/include/QtGui -I/usr/include/QtCore -I/usr/local/include -I/usr/include -I/usr/include -I/usr/include -DQT_GUI_LIB -DQT_CORE_LIB -DLUA_EDITOR -o /home/mafiamole/projects/MoleBox/build/linux/src/MoleBox/moc_action.cxx /home/mafiamole/projects/MoleBox/src/MoleBox/action.h
+
+src/MoleBox/moc_actions.cxx: ../../src/MoleBox/actions.h
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/mafiamole/projects/MoleBox/build/linux/CMakeFiles $(CMAKE_PROGRESS_9)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating moc_actions.cxx"
+	cd /home/mafiamole/projects/MoleBox/build/linux/src/MoleBox && /usr/lib64/qt4/bin/moc-qt4 -I/usr/include -I/usr/include/QtGui -I/usr/include/QtCore -I/usr/local/include -I/usr/include -I/usr/include -I/usr/include -DQT_GUI_LIB -DQT_CORE_LIB -DLUA_EDITOR -o /home/mafiamole/projects/MoleBox/build/linux/src/MoleBox/moc_actions.cxx /home/mafiamole/projects/MoleBox/src/MoleBox/actions.h
+
+src/MoleBox/moc_ContainerDefinitions.cxx: ../../src/MoleBox/ContainerDefinitions.h
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/mafiamole/projects/MoleBox/build/linux/CMakeFiles $(CMAKE_PROGRESS_10)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating moc_ContainerDefinitions.cxx"
+	cd /home/mafiamole/projects/MoleBox/build/linux/src/MoleBox && /usr/lib64/qt4/bin/moc-qt4 -I/usr/include -I/usr/include/QtGui -I/usr/include/QtCore -I/usr/local/include -I/usr/include -I/usr/include -I/usr/include -DQT_GUI_LIB -DQT_CORE_LIB -DLUA_EDITOR -o /home/mafiamole/projects/MoleBox/build/linux/src/MoleBox/moc_ContainerDefinitions.cxx /home/mafiamole/projects/MoleBox/src/MoleBox/ContainerDefinitions.h
+
+src/MoleBox/moc_Game.cxx: ../../src/MoleBox/Game.h
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/mafiamole/projects/MoleBox/build/linux/CMakeFiles $(CMAKE_PROGRESS_11)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating moc_Game.cxx"
+	cd /home/mafiamole/projects/MoleBox/build/linux/src/MoleBox && /usr/lib64/qt4/bin/moc-qt4 -I/usr/include -I/usr/include/QtGui -I/usr/include/QtCore -I/usr/local/include -I/usr/include -I/usr/include -I/usr/include -DQT_GUI_LIB -DQT_CORE_LIB -DLUA_EDITOR -o /home/mafiamole/projects/MoleBox/build/linux/src/MoleBox/moc_Game.cxx /home/mafiamole/projects/MoleBox/src/MoleBox/Game.h
+
+src/MoleBox/moc_GameComponent.cxx: ../../src/MoleBox/GameComponent.h
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/mafiamole/projects/MoleBox/build/linux/CMakeFiles $(CMAKE_PROGRESS_12)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating moc_GameComponent.cxx"
+	cd /home/mafiamole/projects/MoleBox/build/linux/src/MoleBox && /usr/lib64/qt4/bin/moc-qt4 -I/usr/include -I/usr/include/QtGui -I/usr/include/QtCore -I/usr/local/include -I/usr/include -I/usr/include -I/usr/include -DQT_GUI_LIB -DQT_CORE_LIB -DLUA_EDITOR -o /home/mafiamole/projects/MoleBox/build/linux/src/MoleBox/moc_GameComponent.cxx /home/mafiamole/projects/MoleBox/src/MoleBox/GameComponent.h
+
+src/MoleBox/Actions/moc_keyboard.cxx: ../../src/MoleBox/Actions/keyboard.h
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/mafiamole/projects/MoleBox/build/linux/CMakeFiles $(CMAKE_PROGRESS_13)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Actions/moc_keyboard.cxx"
+	cd /home/mafiamole/projects/MoleBox/build/linux/src/MoleBox && /usr/lib64/qt4/bin/moc-qt4 -I/usr/include -I/usr/include/QtGui -I/usr/include/QtCore -I/usr/local/include -I/usr/include -I/usr/include -I/usr/include -DQT_GUI_LIB -DQT_CORE_LIB -DLUA_EDITOR -o /home/mafiamole/projects/MoleBox/build/linux/src/MoleBox/Actions/moc_keyboard.cxx /home/mafiamole/projects/MoleBox/src/MoleBox/Actions/keyboard.h
+
+src/MoleBox/Actions/moc_mouse.cxx: ../../src/MoleBox/Actions/mouse.h
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/mafiamole/projects/MoleBox/build/linux/CMakeFiles $(CMAKE_PROGRESS_14)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Actions/moc_mouse.cxx"
+	cd /home/mafiamole/projects/MoleBox/build/linux/src/MoleBox && /usr/lib64/qt4/bin/moc-qt4 -I/usr/include -I/usr/include/QtGui -I/usr/include/QtCore -I/usr/local/include -I/usr/include -I/usr/include -I/usr/include -DQT_GUI_LIB -DQT_CORE_LIB -DLUA_EDITOR -o /home/mafiamole/projects/MoleBox/build/linux/src/MoleBox/Actions/moc_mouse.cxx /home/mafiamole/projects/MoleBox/src/MoleBox/Actions/mouse.h
+
+src/MoleBox/ui_GameLuaEditor.h: ../../src/MoleBox/Lua/GameLuaEditor.ui
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/mafiamole/projects/MoleBox/build/linux/CMakeFiles $(CMAKE_PROGRESS_15)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ui_GameLuaEditor.h"
+	cd /home/mafiamole/projects/MoleBox/build/linux/src/MoleBox && /usr/lib64/qt4/bin/uic-qt4 -o /home/mafiamole/projects/MoleBox/build/linux/src/MoleBox/ui_GameLuaEditor.h /home/mafiamole/projects/MoleBox/src/MoleBox/Lua/GameLuaEditor.ui
+
 src/MoleBox/CMakeFiles/MoleBox.dir/Actions/keyboard.cpp.o: src/MoleBox/CMakeFiles/MoleBox.dir/flags.make
 src/MoleBox/CMakeFiles/MoleBox.dir/Actions/keyboard.cpp.o: ../../src/MoleBox/Actions/keyboard.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/mafiamole/projects/MoleBox/build/linux/CMakeFiles $(CMAKE_PROGRESS_1)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/mafiamole/projects/MoleBox/build/linux/CMakeFiles $(CMAKE_PROGRESS_16)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object src/MoleBox/CMakeFiles/MoleBox.dir/Actions/keyboard.cpp.o"
 	cd /home/mafiamole/projects/MoleBox/build/linux/src/MoleBox && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/MoleBox.dir/Actions/keyboard.cpp.o -c /home/mafiamole/projects/MoleBox/src/MoleBox/Actions/keyboard.cpp
 
@@ -74,7 +149,7 @@ src/MoleBox/CMakeFiles/MoleBox.dir/Actions/keyboard.cpp.o.provides.build: src/Mo
 
 src/MoleBox/CMakeFiles/MoleBox.dir/Actions/mouse.cpp.o: src/MoleBox/CMakeFiles/MoleBox.dir/flags.make
 src/MoleBox/CMakeFiles/MoleBox.dir/Actions/mouse.cpp.o: ../../src/MoleBox/Actions/mouse.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/mafiamole/projects/MoleBox/build/linux/CMakeFiles $(CMAKE_PROGRESS_2)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/mafiamole/projects/MoleBox/build/linux/CMakeFiles $(CMAKE_PROGRESS_17)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object src/MoleBox/CMakeFiles/MoleBox.dir/Actions/mouse.cpp.o"
 	cd /home/mafiamole/projects/MoleBox/build/linux/src/MoleBox && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/MoleBox.dir/Actions/mouse.cpp.o -c /home/mafiamole/projects/MoleBox/src/MoleBox/Actions/mouse.cpp
 
@@ -97,7 +172,7 @@ src/MoleBox/CMakeFiles/MoleBox.dir/Actions/mouse.cpp.o.provides.build: src/MoleB
 
 src/MoleBox/CMakeFiles/MoleBox.dir/action.cpp.o: src/MoleBox/CMakeFiles/MoleBox.dir/flags.make
 src/MoleBox/CMakeFiles/MoleBox.dir/action.cpp.o: ../../src/MoleBox/action.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/mafiamole/projects/MoleBox/build/linux/CMakeFiles $(CMAKE_PROGRESS_3)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/mafiamole/projects/MoleBox/build/linux/CMakeFiles $(CMAKE_PROGRESS_18)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object src/MoleBox/CMakeFiles/MoleBox.dir/action.cpp.o"
 	cd /home/mafiamole/projects/MoleBox/build/linux/src/MoleBox && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/MoleBox.dir/action.cpp.o -c /home/mafiamole/projects/MoleBox/src/MoleBox/action.cpp
 
@@ -120,7 +195,7 @@ src/MoleBox/CMakeFiles/MoleBox.dir/action.cpp.o.provides.build: src/MoleBox/CMak
 
 src/MoleBox/CMakeFiles/MoleBox.dir/actions.cpp.o: src/MoleBox/CMakeFiles/MoleBox.dir/flags.make
 src/MoleBox/CMakeFiles/MoleBox.dir/actions.cpp.o: ../../src/MoleBox/actions.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/mafiamole/projects/MoleBox/build/linux/CMakeFiles $(CMAKE_PROGRESS_4)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/mafiamole/projects/MoleBox/build/linux/CMakeFiles $(CMAKE_PROGRESS_19)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object src/MoleBox/CMakeFiles/MoleBox.dir/actions.cpp.o"
 	cd /home/mafiamole/projects/MoleBox/build/linux/src/MoleBox && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/MoleBox.dir/actions.cpp.o -c /home/mafiamole/projects/MoleBox/src/MoleBox/actions.cpp
 
@@ -143,7 +218,7 @@ src/MoleBox/CMakeFiles/MoleBox.dir/actions.cpp.o.provides.build: src/MoleBox/CMa
 
 src/MoleBox/CMakeFiles/MoleBox.dir/Lua/content.cpp.o: src/MoleBox/CMakeFiles/MoleBox.dir/flags.make
 src/MoleBox/CMakeFiles/MoleBox.dir/Lua/content.cpp.o: ../../src/MoleBox/Lua/content.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/mafiamole/projects/MoleBox/build/linux/CMakeFiles $(CMAKE_PROGRESS_5)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/mafiamole/projects/MoleBox/build/linux/CMakeFiles $(CMAKE_PROGRESS_20)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object src/MoleBox/CMakeFiles/MoleBox.dir/Lua/content.cpp.o"
 	cd /home/mafiamole/projects/MoleBox/build/linux/src/MoleBox && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/MoleBox.dir/Lua/content.cpp.o -c /home/mafiamole/projects/MoleBox/src/MoleBox/Lua/content.cpp
 
@@ -166,7 +241,7 @@ src/MoleBox/CMakeFiles/MoleBox.dir/Lua/content.cpp.o.provides.build: src/MoleBox
 
 src/MoleBox/CMakeFiles/MoleBox.dir/Lua/LuaScriptHelper.cpp.o: src/MoleBox/CMakeFiles/MoleBox.dir/flags.make
 src/MoleBox/CMakeFiles/MoleBox.dir/Lua/LuaScriptHelper.cpp.o: ../../src/MoleBox/Lua/LuaScriptHelper.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/mafiamole/projects/MoleBox/build/linux/CMakeFiles $(CMAKE_PROGRESS_6)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/mafiamole/projects/MoleBox/build/linux/CMakeFiles $(CMAKE_PROGRESS_21)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object src/MoleBox/CMakeFiles/MoleBox.dir/Lua/LuaScriptHelper.cpp.o"
 	cd /home/mafiamole/projects/MoleBox/build/linux/src/MoleBox && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/MoleBox.dir/Lua/LuaScriptHelper.cpp.o -c /home/mafiamole/projects/MoleBox/src/MoleBox/Lua/LuaScriptHelper.cpp
 
@@ -189,7 +264,7 @@ src/MoleBox/CMakeFiles/MoleBox.dir/Lua/LuaScriptHelper.cpp.o.provides.build: src
 
 src/MoleBox/CMakeFiles/MoleBox.dir/Lua/Component.cpp.o: src/MoleBox/CMakeFiles/MoleBox.dir/flags.make
 src/MoleBox/CMakeFiles/MoleBox.dir/Lua/Component.cpp.o: ../../src/MoleBox/Lua/Component.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/mafiamole/projects/MoleBox/build/linux/CMakeFiles $(CMAKE_PROGRESS_7)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/mafiamole/projects/MoleBox/build/linux/CMakeFiles $(CMAKE_PROGRESS_22)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object src/MoleBox/CMakeFiles/MoleBox.dir/Lua/Component.cpp.o"
 	cd /home/mafiamole/projects/MoleBox/build/linux/src/MoleBox && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/MoleBox.dir/Lua/Component.cpp.o -c /home/mafiamole/projects/MoleBox/src/MoleBox/Lua/Component.cpp
 
@@ -212,7 +287,7 @@ src/MoleBox/CMakeFiles/MoleBox.dir/Lua/Component.cpp.o.provides.build: src/MoleB
 
 src/MoleBox/CMakeFiles/MoleBox.dir/Lua/luascript.cpp.o: src/MoleBox/CMakeFiles/MoleBox.dir/flags.make
 src/MoleBox/CMakeFiles/MoleBox.dir/Lua/luascript.cpp.o: ../../src/MoleBox/Lua/luascript.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/mafiamole/projects/MoleBox/build/linux/CMakeFiles $(CMAKE_PROGRESS_8)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/mafiamole/projects/MoleBox/build/linux/CMakeFiles $(CMAKE_PROGRESS_23)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object src/MoleBox/CMakeFiles/MoleBox.dir/Lua/luascript.cpp.o"
 	cd /home/mafiamole/projects/MoleBox/build/linux/src/MoleBox && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/MoleBox.dir/Lua/luascript.cpp.o -c /home/mafiamole/projects/MoleBox/src/MoleBox/Lua/luascript.cpp
 
@@ -235,7 +310,7 @@ src/MoleBox/CMakeFiles/MoleBox.dir/Lua/luascript.cpp.o.provides.build: src/MoleB
 
 src/MoleBox/CMakeFiles/MoleBox.dir/Lua/luascripts.cpp.o: src/MoleBox/CMakeFiles/MoleBox.dir/flags.make
 src/MoleBox/CMakeFiles/MoleBox.dir/Lua/luascripts.cpp.o: ../../src/MoleBox/Lua/luascripts.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/mafiamole/projects/MoleBox/build/linux/CMakeFiles $(CMAKE_PROGRESS_9)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/mafiamole/projects/MoleBox/build/linux/CMakeFiles $(CMAKE_PROGRESS_24)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object src/MoleBox/CMakeFiles/MoleBox.dir/Lua/luascripts.cpp.o"
 	cd /home/mafiamole/projects/MoleBox/build/linux/src/MoleBox && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/MoleBox.dir/Lua/luascripts.cpp.o -c /home/mafiamole/projects/MoleBox/src/MoleBox/Lua/luascripts.cpp
 
@@ -258,7 +333,7 @@ src/MoleBox/CMakeFiles/MoleBox.dir/Lua/luascripts.cpp.o.provides.build: src/Mole
 
 src/MoleBox/CMakeFiles/MoleBox.dir/Lua/luaeditor.cpp.o: src/MoleBox/CMakeFiles/MoleBox.dir/flags.make
 src/MoleBox/CMakeFiles/MoleBox.dir/Lua/luaeditor.cpp.o: ../../src/MoleBox/Lua/luaeditor.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/mafiamole/projects/MoleBox/build/linux/CMakeFiles $(CMAKE_PROGRESS_10)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/mafiamole/projects/MoleBox/build/linux/CMakeFiles $(CMAKE_PROGRESS_25)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object src/MoleBox/CMakeFiles/MoleBox.dir/Lua/luaeditor.cpp.o"
 	cd /home/mafiamole/projects/MoleBox/build/linux/src/MoleBox && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/MoleBox.dir/Lua/luaeditor.cpp.o -c /home/mafiamole/projects/MoleBox/src/MoleBox/Lua/luaeditor.cpp
 
@@ -281,7 +356,7 @@ src/MoleBox/CMakeFiles/MoleBox.dir/Lua/luaeditor.cpp.o.provides.build: src/MoleB
 
 src/MoleBox/CMakeFiles/MoleBox.dir/GameComponent.cpp.o: src/MoleBox/CMakeFiles/MoleBox.dir/flags.make
 src/MoleBox/CMakeFiles/MoleBox.dir/GameComponent.cpp.o: ../../src/MoleBox/GameComponent.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/mafiamole/projects/MoleBox/build/linux/CMakeFiles $(CMAKE_PROGRESS_11)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/mafiamole/projects/MoleBox/build/linux/CMakeFiles $(CMAKE_PROGRESS_26)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object src/MoleBox/CMakeFiles/MoleBox.dir/GameComponent.cpp.o"
 	cd /home/mafiamole/projects/MoleBox/build/linux/src/MoleBox && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/MoleBox.dir/GameComponent.cpp.o -c /home/mafiamole/projects/MoleBox/src/MoleBox/GameComponent.cpp
 
@@ -304,7 +379,7 @@ src/MoleBox/CMakeFiles/MoleBox.dir/GameComponent.cpp.o.provides.build: src/MoleB
 
 src/MoleBox/CMakeFiles/MoleBox.dir/Game.cpp.o: src/MoleBox/CMakeFiles/MoleBox.dir/flags.make
 src/MoleBox/CMakeFiles/MoleBox.dir/Game.cpp.o: ../../src/MoleBox/Game.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/mafiamole/projects/MoleBox/build/linux/CMakeFiles $(CMAKE_PROGRESS_12)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/mafiamole/projects/MoleBox/build/linux/CMakeFiles $(CMAKE_PROGRESS_27)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object src/MoleBox/CMakeFiles/MoleBox.dir/Game.cpp.o"
 	cd /home/mafiamole/projects/MoleBox/build/linux/src/MoleBox && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/MoleBox.dir/Game.cpp.o -c /home/mafiamole/projects/MoleBox/src/MoleBox/Game.cpp
 
@@ -327,7 +402,7 @@ src/MoleBox/CMakeFiles/MoleBox.dir/Game.cpp.o.provides.build: src/MoleBox/CMakeF
 
 src/MoleBox/CMakeFiles/MoleBox.dir/Content/Content.cpp.o: src/MoleBox/CMakeFiles/MoleBox.dir/flags.make
 src/MoleBox/CMakeFiles/MoleBox.dir/Content/Content.cpp.o: ../../src/MoleBox/Content/Content.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/mafiamole/projects/MoleBox/build/linux/CMakeFiles $(CMAKE_PROGRESS_13)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/mafiamole/projects/MoleBox/build/linux/CMakeFiles $(CMAKE_PROGRESS_28)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object src/MoleBox/CMakeFiles/MoleBox.dir/Content/Content.cpp.o"
 	cd /home/mafiamole/projects/MoleBox/build/linux/src/MoleBox && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/MoleBox.dir/Content/Content.cpp.o -c /home/mafiamole/projects/MoleBox/src/MoleBox/Content/Content.cpp
 
@@ -348,6 +423,328 @@ src/MoleBox/CMakeFiles/MoleBox.dir/Content/Content.cpp.o.provides: src/MoleBox/C
 
 src/MoleBox/CMakeFiles/MoleBox.dir/Content/Content.cpp.o.provides.build: src/MoleBox/CMakeFiles/MoleBox.dir/Content/Content.cpp.o
 
+src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_luaeditor.cxx.o: src/MoleBox/CMakeFiles/MoleBox.dir/flags.make
+src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_luaeditor.cxx.o: src/MoleBox/Lua/moc_luaeditor.cxx
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/mafiamole/projects/MoleBox/build/linux/CMakeFiles $(CMAKE_PROGRESS_29)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_luaeditor.cxx.o"
+	cd /home/mafiamole/projects/MoleBox/build/linux/src/MoleBox && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/MoleBox.dir/Lua/moc_luaeditor.cxx.o -c /home/mafiamole/projects/MoleBox/build/linux/src/MoleBox/Lua/moc_luaeditor.cxx
+
+src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_luaeditor.cxx.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/MoleBox.dir/Lua/moc_luaeditor.cxx.i"
+	cd /home/mafiamole/projects/MoleBox/build/linux/src/MoleBox && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/mafiamole/projects/MoleBox/build/linux/src/MoleBox/Lua/moc_luaeditor.cxx > CMakeFiles/MoleBox.dir/Lua/moc_luaeditor.cxx.i
+
+src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_luaeditor.cxx.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MoleBox.dir/Lua/moc_luaeditor.cxx.s"
+	cd /home/mafiamole/projects/MoleBox/build/linux/src/MoleBox && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/mafiamole/projects/MoleBox/build/linux/src/MoleBox/Lua/moc_luaeditor.cxx -o CMakeFiles/MoleBox.dir/Lua/moc_luaeditor.cxx.s
+
+src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_luaeditor.cxx.o.requires:
+.PHONY : src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_luaeditor.cxx.o.requires
+
+src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_luaeditor.cxx.o.provides: src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_luaeditor.cxx.o.requires
+	$(MAKE) -f src/MoleBox/CMakeFiles/MoleBox.dir/build.make src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_luaeditor.cxx.o.provides.build
+.PHONY : src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_luaeditor.cxx.o.provides
+
+src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_luaeditor.cxx.o.provides.build: src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_luaeditor.cxx.o
+
+src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_LuaScriptHelper.cxx.o: src/MoleBox/CMakeFiles/MoleBox.dir/flags.make
+src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_LuaScriptHelper.cxx.o: src/MoleBox/Lua/moc_LuaScriptHelper.cxx
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/mafiamole/projects/MoleBox/build/linux/CMakeFiles $(CMAKE_PROGRESS_30)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_LuaScriptHelper.cxx.o"
+	cd /home/mafiamole/projects/MoleBox/build/linux/src/MoleBox && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/MoleBox.dir/Lua/moc_LuaScriptHelper.cxx.o -c /home/mafiamole/projects/MoleBox/build/linux/src/MoleBox/Lua/moc_LuaScriptHelper.cxx
+
+src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_LuaScriptHelper.cxx.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/MoleBox.dir/Lua/moc_LuaScriptHelper.cxx.i"
+	cd /home/mafiamole/projects/MoleBox/build/linux/src/MoleBox && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/mafiamole/projects/MoleBox/build/linux/src/MoleBox/Lua/moc_LuaScriptHelper.cxx > CMakeFiles/MoleBox.dir/Lua/moc_LuaScriptHelper.cxx.i
+
+src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_LuaScriptHelper.cxx.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MoleBox.dir/Lua/moc_LuaScriptHelper.cxx.s"
+	cd /home/mafiamole/projects/MoleBox/build/linux/src/MoleBox && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/mafiamole/projects/MoleBox/build/linux/src/MoleBox/Lua/moc_LuaScriptHelper.cxx -o CMakeFiles/MoleBox.dir/Lua/moc_LuaScriptHelper.cxx.s
+
+src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_LuaScriptHelper.cxx.o.requires:
+.PHONY : src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_LuaScriptHelper.cxx.o.requires
+
+src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_LuaScriptHelper.cxx.o.provides: src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_LuaScriptHelper.cxx.o.requires
+	$(MAKE) -f src/MoleBox/CMakeFiles/MoleBox.dir/build.make src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_LuaScriptHelper.cxx.o.provides.build
+.PHONY : src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_LuaScriptHelper.cxx.o.provides
+
+src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_LuaScriptHelper.cxx.o.provides.build: src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_LuaScriptHelper.cxx.o
+
+src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_Component.cxx.o: src/MoleBox/CMakeFiles/MoleBox.dir/flags.make
+src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_Component.cxx.o: src/MoleBox/Lua/moc_Component.cxx
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/mafiamole/projects/MoleBox/build/linux/CMakeFiles $(CMAKE_PROGRESS_31)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_Component.cxx.o"
+	cd /home/mafiamole/projects/MoleBox/build/linux/src/MoleBox && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/MoleBox.dir/Lua/moc_Component.cxx.o -c /home/mafiamole/projects/MoleBox/build/linux/src/MoleBox/Lua/moc_Component.cxx
+
+src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_Component.cxx.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/MoleBox.dir/Lua/moc_Component.cxx.i"
+	cd /home/mafiamole/projects/MoleBox/build/linux/src/MoleBox && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/mafiamole/projects/MoleBox/build/linux/src/MoleBox/Lua/moc_Component.cxx > CMakeFiles/MoleBox.dir/Lua/moc_Component.cxx.i
+
+src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_Component.cxx.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MoleBox.dir/Lua/moc_Component.cxx.s"
+	cd /home/mafiamole/projects/MoleBox/build/linux/src/MoleBox && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/mafiamole/projects/MoleBox/build/linux/src/MoleBox/Lua/moc_Component.cxx -o CMakeFiles/MoleBox.dir/Lua/moc_Component.cxx.s
+
+src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_Component.cxx.o.requires:
+.PHONY : src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_Component.cxx.o.requires
+
+src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_Component.cxx.o.provides: src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_Component.cxx.o.requires
+	$(MAKE) -f src/MoleBox/CMakeFiles/MoleBox.dir/build.make src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_Component.cxx.o.provides.build
+.PHONY : src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_Component.cxx.o.provides
+
+src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_Component.cxx.o.provides.build: src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_Component.cxx.o
+
+src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_luascript.cxx.o: src/MoleBox/CMakeFiles/MoleBox.dir/flags.make
+src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_luascript.cxx.o: src/MoleBox/Lua/moc_luascript.cxx
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/mafiamole/projects/MoleBox/build/linux/CMakeFiles $(CMAKE_PROGRESS_32)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_luascript.cxx.o"
+	cd /home/mafiamole/projects/MoleBox/build/linux/src/MoleBox && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/MoleBox.dir/Lua/moc_luascript.cxx.o -c /home/mafiamole/projects/MoleBox/build/linux/src/MoleBox/Lua/moc_luascript.cxx
+
+src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_luascript.cxx.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/MoleBox.dir/Lua/moc_luascript.cxx.i"
+	cd /home/mafiamole/projects/MoleBox/build/linux/src/MoleBox && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/mafiamole/projects/MoleBox/build/linux/src/MoleBox/Lua/moc_luascript.cxx > CMakeFiles/MoleBox.dir/Lua/moc_luascript.cxx.i
+
+src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_luascript.cxx.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MoleBox.dir/Lua/moc_luascript.cxx.s"
+	cd /home/mafiamole/projects/MoleBox/build/linux/src/MoleBox && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/mafiamole/projects/MoleBox/build/linux/src/MoleBox/Lua/moc_luascript.cxx -o CMakeFiles/MoleBox.dir/Lua/moc_luascript.cxx.s
+
+src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_luascript.cxx.o.requires:
+.PHONY : src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_luascript.cxx.o.requires
+
+src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_luascript.cxx.o.provides: src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_luascript.cxx.o.requires
+	$(MAKE) -f src/MoleBox/CMakeFiles/MoleBox.dir/build.make src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_luascript.cxx.o.provides.build
+.PHONY : src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_luascript.cxx.o.provides
+
+src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_luascript.cxx.o.provides.build: src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_luascript.cxx.o
+
+src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_luascripts.cxx.o: src/MoleBox/CMakeFiles/MoleBox.dir/flags.make
+src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_luascripts.cxx.o: src/MoleBox/Lua/moc_luascripts.cxx
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/mafiamole/projects/MoleBox/build/linux/CMakeFiles $(CMAKE_PROGRESS_33)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_luascripts.cxx.o"
+	cd /home/mafiamole/projects/MoleBox/build/linux/src/MoleBox && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/MoleBox.dir/Lua/moc_luascripts.cxx.o -c /home/mafiamole/projects/MoleBox/build/linux/src/MoleBox/Lua/moc_luascripts.cxx
+
+src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_luascripts.cxx.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/MoleBox.dir/Lua/moc_luascripts.cxx.i"
+	cd /home/mafiamole/projects/MoleBox/build/linux/src/MoleBox && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/mafiamole/projects/MoleBox/build/linux/src/MoleBox/Lua/moc_luascripts.cxx > CMakeFiles/MoleBox.dir/Lua/moc_luascripts.cxx.i
+
+src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_luascripts.cxx.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MoleBox.dir/Lua/moc_luascripts.cxx.s"
+	cd /home/mafiamole/projects/MoleBox/build/linux/src/MoleBox && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/mafiamole/projects/MoleBox/build/linux/src/MoleBox/Lua/moc_luascripts.cxx -o CMakeFiles/MoleBox.dir/Lua/moc_luascripts.cxx.s
+
+src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_luascripts.cxx.o.requires:
+.PHONY : src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_luascripts.cxx.o.requires
+
+src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_luascripts.cxx.o.provides: src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_luascripts.cxx.o.requires
+	$(MAKE) -f src/MoleBox/CMakeFiles/MoleBox.dir/build.make src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_luascripts.cxx.o.provides.build
+.PHONY : src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_luascripts.cxx.o.provides
+
+src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_luascripts.cxx.o.provides.build: src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_luascripts.cxx.o
+
+src/MoleBox/CMakeFiles/MoleBox.dir/Content/moc_ContentTemplate.cxx.o: src/MoleBox/CMakeFiles/MoleBox.dir/flags.make
+src/MoleBox/CMakeFiles/MoleBox.dir/Content/moc_ContentTemplate.cxx.o: src/MoleBox/Content/moc_ContentTemplate.cxx
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/mafiamole/projects/MoleBox/build/linux/CMakeFiles $(CMAKE_PROGRESS_34)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object src/MoleBox/CMakeFiles/MoleBox.dir/Content/moc_ContentTemplate.cxx.o"
+	cd /home/mafiamole/projects/MoleBox/build/linux/src/MoleBox && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/MoleBox.dir/Content/moc_ContentTemplate.cxx.o -c /home/mafiamole/projects/MoleBox/build/linux/src/MoleBox/Content/moc_ContentTemplate.cxx
+
+src/MoleBox/CMakeFiles/MoleBox.dir/Content/moc_ContentTemplate.cxx.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/MoleBox.dir/Content/moc_ContentTemplate.cxx.i"
+	cd /home/mafiamole/projects/MoleBox/build/linux/src/MoleBox && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/mafiamole/projects/MoleBox/build/linux/src/MoleBox/Content/moc_ContentTemplate.cxx > CMakeFiles/MoleBox.dir/Content/moc_ContentTemplate.cxx.i
+
+src/MoleBox/CMakeFiles/MoleBox.dir/Content/moc_ContentTemplate.cxx.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MoleBox.dir/Content/moc_ContentTemplate.cxx.s"
+	cd /home/mafiamole/projects/MoleBox/build/linux/src/MoleBox && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/mafiamole/projects/MoleBox/build/linux/src/MoleBox/Content/moc_ContentTemplate.cxx -o CMakeFiles/MoleBox.dir/Content/moc_ContentTemplate.cxx.s
+
+src/MoleBox/CMakeFiles/MoleBox.dir/Content/moc_ContentTemplate.cxx.o.requires:
+.PHONY : src/MoleBox/CMakeFiles/MoleBox.dir/Content/moc_ContentTemplate.cxx.o.requires
+
+src/MoleBox/CMakeFiles/MoleBox.dir/Content/moc_ContentTemplate.cxx.o.provides: src/MoleBox/CMakeFiles/MoleBox.dir/Content/moc_ContentTemplate.cxx.o.requires
+	$(MAKE) -f src/MoleBox/CMakeFiles/MoleBox.dir/build.make src/MoleBox/CMakeFiles/MoleBox.dir/Content/moc_ContentTemplate.cxx.o.provides.build
+.PHONY : src/MoleBox/CMakeFiles/MoleBox.dir/Content/moc_ContentTemplate.cxx.o.provides
+
+src/MoleBox/CMakeFiles/MoleBox.dir/Content/moc_ContentTemplate.cxx.o.provides.build: src/MoleBox/CMakeFiles/MoleBox.dir/Content/moc_ContentTemplate.cxx.o
+
+src/MoleBox/CMakeFiles/MoleBox.dir/Content/moc_Content.cxx.o: src/MoleBox/CMakeFiles/MoleBox.dir/flags.make
+src/MoleBox/CMakeFiles/MoleBox.dir/Content/moc_Content.cxx.o: src/MoleBox/Content/moc_Content.cxx
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/mafiamole/projects/MoleBox/build/linux/CMakeFiles $(CMAKE_PROGRESS_35)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object src/MoleBox/CMakeFiles/MoleBox.dir/Content/moc_Content.cxx.o"
+	cd /home/mafiamole/projects/MoleBox/build/linux/src/MoleBox && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/MoleBox.dir/Content/moc_Content.cxx.o -c /home/mafiamole/projects/MoleBox/build/linux/src/MoleBox/Content/moc_Content.cxx
+
+src/MoleBox/CMakeFiles/MoleBox.dir/Content/moc_Content.cxx.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/MoleBox.dir/Content/moc_Content.cxx.i"
+	cd /home/mafiamole/projects/MoleBox/build/linux/src/MoleBox && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/mafiamole/projects/MoleBox/build/linux/src/MoleBox/Content/moc_Content.cxx > CMakeFiles/MoleBox.dir/Content/moc_Content.cxx.i
+
+src/MoleBox/CMakeFiles/MoleBox.dir/Content/moc_Content.cxx.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MoleBox.dir/Content/moc_Content.cxx.s"
+	cd /home/mafiamole/projects/MoleBox/build/linux/src/MoleBox && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/mafiamole/projects/MoleBox/build/linux/src/MoleBox/Content/moc_Content.cxx -o CMakeFiles/MoleBox.dir/Content/moc_Content.cxx.s
+
+src/MoleBox/CMakeFiles/MoleBox.dir/Content/moc_Content.cxx.o.requires:
+.PHONY : src/MoleBox/CMakeFiles/MoleBox.dir/Content/moc_Content.cxx.o.requires
+
+src/MoleBox/CMakeFiles/MoleBox.dir/Content/moc_Content.cxx.o.provides: src/MoleBox/CMakeFiles/MoleBox.dir/Content/moc_Content.cxx.o.requires
+	$(MAKE) -f src/MoleBox/CMakeFiles/MoleBox.dir/build.make src/MoleBox/CMakeFiles/MoleBox.dir/Content/moc_Content.cxx.o.provides.build
+.PHONY : src/MoleBox/CMakeFiles/MoleBox.dir/Content/moc_Content.cxx.o.provides
+
+src/MoleBox/CMakeFiles/MoleBox.dir/Content/moc_Content.cxx.o.provides.build: src/MoleBox/CMakeFiles/MoleBox.dir/Content/moc_Content.cxx.o
+
+src/MoleBox/CMakeFiles/MoleBox.dir/moc_action.cxx.o: src/MoleBox/CMakeFiles/MoleBox.dir/flags.make
+src/MoleBox/CMakeFiles/MoleBox.dir/moc_action.cxx.o: src/MoleBox/moc_action.cxx
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/mafiamole/projects/MoleBox/build/linux/CMakeFiles $(CMAKE_PROGRESS_36)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object src/MoleBox/CMakeFiles/MoleBox.dir/moc_action.cxx.o"
+	cd /home/mafiamole/projects/MoleBox/build/linux/src/MoleBox && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/MoleBox.dir/moc_action.cxx.o -c /home/mafiamole/projects/MoleBox/build/linux/src/MoleBox/moc_action.cxx
+
+src/MoleBox/CMakeFiles/MoleBox.dir/moc_action.cxx.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/MoleBox.dir/moc_action.cxx.i"
+	cd /home/mafiamole/projects/MoleBox/build/linux/src/MoleBox && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/mafiamole/projects/MoleBox/build/linux/src/MoleBox/moc_action.cxx > CMakeFiles/MoleBox.dir/moc_action.cxx.i
+
+src/MoleBox/CMakeFiles/MoleBox.dir/moc_action.cxx.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MoleBox.dir/moc_action.cxx.s"
+	cd /home/mafiamole/projects/MoleBox/build/linux/src/MoleBox && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/mafiamole/projects/MoleBox/build/linux/src/MoleBox/moc_action.cxx -o CMakeFiles/MoleBox.dir/moc_action.cxx.s
+
+src/MoleBox/CMakeFiles/MoleBox.dir/moc_action.cxx.o.requires:
+.PHONY : src/MoleBox/CMakeFiles/MoleBox.dir/moc_action.cxx.o.requires
+
+src/MoleBox/CMakeFiles/MoleBox.dir/moc_action.cxx.o.provides: src/MoleBox/CMakeFiles/MoleBox.dir/moc_action.cxx.o.requires
+	$(MAKE) -f src/MoleBox/CMakeFiles/MoleBox.dir/build.make src/MoleBox/CMakeFiles/MoleBox.dir/moc_action.cxx.o.provides.build
+.PHONY : src/MoleBox/CMakeFiles/MoleBox.dir/moc_action.cxx.o.provides
+
+src/MoleBox/CMakeFiles/MoleBox.dir/moc_action.cxx.o.provides.build: src/MoleBox/CMakeFiles/MoleBox.dir/moc_action.cxx.o
+
+src/MoleBox/CMakeFiles/MoleBox.dir/moc_actions.cxx.o: src/MoleBox/CMakeFiles/MoleBox.dir/flags.make
+src/MoleBox/CMakeFiles/MoleBox.dir/moc_actions.cxx.o: src/MoleBox/moc_actions.cxx
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/mafiamole/projects/MoleBox/build/linux/CMakeFiles $(CMAKE_PROGRESS_37)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object src/MoleBox/CMakeFiles/MoleBox.dir/moc_actions.cxx.o"
+	cd /home/mafiamole/projects/MoleBox/build/linux/src/MoleBox && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/MoleBox.dir/moc_actions.cxx.o -c /home/mafiamole/projects/MoleBox/build/linux/src/MoleBox/moc_actions.cxx
+
+src/MoleBox/CMakeFiles/MoleBox.dir/moc_actions.cxx.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/MoleBox.dir/moc_actions.cxx.i"
+	cd /home/mafiamole/projects/MoleBox/build/linux/src/MoleBox && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/mafiamole/projects/MoleBox/build/linux/src/MoleBox/moc_actions.cxx > CMakeFiles/MoleBox.dir/moc_actions.cxx.i
+
+src/MoleBox/CMakeFiles/MoleBox.dir/moc_actions.cxx.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MoleBox.dir/moc_actions.cxx.s"
+	cd /home/mafiamole/projects/MoleBox/build/linux/src/MoleBox && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/mafiamole/projects/MoleBox/build/linux/src/MoleBox/moc_actions.cxx -o CMakeFiles/MoleBox.dir/moc_actions.cxx.s
+
+src/MoleBox/CMakeFiles/MoleBox.dir/moc_actions.cxx.o.requires:
+.PHONY : src/MoleBox/CMakeFiles/MoleBox.dir/moc_actions.cxx.o.requires
+
+src/MoleBox/CMakeFiles/MoleBox.dir/moc_actions.cxx.o.provides: src/MoleBox/CMakeFiles/MoleBox.dir/moc_actions.cxx.o.requires
+	$(MAKE) -f src/MoleBox/CMakeFiles/MoleBox.dir/build.make src/MoleBox/CMakeFiles/MoleBox.dir/moc_actions.cxx.o.provides.build
+.PHONY : src/MoleBox/CMakeFiles/MoleBox.dir/moc_actions.cxx.o.provides
+
+src/MoleBox/CMakeFiles/MoleBox.dir/moc_actions.cxx.o.provides.build: src/MoleBox/CMakeFiles/MoleBox.dir/moc_actions.cxx.o
+
+src/MoleBox/CMakeFiles/MoleBox.dir/moc_ContainerDefinitions.cxx.o: src/MoleBox/CMakeFiles/MoleBox.dir/flags.make
+src/MoleBox/CMakeFiles/MoleBox.dir/moc_ContainerDefinitions.cxx.o: src/MoleBox/moc_ContainerDefinitions.cxx
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/mafiamole/projects/MoleBox/build/linux/CMakeFiles $(CMAKE_PROGRESS_38)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object src/MoleBox/CMakeFiles/MoleBox.dir/moc_ContainerDefinitions.cxx.o"
+	cd /home/mafiamole/projects/MoleBox/build/linux/src/MoleBox && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/MoleBox.dir/moc_ContainerDefinitions.cxx.o -c /home/mafiamole/projects/MoleBox/build/linux/src/MoleBox/moc_ContainerDefinitions.cxx
+
+src/MoleBox/CMakeFiles/MoleBox.dir/moc_ContainerDefinitions.cxx.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/MoleBox.dir/moc_ContainerDefinitions.cxx.i"
+	cd /home/mafiamole/projects/MoleBox/build/linux/src/MoleBox && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/mafiamole/projects/MoleBox/build/linux/src/MoleBox/moc_ContainerDefinitions.cxx > CMakeFiles/MoleBox.dir/moc_ContainerDefinitions.cxx.i
+
+src/MoleBox/CMakeFiles/MoleBox.dir/moc_ContainerDefinitions.cxx.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MoleBox.dir/moc_ContainerDefinitions.cxx.s"
+	cd /home/mafiamole/projects/MoleBox/build/linux/src/MoleBox && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/mafiamole/projects/MoleBox/build/linux/src/MoleBox/moc_ContainerDefinitions.cxx -o CMakeFiles/MoleBox.dir/moc_ContainerDefinitions.cxx.s
+
+src/MoleBox/CMakeFiles/MoleBox.dir/moc_ContainerDefinitions.cxx.o.requires:
+.PHONY : src/MoleBox/CMakeFiles/MoleBox.dir/moc_ContainerDefinitions.cxx.o.requires
+
+src/MoleBox/CMakeFiles/MoleBox.dir/moc_ContainerDefinitions.cxx.o.provides: src/MoleBox/CMakeFiles/MoleBox.dir/moc_ContainerDefinitions.cxx.o.requires
+	$(MAKE) -f src/MoleBox/CMakeFiles/MoleBox.dir/build.make src/MoleBox/CMakeFiles/MoleBox.dir/moc_ContainerDefinitions.cxx.o.provides.build
+.PHONY : src/MoleBox/CMakeFiles/MoleBox.dir/moc_ContainerDefinitions.cxx.o.provides
+
+src/MoleBox/CMakeFiles/MoleBox.dir/moc_ContainerDefinitions.cxx.o.provides.build: src/MoleBox/CMakeFiles/MoleBox.dir/moc_ContainerDefinitions.cxx.o
+
+src/MoleBox/CMakeFiles/MoleBox.dir/moc_Game.cxx.o: src/MoleBox/CMakeFiles/MoleBox.dir/flags.make
+src/MoleBox/CMakeFiles/MoleBox.dir/moc_Game.cxx.o: src/MoleBox/moc_Game.cxx
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/mafiamole/projects/MoleBox/build/linux/CMakeFiles $(CMAKE_PROGRESS_39)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object src/MoleBox/CMakeFiles/MoleBox.dir/moc_Game.cxx.o"
+	cd /home/mafiamole/projects/MoleBox/build/linux/src/MoleBox && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/MoleBox.dir/moc_Game.cxx.o -c /home/mafiamole/projects/MoleBox/build/linux/src/MoleBox/moc_Game.cxx
+
+src/MoleBox/CMakeFiles/MoleBox.dir/moc_Game.cxx.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/MoleBox.dir/moc_Game.cxx.i"
+	cd /home/mafiamole/projects/MoleBox/build/linux/src/MoleBox && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/mafiamole/projects/MoleBox/build/linux/src/MoleBox/moc_Game.cxx > CMakeFiles/MoleBox.dir/moc_Game.cxx.i
+
+src/MoleBox/CMakeFiles/MoleBox.dir/moc_Game.cxx.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MoleBox.dir/moc_Game.cxx.s"
+	cd /home/mafiamole/projects/MoleBox/build/linux/src/MoleBox && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/mafiamole/projects/MoleBox/build/linux/src/MoleBox/moc_Game.cxx -o CMakeFiles/MoleBox.dir/moc_Game.cxx.s
+
+src/MoleBox/CMakeFiles/MoleBox.dir/moc_Game.cxx.o.requires:
+.PHONY : src/MoleBox/CMakeFiles/MoleBox.dir/moc_Game.cxx.o.requires
+
+src/MoleBox/CMakeFiles/MoleBox.dir/moc_Game.cxx.o.provides: src/MoleBox/CMakeFiles/MoleBox.dir/moc_Game.cxx.o.requires
+	$(MAKE) -f src/MoleBox/CMakeFiles/MoleBox.dir/build.make src/MoleBox/CMakeFiles/MoleBox.dir/moc_Game.cxx.o.provides.build
+.PHONY : src/MoleBox/CMakeFiles/MoleBox.dir/moc_Game.cxx.o.provides
+
+src/MoleBox/CMakeFiles/MoleBox.dir/moc_Game.cxx.o.provides.build: src/MoleBox/CMakeFiles/MoleBox.dir/moc_Game.cxx.o
+
+src/MoleBox/CMakeFiles/MoleBox.dir/moc_GameComponent.cxx.o: src/MoleBox/CMakeFiles/MoleBox.dir/flags.make
+src/MoleBox/CMakeFiles/MoleBox.dir/moc_GameComponent.cxx.o: src/MoleBox/moc_GameComponent.cxx
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/mafiamole/projects/MoleBox/build/linux/CMakeFiles $(CMAKE_PROGRESS_40)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object src/MoleBox/CMakeFiles/MoleBox.dir/moc_GameComponent.cxx.o"
+	cd /home/mafiamole/projects/MoleBox/build/linux/src/MoleBox && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/MoleBox.dir/moc_GameComponent.cxx.o -c /home/mafiamole/projects/MoleBox/build/linux/src/MoleBox/moc_GameComponent.cxx
+
+src/MoleBox/CMakeFiles/MoleBox.dir/moc_GameComponent.cxx.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/MoleBox.dir/moc_GameComponent.cxx.i"
+	cd /home/mafiamole/projects/MoleBox/build/linux/src/MoleBox && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/mafiamole/projects/MoleBox/build/linux/src/MoleBox/moc_GameComponent.cxx > CMakeFiles/MoleBox.dir/moc_GameComponent.cxx.i
+
+src/MoleBox/CMakeFiles/MoleBox.dir/moc_GameComponent.cxx.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MoleBox.dir/moc_GameComponent.cxx.s"
+	cd /home/mafiamole/projects/MoleBox/build/linux/src/MoleBox && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/mafiamole/projects/MoleBox/build/linux/src/MoleBox/moc_GameComponent.cxx -o CMakeFiles/MoleBox.dir/moc_GameComponent.cxx.s
+
+src/MoleBox/CMakeFiles/MoleBox.dir/moc_GameComponent.cxx.o.requires:
+.PHONY : src/MoleBox/CMakeFiles/MoleBox.dir/moc_GameComponent.cxx.o.requires
+
+src/MoleBox/CMakeFiles/MoleBox.dir/moc_GameComponent.cxx.o.provides: src/MoleBox/CMakeFiles/MoleBox.dir/moc_GameComponent.cxx.o.requires
+	$(MAKE) -f src/MoleBox/CMakeFiles/MoleBox.dir/build.make src/MoleBox/CMakeFiles/MoleBox.dir/moc_GameComponent.cxx.o.provides.build
+.PHONY : src/MoleBox/CMakeFiles/MoleBox.dir/moc_GameComponent.cxx.o.provides
+
+src/MoleBox/CMakeFiles/MoleBox.dir/moc_GameComponent.cxx.o.provides.build: src/MoleBox/CMakeFiles/MoleBox.dir/moc_GameComponent.cxx.o
+
+src/MoleBox/CMakeFiles/MoleBox.dir/Actions/moc_keyboard.cxx.o: src/MoleBox/CMakeFiles/MoleBox.dir/flags.make
+src/MoleBox/CMakeFiles/MoleBox.dir/Actions/moc_keyboard.cxx.o: src/MoleBox/Actions/moc_keyboard.cxx
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/mafiamole/projects/MoleBox/build/linux/CMakeFiles $(CMAKE_PROGRESS_41)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object src/MoleBox/CMakeFiles/MoleBox.dir/Actions/moc_keyboard.cxx.o"
+	cd /home/mafiamole/projects/MoleBox/build/linux/src/MoleBox && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/MoleBox.dir/Actions/moc_keyboard.cxx.o -c /home/mafiamole/projects/MoleBox/build/linux/src/MoleBox/Actions/moc_keyboard.cxx
+
+src/MoleBox/CMakeFiles/MoleBox.dir/Actions/moc_keyboard.cxx.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/MoleBox.dir/Actions/moc_keyboard.cxx.i"
+	cd /home/mafiamole/projects/MoleBox/build/linux/src/MoleBox && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/mafiamole/projects/MoleBox/build/linux/src/MoleBox/Actions/moc_keyboard.cxx > CMakeFiles/MoleBox.dir/Actions/moc_keyboard.cxx.i
+
+src/MoleBox/CMakeFiles/MoleBox.dir/Actions/moc_keyboard.cxx.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MoleBox.dir/Actions/moc_keyboard.cxx.s"
+	cd /home/mafiamole/projects/MoleBox/build/linux/src/MoleBox && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/mafiamole/projects/MoleBox/build/linux/src/MoleBox/Actions/moc_keyboard.cxx -o CMakeFiles/MoleBox.dir/Actions/moc_keyboard.cxx.s
+
+src/MoleBox/CMakeFiles/MoleBox.dir/Actions/moc_keyboard.cxx.o.requires:
+.PHONY : src/MoleBox/CMakeFiles/MoleBox.dir/Actions/moc_keyboard.cxx.o.requires
+
+src/MoleBox/CMakeFiles/MoleBox.dir/Actions/moc_keyboard.cxx.o.provides: src/MoleBox/CMakeFiles/MoleBox.dir/Actions/moc_keyboard.cxx.o.requires
+	$(MAKE) -f src/MoleBox/CMakeFiles/MoleBox.dir/build.make src/MoleBox/CMakeFiles/MoleBox.dir/Actions/moc_keyboard.cxx.o.provides.build
+.PHONY : src/MoleBox/CMakeFiles/MoleBox.dir/Actions/moc_keyboard.cxx.o.provides
+
+src/MoleBox/CMakeFiles/MoleBox.dir/Actions/moc_keyboard.cxx.o.provides.build: src/MoleBox/CMakeFiles/MoleBox.dir/Actions/moc_keyboard.cxx.o
+
+src/MoleBox/CMakeFiles/MoleBox.dir/Actions/moc_mouse.cxx.o: src/MoleBox/CMakeFiles/MoleBox.dir/flags.make
+src/MoleBox/CMakeFiles/MoleBox.dir/Actions/moc_mouse.cxx.o: src/MoleBox/Actions/moc_mouse.cxx
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/mafiamole/projects/MoleBox/build/linux/CMakeFiles $(CMAKE_PROGRESS_42)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object src/MoleBox/CMakeFiles/MoleBox.dir/Actions/moc_mouse.cxx.o"
+	cd /home/mafiamole/projects/MoleBox/build/linux/src/MoleBox && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/MoleBox.dir/Actions/moc_mouse.cxx.o -c /home/mafiamole/projects/MoleBox/build/linux/src/MoleBox/Actions/moc_mouse.cxx
+
+src/MoleBox/CMakeFiles/MoleBox.dir/Actions/moc_mouse.cxx.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/MoleBox.dir/Actions/moc_mouse.cxx.i"
+	cd /home/mafiamole/projects/MoleBox/build/linux/src/MoleBox && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/mafiamole/projects/MoleBox/build/linux/src/MoleBox/Actions/moc_mouse.cxx > CMakeFiles/MoleBox.dir/Actions/moc_mouse.cxx.i
+
+src/MoleBox/CMakeFiles/MoleBox.dir/Actions/moc_mouse.cxx.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MoleBox.dir/Actions/moc_mouse.cxx.s"
+	cd /home/mafiamole/projects/MoleBox/build/linux/src/MoleBox && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/mafiamole/projects/MoleBox/build/linux/src/MoleBox/Actions/moc_mouse.cxx -o CMakeFiles/MoleBox.dir/Actions/moc_mouse.cxx.s
+
+src/MoleBox/CMakeFiles/MoleBox.dir/Actions/moc_mouse.cxx.o.requires:
+.PHONY : src/MoleBox/CMakeFiles/MoleBox.dir/Actions/moc_mouse.cxx.o.requires
+
+src/MoleBox/CMakeFiles/MoleBox.dir/Actions/moc_mouse.cxx.o.provides: src/MoleBox/CMakeFiles/MoleBox.dir/Actions/moc_mouse.cxx.o.requires
+	$(MAKE) -f src/MoleBox/CMakeFiles/MoleBox.dir/build.make src/MoleBox/CMakeFiles/MoleBox.dir/Actions/moc_mouse.cxx.o.provides.build
+.PHONY : src/MoleBox/CMakeFiles/MoleBox.dir/Actions/moc_mouse.cxx.o.provides
+
+src/MoleBox/CMakeFiles/MoleBox.dir/Actions/moc_mouse.cxx.o.provides.build: src/MoleBox/CMakeFiles/MoleBox.dir/Actions/moc_mouse.cxx.o
+
 # Object files for target MoleBox
 MoleBox_OBJECTS = \
 "CMakeFiles/MoleBox.dir/Actions/keyboard.cpp.o" \
@@ -362,7 +759,21 @@ MoleBox_OBJECTS = \
 "CMakeFiles/MoleBox.dir/Lua/luaeditor.cpp.o" \
 "CMakeFiles/MoleBox.dir/GameComponent.cpp.o" \
 "CMakeFiles/MoleBox.dir/Game.cpp.o" \
-"CMakeFiles/MoleBox.dir/Content/Content.cpp.o"
+"CMakeFiles/MoleBox.dir/Content/Content.cpp.o" \
+"CMakeFiles/MoleBox.dir/Lua/moc_luaeditor.cxx.o" \
+"CMakeFiles/MoleBox.dir/Lua/moc_LuaScriptHelper.cxx.o" \
+"CMakeFiles/MoleBox.dir/Lua/moc_Component.cxx.o" \
+"CMakeFiles/MoleBox.dir/Lua/moc_luascript.cxx.o" \
+"CMakeFiles/MoleBox.dir/Lua/moc_luascripts.cxx.o" \
+"CMakeFiles/MoleBox.dir/Content/moc_ContentTemplate.cxx.o" \
+"CMakeFiles/MoleBox.dir/Content/moc_Content.cxx.o" \
+"CMakeFiles/MoleBox.dir/moc_action.cxx.o" \
+"CMakeFiles/MoleBox.dir/moc_actions.cxx.o" \
+"CMakeFiles/MoleBox.dir/moc_ContainerDefinitions.cxx.o" \
+"CMakeFiles/MoleBox.dir/moc_Game.cxx.o" \
+"CMakeFiles/MoleBox.dir/moc_GameComponent.cxx.o" \
+"CMakeFiles/MoleBox.dir/Actions/moc_keyboard.cxx.o" \
+"CMakeFiles/MoleBox.dir/Actions/moc_mouse.cxx.o"
 
 # External object files for target MoleBox
 MoleBox_EXTERNAL_OBJECTS =
@@ -380,6 +791,20 @@ src/MoleBox/libMoleBox.so: src/MoleBox/CMakeFiles/MoleBox.dir/Lua/luaeditor.cpp.
 src/MoleBox/libMoleBox.so: src/MoleBox/CMakeFiles/MoleBox.dir/GameComponent.cpp.o
 src/MoleBox/libMoleBox.so: src/MoleBox/CMakeFiles/MoleBox.dir/Game.cpp.o
 src/MoleBox/libMoleBox.so: src/MoleBox/CMakeFiles/MoleBox.dir/Content/Content.cpp.o
+src/MoleBox/libMoleBox.so: src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_luaeditor.cxx.o
+src/MoleBox/libMoleBox.so: src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_LuaScriptHelper.cxx.o
+src/MoleBox/libMoleBox.so: src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_Component.cxx.o
+src/MoleBox/libMoleBox.so: src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_luascript.cxx.o
+src/MoleBox/libMoleBox.so: src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_luascripts.cxx.o
+src/MoleBox/libMoleBox.so: src/MoleBox/CMakeFiles/MoleBox.dir/Content/moc_ContentTemplate.cxx.o
+src/MoleBox/libMoleBox.so: src/MoleBox/CMakeFiles/MoleBox.dir/Content/moc_Content.cxx.o
+src/MoleBox/libMoleBox.so: src/MoleBox/CMakeFiles/MoleBox.dir/moc_action.cxx.o
+src/MoleBox/libMoleBox.so: src/MoleBox/CMakeFiles/MoleBox.dir/moc_actions.cxx.o
+src/MoleBox/libMoleBox.so: src/MoleBox/CMakeFiles/MoleBox.dir/moc_ContainerDefinitions.cxx.o
+src/MoleBox/libMoleBox.so: src/MoleBox/CMakeFiles/MoleBox.dir/moc_Game.cxx.o
+src/MoleBox/libMoleBox.so: src/MoleBox/CMakeFiles/MoleBox.dir/moc_GameComponent.cxx.o
+src/MoleBox/libMoleBox.so: src/MoleBox/CMakeFiles/MoleBox.dir/Actions/moc_keyboard.cxx.o
+src/MoleBox/libMoleBox.so: src/MoleBox/CMakeFiles/MoleBox.dir/Actions/moc_mouse.cxx.o
 src/MoleBox/libMoleBox.so: src/MoleBox/CMakeFiles/MoleBox.dir/build.make
 src/MoleBox/libMoleBox.so: /usr/local/lib64/libsfml-system.so
 src/MoleBox/libMoleBox.so: /usr/local/lib64/libsfml-window.so
@@ -393,12 +818,16 @@ src/MoleBox/libMoleBox.so: /usr/lib64/libICE.so
 src/MoleBox/libMoleBox.so: /usr/lib64/libX11.so
 src/MoleBox/libMoleBox.so: /usr/lib64/libXext.so
 src/MoleBox/libMoleBox.so: /usr/lib64/liblua-5.1.so
+src/MoleBox/libMoleBox.so: /usr/lib64/libQtGui_debug.so
+src/MoleBox/libMoleBox.so: /usr/lib64/libQtCore_debug.so
 src/MoleBox/libMoleBox.so: /usr/lib64/libGLU.so
 src/MoleBox/libMoleBox.so: /usr/lib64/libSM.so
 src/MoleBox/libMoleBox.so: /usr/lib64/libICE.so
 src/MoleBox/libMoleBox.so: /usr/lib64/libX11.so
 src/MoleBox/libMoleBox.so: /usr/lib64/libXext.so
 src/MoleBox/libMoleBox.so: /usr/lib64/liblua-5.1.so
+src/MoleBox/libMoleBox.so: /usr/lib64/libQtGui_debug.so
+src/MoleBox/libMoleBox.so: /usr/lib64/libQtCore_debug.so
 src/MoleBox/libMoleBox.so: src/MoleBox/CMakeFiles/MoleBox.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking CXX shared library libMoleBox.so"
 	cd /home/mafiamole/projects/MoleBox/build/linux/src/MoleBox && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/MoleBox.dir/link.txt --verbose=$(VERBOSE)
@@ -420,13 +849,41 @@ src/MoleBox/CMakeFiles/MoleBox.dir/requires: src/MoleBox/CMakeFiles/MoleBox.dir/
 src/MoleBox/CMakeFiles/MoleBox.dir/requires: src/MoleBox/CMakeFiles/MoleBox.dir/GameComponent.cpp.o.requires
 src/MoleBox/CMakeFiles/MoleBox.dir/requires: src/MoleBox/CMakeFiles/MoleBox.dir/Game.cpp.o.requires
 src/MoleBox/CMakeFiles/MoleBox.dir/requires: src/MoleBox/CMakeFiles/MoleBox.dir/Content/Content.cpp.o.requires
+src/MoleBox/CMakeFiles/MoleBox.dir/requires: src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_luaeditor.cxx.o.requires
+src/MoleBox/CMakeFiles/MoleBox.dir/requires: src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_LuaScriptHelper.cxx.o.requires
+src/MoleBox/CMakeFiles/MoleBox.dir/requires: src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_Component.cxx.o.requires
+src/MoleBox/CMakeFiles/MoleBox.dir/requires: src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_luascript.cxx.o.requires
+src/MoleBox/CMakeFiles/MoleBox.dir/requires: src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_luascripts.cxx.o.requires
+src/MoleBox/CMakeFiles/MoleBox.dir/requires: src/MoleBox/CMakeFiles/MoleBox.dir/Content/moc_ContentTemplate.cxx.o.requires
+src/MoleBox/CMakeFiles/MoleBox.dir/requires: src/MoleBox/CMakeFiles/MoleBox.dir/Content/moc_Content.cxx.o.requires
+src/MoleBox/CMakeFiles/MoleBox.dir/requires: src/MoleBox/CMakeFiles/MoleBox.dir/moc_action.cxx.o.requires
+src/MoleBox/CMakeFiles/MoleBox.dir/requires: src/MoleBox/CMakeFiles/MoleBox.dir/moc_actions.cxx.o.requires
+src/MoleBox/CMakeFiles/MoleBox.dir/requires: src/MoleBox/CMakeFiles/MoleBox.dir/moc_ContainerDefinitions.cxx.o.requires
+src/MoleBox/CMakeFiles/MoleBox.dir/requires: src/MoleBox/CMakeFiles/MoleBox.dir/moc_Game.cxx.o.requires
+src/MoleBox/CMakeFiles/MoleBox.dir/requires: src/MoleBox/CMakeFiles/MoleBox.dir/moc_GameComponent.cxx.o.requires
+src/MoleBox/CMakeFiles/MoleBox.dir/requires: src/MoleBox/CMakeFiles/MoleBox.dir/Actions/moc_keyboard.cxx.o.requires
+src/MoleBox/CMakeFiles/MoleBox.dir/requires: src/MoleBox/CMakeFiles/MoleBox.dir/Actions/moc_mouse.cxx.o.requires
 .PHONY : src/MoleBox/CMakeFiles/MoleBox.dir/requires
 
 src/MoleBox/CMakeFiles/MoleBox.dir/clean:
 	cd /home/mafiamole/projects/MoleBox/build/linux/src/MoleBox && $(CMAKE_COMMAND) -P CMakeFiles/MoleBox.dir/cmake_clean.cmake
 .PHONY : src/MoleBox/CMakeFiles/MoleBox.dir/clean
 
-src/MoleBox/CMakeFiles/MoleBox.dir/depend:
+src/MoleBox/CMakeFiles/MoleBox.dir/depend: src/MoleBox/Lua/moc_luaeditor.cxx
+src/MoleBox/CMakeFiles/MoleBox.dir/depend: src/MoleBox/Lua/moc_LuaScriptHelper.cxx
+src/MoleBox/CMakeFiles/MoleBox.dir/depend: src/MoleBox/Lua/moc_Component.cxx
+src/MoleBox/CMakeFiles/MoleBox.dir/depend: src/MoleBox/Lua/moc_luascript.cxx
+src/MoleBox/CMakeFiles/MoleBox.dir/depend: src/MoleBox/Lua/moc_luascripts.cxx
+src/MoleBox/CMakeFiles/MoleBox.dir/depend: src/MoleBox/Content/moc_ContentTemplate.cxx
+src/MoleBox/CMakeFiles/MoleBox.dir/depend: src/MoleBox/Content/moc_Content.cxx
+src/MoleBox/CMakeFiles/MoleBox.dir/depend: src/MoleBox/moc_action.cxx
+src/MoleBox/CMakeFiles/MoleBox.dir/depend: src/MoleBox/moc_actions.cxx
+src/MoleBox/CMakeFiles/MoleBox.dir/depend: src/MoleBox/moc_ContainerDefinitions.cxx
+src/MoleBox/CMakeFiles/MoleBox.dir/depend: src/MoleBox/moc_Game.cxx
+src/MoleBox/CMakeFiles/MoleBox.dir/depend: src/MoleBox/moc_GameComponent.cxx
+src/MoleBox/CMakeFiles/MoleBox.dir/depend: src/MoleBox/Actions/moc_keyboard.cxx
+src/MoleBox/CMakeFiles/MoleBox.dir/depend: src/MoleBox/Actions/moc_mouse.cxx
+src/MoleBox/CMakeFiles/MoleBox.dir/depend: src/MoleBox/ui_GameLuaEditor.h
 	cd /home/mafiamole/projects/MoleBox/build/linux && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/mafiamole/projects/MoleBox /home/mafiamole/projects/MoleBox/src/MoleBox /home/mafiamole/projects/MoleBox/build/linux /home/mafiamole/projects/MoleBox/build/linux/src/MoleBox /home/mafiamole/projects/MoleBox/build/linux/src/MoleBox/CMakeFiles/MoleBox.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : src/MoleBox/CMakeFiles/MoleBox.dir/depend
 

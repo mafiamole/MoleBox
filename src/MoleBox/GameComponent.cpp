@@ -27,6 +27,12 @@
 #include "GameComponent.h"
 #include "Game.h"
 
+MB::GameComponent::GameComponent()
+{
+
+}
+
+
 MB::GameComponent::GameComponent( Game *game ) : game( game ), actions( game->GetActions() )
 {
 

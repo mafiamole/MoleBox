@@ -1,4 +1,5 @@
 FILE(REMOVE_RECURSE
+  "CMakeFiles/ExampleA.dir/ui.cpp.o"
   "CMakeFiles/ExampleA.dir/ball.cpp.o"
   "CMakeFiles/ExampleA.dir/enemy.cpp.o"
   "CMakeFiles/ExampleA.dir/player.cpp.o"

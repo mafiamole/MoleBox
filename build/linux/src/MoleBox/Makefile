@@ -136,6 +136,54 @@ Actions/keyboard.cpp.s:
 	cd /home/mafiamole/projects/MoleBox/build/linux && $(MAKE) -f src/MoleBox/CMakeFiles/MoleBox.dir/build.make src/MoleBox/CMakeFiles/MoleBox.dir/Actions/keyboard.cpp.s
 .PHONY : Actions/keyboard.cpp.s
 
+Actions/moc_keyboard.o: Actions/moc_keyboard.cxx.o
+.PHONY : Actions/moc_keyboard.o
+
+# target to build an object file
+Actions/moc_keyboard.cxx.o:
+	cd /home/mafiamole/projects/MoleBox/build/linux && $(MAKE) -f src/MoleBox/CMakeFiles/MoleBox.dir/build.make src/MoleBox/CMakeFiles/MoleBox.dir/Actions/moc_keyboard.cxx.o
+.PHONY : Actions/moc_keyboard.cxx.o
+
+Actions/moc_keyboard.i: Actions/moc_keyboard.cxx.i
+.PHONY : Actions/moc_keyboard.i
+
+# target to preprocess a source file
+Actions/moc_keyboard.cxx.i:
+	cd /home/mafiamole/projects/MoleBox/build/linux && $(MAKE) -f src/MoleBox/CMakeFiles/MoleBox.dir/build.make src/MoleBox/CMakeFiles/MoleBox.dir/Actions/moc_keyboard.cxx.i
+.PHONY : Actions/moc_keyboard.cxx.i
+
+Actions/moc_keyboard.s: Actions/moc_keyboard.cxx.s
+.PHONY : Actions/moc_keyboard.s
+
+# target to generate assembly for a file
+Actions/moc_keyboard.cxx.s:
+	cd /home/mafiamole/projects/MoleBox/build/linux && $(MAKE) -f src/MoleBox/CMakeFiles/MoleBox.dir/build.make src/MoleBox/CMakeFiles/MoleBox.dir/Actions/moc_keyboard.cxx.s
+.PHONY : Actions/moc_keyboard.cxx.s
+
+Actions/moc_mouse.o: Actions/moc_mouse.cxx.o
+.PHONY : Actions/moc_mouse.o
+
+# target to build an object file
+Actions/moc_mouse.cxx.o:
+	cd /home/mafiamole/projects/MoleBox/build/linux && $(MAKE) -f src/MoleBox/CMakeFiles/MoleBox.dir/build.make src/MoleBox/CMakeFiles/MoleBox.dir/Actions/moc_mouse.cxx.o
+.PHONY : Actions/moc_mouse.cxx.o
+
+Actions/moc_mouse.i: Actions/moc_mouse.cxx.i
+.PHONY : Actions/moc_mouse.i
+
+# target to preprocess a source file
+Actions/moc_mouse.cxx.i:
+	cd /home/mafiamole/projects/MoleBox/build/linux && $(MAKE) -f src/MoleBox/CMakeFiles/MoleBox.dir/build.make src/MoleBox/CMakeFiles/MoleBox.dir/Actions/moc_mouse.cxx.i
+.PHONY : Actions/moc_mouse.cxx.i
+
+Actions/moc_mouse.s: Actions/moc_mouse.cxx.s
+.PHONY : Actions/moc_mouse.s
+
+# target to generate assembly for a file
+Actions/moc_mouse.cxx.s:
+	cd /home/mafiamole/projects/MoleBox/build/linux && $(MAKE) -f src/MoleBox/CMakeFiles/MoleBox.dir/build.make src/MoleBox/CMakeFiles/MoleBox.dir/Actions/moc_mouse.cxx.s
+.PHONY : Actions/moc_mouse.cxx.s
+
 Actions/mouse.o: Actions/mouse.cpp.o
 .PHONY : Actions/mouse.o
 
@@ -183,6 +231,54 @@ Content/Content.s: Content/Content.cpp.s
 Content/Content.cpp.s:
 	cd /home/mafiamole/projects/MoleBox/build/linux && $(MAKE) -f src/MoleBox/CMakeFiles/MoleBox.dir/build.make src/MoleBox/CMakeFiles/MoleBox.dir/Content/Content.cpp.s
 .PHONY : Content/Content.cpp.s
+
+Content/moc_Content.o: Content/moc_Content.cxx.o
+.PHONY : Content/moc_Content.o
+
+# target to build an object file
+Content/moc_Content.cxx.o:
+	cd /home/mafiamole/projects/MoleBox/build/linux && $(MAKE) -f src/MoleBox/CMakeFiles/MoleBox.dir/build.make src/MoleBox/CMakeFiles/MoleBox.dir/Content/moc_Content.cxx.o
+.PHONY : Content/moc_Content.cxx.o
+
+Content/moc_Content.i: Content/moc_Content.cxx.i
+.PHONY : Content/moc_Content.i
+
+# target to preprocess a source file
+Content/moc_Content.cxx.i:
+	cd /home/mafiamole/projects/MoleBox/build/linux && $(MAKE) -f src/MoleBox/CMakeFiles/MoleBox.dir/build.make src/MoleBox/CMakeFiles/MoleBox.dir/Content/moc_Content.cxx.i
+.PHONY : Content/moc_Content.cxx.i
+
+Content/moc_Content.s: Content/moc_Content.cxx.s
+.PHONY : Content/moc_Content.s
+
+# target to generate assembly for a file
+Content/moc_Content.cxx.s:
+	cd /home/mafiamole/projects/MoleBox/build/linux && $(MAKE) -f src/MoleBox/CMakeFiles/MoleBox.dir/build.make src/MoleBox/CMakeFiles/MoleBox.dir/Content/moc_Content.cxx.s
+.PHONY : Content/moc_Content.cxx.s
+
+Content/moc_ContentTemplate.o: Content/moc_ContentTemplate.cxx.o
+.PHONY : Content/moc_ContentTemplate.o
+
+# target to build an object file
+Content/moc_ContentTemplate.cxx.o:
+	cd /home/mafiamole/projects/MoleBox/build/linux && $(MAKE) -f src/MoleBox/CMakeFiles/MoleBox.dir/build.make src/MoleBox/CMakeFiles/MoleBox.dir/Content/moc_ContentTemplate.cxx.o
+.PHONY : Content/moc_ContentTemplate.cxx.o
+
+Content/moc_ContentTemplate.i: Content/moc_ContentTemplate.cxx.i
+.PHONY : Content/moc_ContentTemplate.i
+
+# target to preprocess a source file
+Content/moc_ContentTemplate.cxx.i:
+	cd /home/mafiamole/projects/MoleBox/build/linux && $(MAKE) -f src/MoleBox/CMakeFiles/MoleBox.dir/build.make src/MoleBox/CMakeFiles/MoleBox.dir/Content/moc_ContentTemplate.cxx.i
+.PHONY : Content/moc_ContentTemplate.cxx.i
+
+Content/moc_ContentTemplate.s: Content/moc_ContentTemplate.cxx.s
+.PHONY : Content/moc_ContentTemplate.s
+
+# target to generate assembly for a file
+Content/moc_ContentTemplate.cxx.s:
+	cd /home/mafiamole/projects/MoleBox/build/linux && $(MAKE) -f src/MoleBox/CMakeFiles/MoleBox.dir/build.make src/MoleBox/CMakeFiles/MoleBox.dir/Content/moc_ContentTemplate.cxx.s
+.PHONY : Content/moc_ContentTemplate.cxx.s
 
 Game.o: Game.cpp.o
 .PHONY : Game.o
@@ -376,6 +472,126 @@ Lua/luascripts.cpp.s:
 	cd /home/mafiamole/projects/MoleBox/build/linux && $(MAKE) -f src/MoleBox/CMakeFiles/MoleBox.dir/build.make src/MoleBox/CMakeFiles/MoleBox.dir/Lua/luascripts.cpp.s
 .PHONY : Lua/luascripts.cpp.s
 
+Lua/moc_Component.o: Lua/moc_Component.cxx.o
+.PHONY : Lua/moc_Component.o
+
+# target to build an object file
+Lua/moc_Component.cxx.o:
+	cd /home/mafiamole/projects/MoleBox/build/linux && $(MAKE) -f src/MoleBox/CMakeFiles/MoleBox.dir/build.make src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_Component.cxx.o
+.PHONY : Lua/moc_Component.cxx.o
+
+Lua/moc_Component.i: Lua/moc_Component.cxx.i
+.PHONY : Lua/moc_Component.i
+
+# target to preprocess a source file
+Lua/moc_Component.cxx.i:
+	cd /home/mafiamole/projects/MoleBox/build/linux && $(MAKE) -f src/MoleBox/CMakeFiles/MoleBox.dir/build.make src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_Component.cxx.i
+.PHONY : Lua/moc_Component.cxx.i
+
+Lua/moc_Component.s: Lua/moc_Component.cxx.s
+.PHONY : Lua/moc_Component.s
+
+# target to generate assembly for a file
+Lua/moc_Component.cxx.s:
+	cd /home/mafiamole/projects/MoleBox/build/linux && $(MAKE) -f src/MoleBox/CMakeFiles/MoleBox.dir/build.make src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_Component.cxx.s
+.PHONY : Lua/moc_Component.cxx.s
+
+Lua/moc_LuaScriptHelper.o: Lua/moc_LuaScriptHelper.cxx.o
+.PHONY : Lua/moc_LuaScriptHelper.o
+
+# target to build an object file
+Lua/moc_LuaScriptHelper.cxx.o:
+	cd /home/mafiamole/projects/MoleBox/build/linux && $(MAKE) -f src/MoleBox/CMakeFiles/MoleBox.dir/build.make src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_LuaScriptHelper.cxx.o
+.PHONY : Lua/moc_LuaScriptHelper.cxx.o
+
+Lua/moc_LuaScriptHelper.i: Lua/moc_LuaScriptHelper.cxx.i
+.PHONY : Lua/moc_LuaScriptHelper.i
+
+# target to preprocess a source file
+Lua/moc_LuaScriptHelper.cxx.i:
+	cd /home/mafiamole/projects/MoleBox/build/linux && $(MAKE) -f src/MoleBox/CMakeFiles/MoleBox.dir/build.make src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_LuaScriptHelper.cxx.i
+.PHONY : Lua/moc_LuaScriptHelper.cxx.i
+
+Lua/moc_LuaScriptHelper.s: Lua/moc_LuaScriptHelper.cxx.s
+.PHONY : Lua/moc_LuaScriptHelper.s
+
+# target to generate assembly for a file
+Lua/moc_LuaScriptHelper.cxx.s:
+	cd /home/mafiamole/projects/MoleBox/build/linux && $(MAKE) -f src/MoleBox/CMakeFiles/MoleBox.dir/build.make src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_LuaScriptHelper.cxx.s
+.PHONY : Lua/moc_LuaScriptHelper.cxx.s
+
+Lua/moc_luaeditor.o: Lua/moc_luaeditor.cxx.o
+.PHONY : Lua/moc_luaeditor.o
+
+# target to build an object file
+Lua/moc_luaeditor.cxx.o:
+	cd /home/mafiamole/projects/MoleBox/build/linux && $(MAKE) -f src/MoleBox/CMakeFiles/MoleBox.dir/build.make src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_luaeditor.cxx.o
+.PHONY : Lua/moc_luaeditor.cxx.o
+
+Lua/moc_luaeditor.i: Lua/moc_luaeditor.cxx.i
+.PHONY : Lua/moc_luaeditor.i
+
+# target to preprocess a source file
+Lua/moc_luaeditor.cxx.i:
+	cd /home/mafiamole/projects/MoleBox/build/linux && $(MAKE) -f src/MoleBox/CMakeFiles/MoleBox.dir/build.make src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_luaeditor.cxx.i
+.PHONY : Lua/moc_luaeditor.cxx.i
+
+Lua/moc_luaeditor.s: Lua/moc_luaeditor.cxx.s
+.PHONY : Lua/moc_luaeditor.s
+
+# target to generate assembly for a file
+Lua/moc_luaeditor.cxx.s:
+	cd /home/mafiamole/projects/MoleBox/build/linux && $(MAKE) -f src/MoleBox/CMakeFiles/MoleBox.dir/build.make src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_luaeditor.cxx.s
+.PHONY : Lua/moc_luaeditor.cxx.s
+
+Lua/moc_luascript.o: Lua/moc_luascript.cxx.o
+.PHONY : Lua/moc_luascript.o
+
+# target to build an object file
+Lua/moc_luascript.cxx.o:
+	cd /home/mafiamole/projects/MoleBox/build/linux && $(MAKE) -f src/MoleBox/CMakeFiles/MoleBox.dir/build.make src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_luascript.cxx.o
+.PHONY : Lua/moc_luascript.cxx.o
+
+Lua/moc_luascript.i: Lua/moc_luascript.cxx.i
+.PHONY : Lua/moc_luascript.i
+
+# target to preprocess a source file
+Lua/moc_luascript.cxx.i:
+	cd /home/mafiamole/projects/MoleBox/build/linux && $(MAKE) -f src/MoleBox/CMakeFiles/MoleBox.dir/build.make src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_luascript.cxx.i
+.PHONY : Lua/moc_luascript.cxx.i
+
+Lua/moc_luascript.s: Lua/moc_luascript.cxx.s
+.PHONY : Lua/moc_luascript.s
+
+# target to generate assembly for a file
+Lua/moc_luascript.cxx.s:
+	cd /home/mafiamole/projects/MoleBox/build/linux && $(MAKE) -f src/MoleBox/CMakeFiles/MoleBox.dir/build.make src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_luascript.cxx.s
+.PHONY : Lua/moc_luascript.cxx.s
+
+Lua/moc_luascripts.o: Lua/moc_luascripts.cxx.o
+.PHONY : Lua/moc_luascripts.o
+
+# target to build an object file
+Lua/moc_luascripts.cxx.o:
+	cd /home/mafiamole/projects/MoleBox/build/linux && $(MAKE) -f src/MoleBox/CMakeFiles/MoleBox.dir/build.make src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_luascripts.cxx.o
+.PHONY : Lua/moc_luascripts.cxx.o
+
+Lua/moc_luascripts.i: Lua/moc_luascripts.cxx.i
+.PHONY : Lua/moc_luascripts.i
+
+# target to preprocess a source file
+Lua/moc_luascripts.cxx.i:
+	cd /home/mafiamole/projects/MoleBox/build/linux && $(MAKE) -f src/MoleBox/CMakeFiles/MoleBox.dir/build.make src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_luascripts.cxx.i
+.PHONY : Lua/moc_luascripts.cxx.i
+
+Lua/moc_luascripts.s: Lua/moc_luascripts.cxx.s
+.PHONY : Lua/moc_luascripts.s
+
+# target to generate assembly for a file
+Lua/moc_luascripts.cxx.s:
+	cd /home/mafiamole/projects/MoleBox/build/linux && $(MAKE) -f src/MoleBox/CMakeFiles/MoleBox.dir/build.make src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_luascripts.cxx.s
+.PHONY : Lua/moc_luascripts.cxx.s
+
 action.o: action.cpp.o
 .PHONY : action.o
 
@@ -424,6 +640,126 @@ actions.cpp.s:
 	cd /home/mafiamole/projects/MoleBox/build/linux && $(MAKE) -f src/MoleBox/CMakeFiles/MoleBox.dir/build.make src/MoleBox/CMakeFiles/MoleBox.dir/actions.cpp.s
 .PHONY : actions.cpp.s
 
+moc_ContainerDefinitions.o: moc_ContainerDefinitions.cxx.o
+.PHONY : moc_ContainerDefinitions.o
+
+# target to build an object file
+moc_ContainerDefinitions.cxx.o:
+	cd /home/mafiamole/projects/MoleBox/build/linux && $(MAKE) -f src/MoleBox/CMakeFiles/MoleBox.dir/build.make src/MoleBox/CMakeFiles/MoleBox.dir/moc_ContainerDefinitions.cxx.o
+.PHONY : moc_ContainerDefinitions.cxx.o
+
+moc_ContainerDefinitions.i: moc_ContainerDefinitions.cxx.i
+.PHONY : moc_ContainerDefinitions.i
+
+# target to preprocess a source file
+moc_ContainerDefinitions.cxx.i:
+	cd /home/mafiamole/projects/MoleBox/build/linux && $(MAKE) -f src/MoleBox/CMakeFiles/MoleBox.dir/build.make src/MoleBox/CMakeFiles/MoleBox.dir/moc_ContainerDefinitions.cxx.i
+.PHONY : moc_ContainerDefinitions.cxx.i
+
+moc_ContainerDefinitions.s: moc_ContainerDefinitions.cxx.s
+.PHONY : moc_ContainerDefinitions.s
+
+# target to generate assembly for a file
+moc_ContainerDefinitions.cxx.s:
+	cd /home/mafiamole/projects/MoleBox/build/linux && $(MAKE) -f src/MoleBox/CMakeFiles/MoleBox.dir/build.make src/MoleBox/CMakeFiles/MoleBox.dir/moc_ContainerDefinitions.cxx.s
+.PHONY : moc_ContainerDefinitions.cxx.s
+
+moc_Game.o: moc_Game.cxx.o
+.PHONY : moc_Game.o
+
+# target to build an object file
+moc_Game.cxx.o:
+	cd /home/mafiamole/projects/MoleBox/build/linux && $(MAKE) -f src/MoleBox/CMakeFiles/MoleBox.dir/build.make src/MoleBox/CMakeFiles/MoleBox.dir/moc_Game.cxx.o
+.PHONY : moc_Game.cxx.o
+
+moc_Game.i: moc_Game.cxx.i
+.PHONY : moc_Game.i
+
+# target to preprocess a source file
+moc_Game.cxx.i:
+	cd /home/mafiamole/projects/MoleBox/build/linux && $(MAKE) -f src/MoleBox/CMakeFiles/MoleBox.dir/build.make src/MoleBox/CMakeFiles/MoleBox.dir/moc_Game.cxx.i
+.PHONY : moc_Game.cxx.i
+
+moc_Game.s: moc_Game.cxx.s
+.PHONY : moc_Game.s
+
+# target to generate assembly for a file
+moc_Game.cxx.s:
+	cd /home/mafiamole/projects/MoleBox/build/linux && $(MAKE) -f src/MoleBox/CMakeFiles/MoleBox.dir/build.make src/MoleBox/CMakeFiles/MoleBox.dir/moc_Game.cxx.s
+.PHONY : moc_Game.cxx.s
+
+moc_GameComponent.o: moc_GameComponent.cxx.o
+.PHONY : moc_GameComponent.o
+
+# target to build an object file
+moc_GameComponent.cxx.o:
+	cd /home/mafiamole/projects/MoleBox/build/linux && $(MAKE) -f src/MoleBox/CMakeFiles/MoleBox.dir/build.make src/MoleBox/CMakeFiles/MoleBox.dir/moc_GameComponent.cxx.o
+.PHONY : moc_GameComponent.cxx.o
+
+moc_GameComponent.i: moc_GameComponent.cxx.i
+.PHONY : moc_GameComponent.i
+
+# target to preprocess a source file
+moc_GameComponent.cxx.i:
+	cd /home/mafiamole/projects/MoleBox/build/linux && $(MAKE) -f src/MoleBox/CMakeFiles/MoleBox.dir/build.make src/MoleBox/CMakeFiles/MoleBox.dir/moc_GameComponent.cxx.i
+.PHONY : moc_GameComponent.cxx.i
+
+moc_GameComponent.s: moc_GameComponent.cxx.s
+.PHONY : moc_GameComponent.s
+
+# target to generate assembly for a file
+moc_GameComponent.cxx.s:
+	cd /home/mafiamole/projects/MoleBox/build/linux && $(MAKE) -f src/MoleBox/CMakeFiles/MoleBox.dir/build.make src/MoleBox/CMakeFiles/MoleBox.dir/moc_GameComponent.cxx.s
+.PHONY : moc_GameComponent.cxx.s
+
+moc_action.o: moc_action.cxx.o
+.PHONY : moc_action.o
+
+# target to build an object file
+moc_action.cxx.o:
+	cd /home/mafiamole/projects/MoleBox/build/linux && $(MAKE) -f src/MoleBox/CMakeFiles/MoleBox.dir/build.make src/MoleBox/CMakeFiles/MoleBox.dir/moc_action.cxx.o
+.PHONY : moc_action.cxx.o
+
+moc_action.i: moc_action.cxx.i
+.PHONY : moc_action.i
+
+# target to preprocess a source file
+moc_action.cxx.i:
+	cd /home/mafiamole/projects/MoleBox/build/linux && $(MAKE) -f src/MoleBox/CMakeFiles/MoleBox.dir/build.make src/MoleBox/CMakeFiles/MoleBox.dir/moc_action.cxx.i
+.PHONY : moc_action.cxx.i
+
+moc_action.s: moc_action.cxx.s
+.PHONY : moc_action.s
+
+# target to generate assembly for a file
+moc_action.cxx.s:
+	cd /home/mafiamole/projects/MoleBox/build/linux && $(MAKE) -f src/MoleBox/CMakeFiles/MoleBox.dir/build.make src/MoleBox/CMakeFiles/MoleBox.dir/moc_action.cxx.s
+.PHONY : moc_action.cxx.s
+
+moc_actions.o: moc_actions.cxx.o
+.PHONY : moc_actions.o
+
+# target to build an object file
+moc_actions.cxx.o:
+	cd /home/mafiamole/projects/MoleBox/build/linux && $(MAKE) -f src/MoleBox/CMakeFiles/MoleBox.dir/build.make src/MoleBox/CMakeFiles/MoleBox.dir/moc_actions.cxx.o
+.PHONY : moc_actions.cxx.o
+
+moc_actions.i: moc_actions.cxx.i
+.PHONY : moc_actions.i
+
+# target to preprocess a source file
+moc_actions.cxx.i:
+	cd /home/mafiamole/projects/MoleBox/build/linux && $(MAKE) -f src/MoleBox/CMakeFiles/MoleBox.dir/build.make src/MoleBox/CMakeFiles/MoleBox.dir/moc_actions.cxx.i
+.PHONY : moc_actions.cxx.i
+
+moc_actions.s: moc_actions.cxx.s
+.PHONY : moc_actions.s
+
+# target to generate assembly for a file
+moc_actions.cxx.s:
+	cd /home/mafiamole/projects/MoleBox/build/linux && $(MAKE) -f src/MoleBox/CMakeFiles/MoleBox.dir/build.make src/MoleBox/CMakeFiles/MoleBox.dir/moc_actions.cxx.s
+.PHONY : moc_actions.cxx.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -436,12 +772,24 @@ help:
 	@echo "... Actions/keyboard.o"
 	@echo "... Actions/keyboard.i"
 	@echo "... Actions/keyboard.s"
+	@echo "... Actions/moc_keyboard.o"
+	@echo "... Actions/moc_keyboard.i"
+	@echo "... Actions/moc_keyboard.s"
+	@echo "... Actions/moc_mouse.o"
+	@echo "... Actions/moc_mouse.i"
+	@echo "... Actions/moc_mouse.s"
 	@echo "... Actions/mouse.o"
 	@echo "... Actions/mouse.i"
 	@echo "... Actions/mouse.s"
 	@echo "... Content/Content.o"
 	@echo "... Content/Content.i"
 	@echo "... Content/Content.s"
+	@echo "... Content/moc_Content.o"
+	@echo "... Content/moc_Content.i"
+	@echo "... Content/moc_Content.s"
+	@echo "... Content/moc_ContentTemplate.o"
+	@echo "... Content/moc_ContentTemplate.i"
+	@echo "... Content/moc_ContentTemplate.s"
 	@echo "... Game.o"
 	@echo "... Game.i"
 	@echo "... Game.s"
@@ -466,12 +814,42 @@ help:
 	@echo "... Lua/luascripts.o"
 	@echo "... Lua/luascripts.i"
 	@echo "... Lua/luascripts.s"
+	@echo "... Lua/moc_Component.o"
+	@echo "... Lua/moc_Component.i"
+	@echo "... Lua/moc_Component.s"
+	@echo "... Lua/moc_LuaScriptHelper.o"
+	@echo "... Lua/moc_LuaScriptHelper.i"
+	@echo "... Lua/moc_LuaScriptHelper.s"
+	@echo "... Lua/moc_luaeditor.o"
+	@echo "... Lua/moc_luaeditor.i"
+	@echo "... Lua/moc_luaeditor.s"
+	@echo "... Lua/moc_luascript.o"
+	@echo "... Lua/moc_luascript.i"
+	@echo "... Lua/moc_luascript.s"
+	@echo "... Lua/moc_luascripts.o"
+	@echo "... Lua/moc_luascripts.i"
+	@echo "... Lua/moc_luascripts.s"
 	@echo "... action.o"
 	@echo "... action.i"
 	@echo "... action.s"
 	@echo "... actions.o"
 	@echo "... actions.i"
 	@echo "... actions.s"
+	@echo "... moc_ContainerDefinitions.o"
+	@echo "... moc_ContainerDefinitions.i"
+	@echo "... moc_ContainerDefinitions.s"
+	@echo "... moc_Game.o"
+	@echo "... moc_Game.i"
+	@echo "... moc_Game.s"
+	@echo "... moc_GameComponent.o"
+	@echo "... moc_GameComponent.i"
+	@echo "... moc_GameComponent.s"
+	@echo "... moc_action.o"
+	@echo "... moc_action.i"
+	@echo "... moc_action.s"
+	@echo "... moc_actions.o"
+	@echo "... moc_actions.i"
+	@echo "... moc_actions.s"
 .PHONY : help
 
 

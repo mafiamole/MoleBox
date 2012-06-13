@@ -28,28 +28,33 @@
 #define BALL_H
 
 #include "../src/MoleBox/GameComponent.h"
+#include "../src/MoleBox/Content/Content.h"
 #include "player.h"
 #include "enemy.h"
 
 class Player;
+class Game;
 
 class Ball : public MB::GameComponent
 {
-sf::Sprite sprite;
-sf::Vector2f startPosition;
-sf::Vector2f direction;
-float lowerBoundry, upperBoundry;
-Player *player;
-Enemy *enemy;
-bool InterceptPlayer(sf::Vector2f calculatedPositon,sf::Vector2f moveVector);
-bool IntereptEnemy();
-
+  sf::Sprite sprite;
+  sf::Vector2f startPosition;
+  sf::Vector2f direction;
+  float lowerBoundry, upperBoundry;
+  Player *player;
+  Enemy *enemy;
+  bool InterceptPlayer(sf::Vector2f calculatedPositon,sf::Vector2f moveVector);
+  bool IntereptEnemy(sf::Vector2f calculatedPositon,sf::Vector2f moveVector);
+  sf::Sound sound;
+  int playerScore,computerScore;
 public:
-    Ball(MB::Game* game);
+    Ball(Game* game);
     void SetOpponents(Player* player,Enemy* enemy);
     sf::Vector2f getPosition();
     virtual void Update(sf::Time elapsed, MB::Types::EventList* events);
     virtual void Draw();
+    int PlayerScore();
+    int ComputerScore();
 };
 
 #endif // BALL_H

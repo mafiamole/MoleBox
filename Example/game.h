@@ -34,6 +34,7 @@
 #include "ball.h"
 #include "enemy.h"
 #include "player.h"
+#include "ui.h"
 
 #ifdef LUA_EDITOR
   #include "../src/MoleBox/Lua/luascripts.h"
@@ -43,11 +44,16 @@ class Game : public MB::Game
 {
 protected:
 
+  Player* player;
+  Enemy* enemy;
+  Ball* ball;
+  UI  * ui;
 public:
     Game();
     void Update( sf::Time elapsed, MB::Types::EventList* events);
     void Draw();
     void Run(int argc,char** argv);
+
     virtual ~Game();
    
 

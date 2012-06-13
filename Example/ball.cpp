@@ -25,14 +25,19 @@
 
 
 #include "ball.h"
+#include "game.h"
 #include "../src/MoleBox/Game.h"
 #include "../src/MoleBox/Content/Content.h"
+#include <SFML/Audio.hpp>
 #include <cstdlib>
 #include <ctime>
 
-Ball::Ball(MB::Game* game) : MB::GameComponent(game)
+Ball::Ball(Game* game) : MB::GameComponent(game), playerScore(0), computerScore(0)
 {
+  
+
   this->sprite = MB::Content::NewSprite("ball.png");
+  this->sound = MB::Content::NewSound("mouthpop.wav");
   this->startPosition.x = (this->game->Window()->getSize().x / 2) - (this->sprite.getTextureRect().width / 2);
   this->startPosition.y = (this->game->Window()->getSize().y / 2) - (this->sprite.getTextureRect().height / 2);
   
@@ -44,7 +49,8 @@ Ball::Ball(MB::Game* game) : MB::GameComponent(game)
   srand( std::time(NULL) );
   this->direction.x = 1;
   this->direction.y = 1;
-  std::cout << this->direction.x << "," << this->direction.y << std::endl;
+
+  std::cout << "Setting score! "<< playerScore << "," << computerScore << std::endl;
 }
 
 void Ball::SetOpponents(Player* player, Enemy* enemy)
@@ -57,7 +63,7 @@ void Ball::SetOpponents(Player* player, Enemy* enemy)
 void Ball::Update(sf::Time elapsed, MB::Types::EventList* events)
 {
     MB::GameComponent::Update(elapsed, events);
-    
+        
     sf::Vector2f moveVector;
     
     moveVector.x = this->direction.x * (elapsed.asMilliseconds() * 0.5f);
@@ -68,40 +74,44 @@ void Ball::Update(sf::Time elapsed, MB::Types::EventList* events)
     calculatedPositon.x = this->sprite.getPosition().x + moveVector.x;
     calculatedPositon.y = this->sprite.getPosition().y + moveVector.y;
     
-    if ( calculatedPositon.y < this->lowerBoundry or calculatedPositon.y > this->upperBoundry) {
+    if ( calculatedPositon.y < this->lowerBoundry || calculatedPositon.y > this->upperBoundry) {
       moveVector.y = moveVector.y * -1.0f; // flip the direction
       this->direction.y = this->direction.y * -1.0f;
       calculatedPositon.y = this->sprite.getPosition().y + moveVector.y;
     }
       
-    if (this->InterceptPlayer(calculatedPositon,moveVector) or this->IntereptEnemy(calculatedPositon,moveVector) )
+    if (this->InterceptPlayer(calculatedPositon,moveVector) || this->IntereptEnemy(calculatedPositon,moveVector) )
     {
       moveVector.x = moveVector.x * -1.0f; // flip the direction
       this->direction.x = this->direction.x * -1.0f;
       calculatedPositon.x = this->sprite.getPosition().x + moveVector.x;
-      std::cout << "Interception with players detected" << std::endl;
       this->sprite.setPosition(calculatedPositon);
+      this->sound.play();
     }
     
-    if ( calculatedPositon.x < 0 or calculatedPositon.x > this->game->Window()->getSize().x)
+    if ( calculatedPositon.x < 0 || calculatedPositon.x > this->game->Window()->getSize().x)
     {
       this->sprite.setPosition(this->startPosition);
-        srand( std::time(NULL) );
         this->direction.x = 1;
-	this->direction.y = 2;
+	this->direction.y = 1;
+	if (calculatedPositon.x < 0)
+	  this->computerScore++;
+	else
+	  this->playerScore++;
+
     }
     else
     {
       this->sprite.setPosition(calculatedPositon);
     }
     
-    //this->sprite.move(this->direction.x * elapsed.asMilliseconds() * 0.01, this->direction.y * elapsed.asMilliseconds() );
 }
 
 void Ball::Draw()
 {
     MB::GameComponent::Draw();
     this->game->DrawSprite(this->sprite);
+
 }
 
 bool Ball::InterceptPlayer(sf::Vector2f calculatedPositon, sf::Vector2f moveVector)
@@ -145,4 +155,13 @@ sf::Vector2f Ball::getPosition()
   return this->sprite.getPosition();
 }
 
+int Ball::ComputerScore()
+{
+  return this->computerScore;
+}
+
+int Ball::PlayerScore()
+{
+  return this->playerScore;
+}
 
