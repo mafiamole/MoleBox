@@ -14,7 +14,7 @@ end
 function setComputerTextLocation() 
   computerTextSize = {Text.Size(Computer.ScoreText)}
   newSize = WindowDimensions[1] - computerTextSize[1]
-  Text.Move(Computer.ScoreText, newSize ,0)
+  Text.SetPosition(Computer.ScoreText, newSize ,0)
 
 end
 
@@ -28,9 +28,9 @@ function update( events, elasped, playerScore, computerScore )
   if computerScore ~= Computer.CurrentScore then
     Text.Modify(Computer.ScoreText,computerScore)
     Computer.CurrentScore = computerScore
+	setComputerTextLocation()
   end
-  
-  
+
 end
 
 function draw()

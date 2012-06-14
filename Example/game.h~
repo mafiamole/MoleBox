@@ -47,6 +47,9 @@ protected:
   Player* player;
   Enemy* enemy;
   Ball* ball;
+  UI  * ui;
+  bool finished;
+  unsigned int won;
 public:
     Game();
     void Update( sf::Time elapsed, MB::Types::EventList* events);

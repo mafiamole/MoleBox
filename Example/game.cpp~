@@ -31,23 +31,17 @@
 
 #include "game.h"
 
-
-
-
-Game::Game() : MB::Game("Game Title")
+Game::Game() : MB::Game("Game Title"), won("No one"),finished(false)
 {
 
   this->actionList.Register("Player Move Up",new MB::Keyboard(sf::Keyboard::Up));
   this->actionList.Register("Player Move Down",new MB::Keyboard(sf::Keyboard::Down));
-  try {  
-// 	this->AddComponent(new TestComponent(this));
-// 	this->AddComponent(new MB::LuaComponent(this,"../testComponent.lua"));
-// 	this->AddComponent(new MB::LuaComponent(this,"testComponent2.lua"));
+  try {
 
   this->player 		= (Player*)this->AddComponent( new Player(this) );
   this->enemy		= (Enemy*)this->AddComponent( new Enemy(this) );
   this->ball 		= (Ball*)this->AddComponent( new Ball(this) );
-  this->ui		= (UI*)this->AddComponent( new UI(this,"ui.lua") );
+  this->ui			= (UI*)this->AddComponent( new UI(this,"ui.lua") );
   enemy->SetBall(ball);
   ball->SetOpponents(player,enemy);
   ui->SetBall(ball);
@@ -67,25 +61,49 @@ Game::~Game()
 
 void Game::Draw()
 {
-  MB::Game::Draw();
+  MB::Game::Draw();  
+  if (finished)
+  {
+    this->Window()->draw(won);
+  }
+
 }
 
 void Game::Update( sf::Time elapsed, MB::Types::EventList* events)
 {
-  MB::Game::Update(elapsed,events);
-  int pScore = ball->PlayerScore();
-  int cScore = ball->ComputerScore();
-  std::cout << pScore << "," << cScore << std::endl;
-  if (pScore >= 10)
-  {
-    std::cout << "Player has won!" << std::endl;
-    this->Window()->close();
-  }
   
-  if (cScore >= 10)
+  if (!finished)
   {
-    std::cout << "Computer has won!" << std::endl;
-    this->Window()->close();
+    int pScore = ball->PlayerScore();
+    int cScore = ball->ComputerScore();
+
+    if (pScore >= 10)
+    {
+      this->won.setString("Player has won!");
+      this->won.setScale(3,3);
+      sf::Vector2f newPos;
+      newPos.x = (this->Window()->getSize().x / 2)  - ( this->won.getLocalBounds().width / 2) ;
+      newPos.y = (this->Window()->getSize().x / 2)  - ( this->won.getLocalBounds().width / 2) ;
+      
+      this->won.setPosition( newPos );
+      this->finished = true;
+    }
+    
+    if (cScore >= 10)
+    {
+      this->won.setString("Computer has won!");
+      sf::Vector2f newPos;
+      this->won.setScale(3,3);
+      newPos.x = (this->Window()->getSize().x / 2)  - ( this->won.getLocalBounds().width / 2) ;
+      newPos.y = (this->Window()->getSize().x / 2)  - ( this->won.getLocalBounds().width / 2) ;
+      this->won.setPosition( newPos );
+      this->finished = true;
+    }
+    MB::Game::Update(elapsed,events);
+    }
+  else
+  {
+    
   }
 }
 

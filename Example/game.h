@@ -48,6 +48,8 @@ protected:
   Enemy* enemy;
   Ball* ball;
   UI  * ui;
+  bool finished;
+  sf::Text won;
 public:
     Game();
     void Update( sf::Time elapsed, MB::Types::EventList* events);

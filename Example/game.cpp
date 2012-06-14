@@ -31,7 +31,7 @@
 
 #include "game.h"
 
-Game::Game() : MB::Game("Game Title")
+Game::Game() : MB::Game("Game Title"), won("No one"),finished(false)
 {
 
   this->actionList.Register("Player Move Up",new MB::Keyboard(sf::Keyboard::Up));
@@ -61,27 +61,50 @@ Game::~Game()
 
 void Game::Draw()
 {
-  MB::Game::Draw();
+  MB::Game::Draw();  
+  if (finished)
+  {
+    this->Window()->draw(won);
+  }
+
 }
 
 void Game::Update( sf::Time elapsed, MB::Types::EventList* events)
 {
   
-  int pScore = ball->PlayerScore();
-  int cScore = ball->ComputerScore();
+  if (!finished)
+  {
+    int pScore = ball->PlayerScore();
+    int cScore = ball->ComputerScore();
 
-  if (pScore >= 10)
+    if (pScore >= 10)
+    {
+      this->won.setString("Player has won!");
+      this->won.setCharacterSize(50);
+      sf::Vector2f newPos;
+      newPos.x = (this->Window()->getSize().x / 2)  - ( this->won.getGlobalBounds().width / 2) ;
+      newPos.y = (this->Window()->getSize().x / 2)  - ( this->won.getGlobalBounds().width / 2) ;
+      
+      this->won.setPosition( newPos );
+      this->finished = true;
+    }
+    
+    if (cScore >= 10)
+    {
+      this->won.setString("Computer has won!");
+      sf::Vector2f newPos;
+      this->won.setCharacterSize(50);
+      newPos.x = (this->Window()->getSize().x / 2)  - ( this->won.getGlobalBounds().width / 2) ;
+      newPos.y = (this->Window()->getSize().x / 2)  - ( this->won.getGlobalBounds().width / 2) ;
+      this->won.setPosition( newPos );
+      this->finished = true;
+    }
+    MB::Game::Update(elapsed,events);
+    }
+  else
   {
-    std::cout << "Player has won!" << std::endl;
-    this->Window()->close();
+    
   }
-  
-  if (cScore >= 10)
-  {
-    std::cout << "Computer has won!" << std::endl;
-    this->Window()->close();
-  }
-  MB::Game::Update(elapsed,events);
 }
 
 void Game::Run(int argc,char **argv)
