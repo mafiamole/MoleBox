@@ -310,6 +310,7 @@ src/MoleBox/CMakeFiles/MoleBox.dir/Lua/Component.cpp.o: ../../src/MoleBox/Lua/..
 src/MoleBox/CMakeFiles/MoleBox.dir/Lua/Component.cpp.o: ../../src/MoleBox/Lua/../actions.h
 src/MoleBox/CMakeFiles/MoleBox.dir/Lua/Component.cpp.o: ../../src/MoleBox/Lua/Component.cpp
 src/MoleBox/CMakeFiles/MoleBox.dir/Lua/Component.cpp.o: ../../src/MoleBox/Lua/Component.h
+src/MoleBox/CMakeFiles/MoleBox.dir/Lua/Component.cpp.o: ../../src/MoleBox/Lua/LuaComponentFunctions.h
 src/MoleBox/CMakeFiles/MoleBox.dir/Lua/Component.cpp.o: ../../src/MoleBox/Lua/LuaScriptHelper.h
 src/MoleBox/CMakeFiles/MoleBox.dir/Lua/Component.cpp.o: ../../src/MoleBox/Lua/content.h
 src/MoleBox/CMakeFiles/MoleBox.dir/Lua/Component.cpp.o: ../../src/MoleBox/Lua/luascript.h
@@ -482,13 +483,12 @@ src/MoleBox/CMakeFiles/MoleBox.dir/Lua/content.cpp.o: /usr/local/include/SFML/Wi
 
 src/MoleBox/CMakeFiles/MoleBox.dir/Lua/luaeditor.cpp.o: ../../src/MoleBox/Lua/../Content/Content.h
 src/MoleBox/CMakeFiles/MoleBox.dir/Lua/luaeditor.cpp.o: ../../src/MoleBox/Lua/../Content/ContentTemplate.h
+src/MoleBox/CMakeFiles/MoleBox.dir/Lua/luaeditor.cpp.o: ../../src/MoleBox/Lua/LuaEditorFunctions.h
 src/MoleBox/CMakeFiles/MoleBox.dir/Lua/luaeditor.cpp.o: ../../src/MoleBox/Lua/LuaScriptHelper.h
 src/MoleBox/CMakeFiles/MoleBox.dir/Lua/luaeditor.cpp.o: ../../src/MoleBox/Lua/luaeditor.cpp
 src/MoleBox/CMakeFiles/MoleBox.dir/Lua/luaeditor.cpp.o: ../../src/MoleBox/Lua/luaeditor.h
 src/MoleBox/CMakeFiles/MoleBox.dir/Lua/luaeditor.cpp.o: ../../src/MoleBox/Lua/luascript.h
 src/MoleBox/CMakeFiles/MoleBox.dir/Lua/luaeditor.cpp.o: ../../src/MoleBox/Lua/luascripts.h
-src/MoleBox/CMakeFiles/MoleBox.dir/Lua/luaeditor.cpp.o: /usr/include/QtCore/qfile.h
-src/MoleBox/CMakeFiles/MoleBox.dir/Lua/luaeditor.cpp.o: /usr/include/QtCore/qtextstream.h
 src/MoleBox/CMakeFiles/MoleBox.dir/Lua/luaeditor.cpp.o: /usr/include/QtGui/QSyntaxHighlighter
 src/MoleBox/CMakeFiles/MoleBox.dir/Lua/luaeditor.cpp.o: /usr/include/QtGui/qsyntaxhighlighter.h
 src/MoleBox/CMakeFiles/MoleBox.dir/Lua/luaeditor.cpp.o: /usr/local/include/SFML/Audio.hpp

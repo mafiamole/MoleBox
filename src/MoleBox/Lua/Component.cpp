@@ -26,6 +26,7 @@
 #include "Component.h"
 #include "../Content/Content.h"
 #include "LuaScriptHelper.h"
+#include "LuaComponentFunctions.h"
 
 void MB::ActionsToLua(lua_State* L,MB::Actions* actions)
 {

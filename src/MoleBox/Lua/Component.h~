@@ -106,7 +106,7 @@ static const luaL_reg sfml_lua_window[] =
   { NULL, NULL }
 };
 
-static const luaL_reg sfml_lua_prite[] =
+static const luaL_reg sfml_lua_sprite[] =
 {
   { "Load", MB_Lua::Sprites::Load},
   { "Draw", MB_Lua::Sprites::Draw},

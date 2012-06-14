@@ -22,7 +22,7 @@
     FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
     OTHER DEALINGS IN THE SOFTWARE.
 */
-
+#include "LuaEditorFunctions.h"
 
 #ifdef LUA_EDITOR
 #include "luaeditor.h"
