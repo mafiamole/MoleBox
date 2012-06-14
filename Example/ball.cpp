@@ -50,7 +50,6 @@ Ball::Ball(Game* game) : MB::GameComponent(game), playerScore(0), computerScore(
   this->direction.x = 1;
   this->direction.y = 1;
 
-  std::cout << "Setting score! "<< playerScore << "," << computerScore << std::endl;
 }
 
 void Ball::SetOpponents(Player* player, Enemy* enemy)
@@ -93,12 +92,12 @@ void Ball::Update(sf::Time elapsed, MB::Types::EventList* events)
     if ( calculatedPositon.x < 0 || calculatedPositon.x > this->game->Window()->getSize().x)
     {
       this->sprite.setPosition(this->startPosition);
-        this->direction.x = 1;
-	this->direction.y = 1;
-	if (calculatedPositon.x < 0)
-	  this->computerScore++;
-	else
-	  this->playerScore++;
+      this->direction.x = 1;
+	  this->direction.y = 1;
+		if (calculatedPositon.x < 0)
+		  this->computerScore++;
+		else
+		  this->playerScore++;
       acceleration = 1.0f;
     }
     else

@@ -108,14 +108,14 @@ void MB::Game::Run(int argc, char** argv)
   sf::Thread qtThread( &MB::LuaGUIThread,argList);
   qtThread.launch(); 
 #endif
-
-  clock.restart();
- 
+  	this->window->setFramerateLimit(60);
+  //clock.restart();
+  sf::Time elapsed = clock.restart();
   while ( this->window->isOpen() )
   {
     
     sf::Event event;
-    sf::Time elapsed = clock.restart();
+
     while ( window->pollEvent(event) )
     {
       
@@ -135,7 +135,10 @@ void MB::Game::Run(int argc, char** argv)
     this->window->display();
     
     eventList.clear();
-    
+
+    elapsed = clock.restart(); 
+
+
   }
   
 #ifdef LUA_EDITOR

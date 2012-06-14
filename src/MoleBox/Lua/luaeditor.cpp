@@ -24,16 +24,17 @@
 */
 
 
+#ifdef LUA_EDITOR
 #include "luaeditor.h"
 #include "LuaScriptHelper.h"
 #include "luascript.h"
 #include  <time.h>
 
 
-#include <Qt/qfile.h>
-#include <Qt/qtextstream.h>
+#include <Qt\qfile.h>
+#include <qtextstream.h>
 
-#ifdef LUA_EDITOR
+
 
 LuaHighlighter::LuaHighlighter(QObject* parent): QSyntaxHighlighter(parent)
 {
@@ -147,7 +148,9 @@ LuaEditor::LuaEditor(std::vector<std::string> scripts,QWidget *parent) : QWidget
   if ( ui.tabCodeWindow->count() > 0 ) { 
     this->ResourcesTabTitle = ui.tabCodeWindow->tabText(0);
   }
-  this->ChangeScript(scripts[0].c_str());
+  if (!scripts.empty()) {
+	this->ChangeScript(scripts[0].c_str());
+  }
 }
 
 LuaEditor::~LuaEditor()

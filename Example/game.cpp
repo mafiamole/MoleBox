@@ -31,23 +31,17 @@
 
 #include "game.h"
 
-
-
-
 Game::Game() : MB::Game("Game Title")
 {
 
   this->actionList.Register("Player Move Up",new MB::Keyboard(sf::Keyboard::Up));
   this->actionList.Register("Player Move Down",new MB::Keyboard(sf::Keyboard::Down));
-  try {  
-// 	this->AddComponent(new TestComponent(this));
-// 	this->AddComponent(new MB::LuaComponent(this,"../testComponent.lua"));
-// 	this->AddComponent(new MB::LuaComponent(this,"testComponent2.lua"));
+  try {
 
   this->player 		= (Player*)this->AddComponent( new Player(this) );
   this->enemy		= (Enemy*)this->AddComponent( new Enemy(this) );
   this->ball 		= (Ball*)this->AddComponent( new Ball(this) );
-  this->ui		= (UI*)this->AddComponent( new UI(this,"ui.lua") );
+  this->ui			= (UI*)this->AddComponent( new UI(this,"ui.lua") );
   enemy->SetBall(ball);
   ball->SetOpponents(player,enemy);
   ui->SetBall(ball);
@@ -72,7 +66,7 @@ void Game::Draw()
 
 void Game::Update( sf::Time elapsed, MB::Types::EventList* events)
 {
-  MB::Game::Update(elapsed,events);
+  
   int pScore = ball->PlayerScore();
   int cScore = ball->ComputerScore();
 
@@ -87,6 +81,7 @@ void Game::Update( sf::Time elapsed, MB::Types::EventList* events)
     std::cout << "Computer has won!" << std::endl;
     this->Window()->close();
   }
+  MB::Game::Update(elapsed,events);
 }
 
 void Game::Run(int argc,char **argv)

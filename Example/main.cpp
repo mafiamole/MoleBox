@@ -41,7 +41,8 @@ int main(int argc, char **argv) {
     std::cout << error << std::endl;
     
   }
-  
+  std::string a;
+  std::cin >> a; 
   return EXIT_SUCCESS;
   
 }

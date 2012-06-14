@@ -65,8 +65,8 @@ void Player::Update(sf::Time elapsed, MB::Types::EventList* events)
     {
       direction = 0;
     }
-    
-    float vector =  direction * (int)elapsed.asMilliseconds() * 0.5f;
+
+	float vector =  direction * 0.5f * (float)elapsed.asMilliseconds() * 0.5f;
     
     sf::Vector2f playerPos = this->playerSprite.getPosition();
     

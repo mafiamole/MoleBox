@@ -50,7 +50,8 @@ void Enemy::Update(sf::Time elapsed, MB::Types::EventList* events)
     MB::GameComponent::Update(elapsed, events);
     
     int halfWayX = this->game->Window()->getSize().x / 2;
-    
+    //std::cout << halfWayX << std::endl;
+
     int direction = 0;
     
     float centrePos = this->enemySprite.getPosition().y  + (this->enemySprite.getTextureRect().height / 2); 

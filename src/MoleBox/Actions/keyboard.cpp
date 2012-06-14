@@ -34,7 +34,7 @@ Keyboard::Keyboard(sf::Keyboard::Key key)
   this->key = key;
   this->keyDown = false;//sf::Keyboard::isKeyPressed(key);
   this->keyPressed = this->keyDown;
-  std::cout <<"initiate! " << this->keyDown << std::endl;
+
 }
 
 Keyboard::~Keyboard()
