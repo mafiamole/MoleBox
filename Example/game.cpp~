@@ -80,10 +80,10 @@ void Game::Update( sf::Time elapsed, MB::Types::EventList* events)
     if (pScore >= 10)
     {
       this->won.setString("Player has won!");
-      this->won.setScale(3,3);
+      this->won.setCharacterSize(50);
       sf::Vector2f newPos;
-      newPos.x = (this->Window()->getSize().x / 2)  - ( this->won.getLocalBounds().width / 2) ;
-      newPos.y = (this->Window()->getSize().x / 2)  - ( this->won.getLocalBounds().width / 2) ;
+      newPos.x = (this->Window()->getSize().x / 2)  - ( this->won.getGlobalBounds().width / 2) ;
+      newPos.y = (this->Window()->getSize().x / 2)  - ( this->won.getGlobalBounds().width / 2) ;
       
       this->won.setPosition( newPos );
       this->finished = true;
@@ -93,9 +93,9 @@ void Game::Update( sf::Time elapsed, MB::Types::EventList* events)
     {
       this->won.setString("Computer has won!");
       sf::Vector2f newPos;
-      this->won.setScale(3,3);
-      newPos.x = (this->Window()->getSize().x / 2)  - ( this->won.getLocalBounds().width / 2) ;
-      newPos.y = (this->Window()->getSize().x / 2)  - ( this->won.getLocalBounds().width / 2) ;
+      this->won.setCharacterSize(50);
+      newPos.x = (this->Window()->getSize().x / 2)  - ( this->won.getGlobalBounds().width / 2) ;
+      newPos.y = (this->Window()->getSize().x / 2)  - ( this->won.getGlobalBounds().width / 2) ;
       this->won.setPosition( newPos );
       this->finished = true;
     }

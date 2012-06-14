@@ -33,6 +33,7 @@
 #ifndef LUA_SFML_API
 #define LUA_SFML_API
 #include <sstream>
+#include <list>
 
 template <int T> static int voidLuaEmptyFunction(lua_State *L) {
   
@@ -121,12 +122,13 @@ static const luaL_Reg sound[] =
   
   { NULL, NULL }
 };
-  
+typedef std::map< std::string, const luaL_reg * > LuaRegisterMap;
 class LuaScript
 {
 private:
   lua_State *L;
   bool debug;
+  LuaRegisterMap FuncsToReg;
 public:
     LuaScript(bool debug = false);
     bool LoadFromFile(std::string file);
@@ -134,6 +136,7 @@ public:
     bool HandleError(int State);
     void RegisterComponentFunctions();
     void RegisterDummyComponentFuncs();
+    void RegisterLibrary(std::string name,const luaL_reg * stuff);
     bool RunScript();
     bool RunFunction(std::string name);
     bool LookForFunction( std::string name );

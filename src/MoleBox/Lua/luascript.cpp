@@ -63,6 +63,13 @@ std::string LuaScript::ErrorTypeName(int state)
   }
   return "";
 }
+
+void LuaScript::RegisterLibrary(std::string name,const luaL_Reg* stuff)
+{
+  luaL_register(L,name.c_str(),stuff);
+}
+
+
 bool LuaScript::HandleError(int State)
 {
   lua_gettop(L);

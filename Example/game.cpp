@@ -101,10 +101,7 @@ void Game::Update( sf::Time elapsed, MB::Types::EventList* events)
     }
     MB::Game::Update(elapsed,events);
     }
-  else
-  {
-    
-  }
+
 }
 
 void Game::Run(int argc,char **argv)
