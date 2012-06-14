@@ -75,7 +75,7 @@ void Game::Update( sf::Time elapsed, MB::Types::EventList* events)
   MB::Game::Update(elapsed,events);
   int pScore = ball->PlayerScore();
   int cScore = ball->ComputerScore();
-  std::cout << pScore << "," << cScore << std::endl;
+
   if (pScore >= 10)
   {
     std::cout << "Player has won!" << std::endl;

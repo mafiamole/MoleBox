@@ -31,37 +31,47 @@
 
 namespace MB_Lua {
 
-class Sounds {
-  
+  class Sounds {
+    
+    public:
+      static Sounds& 			Instance			(); 
+      static int 				Load				( lua_State *L );
+      static int 				Play				( lua_State *L );
+      static int 				PauseUnPause			( lua_State *L );
+      static int 				Stop				( lua_State* L );
+
+    };
+    
+  class Sprites {
   public:
-    static Sounds& 			Instance			(); 
-    static int 				Load				( lua_State *L );
-    static int 				Play				( lua_State *L );
-    static int 				PauseUnPause			( lua_State *L );
-    static int 				Stop				( lua_State* L );
+      static int 				Load				( lua_State *L );
+      static int 				Draw				( lua_State *L );
+      static int				Move				( lua_State *L );
+      static int				SetPosition			( lua_State *L );
+      static int				GetPosition			( lua_State *L );
+      static int				Size				( lua_State *L );
+    };
+    
 
+
+  class Text {
+  public:
+      static int 				Create				( lua_State *L );
+      static int 				Draw				( lua_State *L );
+      static int 				Modify				( lua_State *L );
+      static int				Move				( lua_State *L );
+      static int				SetPosition			( lua_State *L );
+      static int				GetPosition			( lua_State *L );
+      static int				Size				( lua_State *L );
+
+    
   };
   
-class Sprites {
-public:
-    static int 				Load				( lua_State *L );
-    static int 				Draw				( lua_State *L );
-    static int				Move				( lua_State *L );
-    static int				SetPosition			( lua_State *L );
-    static int				GetPosition			( lua_State *L );
-  };
-   
+class Window {
 
-
-class Text {
-public:
-    static int 				Create				( lua_State *L );
-    static int 				Draw				( lua_State *L );
-    static int 				Modify				( lua_State *L );
-    static int				Move				( lua_State *L );
-    static int				SetPosition			( lua_State *L );
-    static int				GetPosition			( lua_State *L );
+  public:
+    static int Dimensions ( lua_State *L );
   };
-   
+  
 }
 #endif // CONTENT_H

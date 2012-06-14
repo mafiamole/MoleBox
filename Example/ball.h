@@ -47,7 +47,7 @@ class Ball : public MB::GameComponent
   bool IntereptEnemy(sf::Vector2f calculatedPositon,sf::Vector2f moveVector);
   sf::Sound sound;
   int playerScore,computerScore;
-  
+  float acceleration;
 public:
     Ball(Game* game);
     void SetOpponents(Player* player,Enemy* enemy);

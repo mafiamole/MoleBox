@@ -265,6 +265,32 @@ int MB_Lua::Sprites::GetPosition(lua_State* L)
   return 2;
 }
 
+int MB_Lua::Sprites::Size(lua_State* L)
+{
+  int n = lua_gettop( L ); 
+  
+  if ( n != 1 )
+    LuaHelper::PushError(  L, "Sprites.Size requires one arguments: ( string to display )");
+  
+  MB::LuaComponent* _this = getComponentFromUserData(L);  
+  int ref		= lua_tointeger(L,1);
+    
+  try {
+    int width = _this->GetSprite(ref)->getTextureRect().width;
+    int height = _this->GetSprite(ref)->getTextureRect().height;
+    
+    lua_pushinteger(L,width);
+    lua_pushinteger(L,height);
+  }
+  catch (std::string err)
+  {
+    LuaHelper::PushError(L, err);
+    
+  }
+  
+  return 2;
+}
+
 
 int MB_Lua::Text::Create(lua_State* L)
 {
@@ -310,26 +336,124 @@ int MB_Lua::Text::Modify(lua_State* L)
   
    MB::LuaComponent* _this = getComponentFromUserData(L);
   
-  int ref		= lua_tostring(L,1);
+  int ref		= lua_tointeger(L,1);
   std::string text 	= lua_tostring(L,2);
   
-  _this->GetText(ref)->setString(text);
- 
+  try {
+    _this->GetText(ref)->setString(text);
+  }
+  catch (std::string err)
+  {
+    LuaHelper::PushError(L, err);
+    
+  } 
+  return 0;
+}
+
+int MB_Lua::Text::Size(lua_State* L)
+{
+  int n = lua_gettop( L );
+  
+  if ( n != 1 )
+    LuaHelper::PushError(L, "Text.Size requires 1 argument ( the text object key) ");
+
+  MB::LuaComponent* _this = getComponentFromUserData(L);
+  
+  int ref = lua_tointeger(L,1);
+  
+  try {
+    sf::FloatRect bounds = _this->GetText(ref)->getLocalBounds();
+    std::cout << "Text bounds" << bounds.width << "," << bounds.height << std::endl;
+  }
+  catch (std::string err)
+  {
+    LuaHelper::PushError(L, err);
+    
+  }  
+  
   return 0;
 }
 
 
 int MB_Lua::Text::Move(lua_State* L)
 {
+  int n = lua_gettop( L );
+  
+  if ( n != 3 )
+    LuaHelper::PushError(L, "Text.Move requires three arguments ( the text object key, difference in x, difference in y) ");
 
+  MB::LuaComponent* _this = getComponentFromUserData(L);
+  
+  int ref = lua_tointeger(L,1);
+  float x = lua_tonumber(L,2);
+  float y = lua_tonumber(L,3);
+  try {
+    _this->GetText(ref)->move(x,y);
+
+  }
+  catch (std::string err)
+  {
+    LuaHelper::PushError(L, err);
+    
+  }
+  return 0;
 }
 
 int MB_Lua::Text::GetPosition(lua_State* L)
 {
+  int n = lua_gettop( L );
+  
+  if ( n != 1 )
+    LuaHelper::PushError(L, "Text.GetPosition requires 1 argument ( the text object key) ");
 
+  MB::LuaComponent* _this = getComponentFromUserData(L);
+  
+  int ref = lua_tointeger(L,1);
+
+  try {
+    sf::Vector2f textpos = _this->GetText(ref)->getPosition();
+    lua_pushnumber(L,textpos.x);
+    lua_pushnumber(L,textpos.y);
+  }
+  catch (std::string err)
+  {
+    LuaHelper::PushError(L, err);
+  }
+  return 0;
 }
 
 int MB_Lua::Text::SetPosition(lua_State* L)
 {
+    int n = lua_gettop( L );
+  
+  if ( n != 3 )
+    LuaHelper::PushError(L, "Text.SetPosition requires three arguments ( the text object key, difference in x, difference in y) ");
 
+  MB::LuaComponent* _this = getComponentFromUserData(L);
+  
+  int ref = lua_tointeger(L,1);
+  float x = lua_tonumber(L,2);
+  float y = lua_tonumber(L,3);
+  try {
+    _this->GetText(ref)->setPosition(x,y);
+  }
+  catch (std::string err)
+  {
+    LuaHelper::PushError(L, err);
+  }
+  return 0;
+}
+
+int MB_Lua::Window::Dimensions(lua_State* L)
+{
+  int n = lua_gettop( L );
+  
+  if ( n != 0)
+    LuaHelper::PushError(L, "Window.Size requires no arguments.");
+
+  MB::LuaComponent* _this = getComponentFromUserData(L);
+  
+  lua_pushinteger(L, _this->GetWindowSize().x);
+  lua_pushinteger(L, _this->GetWindowSize().y);
+  return 2;
 }

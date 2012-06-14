@@ -46,7 +46,7 @@ void MB::ActionsToLua(lua_State* L,MB::Actions* actions)
 }
 
 
-MB::LuaComponent::LuaComponent(Game* game,std::string file) : GameComponent(game), script() , soundKey(0), spriteKey(0), textKey(0), scriptFile(file)
+MB::LuaComponent::LuaComponent(Game* game,std::string file) : GameComponent(game), script() , soundKey(0), spriteKey(0), textKey(0), scriptFile(file),text(),textBatch()
 {
   
   //this->LoadScript(file);
@@ -85,7 +85,7 @@ void MB::LuaComponent::UpdateScriptPreCall(lua_State* L)
 
 
 
-void MB::LuaComponent::Update( sf::Time elapsed, MB::Types::EventList* events )
+void MB::LuaComponent::Update( sf::Time elapsed, MB::Types::EventList* events,int argCount )
 {
 #ifdef LUA_EDITOR
 
@@ -113,7 +113,7 @@ void MB::LuaComponent::Update( sf::Time elapsed, MB::Types::EventList* events )
   
   this->UpdateScriptPreCall(L);
   
-  int s = lua_pcall( L , 2, 0 ,0);
+  int s = lua_pcall( L , argCount, 0 ,0);
   
   this->script.HandleError(s);
   
@@ -129,6 +129,20 @@ int MB::LuaComponent::AddSounds(std::string file)
   return key;
 }
 
+
+sf::Sound* MB::LuaComponent::GetSound(int ref)
+{
+  if ( this->sounds.find(ref) != this->sounds.end() )
+  {
+    return &this->sounds[ref];
+  }
+  else
+  {
+    throw "Unable to find sound";
+  }
+}
+
+
 int MB::LuaComponent::AddSprite(std::string file)
 {
   
@@ -143,31 +157,6 @@ void MB::LuaComponent::AddSpriteToDrawList(int ref)
   this->spriteBatch.push_back(ref);
 }
 
-int MB::LuaComponent::AddText(std::string value)
-{
-  int key = this->textKey;
-    this->text.insert( std::pair <int,sf::Text>( key, sf::Text(value) )  );
-  return key;
-}
-
-void MB::LuaComponent::AddTextToDrawList(int ref)
-{
-  this->textBatch.push_back(ref);
-}
-
-
-sf::Sound* MB::LuaComponent::GetSound(int ref)
-{
-  if ( this->sounds.find(ref) != this->sounds.end() )
-  {
-    return &this->sounds[ref];
-  }
-  else
-  {
-    throw "Unable to find sound";
-  }
-}
-
 sf::Sprite* MB::LuaComponent::GetSprite(int ref)
 {
   if ( this->sprites.find(ref) != this->sprites.end() )
@@ -179,6 +168,27 @@ sf::Sprite* MB::LuaComponent::GetSprite(int ref)
     throw "Unable to find sprite";
   }
 }
+
+int MB::LuaComponent::AddText(std::string value)
+{
+  int key = this->textKey;
+  this->text.insert( std::pair <int,sf::Text>( key,sf::Text(sf::String(value)) )  );
+  this->textKey++;
+  return key;
+}
+
+void MB::LuaComponent::AddTextToDrawList(int ref)
+{
+  if ( this->text.find(ref) != this->text.end() ) {
+    this->textBatch.push_back(ref);
+  }
+  else
+  {
+    throw "Unable to find text.";
+  }
+}
+
+
 
 sf::Text* MB::LuaComponent::GetText(int ref)
 {
@@ -211,16 +221,20 @@ void MB::LuaComponent::Draw()
     }
   }
   spriteBatch.clear();
-  
+   
   std::vector<int>::iterator textItr;
+ 
   for (textItr = this->textBatch.begin(); textItr != this->textBatch.end(); textItr++)
   {
-    if (this->text.find((*spriteItr)) != this->text.end())
+    int key = (*textItr);
+    if (this->text.find(key) != this->text.end())
     {
-      this->game->Window()->draw (this->text[(*textItr)]);
+      
+      this->game->Window()->draw (this->text[key]);
     }
   }
   textBatch.clear();  
+  
   }
   else
   {
@@ -229,7 +243,14 @@ void MB::LuaComponent::Draw()
   GameComponent::Draw();
 }
 
+const sf::Vector2u& MB::LuaComponent::GetWindowSize()
+{
+  return this->game->Window()->getSize();
+}
+
+
 MB::LuaComponent::~LuaComponent()
 {
 
+  
 }

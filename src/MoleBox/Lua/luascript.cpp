@@ -95,6 +95,7 @@ void LuaScript::RegisterComponentFunctions()
   luaL_register(L,"Sprites",sprite);
   luaL_register(L,"Text",text);  
   luaL_register(L,"Sounds",sound);
+  luaL_register(L,"Window",window);
 }
 
 void LuaScript::RegisterDummyComponentFuncs()

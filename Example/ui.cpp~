@@ -40,17 +40,18 @@ void UI::SetBall(Ball* ball)
 
 void UI::UpdateScriptPreCall(lua_State* L)
 {
-    int playerScore = this->ball->PlayerScore();
-  computerScore = this->ball->ComputerScore()
-  lua_pushinteger(L,this->ball->PlayerScore());
-  lua_pushinteger(L,this->ball->ComputerScore());
-    MB::LuaComponent::UpdateScriptPreCall(L);
+  int pScore = this->ball->PlayerScore();
+  int cScore = this->ball->ComputerScore();
+  lua_pushinteger(L,pScore);
+  lua_pushinteger(L,cScore);
+  MB::LuaComponent::UpdateScriptPreCall(L);
 }
 
 
 void UI::Update(sf::Time elapsed, MB::Types::EventList* events)
 {
-    MB::LuaComponent::Update(elapsed, events);
+  
+  MB::LuaComponent::Update(elapsed, events,4);
 }
 
 void UI::Draw()

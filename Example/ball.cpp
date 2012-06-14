@@ -32,7 +32,7 @@
 #include <cstdlib>
 #include <ctime>
 
-Ball::Ball(Game* game) : MB::GameComponent(game), playerScore(0), computerScore(0)
+Ball::Ball(Game* game) : MB::GameComponent(game), playerScore(0), computerScore(0), acceleration(1.0f)
 {
   
 
@@ -66,8 +66,8 @@ void Ball::Update(sf::Time elapsed, MB::Types::EventList* events)
         
     sf::Vector2f moveVector;
     
-    moveVector.x = this->direction.x * (elapsed.asMilliseconds() * 0.5f);
-    moveVector.y = this->direction.y * (elapsed.asMilliseconds() * 0.5f);
+    moveVector.x = this->direction.x * (elapsed.asMilliseconds() * 0.5f * acceleration);
+    moveVector.y = this->direction.y * (elapsed.asMilliseconds() * 0.5f * acceleration);
     
     sf::Vector2f calculatedPositon;
     
@@ -87,6 +87,7 @@ void Ball::Update(sf::Time elapsed, MB::Types::EventList* events)
       calculatedPositon.x = this->sprite.getPosition().x + moveVector.x;
       this->sprite.setPosition(calculatedPositon);
       this->sound.play();
+      this->acceleration += 0.05f;
     }
     
     if ( calculatedPositon.x < 0 || calculatedPositon.x > this->game->Window()->getSize().x)
@@ -98,7 +99,7 @@ void Ball::Update(sf::Time elapsed, MB::Types::EventList* events)
 	  this->computerScore++;
 	else
 	  this->playerScore++;
-
+      acceleration = 1.0f;
     }
     else
     {

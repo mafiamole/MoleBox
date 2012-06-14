@@ -85,11 +85,13 @@ namespace MB {
     
     int AddText(std::string value);
     
+    const sf::Vector2u& GetWindowSize();
+    
     sf::Sprite* GetSprite(int ref);
     sf::Sound*	GetSound(int ref);
     sf::Text* GetText(int ref);
     
-    virtual void Update(sf::Time elapsed,Types::EventList* events);
+    virtual void Update(sf::Time elapsed,Types::EventList* events,int argCount = 2);
     virtual void Draw();
     
     virtual ~LuaComponent();

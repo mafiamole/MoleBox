@@ -100,7 +100,7 @@ void LuaScript::RegisterComponentFunctions()
 void LuaScript::RegisterDummyComponentFuncs()
 {
   luaL_register(L,"Sprites",sprite_DUMMY);
-  
+  luaL_register(L,"Text",text);    
   luaL_register(L,"Sounds",sound_DUMMY);
 }
 

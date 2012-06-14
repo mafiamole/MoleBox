@@ -1,23 +1,42 @@
---playerScore = {Text = 0,Current=0}
+Player = {ScoreText = 0,CurrentScore=0}
 
---computerScore = {Text = 0,Current=0}
+Computer = {ScoreText = 0,CurrentScore=0}
+WindowDimensions =  {}
+WindowDimensions = {Window.Size()}
 
 function init()
---  playerScore.Text = Text.Create("0");
---  computerScore.Text = Text.Create("0");
+  Player.ScoreText = Text.Create("0")
+  Computer.ScoreText = Text.Create("0")
+
+  setComputerTextLocation()
+end
+
+function setComputerTextLocation() 
+  computerTextSize = {Text.Size(Computer.ScoreText)}
+  newSize = WindowDimensions[1] - computerTextSize[1]
+  Text.Move(Computer.ScoreText, newSize ,0)
+
 end
 
 function update( events, elasped, playerScore, computerScore )
 
---  message(playerScore)
---  message(computerScore)
+  if  playerScore ~= Player.CurrentScore then
+    Text.Modify(Player.ScoreText,playerScore)
+    Player.CurrentScore = playerScore
+  end
+  
+  if computerScore ~= Computer.CurrentScore then
+    Text.Modify(Computer.ScoreText,computerScore)
+    Computer.CurrentScore = computerScore
+  end
+  
   
 end
 
 function draw()
   
---  Text.Draw(playerScore.Text)
---  Text.Draw(computerScore.Text)
+  Text.Draw(Player.ScoreText)
+  Text.Draw(Computer.ScoreText)
   
 end
 
