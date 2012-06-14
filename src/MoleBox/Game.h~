@@ -69,6 +69,8 @@ class GameComponent;
     
   protected:
     
+    bool 			windowResized;
+    
     sf::Clock 			clock;
     
     Actions 			actionList;
@@ -85,12 +87,6 @@ class GameComponent;
     * Method that returns the number of components already assigned to the game loop.
     */
     int 			ComponentCount	();
-    /**
-    * 
-    * Used to render the sprite to the screen.
-    * 
-    */
-    void			DrawSprite(const sf::Drawable& drawable, const sf::RenderStates& states = sf::RenderStates::Default);
     
   public:
     
@@ -124,6 +120,12 @@ class GameComponent;
     * Contains the game loop
     */
     virtual void 		Run		(int argc, char** argv);
+    /**
+    * 
+    * Used to render the sprite to the screen.
+    * 
+    */
+    void			DrawSprite(const sf::Drawable& drawable, const sf::RenderStates& states = sf::RenderStates::Default);
     
 #ifdef LUA_EDITOR    
     virtual std::vector<std::string>		GetScripts	();

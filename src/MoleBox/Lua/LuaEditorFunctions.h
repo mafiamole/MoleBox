@@ -47,6 +47,7 @@ static const luaL_reg lua_reg_sound_DUMMY[] =
 static const luaL_reg lua_reg_window_DUMMY[] =
 {
   { "Size", voidLuaEmptyFunction<0>},
+  { "Resize", voidLuaEmptyFunction<0>},
   { NULL, NULL }
 };
 

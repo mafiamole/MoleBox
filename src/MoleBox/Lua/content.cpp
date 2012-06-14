@@ -458,3 +458,20 @@ int MB_Lua::Window::Dimensions(lua_State* L)
   lua_pushinteger(L, _this->GetWindowSize().y);
   return 2;
 }
+
+int MB_Lua::Window::Resized(lua_State* L)
+{
+  int n = lua_gettop ( L );
+  
+  if ( n != 0)
+   LuaHelper::PushError(L, "Window.Resized requires no arguments.");
+  MB::LuaComponent* _this = getComponentFromUserData(L);
+  
+  bool windowResize = _this->GetGame()->WindowResized();  
+  
+  lua_pushboolean(L, windowResize);
+  
+  return 1;
+  
+}
+

@@ -56,6 +56,8 @@ namespace MB {
     */
 			GameComponent   ();
 			GameComponent	(Game *game);
+			
+			Game * GetGame();
     /**
     * Called every game loop.
     * This function is used for changing the components state.

@@ -2,6 +2,7 @@
 #define LUAEDITORFUNCTIONS_H
 
 #include "lua.hpp"
+#include <string>
 
 template <int T> static int voidLuaEmptyFunction(lua_State *L) {
   
@@ -45,6 +46,7 @@ static const luaL_reg lua_reg_sound_DUMMY[] =
 
 static const luaL_reg lua_reg_window_DUMMY[] =
 {
+  { "Size", voidLuaEmptyFunction<0>},
   { "Size", voidLuaEmptyFunction<0>},
   { NULL, NULL }
 };

@@ -31,7 +31,7 @@
 
 #include "game.h"
 
-Game::Game() : MB::Game("Game Title"), won("No one"),finished(false)
+Game::Game() : MB::Game("Ultra Pong 3000"), won("No one"),finished(false)
 {
 
   this->actionList.Register("Player Move Up",new MB::Keyboard(sf::Keyboard::Up));

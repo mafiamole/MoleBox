@@ -108,19 +108,21 @@ void MB::Game::Run(int argc, char** argv)
   sf::Thread qtThread( &MB::LuaGUIThread,argList);
   qtThread.launch(); 
 #endif
-  	this->window->setFramerateLimit(60);
+  this->window->setFramerateLimit(60);
   //clock.restart();
   sf::Time elapsed = clock.restart();
   while ( this->window->isOpen() )
   {
+    if ( this->windowResized ) this->windowResized = false;
     
     sf::Event event;
 
     while ( window->pollEvent(event) )
     {
-      
       if ( event.type == sf::Event::Closed )
 	window->close();
+      else if ( event.type = sf::Event::Resized )
+	this->windowResized = true;
       else
 	eventList.insert( std::pair< sf::Event::EventType,sf::Event >( event.type,event ) );
 
@@ -166,6 +168,12 @@ MB::Actions* MB::Game::GetActions()
 {
   return &this->actionList;
 }
+
+bool MB::Game::WindowResized()
+{
+  return this->windowResized;
+}
+
 
 #ifdef LUA_EDITOR
 

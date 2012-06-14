@@ -69,6 +69,8 @@ class GameComponent;
     
   protected:
     
+    bool 			windowResized;
+    
     sf::Clock 			clock;
     
     Actions 			actionList;
@@ -125,6 +127,11 @@ class GameComponent;
     */
     void			DrawSprite(const sf::Drawable& drawable, const sf::RenderStates& states = sf::RenderStates::Default);
     
+    /**
+     * 
+     * 
+     */
+    bool 			WindowResized();
 #ifdef LUA_EDITOR    
     virtual std::vector<std::string>		GetScripts	();
     virtual std::string				GetScript	(std::string name);

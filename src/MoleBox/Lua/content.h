@@ -71,6 +71,7 @@ class Window {
 
   public:
     static int Dimensions ( lua_State *L );
+    static int Resized	  ( lua_State *L ); 
   };
   
 }

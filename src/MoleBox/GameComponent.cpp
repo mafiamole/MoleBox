@@ -55,3 +55,7 @@ void MB::GameComponent::Update (sf::Time elapsed, MB::Types::EventList* events )
 
 }
 
+MB::Game* MB::GameComponent::GetGame()
+{
+  return this->game;
+}

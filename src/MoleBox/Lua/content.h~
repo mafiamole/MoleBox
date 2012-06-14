@@ -49,6 +49,7 @@ namespace MB_Lua {
       static int				Move				( lua_State *L );
       static int				SetPosition			( lua_State *L );
       static int				GetPosition			( lua_State *L );
+      static int				Size				( lua_State *L );
     };
     
 
@@ -61,12 +62,16 @@ namespace MB_Lua {
       static int				Move				( lua_State *L );
       static int				SetPosition			( lua_State *L );
       static int				GetPosition			( lua_State *L );
-    };
+      static int				Size				( lua_State *L );
+
+    
+  };
   
 class Window {
 
   public:
     static int Dimensions ( lua_State *L );
+    static int Resized	  ( lua_State *L );
   };
   
 }

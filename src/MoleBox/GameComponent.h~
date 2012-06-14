@@ -54,8 +54,10 @@ namespace MB {
     /**
     * the Constructor sets the pointer to the SFMLGame member.
     */
-			GameComponent   (Game *game);
+			GameComponent   ();
 			GameComponent	(Game *game);
+			
+			Game *game;
     /**
     * Called every game loop.
     * This function is used for changing the components state.

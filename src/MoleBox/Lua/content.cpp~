@@ -363,7 +363,8 @@ int MB_Lua::Text::Size(lua_State* L)
   
   try {
     sf::FloatRect bounds = _this->GetText(ref)->getLocalBounds();
-    std::cout << "Text bounds" << bounds.width << "," << bounds.height << std::endl;
+    lua_pushnumber(L,bounds.width);
+    lua_pushnumber(L,bounds.height);
   }
   catch (std::string err)
   {
@@ -371,7 +372,7 @@ int MB_Lua::Text::Size(lua_State* L)
     
   }  
   
-  return 0;
+  return 2;
 }
 
 
@@ -457,3 +458,18 @@ int MB_Lua::Window::Dimensions(lua_State* L)
   lua_pushinteger(L, _this->GetWindowSize().y);
   return 2;
 }
+
+int MB_Lua::Window::Resized(lua_State* L)
+{
+  int n = lua_gettop ( L );
+  
+  if ( n != 0)
+   LuaHelper::PushError(L, "Window.Resized requires no arguments.");
+  MB::LuaComponent* _this = getComponentFromUserData(L);
+  
+  bool windowResize = _this->GetGame()->WindowResized();  
+  
+  
+  
+}
+
