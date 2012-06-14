@@ -195,6 +195,8 @@ Example2/Example2: /usr/lib64/libICE.so
 Example2/Example2: /usr/lib64/libX11.so
 Example2/Example2: /usr/lib64/libXext.so
 Example2/Example2: /usr/lib64/liblua-5.1.so
+Example2/Example2: /usr/lib64/libQtGui_debug.so
+Example2/Example2: /usr/lib64/libQtCore_debug.so
 Example2/Example2: Example2/CMakeFiles/Example2.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking CXX executable Example2"
 	cd /home/mafiamole/projects/MoleBox/build/linux/Example2 && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Example2.dir/link.txt --verbose=$(VERBOSE)

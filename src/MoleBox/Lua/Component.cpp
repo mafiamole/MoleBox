@@ -51,7 +51,12 @@ MB::LuaComponent::LuaComponent(Game* game,std::string file) : GameComponent(game
   
   //this->LoadScript(file);
   int success;
-
+  
+  this->script.AddLibrary("Window",sfml_lua_window);
+  this->script.AddLibrary("Sprite",sfml_lua_sprite);
+  this->script.AddLibrary("Text",sfml_lua_text);
+  this->script.AddLibrary("Sound",sfml_lua_sound);
+  
   bool loadedScript = this->script.LoadFromFile(file);
 
   

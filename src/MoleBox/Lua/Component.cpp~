@@ -51,7 +51,12 @@ MB::LuaComponent::LuaComponent(Game* game,std::string file) : GameComponent(game
   
   //this->LoadScript(file);
   int success;
-
+  
+  this->script.RegisterLibrary("Window",sfml_lua_window);
+  this->script.RegisterLibrary("Sprite",sfml_lua_sprite);
+  this->script.RegisterLibrary("Text",sfml_lua_text);
+  this->script.RegisterLibrary("Sound",sfml_lua_sound);
+  
   bool loadedScript = this->script.LoadFromFile(file);
 
   
@@ -242,6 +247,12 @@ void MB::LuaComponent::Draw()
   }
   GameComponent::Draw();
 }
+
+const sf::Vector2u& MB::LuaComponent::GetWindowSize()
+{
+  return this->game->Window()->getSize();
+}
+
 
 MB::LuaComponent::~LuaComponent()
 {

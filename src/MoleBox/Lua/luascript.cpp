@@ -29,7 +29,7 @@
 #include <fstream>
 #include <sstream>
 
-LuaScript::LuaScript(bool debug) : debug(debug)
+LuaScript::LuaScript()
 {
 
 }
@@ -64,9 +64,12 @@ std::string LuaScript::ErrorTypeName(int state)
   return "";
 }
 
-void LuaScript::RegisterLibrary(std::string name,const luaL_Reg* stuff)
+
+
+void LuaScript::AddLibrary(std::string name,const luaL_Reg* stuff)
 {
-  luaL_register(L,name.c_str(),stuff);
+  this->FuncsToReg.insert ( std::pair<std::string,const luaL_Reg*>(name,stuff) );
+  
 }
 
 
@@ -97,20 +100,20 @@ bool LuaScript::HandleError(int State)
   }
 }
 
-void LuaScript::RegisterComponentFunctions()
-{
-  luaL_register(L,"Sprites",sprite);
-  luaL_register(L,"Text",text);  
-  luaL_register(L,"Sounds",sound);
-  luaL_register(L,"Window",window);
-}
-
-void LuaScript::RegisterDummyComponentFuncs()
-{
-  luaL_register(L,"Sprites",sprite_DUMMY);
-  luaL_register(L,"Text",text);    
-  luaL_register(L,"Sounds",sound_DUMMY);
-}
+// void LuaScript::RegisterComponentFunctions()
+// {
+//   luaL_register(L,"Sprites",sprite);
+//   luaL_register(L,"Text",text);  
+//   luaL_register(L,"Sounds",sound);
+//   luaL_register(L,"Window",window);
+// }
+// 
+// void LuaScript::RegisterDummyComponentFuncs()
+// {
+//   luaL_register(L,"Sprites",sprite_DUMMY);
+//   luaL_register(L,"Text",text);    
+//   luaL_register(L,"Sounds",sound_DUMMY);
+// }
 
 
 bool LuaScript::LoadFromFile(std::string file)
@@ -121,13 +124,17 @@ bool LuaScript::LoadFromFile(std::string file)
   this->L = luaL_newstate();
   
   luaL_openlibs(this->L);
+
+  LuaRegisterMap::iterator regItr;
   
-  if (debug) {
-    this->RegisterDummyComponentFuncs();
+  for (regItr = this->FuncsToReg.begin(); regItr != this->FuncsToReg.end(); regItr++)
+  {
+   
+    const luaL_reg* reg =  (*regItr).second;
+    luaL_register( L , (*regItr).first.c_str() , reg);
+    
   }
-  else {
-    this->RegisterComponentFunctions();    
-  }
+
   
 #ifdef LUA_EDITOR
   success = LuaHelper::LuaScripts::Instance().LoadFromFile(L,file);
@@ -148,12 +155,14 @@ bool LuaScript::LoadFromString(std::string contents,std::string remarks)
   
   luaL_openlibs(L);
   
-  if (debug) {
-    this->RegisterDummyComponentFuncs();
-  }
-  else {
+  LuaRegisterMap::iterator regItr;
+  
+  for (regItr = this->FuncsToReg.begin(); regItr != this->FuncsToReg.end(); regItr++)
+  {
+   
+    const luaL_reg* reg =  (*regItr).second;
+    luaL_register( L , (*regItr).first.c_str() , reg);
     
-    this->RegisterComponentFunctions();    
   }
   
   success = luaL_loadstring(L,contents.c_str());

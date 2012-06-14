@@ -14,6 +14,10 @@ src/MoleBox/CMakeFiles/MoleBox.dir/Actions/keyboard.cpp.o: /usr/local/include/SF
 src/MoleBox/CMakeFiles/MoleBox.dir/Actions/keyboard.cpp.o: /usr/local/include/SFML/Window/Keyboard.hpp
 src/MoleBox/CMakeFiles/MoleBox.dir/Actions/keyboard.cpp.o: /usr/local/include/SFML/Window/Mouse.hpp
 
+src/MoleBox/CMakeFiles/MoleBox.dir/Actions/moc_keyboard.cxx.o: src/MoleBox/Actions/moc_keyboard.cxx
+
+src/MoleBox/CMakeFiles/MoleBox.dir/Actions/moc_mouse.cxx.o: src/MoleBox/Actions/moc_mouse.cxx
+
 src/MoleBox/CMakeFiles/MoleBox.dir/Actions/mouse.cpp.o: ../../src/MoleBox/Actions/../ContainerDefinitions.h
 src/MoleBox/CMakeFiles/MoleBox.dir/Actions/mouse.cpp.o: ../../src/MoleBox/Actions/../action.h
 src/MoleBox/CMakeFiles/MoleBox.dir/Actions/mouse.cpp.o: ../../src/MoleBox/Actions/mouse.cpp
@@ -133,6 +137,10 @@ src/MoleBox/CMakeFiles/MoleBox.dir/Content/Content.cpp.o: /usr/local/include/SFM
 src/MoleBox/CMakeFiles/MoleBox.dir/Content/Content.cpp.o: /usr/local/include/SFML/Window/WindowHandle.hpp
 src/MoleBox/CMakeFiles/MoleBox.dir/Content/Content.cpp.o: /usr/local/include/SFML/Window/WindowStyle.hpp
 
+src/MoleBox/CMakeFiles/MoleBox.dir/Content/moc_Content.cxx.o: src/MoleBox/Content/moc_Content.cxx
+
+src/MoleBox/CMakeFiles/MoleBox.dir/Content/moc_ContentTemplate.cxx.o: src/MoleBox/Content/moc_ContentTemplate.cxx
+
 src/MoleBox/CMakeFiles/MoleBox.dir/Game.cpp.o: ../../src/MoleBox/ContainerDefinitions.h
 src/MoleBox/CMakeFiles/MoleBox.dir/Game.cpp.o: ../../src/MoleBox/Game.cpp
 src/MoleBox/CMakeFiles/MoleBox.dir/Game.cpp.o: ../../src/MoleBox/Game.h
@@ -144,6 +152,8 @@ src/MoleBox/CMakeFiles/MoleBox.dir/Game.cpp.o: ../../src/MoleBox/Lua/luaeditor.h
 src/MoleBox/CMakeFiles/MoleBox.dir/Game.cpp.o: ../../src/MoleBox/Lua/luascripts.h
 src/MoleBox/CMakeFiles/MoleBox.dir/Game.cpp.o: ../../src/MoleBox/action.h
 src/MoleBox/CMakeFiles/MoleBox.dir/Game.cpp.o: ../../src/MoleBox/actions.h
+src/MoleBox/CMakeFiles/MoleBox.dir/Game.cpp.o: /usr/include/QtGui/QSyntaxHighlighter
+src/MoleBox/CMakeFiles/MoleBox.dir/Game.cpp.o: /usr/include/QtGui/qsyntaxhighlighter.h
 src/MoleBox/CMakeFiles/MoleBox.dir/Game.cpp.o: /usr/local/include/SFML/Audio.hpp
 src/MoleBox/CMakeFiles/MoleBox.dir/Game.cpp.o: /usr/local/include/SFML/Audio/Export.hpp
 src/MoleBox/CMakeFiles/MoleBox.dir/Game.cpp.o: /usr/local/include/SFML/Audio/Listener.hpp
@@ -473,11 +483,14 @@ src/MoleBox/CMakeFiles/MoleBox.dir/Lua/content.cpp.o: /usr/local/include/SFML/Wi
 src/MoleBox/CMakeFiles/MoleBox.dir/Lua/luaeditor.cpp.o: ../../src/MoleBox/Lua/../Content/Content.h
 src/MoleBox/CMakeFiles/MoleBox.dir/Lua/luaeditor.cpp.o: ../../src/MoleBox/Lua/../Content/ContentTemplate.h
 src/MoleBox/CMakeFiles/MoleBox.dir/Lua/luaeditor.cpp.o: ../../src/MoleBox/Lua/LuaScriptHelper.h
-src/MoleBox/CMakeFiles/MoleBox.dir/Lua/luaeditor.cpp.o: ../../src/MoleBox/Lua/content.h
 src/MoleBox/CMakeFiles/MoleBox.dir/Lua/luaeditor.cpp.o: ../../src/MoleBox/Lua/luaeditor.cpp
 src/MoleBox/CMakeFiles/MoleBox.dir/Lua/luaeditor.cpp.o: ../../src/MoleBox/Lua/luaeditor.h
 src/MoleBox/CMakeFiles/MoleBox.dir/Lua/luaeditor.cpp.o: ../../src/MoleBox/Lua/luascript.h
 src/MoleBox/CMakeFiles/MoleBox.dir/Lua/luaeditor.cpp.o: ../../src/MoleBox/Lua/luascripts.h
+src/MoleBox/CMakeFiles/MoleBox.dir/Lua/luaeditor.cpp.o: /usr/include/QtCore/qfile.h
+src/MoleBox/CMakeFiles/MoleBox.dir/Lua/luaeditor.cpp.o: /usr/include/QtCore/qtextstream.h
+src/MoleBox/CMakeFiles/MoleBox.dir/Lua/luaeditor.cpp.o: /usr/include/QtGui/QSyntaxHighlighter
+src/MoleBox/CMakeFiles/MoleBox.dir/Lua/luaeditor.cpp.o: /usr/include/QtGui/qsyntaxhighlighter.h
 src/MoleBox/CMakeFiles/MoleBox.dir/Lua/luaeditor.cpp.o: /usr/local/include/SFML/Audio.hpp
 src/MoleBox/CMakeFiles/MoleBox.dir/Lua/luaeditor.cpp.o: /usr/local/include/SFML/Audio/Export.hpp
 src/MoleBox/CMakeFiles/MoleBox.dir/Lua/luaeditor.cpp.o: /usr/local/include/SFML/Audio/Listener.hpp
@@ -554,52 +567,10 @@ src/MoleBox/CMakeFiles/MoleBox.dir/Lua/luaeditor.cpp.o: /usr/local/include/SFML/
 src/MoleBox/CMakeFiles/MoleBox.dir/Lua/luaeditor.cpp.o: /usr/local/include/SFML/Window/WindowStyle.hpp
 src/MoleBox/CMakeFiles/MoleBox.dir/Lua/luaeditor.cpp.o: src/MoleBox/ui_GameLuaEditor.h
 
-src/MoleBox/CMakeFiles/MoleBox.dir/Lua/luascript.cpp.o: ../../src/MoleBox/Lua/../Content/Content.h
-src/MoleBox/CMakeFiles/MoleBox.dir/Lua/luascript.cpp.o: ../../src/MoleBox/Lua/../Content/ContentTemplate.h
-src/MoleBox/CMakeFiles/MoleBox.dir/Lua/luascript.cpp.o: ../../src/MoleBox/Lua/LuaScriptHelper.h
-src/MoleBox/CMakeFiles/MoleBox.dir/Lua/luascript.cpp.o: ../../src/MoleBox/Lua/content.h
 src/MoleBox/CMakeFiles/MoleBox.dir/Lua/luascript.cpp.o: ../../src/MoleBox/Lua/luascript.cpp
 src/MoleBox/CMakeFiles/MoleBox.dir/Lua/luascript.cpp.o: ../../src/MoleBox/Lua/luascript.h
 src/MoleBox/CMakeFiles/MoleBox.dir/Lua/luascript.cpp.o: ../../src/MoleBox/Lua/luascripts.h
-src/MoleBox/CMakeFiles/MoleBox.dir/Lua/luascript.cpp.o: /usr/local/include/SFML/Audio.hpp
-src/MoleBox/CMakeFiles/MoleBox.dir/Lua/luascript.cpp.o: /usr/local/include/SFML/Audio/Export.hpp
-src/MoleBox/CMakeFiles/MoleBox.dir/Lua/luascript.cpp.o: /usr/local/include/SFML/Audio/Listener.hpp
-src/MoleBox/CMakeFiles/MoleBox.dir/Lua/luascript.cpp.o: /usr/local/include/SFML/Audio/Music.hpp
-src/MoleBox/CMakeFiles/MoleBox.dir/Lua/luascript.cpp.o: /usr/local/include/SFML/Audio/Sound.hpp
-src/MoleBox/CMakeFiles/MoleBox.dir/Lua/luascript.cpp.o: /usr/local/include/SFML/Audio/SoundBuffer.hpp
-src/MoleBox/CMakeFiles/MoleBox.dir/Lua/luascript.cpp.o: /usr/local/include/SFML/Audio/SoundBufferRecorder.hpp
-src/MoleBox/CMakeFiles/MoleBox.dir/Lua/luascript.cpp.o: /usr/local/include/SFML/Audio/SoundRecorder.hpp
-src/MoleBox/CMakeFiles/MoleBox.dir/Lua/luascript.cpp.o: /usr/local/include/SFML/Audio/SoundSource.hpp
-src/MoleBox/CMakeFiles/MoleBox.dir/Lua/luascript.cpp.o: /usr/local/include/SFML/Audio/SoundStream.hpp
 src/MoleBox/CMakeFiles/MoleBox.dir/Lua/luascript.cpp.o: /usr/local/include/SFML/Config.hpp
-src/MoleBox/CMakeFiles/MoleBox.dir/Lua/luascript.cpp.o: /usr/local/include/SFML/Graphics.hpp
-src/MoleBox/CMakeFiles/MoleBox.dir/Lua/luascript.cpp.o: /usr/local/include/SFML/Graphics/BlendMode.hpp
-src/MoleBox/CMakeFiles/MoleBox.dir/Lua/luascript.cpp.o: /usr/local/include/SFML/Graphics/CircleShape.hpp
-src/MoleBox/CMakeFiles/MoleBox.dir/Lua/luascript.cpp.o: /usr/local/include/SFML/Graphics/Color.hpp
-src/MoleBox/CMakeFiles/MoleBox.dir/Lua/luascript.cpp.o: /usr/local/include/SFML/Graphics/ConvexShape.hpp
-src/MoleBox/CMakeFiles/MoleBox.dir/Lua/luascript.cpp.o: /usr/local/include/SFML/Graphics/Drawable.hpp
-src/MoleBox/CMakeFiles/MoleBox.dir/Lua/luascript.cpp.o: /usr/local/include/SFML/Graphics/Export.hpp
-src/MoleBox/CMakeFiles/MoleBox.dir/Lua/luascript.cpp.o: /usr/local/include/SFML/Graphics/Font.hpp
-src/MoleBox/CMakeFiles/MoleBox.dir/Lua/luascript.cpp.o: /usr/local/include/SFML/Graphics/Glyph.hpp
-src/MoleBox/CMakeFiles/MoleBox.dir/Lua/luascript.cpp.o: /usr/local/include/SFML/Graphics/Image.hpp
-src/MoleBox/CMakeFiles/MoleBox.dir/Lua/luascript.cpp.o: /usr/local/include/SFML/Graphics/PrimitiveType.hpp
-src/MoleBox/CMakeFiles/MoleBox.dir/Lua/luascript.cpp.o: /usr/local/include/SFML/Graphics/Rect.hpp
-src/MoleBox/CMakeFiles/MoleBox.dir/Lua/luascript.cpp.o: /usr/local/include/SFML/Graphics/Rect.inl
-src/MoleBox/CMakeFiles/MoleBox.dir/Lua/luascript.cpp.o: /usr/local/include/SFML/Graphics/RectangleShape.hpp
-src/MoleBox/CMakeFiles/MoleBox.dir/Lua/luascript.cpp.o: /usr/local/include/SFML/Graphics/RenderStates.hpp
-src/MoleBox/CMakeFiles/MoleBox.dir/Lua/luascript.cpp.o: /usr/local/include/SFML/Graphics/RenderTarget.hpp
-src/MoleBox/CMakeFiles/MoleBox.dir/Lua/luascript.cpp.o: /usr/local/include/SFML/Graphics/RenderTexture.hpp
-src/MoleBox/CMakeFiles/MoleBox.dir/Lua/luascript.cpp.o: /usr/local/include/SFML/Graphics/RenderWindow.hpp
-src/MoleBox/CMakeFiles/MoleBox.dir/Lua/luascript.cpp.o: /usr/local/include/SFML/Graphics/Shader.hpp
-src/MoleBox/CMakeFiles/MoleBox.dir/Lua/luascript.cpp.o: /usr/local/include/SFML/Graphics/Shape.hpp
-src/MoleBox/CMakeFiles/MoleBox.dir/Lua/luascript.cpp.o: /usr/local/include/SFML/Graphics/Sprite.hpp
-src/MoleBox/CMakeFiles/MoleBox.dir/Lua/luascript.cpp.o: /usr/local/include/SFML/Graphics/Text.hpp
-src/MoleBox/CMakeFiles/MoleBox.dir/Lua/luascript.cpp.o: /usr/local/include/SFML/Graphics/Texture.hpp
-src/MoleBox/CMakeFiles/MoleBox.dir/Lua/luascript.cpp.o: /usr/local/include/SFML/Graphics/Transform.hpp
-src/MoleBox/CMakeFiles/MoleBox.dir/Lua/luascript.cpp.o: /usr/local/include/SFML/Graphics/Transformable.hpp
-src/MoleBox/CMakeFiles/MoleBox.dir/Lua/luascript.cpp.o: /usr/local/include/SFML/Graphics/Vertex.hpp
-src/MoleBox/CMakeFiles/MoleBox.dir/Lua/luascript.cpp.o: /usr/local/include/SFML/Graphics/VertexArray.hpp
-src/MoleBox/CMakeFiles/MoleBox.dir/Lua/luascript.cpp.o: /usr/local/include/SFML/Graphics/View.hpp
 src/MoleBox/CMakeFiles/MoleBox.dir/Lua/luascript.cpp.o: /usr/local/include/SFML/System.hpp
 src/MoleBox/CMakeFiles/MoleBox.dir/Lua/luascript.cpp.o: /usr/local/include/SFML/System/Clock.hpp
 src/MoleBox/CMakeFiles/MoleBox.dir/Lua/luascript.cpp.o: /usr/local/include/SFML/System/Err.hpp
@@ -622,19 +593,6 @@ src/MoleBox/CMakeFiles/MoleBox.dir/Lua/luascript.cpp.o: /usr/local/include/SFML/
 src/MoleBox/CMakeFiles/MoleBox.dir/Lua/luascript.cpp.o: /usr/local/include/SFML/System/Vector2.inl
 src/MoleBox/CMakeFiles/MoleBox.dir/Lua/luascript.cpp.o: /usr/local/include/SFML/System/Vector3.hpp
 src/MoleBox/CMakeFiles/MoleBox.dir/Lua/luascript.cpp.o: /usr/local/include/SFML/System/Vector3.inl
-src/MoleBox/CMakeFiles/MoleBox.dir/Lua/luascript.cpp.o: /usr/local/include/SFML/Window.hpp
-src/MoleBox/CMakeFiles/MoleBox.dir/Lua/luascript.cpp.o: /usr/local/include/SFML/Window/Context.hpp
-src/MoleBox/CMakeFiles/MoleBox.dir/Lua/luascript.cpp.o: /usr/local/include/SFML/Window/ContextSettings.hpp
-src/MoleBox/CMakeFiles/MoleBox.dir/Lua/luascript.cpp.o: /usr/local/include/SFML/Window/Event.hpp
-src/MoleBox/CMakeFiles/MoleBox.dir/Lua/luascript.cpp.o: /usr/local/include/SFML/Window/Export.hpp
-src/MoleBox/CMakeFiles/MoleBox.dir/Lua/luascript.cpp.o: /usr/local/include/SFML/Window/GlResource.hpp
-src/MoleBox/CMakeFiles/MoleBox.dir/Lua/luascript.cpp.o: /usr/local/include/SFML/Window/Joystick.hpp
-src/MoleBox/CMakeFiles/MoleBox.dir/Lua/luascript.cpp.o: /usr/local/include/SFML/Window/Keyboard.hpp
-src/MoleBox/CMakeFiles/MoleBox.dir/Lua/luascript.cpp.o: /usr/local/include/SFML/Window/Mouse.hpp
-src/MoleBox/CMakeFiles/MoleBox.dir/Lua/luascript.cpp.o: /usr/local/include/SFML/Window/VideoMode.hpp
-src/MoleBox/CMakeFiles/MoleBox.dir/Lua/luascript.cpp.o: /usr/local/include/SFML/Window/Window.hpp
-src/MoleBox/CMakeFiles/MoleBox.dir/Lua/luascript.cpp.o: /usr/local/include/SFML/Window/WindowHandle.hpp
-src/MoleBox/CMakeFiles/MoleBox.dir/Lua/luascript.cpp.o: /usr/local/include/SFML/Window/WindowStyle.hpp
 
 src/MoleBox/CMakeFiles/MoleBox.dir/Lua/luascripts.cpp.o: ../../src/MoleBox/Lua/luascripts.cpp
 src/MoleBox/CMakeFiles/MoleBox.dir/Lua/luascripts.cpp.o: ../../src/MoleBox/Lua/luascripts.h
@@ -662,6 +620,98 @@ src/MoleBox/CMakeFiles/MoleBox.dir/Lua/luascripts.cpp.o: /usr/local/include/SFML
 src/MoleBox/CMakeFiles/MoleBox.dir/Lua/luascripts.cpp.o: /usr/local/include/SFML/System/Vector3.hpp
 src/MoleBox/CMakeFiles/MoleBox.dir/Lua/luascripts.cpp.o: /usr/local/include/SFML/System/Vector3.inl
 
+src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_Component.cxx.o: src/MoleBox/Lua/moc_Component.cxx
+
+src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_LuaScriptHelper.cxx.o: src/MoleBox/Lua/moc_LuaScriptHelper.cxx
+
+src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_luaeditor.cxx.o: src/MoleBox/Lua/../../../../../src/MoleBox/Lua/../Content/Content.h
+src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_luaeditor.cxx.o: src/MoleBox/Lua/../../../../../src/MoleBox/Lua/../Content/ContentTemplate.h
+src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_luaeditor.cxx.o: src/MoleBox/Lua/../../../../../src/MoleBox/Lua/LuaScriptHelper.h
+src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_luaeditor.cxx.o: src/MoleBox/Lua/../../../../../src/MoleBox/Lua/luaeditor.h
+src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_luaeditor.cxx.o: src/MoleBox/Lua/../../../../../src/MoleBox/Lua/luascripts.h
+src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_luaeditor.cxx.o: src/MoleBox/Lua/moc_luaeditor.cxx
+src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_luaeditor.cxx.o: /usr/include/QtGui/QSyntaxHighlighter
+src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_luaeditor.cxx.o: /usr/include/QtGui/qsyntaxhighlighter.h
+src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_luaeditor.cxx.o: /usr/local/include/SFML/Audio.hpp
+src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_luaeditor.cxx.o: /usr/local/include/SFML/Audio/Export.hpp
+src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_luaeditor.cxx.o: /usr/local/include/SFML/Audio/Listener.hpp
+src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_luaeditor.cxx.o: /usr/local/include/SFML/Audio/Music.hpp
+src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_luaeditor.cxx.o: /usr/local/include/SFML/Audio/Sound.hpp
+src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_luaeditor.cxx.o: /usr/local/include/SFML/Audio/SoundBuffer.hpp
+src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_luaeditor.cxx.o: /usr/local/include/SFML/Audio/SoundBufferRecorder.hpp
+src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_luaeditor.cxx.o: /usr/local/include/SFML/Audio/SoundRecorder.hpp
+src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_luaeditor.cxx.o: /usr/local/include/SFML/Audio/SoundSource.hpp
+src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_luaeditor.cxx.o: /usr/local/include/SFML/Audio/SoundStream.hpp
+src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_luaeditor.cxx.o: /usr/local/include/SFML/Config.hpp
+src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_luaeditor.cxx.o: /usr/local/include/SFML/Graphics.hpp
+src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_luaeditor.cxx.o: /usr/local/include/SFML/Graphics/BlendMode.hpp
+src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_luaeditor.cxx.o: /usr/local/include/SFML/Graphics/CircleShape.hpp
+src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_luaeditor.cxx.o: /usr/local/include/SFML/Graphics/Color.hpp
+src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_luaeditor.cxx.o: /usr/local/include/SFML/Graphics/ConvexShape.hpp
+src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_luaeditor.cxx.o: /usr/local/include/SFML/Graphics/Drawable.hpp
+src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_luaeditor.cxx.o: /usr/local/include/SFML/Graphics/Export.hpp
+src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_luaeditor.cxx.o: /usr/local/include/SFML/Graphics/Font.hpp
+src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_luaeditor.cxx.o: /usr/local/include/SFML/Graphics/Glyph.hpp
+src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_luaeditor.cxx.o: /usr/local/include/SFML/Graphics/Image.hpp
+src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_luaeditor.cxx.o: /usr/local/include/SFML/Graphics/PrimitiveType.hpp
+src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_luaeditor.cxx.o: /usr/local/include/SFML/Graphics/Rect.hpp
+src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_luaeditor.cxx.o: /usr/local/include/SFML/Graphics/Rect.inl
+src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_luaeditor.cxx.o: /usr/local/include/SFML/Graphics/RectangleShape.hpp
+src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_luaeditor.cxx.o: /usr/local/include/SFML/Graphics/RenderStates.hpp
+src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_luaeditor.cxx.o: /usr/local/include/SFML/Graphics/RenderTarget.hpp
+src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_luaeditor.cxx.o: /usr/local/include/SFML/Graphics/RenderTexture.hpp
+src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_luaeditor.cxx.o: /usr/local/include/SFML/Graphics/RenderWindow.hpp
+src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_luaeditor.cxx.o: /usr/local/include/SFML/Graphics/Shader.hpp
+src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_luaeditor.cxx.o: /usr/local/include/SFML/Graphics/Shape.hpp
+src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_luaeditor.cxx.o: /usr/local/include/SFML/Graphics/Sprite.hpp
+src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_luaeditor.cxx.o: /usr/local/include/SFML/Graphics/Text.hpp
+src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_luaeditor.cxx.o: /usr/local/include/SFML/Graphics/Texture.hpp
+src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_luaeditor.cxx.o: /usr/local/include/SFML/Graphics/Transform.hpp
+src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_luaeditor.cxx.o: /usr/local/include/SFML/Graphics/Transformable.hpp
+src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_luaeditor.cxx.o: /usr/local/include/SFML/Graphics/Vertex.hpp
+src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_luaeditor.cxx.o: /usr/local/include/SFML/Graphics/VertexArray.hpp
+src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_luaeditor.cxx.o: /usr/local/include/SFML/Graphics/View.hpp
+src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_luaeditor.cxx.o: /usr/local/include/SFML/System.hpp
+src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_luaeditor.cxx.o: /usr/local/include/SFML/System/Clock.hpp
+src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_luaeditor.cxx.o: /usr/local/include/SFML/System/Err.hpp
+src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_luaeditor.cxx.o: /usr/local/include/SFML/System/Export.hpp
+src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_luaeditor.cxx.o: /usr/local/include/SFML/System/InputStream.hpp
+src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_luaeditor.cxx.o: /usr/local/include/SFML/System/Lock.hpp
+src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_luaeditor.cxx.o: /usr/local/include/SFML/System/Mutex.hpp
+src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_luaeditor.cxx.o: /usr/local/include/SFML/System/NonCopyable.hpp
+src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_luaeditor.cxx.o: /usr/local/include/SFML/System/Sleep.hpp
+src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_luaeditor.cxx.o: /usr/local/include/SFML/System/String.hpp
+src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_luaeditor.cxx.o: /usr/local/include/SFML/System/Thread.hpp
+src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_luaeditor.cxx.o: /usr/local/include/SFML/System/Thread.inl
+src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_luaeditor.cxx.o: /usr/local/include/SFML/System/ThreadLocal.hpp
+src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_luaeditor.cxx.o: /usr/local/include/SFML/System/ThreadLocalPtr.hpp
+src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_luaeditor.cxx.o: /usr/local/include/SFML/System/ThreadLocalPtr.inl
+src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_luaeditor.cxx.o: /usr/local/include/SFML/System/Time.hpp
+src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_luaeditor.cxx.o: /usr/local/include/SFML/System/Utf.hpp
+src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_luaeditor.cxx.o: /usr/local/include/SFML/System/Utf.inl
+src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_luaeditor.cxx.o: /usr/local/include/SFML/System/Vector2.hpp
+src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_luaeditor.cxx.o: /usr/local/include/SFML/System/Vector2.inl
+src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_luaeditor.cxx.o: /usr/local/include/SFML/System/Vector3.hpp
+src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_luaeditor.cxx.o: /usr/local/include/SFML/System/Vector3.inl
+src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_luaeditor.cxx.o: /usr/local/include/SFML/Window.hpp
+src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_luaeditor.cxx.o: /usr/local/include/SFML/Window/Context.hpp
+src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_luaeditor.cxx.o: /usr/local/include/SFML/Window/ContextSettings.hpp
+src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_luaeditor.cxx.o: /usr/local/include/SFML/Window/Event.hpp
+src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_luaeditor.cxx.o: /usr/local/include/SFML/Window/Export.hpp
+src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_luaeditor.cxx.o: /usr/local/include/SFML/Window/GlResource.hpp
+src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_luaeditor.cxx.o: /usr/local/include/SFML/Window/Joystick.hpp
+src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_luaeditor.cxx.o: /usr/local/include/SFML/Window/Keyboard.hpp
+src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_luaeditor.cxx.o: /usr/local/include/SFML/Window/Mouse.hpp
+src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_luaeditor.cxx.o: /usr/local/include/SFML/Window/VideoMode.hpp
+src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_luaeditor.cxx.o: /usr/local/include/SFML/Window/Window.hpp
+src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_luaeditor.cxx.o: /usr/local/include/SFML/Window/WindowHandle.hpp
+src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_luaeditor.cxx.o: /usr/local/include/SFML/Window/WindowStyle.hpp
+src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_luaeditor.cxx.o: src/MoleBox/ui_GameLuaEditor.h
+
+src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_luascript.cxx.o: src/MoleBox/Lua/moc_luascript.cxx
+
+src/MoleBox/CMakeFiles/MoleBox.dir/Lua/moc_luascripts.cxx.o: src/MoleBox/Lua/moc_luascripts.cxx
+
 src/MoleBox/CMakeFiles/MoleBox.dir/action.cpp.o: ../../src/MoleBox/ContainerDefinitions.h
 src/MoleBox/CMakeFiles/MoleBox.dir/action.cpp.o: ../../src/MoleBox/action.cpp
 src/MoleBox/CMakeFiles/MoleBox.dir/action.cpp.o: ../../src/MoleBox/action.h
@@ -686,4 +736,14 @@ src/MoleBox/CMakeFiles/MoleBox.dir/actions.cpp.o: /usr/local/include/SFML/Window
 src/MoleBox/CMakeFiles/MoleBox.dir/actions.cpp.o: /usr/local/include/SFML/Window/Joystick.hpp
 src/MoleBox/CMakeFiles/MoleBox.dir/actions.cpp.o: /usr/local/include/SFML/Window/Keyboard.hpp
 src/MoleBox/CMakeFiles/MoleBox.dir/actions.cpp.o: /usr/local/include/SFML/Window/Mouse.hpp
+
+src/MoleBox/CMakeFiles/MoleBox.dir/moc_ContainerDefinitions.cxx.o: src/MoleBox/moc_ContainerDefinitions.cxx
+
+src/MoleBox/CMakeFiles/MoleBox.dir/moc_Game.cxx.o: src/MoleBox/moc_Game.cxx
+
+src/MoleBox/CMakeFiles/MoleBox.dir/moc_GameComponent.cxx.o: src/MoleBox/moc_GameComponent.cxx
+
+src/MoleBox/CMakeFiles/MoleBox.dir/moc_action.cxx.o: src/MoleBox/moc_action.cxx
+
+src/MoleBox/CMakeFiles/MoleBox.dir/moc_actions.cxx.o: src/MoleBox/moc_actions.cxx
 

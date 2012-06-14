@@ -31,8 +31,8 @@
 #include  <time.h>
 
 
-#include <Qt\qfile.h>
-#include <qtextstream.h>
+#include <Qt/qfile.h>
+#include <Qt/qtextstream.h>
 
 
 
@@ -301,7 +301,12 @@ void LuaEditor::UpdateScript()
   
   try {
 
-    LuaScript script(true);
+    LuaScript script;
+    
+    script.AddLibrary("Window",lua_reg_window_DUMMY);
+    script.AddLibrary("Sprite",lua_reg_sprite_DUMMY);
+    script.AddLibrary("Text",lua_reg_text_DUMMY);
+    script.AddLibrary("Sound",lua_reg_sound_DUMMY);
   
     bool success = script.LoadFromString(changedScript);
       script.RunScript();

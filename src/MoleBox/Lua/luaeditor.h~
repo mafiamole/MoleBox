@@ -55,7 +55,7 @@ private:
   Ui_ScriptEditor ui;
   std::vector< std::string > scripts;
 protected:
-  QString ResourcesTitle;
+  QString ResourcesTabTitle;
   void SetScripts( std::vector< std::string > scripts );
   bool FindTab(QString scriptFile);
 public:
@@ -68,7 +68,48 @@ public slots:
     void UpdateScript();
     void TabChanged(int index);
     void CloseTab(int index);
+    void pushButton_Save_Click();
+    void pushButton_SaveAs_Click();
+    void pushButton_New_Click();
 };
+
+static const luaL_reg lua_reg_sprite_DUMMY[] =
+{
+  { "Load", voidLuaEmptyFunction<1> },
+  { "Draw", voidLuaEmptyFunction<1> },
+  { "Move", voidLuaEmptyFunction<3> },
+  { "Size", voidLuaEmptyFunction<0>},
+  { "SetPosition", voidLuaEmptyFunction<3> },
+  { "GetPosition", voidLuaEmptyFunction<0>},
+  { NULL, NULL }
+};
+
+static const luaL_reg lua_reg_sound_DUMMY[] =
+{
+  { "Load", voidLuaEmptyFunction<1>},
+  { "Play", voidLuaEmptyFunction<1>},
+  { NULL, NULL }
+};
+
+
+static const luaL_reg lua_reg_window_DUMMY[] =
+{
+  { "Size", voidLuaEmptyFunction<0>},
+  { NULL, NULL }
+};
+
+static const luaL_reg lua_reg_text_DUMMY[] =
+{
+  { "Create", voidLuaEmptyFunction<1>},
+  { "Draw", voidLuaEmptyFunction<1>},
+  { "Modify", voidLuaEmptyFunction<2>},
+  { "Move",voidLuaEmptyFunction<3>},
+  { "Size", voidLuaEmptyFunction<0>},  
+  { "SetPosition", voidLuaEmptyFunction<3>},
+  { "GetPosition", voidLuaEmptyFunction<0>},
+  { NULL, NULL }
+};
+
 
 #endif // LUAEDITOR_H
 #endif

@@ -27,102 +27,13 @@
 #ifndef LUASCRIPT_H
 #define LUASCRIPT_H
 
-#include "content.h"
 #include "luascripts.h"
 #include <lua.hpp>
-#ifndef LUA_SFML_API
-#define LUA_SFML_API
 #include <sstream>
-#include <list>
+#include <map>
 
-template <int T> static int voidLuaEmptyFunction(lua_State *L) {
-  
-  int n = lua_gettop(L);
-  
-  int numberOfArgs = T;
-  
-  if ( numberOfArgs != T)
-  {
-    
-    std::string error;
-    error = "Incorrect number of arguments, this function takes ";
-    error += numberOfArgs;
-    error += ".";
-    lua_pushstring(L,error.c_str());
-    lua_error(L);
-  }
- 
-  return 0;
-  
-}
-
-static const luaL_reg sprite_DUMMY[] =
-{
-  { "Load", voidLuaEmptyFunction<1> },
-  { "Draw", voidLuaEmptyFunction<1> },
-  { "Move", voidLuaEmptyFunction<3> },
-  { "SetPosition", voidLuaEmptyFunction<3> },
-  { "GetPosition", voidLuaEmptyFunction<0>},
-  { NULL, NULL }
-};
-
-static const luaL_Reg sound_DUMMY[] =
-{
-  { "Load", voidLuaEmptyFunction<1>},
-  { "Play", voidLuaEmptyFunction<1>},
-  { NULL, NULL }
-};
-
-static const luaL_reg text_DUMMY[] =
-{
-  { "Create", voidLuaEmptyFunction<1>},
-  { "Draw", voidLuaEmptyFunction<1>},
-  { "Modify", voidLuaEmptyFunction<2>},
-  { "Move",voidLuaEmptyFunction<3>},
-  { "SetPosition", voidLuaEmptyFunction<3>},
-  { "GetPosition", voidLuaEmptyFunction<0>},
-  { NULL, NULL }
-};
-
-#endif
-
-static const luaL_reg window[] =
-{
-  { "Size", MB_Lua::Window::Dimensions}, 
-  { NULL, NULL }
-};
-
-static const luaL_reg sprite[] =
-{
-  { "Load", MB_Lua::Sprites::Load},
-  { "Draw", MB_Lua::Sprites::Draw},
-  { "Move", MB_Lua::Sprites::Move},
-  { "Size", MB_Lua::Sprites::Size},
-  { "SetPosition", MB_Lua::Sprites::SetPosition},
-  { "GetPosition", MB_Lua::Sprites::GetPosition},
-  { NULL, NULL }
-};
-
-static const luaL_reg text[] =
-{
-  { "Create", MB_Lua::Text::Create},
-  { "Draw", MB_Lua::Text::Draw},
-  { "Modify", MB_Lua::Text::Modify},
-  { "Move", MB_Lua::Text::Move},
-  { "Size", MB_Lua::Text::Size},
-  { "SetPosition", MB_Lua::Text::SetPosition},
-  { "GetPosition", MB_Lua::Text::GetPosition},
-  { NULL, NULL }
-};
-
-static const luaL_Reg sound[] =
-{
-  { "Load", MB_Lua::Sounds::Load},
-  { "Play", MB_Lua::Sounds::Play},
-  
-  { NULL, NULL }
-};
 typedef std::map< std::string, const luaL_reg * > LuaRegisterMap;
+
 class LuaScript
 {
 private:
@@ -130,13 +41,12 @@ private:
   bool debug;
   LuaRegisterMap FuncsToReg;
 public:
-    LuaScript(bool debug = false);
+    LuaScript();
     bool LoadFromFile(std::string file);
     bool LoadFromString(std::string contents, std::string remarks = "");
     bool HandleError(int State);
-    void RegisterComponentFunctions();
-    void RegisterDummyComponentFuncs();
-    void RegisterLibrary(std::string name,const luaL_reg * stuff);
+
+    void AddLibrary(std::string name,const luaL_reg * stuff);
     bool RunScript();
     bool RunFunction(std::string name);
     bool LookForFunction( std::string name );
