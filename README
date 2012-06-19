@@ -1,8 +1,8 @@
-This is a small 'play' framework that uses SFML.
+This is a small 'play' framework that uses SFML. 
+It takes some inspiration from XNA, and adds a bit of lua for extra fun.
 
 Folder structure
 
-  - Content: 	This contains a set of assets for the example
-  - Example: 	Code for an example of the framework in use
-  - Framework: 	bulk of the framework is contained in this folder.
-    - Lua:	Contains the extra stuff relating to the Lua scripting language.
+  - CMake: Contains various CMake scripts to help build and use this framework
+  - src: 	Source files of the project
+  - include: Header files of the project
