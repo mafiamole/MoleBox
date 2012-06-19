@@ -1,3 +1,0 @@
-/home/mafiamole/projects/MoleBox/build/linux/Example2/CMakeFiles/Example2.dir
-/home/mafiamole/projects/MoleBox/build/linux/Example/CMakeFiles/ExampleA.dir
-/home/mafiamole/projects/MoleBox/build/linux/src/MoleBox/CMakeFiles/MoleBox.dir
