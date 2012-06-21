@@ -3,6 +3,8 @@
 
 #include "lua.hpp"
 #include <string>
+#include <sstream>
+#include <iostream>
 
 namespace MB {
   
@@ -14,14 +16,12 @@ namespace MB {
       
       int numberOfArgs = T;
       
-      if ( numberOfArgs != T)
+      if ( n != numberOfArgs)
       {
 	
-	std::string error;
-	error = "Incorrect number of arguments, this function takes ";
-	error += numberOfArgs;
-	error += ".";
-	lua_pushstring(L,error.c_str());
+	std::stringstream error;
+	error << "(DUMMY)Incorrect number of arguments. " << n << " supplied," << numberOfArgs << " required.";
+	lua_pushstring(L,error.str().c_str());
 	lua_error(L);
       }
     
@@ -60,38 +60,37 @@ namespace MB {
     }
 
 
-    template <int T,int N,typename K> static int LuaEmptyFunctionWithReturn(lua_State *L) {
+    template <int ARGC,int RETURNC,typename K> static int LuaEmptyFunctionWithReturn(lua_State *L) {
       
       int n = lua_gettop(L);
       
-      int numberOfArgs = T;
+      int numberOfArgs = ARGC;
       
-      if ( numberOfArgs != T)
+      if ( n != numberOfArgs)
       {
-	
-	std::string error;
-	error = "Incorrect number of arguments, this function takes ";
-	error += numberOfArgs;
-	error += ".";
-	lua_pushstring(L,error.c_str());
+
+	std::stringstream error;
+	error << "(DUMMY)Incorrect number of arguments. " << n << " supplied," << numberOfArgs << " required.";
+	lua_pushstring(L,error.str().c_str());
 	lua_error(L);
+	
       }
       try {
 	
-	for ( int itr =0; itr <= N; itr++ )
+	for ( int itr =0; itr <= RETURNC; itr++ )
 	{
-	  
 	  LuaPushK<K>(L);
 	  
 	}
-	
+	return RETURNC; 
       }
       catch (std::string error)
       {
 	lua_pushstring(L,error.c_str());
 	lua_error(L);
       }
-      return 0;  
+      
+      return RETURNC;  
       
       
     }
@@ -101,9 +100,9 @@ namespace MB {
       { "Load", LuaEmptyFunctionWithReturn< 1 , 1 , int > },
       { "Draw", LuaEmptyFunction<1> },
       { "Move", LuaEmptyFunction<3> },
-      { "Size", LuaEmptyFunctionWithReturn< 0 , 2 , int>},
+      { "Size", LuaEmptyFunctionWithReturn< 1 , 2 , int>},
       { "SetPosition", LuaEmptyFunction<3> },
-      { "GetPosition", LuaEmptyFunctionWithReturn<0 , 2 , float>},
+      { "GetPosition", LuaEmptyFunctionWithReturn<1 , 2 , float>},
       { NULL, NULL }
     };
 
@@ -128,9 +127,9 @@ namespace MB {
       { "Draw", LuaEmptyFunction<1>},
       { "Modify", LuaEmptyFunction<2>},
       { "Move",LuaEmptyFunction<3>},
-      { "Size", LuaEmptyFunctionWithReturn<0,2,int>},  
+      { "Size", LuaEmptyFunctionWithReturn<1,2,int>},  
       { "SetPosition", LuaEmptyFunction<3>},
-      { "GetPosition", LuaEmptyFunctionWithReturn<0,2,float>},
+      { "GetPosition", LuaEmptyFunctionWithReturn<1,2,float>},
       { NULL, NULL }
     };
 

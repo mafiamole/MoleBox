@@ -30,6 +30,8 @@ set ( MoleBox_SOURCES
   ${MB_INCLUDE_DIR}/MoleBox/Lua/Component.hpp
   ${MB_INCLUDE_DIR}/MoleBox/Lua/Script.hpp
   ${MB_INCLUDE_DIR}/MoleBox/Lua/Scripts.hpp
+  ${MB_INCLUDE_DIR}/MoleBox/Lua/EditorFunctions.hpp
+  ${MB_INCLUDE_DIR}/MoleBox/Lua/ComponentFunctions.hpp
   ${MB_INCLUDE_DIR}/MoleBox/Content/ContentTemplate.hpp
   ${MB_INCLUDE_DIR}/MoleBox/Content/Content.hpp
   ${MB_INCLUDE_DIR}/MoleBox/Action.hpp
@@ -45,7 +47,7 @@ set ( MoleBox_SOURCES
   
  set( MB_LIBS ${SFML_LIBRARIES} ${OPENGL_gl_LIBRARY} ${GLU_LIBRARY} ${LUA_LIBRARY} )
  #set( MB_INC_DIR ${CMAKE_CURRENT_BINARY_DIR} ${SFML_INCLUDE_DIR} ${OPENGL_INCLUDE_DIR} ${GLU_INCLUDE_PATH} ${LUA_INCLUDE_DIR})
- set (MB_FILE_LIST ${MoleBox_SOURCES})
+ set (MB_FILE_LIST ${MoleBox_HEADERS} ${MoleBox_SOURCES})
  
   if (LUA_EDITOR_TOOL)
   
@@ -74,7 +76,7 @@ set ( MoleBox_SOURCES
   
   if (SFML_FOUND)
   
-  	add_library(MoleBox SHARED ${MB_FILE_LIST})
+  	add_library(MoleBox SHARED  ${MB_FILE_LIST})
 	set_target_properties(MoleBox PROPERTIES LIBRARY_OUTPUT_DIRECTORY ${PROJECT_BINARY_DIR}/lib)
 
 	include_directories(${CMAKE_CURRENT_BINARY_DIR} ${SFML_INCLUDE_DIR} ${OPENGL_INCLUDE_DIR} ${GLU_INCLUDE_PATH} ${LUA_INCLUDE_DIR})

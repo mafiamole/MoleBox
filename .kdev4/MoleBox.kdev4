@@ -12,47 +12,22 @@ Extra Arguments=
 ProjectRootRelative=./
 
 [Launch]
-Launch Configurations=Launch Configuration 0,Launch Configuration 1
+Launch Configurations=Launch Configuration 0
 
 [Launch][Launch Configuration 0]
 Configured Launch Modes=execute
 Configured Launchers=nativeAppLauncher
-Name=ExampleA
+Name=Pong
 Type=Native Application
 
 [Launch][Launch Configuration 0][Data]
 Arguments=
-Debugger Shell=
-Dependencies=@Variant(\x00\x00\x00\t\x00\x00\x00\x00\x00)
-Dependency Action=Nothing
-Display Demangle Names=true
-Display Static Members=false
-EnvironmentGroup=default
-Executable=
-External Terminal=konsole --noclose --workdir %workdir -e %exe
-GDB Path=
-Project Target=MoleBox,Example,ExampleA
-Remote GDB Config Script=
-Remote GDB Run Script=
-Remote GDB Shell Script=
-Use External Terminal=false
-Working Directory=
-isExecutable=false
-
-[Launch][Launch Configuration 1]
-Configured Launch Modes=execute
-Configured Launchers=nativeAppLauncher
-Name=Example 2
-Type=Native Application
-
-[Launch][Launch Configuration 1][Data]
-Arguments=
 Dependencies=@Variant(\x00\x00\x00\t\x00\x00\x00\x00\x00)
 Dependency Action=Nothing
 EnvironmentGroup=default
 Executable=
 External Terminal=konsole --noclose --workdir %workdir -e %exe
-Project Target=MoleBox,Example2,Example2
+Project Target=MoleBox,src,Pong,Pong
 Use External Terminal=false
 Working Directory=
 isExecutable=false

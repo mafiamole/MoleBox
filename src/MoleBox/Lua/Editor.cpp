@@ -302,6 +302,7 @@ void Lua::LuaEditor::UpdateScript()
   
   try {
 
+    
     LuaScript script;
     
     script.AddLibrary("Window",lua_reg_window_DUMMY);
@@ -310,6 +311,7 @@ void Lua::LuaEditor::UpdateScript()
     script.AddLibrary("Sound",lua_reg_sound_DUMMY);
   
     bool success = script.LoadFromString(changedScript);
+    
       script.RunScript();
       script.RunFunction("init");
       script.RunFunction("update");

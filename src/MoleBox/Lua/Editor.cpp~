@@ -23,37 +23,37 @@
     OTHER DEALINGS IN THE SOFTWARE.
 */
 
-#include <MoleBox/Lua/LuaEditorFunctions.hpp>
+#include <MoleBox/Lua/EditorFunctions.hpp>
 
 #ifdef LUA_EDITOR
-#include "luaeditor.h"
-#include "LuaScriptHelper.h"
-#include "luascript.h"
+#include <MoleBox/Lua/Editor.hpp>
+#include <MoleBox/Lua/ScriptHelper.hpp>
+#include <MoleBox/Lua/Script.hpp>
 #include  <time.h>
 
 
 #include <Qt/qfile.h>
 #include <Qt/qtextstream.h>
 
+using namespace MB;
 
-
-LuaHighlighter::LuaHighlighter(QObject* parent): QSyntaxHighlighter(parent)
+Lua::Highlighter::Highlighter(QObject* parent): QSyntaxHighlighter(parent)
 {
 
 }
 
-LuaHighlighter::LuaHighlighter(QTextEdit* parent): QSyntaxHighlighter(parent)
+Lua::Highlighter::Highlighter(QTextEdit* parent): QSyntaxHighlighter(parent)
 {
 
 }
 
-LuaHighlighter::LuaHighlighter(QTextDocument* parent): QSyntaxHighlighter(parent)
+Lua::Highlighter::Highlighter(QTextDocument* parent): QSyntaxHighlighter(parent)
 {
 
 }
 
 
-void LuaHighlighter::highlightBlock(const QString& text)
+void Lua::Highlighter::highlightBlock(const QString& text)
 {
 
      QTextCharFormat properties;
@@ -125,7 +125,7 @@ void LuaHighlighter::highlightBlock(const QString& text)
 }
 
 
-LuaEditor::LuaEditor(std::vector<std::string> scripts,QWidget *parent) : QWidget(parent)
+Lua::LuaEditor::LuaEditor(std::vector<std::string> scripts,QWidget *parent) : QWidget(parent)
 {
   ui.setupUi(this); 
 
@@ -154,13 +154,13 @@ LuaEditor::LuaEditor(std::vector<std::string> scripts,QWidget *parent) : QWidget
   }
 }
 
-LuaEditor::~LuaEditor()
+Lua::LuaEditor::~LuaEditor()
 {
 
 }
 
 
-void LuaEditor::pushButton_Save_Click(){
+void Lua::LuaEditor::pushButton_Save_Click(){
 	if ((QTextEdit*)ui.tabCodeWindow->currentIndex() != 0){
 		// Not resources tab, so can save
 	
@@ -181,7 +181,7 @@ void LuaEditor::pushButton_Save_Click(){
 }
 
 
-void LuaEditor::pushButton_SaveAs_Click(){
+void Lua::LuaEditor::pushButton_SaveAs_Click(){
 //	if (nomeFile != "") {
 //QFile file(nomeFile);
 // 
@@ -198,11 +198,11 @@ void LuaEditor::pushButton_SaveAs_Click(){
 //}
 }
 
-void LuaEditor::pushButton_New_Click(){
+void Lua::LuaEditor::pushButton_New_Click(){
 	
 }
 
-void LuaEditor::SetScripts( std::vector< std::string > scripts )
+void Lua::LuaEditor::SetScripts( std::vector< std::string > scripts )
 {
   
   this->scripts = scripts;    
@@ -223,7 +223,7 @@ void LuaEditor::SetScripts( std::vector< std::string > scripts )
 
 
 
-void LuaEditor::TabChanged(int index)
+void Lua::LuaEditor::TabChanged(int index)
 {
 
 	// Update current tab formatting
@@ -241,7 +241,7 @@ void LuaEditor::TabChanged(int index)
 		// Update current script tab
 		QTextEdit* currentTextEdit = (QTextEdit*)ui.tabCodeWindow->currentWidget();
 	
-		luaHighlight = new LuaHighlighter(currentTextEdit->document());
+		luaHighlight = new Lua::Highlighter(currentTextEdit->document());
 			
 	QApplication::connect(currentTextEdit, SIGNAL(textChanged()), this, SLOT(UpdateScript()) ); // updates script on changes.
 	}
@@ -250,7 +250,7 @@ void LuaEditor::TabChanged(int index)
 	}
 }
 
-void LuaEditor::CloseTab(int index)
+void Lua::LuaEditor::CloseTab(int index)
 	{
 		if((ui.tabCodeWindow->count() != 1) && (index != 0)){
 			//Handle tabCloseRequested Signal and Close the Tab
@@ -258,7 +258,7 @@ void LuaEditor::CloseTab(int index)
 		}	    	
 	};
 
-bool LuaEditor::FindTab(QString scriptFile)
+bool Lua::LuaEditor::FindTab(QString scriptFile)
 {
   bool needNew = false;
 
@@ -278,14 +278,14 @@ bool LuaEditor::FindTab(QString scriptFile)
 }
 
 	
-void LuaEditor::ChangeScript(QString scriptFile)
+void Lua::LuaEditor::ChangeScript(QString scriptFile)
 {
 
   if (this->FindTab(scriptFile)){
 		  // Create new tab, load, then switch to.
 
       int index = ui.tabCodeWindow->addTab(new QTextEdit(),scriptFile);
-      std::string script = LuaHelper::LuaScripts::Instance().GrabScript(scriptFile.toStdString());
+      std::string script = Lua::LuaScripts::Instance().GrabScript(scriptFile.toStdString());
       ui.tabCodeWindow->setCurrentIndex(ui.tabCodeWindow->count()-1);
       QTextEdit* editor = (QTextEdit*)ui.tabCodeWindow->widget(index);
       editor->setText(script.c_str());
@@ -294,7 +294,7 @@ void LuaEditor::ChangeScript(QString scriptFile)
  
 }
 
-void LuaEditor::UpdateScript()
+void Lua::LuaEditor::UpdateScript()
 {
   
   std::string scriptFile    = ui.comboBox_scriptSelection->itemText( ui.comboBox_scriptSelection->currentIndex() ).toStdString();  
@@ -302,6 +302,8 @@ void LuaEditor::UpdateScript()
   
   try {
 
+    
+    std::cout << "Debuging script" << std::endl;
     LuaScript script;
     
     script.AddLibrary("Window",lua_reg_window_DUMMY);
@@ -310,12 +312,13 @@ void LuaEditor::UpdateScript()
     script.AddLibrary("Sound",lua_reg_sound_DUMMY);
   
     bool success = script.LoadFromString(changedScript);
+    
       script.RunScript();
       script.RunFunction("init");
       script.RunFunction("update");
       script.RunFunction("draw");
   
-      LuaHelper::LuaScripts::Instance().UpdateScript( scriptFile, changedScript );
+      Lua::LuaScripts::Instance().UpdateScript( scriptFile, changedScript );
       
   }
   catch (std::string error) {
