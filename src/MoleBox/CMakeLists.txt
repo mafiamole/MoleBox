@@ -6,7 +6,7 @@ option(LUA_EDITOR_TOOL "Enable the Lua live editor" OFF)
 #	Set the Sources and headers and forms
 #
 
-set ( MoleBox_SOURCES
+set ( MoleBox_SOURCES Content/Resources.cpp
 
   Actions/Keyboard.cpp 
   Actions/Mouse.cpp 
@@ -21,6 +21,9 @@ set ( MoleBox_SOURCES
   GameComponent.cpp
   Game.cpp
   Content/Content.cpp
+  Content/Resources.cpp
+  Content/ContentTemplate.cpp
+  Content/ContentID.cpp
   )
   
   set ( MoleBox_HEADERS
@@ -34,6 +37,8 @@ set ( MoleBox_SOURCES
   ${MB_INCLUDE_DIR}/MoleBox/Lua/ComponentFunctions.hpp
   ${MB_INCLUDE_DIR}/MoleBox/Content/ContentTemplate.hpp
   ${MB_INCLUDE_DIR}/MoleBox/Content/Content.hpp
+  ${MB_INCLUDE_DIR}/MoleBox/Content/Resources.hpp
+  ${MB_INCLUDE_DIR}/MoleBox/Content/ContentID.hpp
   ${MB_INCLUDE_DIR}/MoleBox/Action.hpp
   ${MB_INCLUDE_DIR}/MoleBox/Actions.hpp
   ${MB_INCLUDE_DIR}/MoleBox/ContainerDefinitions.hpp

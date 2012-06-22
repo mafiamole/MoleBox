@@ -33,6 +33,9 @@ using namespace MB;
 
 void Lua::ActionsToLua(lua_State* L,MB::Actions* actions)
 {
+  
+
+  
   lua_newtable(L);
   
   std::map< std::string, Action* > actionList = actions->GetList();
@@ -55,25 +58,25 @@ Lua::LuaComponent::LuaComponent(Game* game,std::string file) : GameComponent(gam
   
   //this->LoadScript(file);
   int success;
+  this->script = Content::Load<LuaScript*>(file);
+  this->script->AddLibrary("Window",sfml_lua_window);
+  this->script->AddLibrary("Sprite",sfml_lua_sprite);
+  this->script->AddLibrary("Text",sfml_lua_text);
+  this->script->AddLibrary("Sound",sfml_lua_sound);
   
-  this->script.AddLibrary("Window",sfml_lua_window);
-  this->script.AddLibrary("Sprite",sfml_lua_sprite);
-  this->script.AddLibrary("Text",sfml_lua_text);
-  this->script.AddLibrary("Sound",sfml_lua_sound);
-  
-  bool loadedScript = this->script.LoadFromFile(file);
+  bool loadedScript = this->script->LoadFromFile(file);
 
   
   if (loadedScript) {
     
-    lua_State* L = this->script.GetState();
+    lua_State* L = this->script->GetState();
     
     lua_pushstring(L,"MB_GAME_COMPONENT");
     lua_pushlightuserdata(L,(void*)this);
     lua_settable(L,LUA_REGISTRYINDEX);    
     
-    bool runscript = this->script.RunScript();
-    bool runinit = this->script.RunFunction("init");
+    bool runscript = this->script->RunScript();
+    bool runinit = this->script->RunFunction("init");
 
     }
 
@@ -102,17 +105,17 @@ void Lua::LuaComponent::Update( sf::Time elapsed, MB::Types::EventList* events,i
   {
     std::string newscript = Lua::LuaScripts::Instance().GrabUpdate(this->scriptFile);
     
-    this->script.LoadFromString(newscript);
-        lua_State* L = this->script.GetState();
+    this->script->LoadFromString(newscript);
+    lua_State* L = this->script->GetState();
     lua_pushstring(L,"MB_GAME_COMPONENT");
     lua_pushlightuserdata(L,(void*)this);
     lua_settable(L,LUA_REGISTRYINDEX);  
-    this->script.RunScript();
-    this->script.RunFunction("init");
+    this->script->RunScript();
+    this->script->RunFunction("init");
     
   }
 #endif
-  lua_State* L = this->script.GetState();
+  lua_State* L = this->script->GetState();
   
   lua_getglobal(L,"update");
   
@@ -120,11 +123,11 @@ void Lua::LuaComponent::Update( sf::Time elapsed, MB::Types::EventList* events,i
 
   lua_pushnumber(L, (int)elapsed.asMilliseconds() );
   
-  this->UpdateScriptPreCall(L);
+  this->UpdateScriptPreCall(L); // convenient virtual method.
   
   int s = lua_pcall( L , argCount, 0 ,0);
   
-  this->script.HandleError(s);
+  this->script->HandleError(s);
   
   GameComponent::Update( elapsed, events );
 
@@ -216,7 +219,7 @@ sf::Text* Lua::LuaComponent::GetText(int ref)
 void Lua::LuaComponent::Draw()
 {
   
-  bool success = this->script.RunFunction("draw");
+  bool success = this->script->RunFunction("draw");
 
   if ( success ) {
 

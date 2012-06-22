@@ -13,7 +13,6 @@ end
 
 function setComputerTextLocation() 
   computerTextSize = {Text.Size(Computer.ScoreText)}
-
   newSize = WindowDimensions[1] - computerTextSize[1]
   Text.SetPosition(Computer.ScoreText, newSize ,0)
 

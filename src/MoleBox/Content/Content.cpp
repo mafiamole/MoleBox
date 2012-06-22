@@ -12,6 +12,29 @@ sf::Sound MB::Content::NewSound(std::string sound)
 }
   
 
+MB::Content::Exception::Exception(ERR_TYPE type,std::string resource)
+{
+  this->type = type;
+  this->resource = resource;
+}
+
+std::string MB::Content::Exception::toString()
+{
+  switch(type)
+  {
+    case OTHER:
+      return "Unknow error with resource:" + this->resource;
+      break;
+    case COULD_NOT_LOAD:
+      return "Could not load " + this->resource;
+      break;
+    default:
+      return "Unknow error with resource:" + this->resource;
+      break;
+  }
+    
+}
+  
 
 MB::SpriteBatch::SpriteBatch(sf::Vector2u size, sf::RenderTarget* target, sf::RenderStates states) : sf::Drawable(),std::vector< sf::Drawable *>()
 {

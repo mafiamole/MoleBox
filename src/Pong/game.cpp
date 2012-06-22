@@ -34,6 +34,8 @@
 Game::Game() : MB::Game("Ultra Pong 3000"), won("No one"),finished(false)
 {
 
+  
+  
   this->actionList.Register("Player Move Up",new MB::Keyboard(sf::Keyboard::Up));
   this->actionList.Register("Player Move Down",new MB::Keyboard(sf::Keyboard::Down));
   try {
@@ -104,9 +106,33 @@ void Game::Update( sf::Time elapsed, MB::Types::EventList* events)
 
 }
 
-void Game::Run(int argc,char **argv)
+int Game::Run(int argc,char **argv)
 {
-  MB::Game::Run(argc,argv);
+
+  try
+  {
+    std::list< std::string > list = resourceManger.LoadList("resources.txt");
+    if (list.size() == 0)
+    {
+      MB::Game::Run(argc,argv);
+    }
+    else
+    {
+      for (std::list< std::string >::iterator itr = list.begin();itr != list.end();itr++)
+      {
+	std::cerr << (*itr) << std::endl;
+      }
+      return 1;
+    }
+  }
+  catch (MB::Content::Exception error)
+  {
+    Window()->close();
+    std::cerr << error.toString() << std::endl;
+    return 1;
+  }
+  
+  return 0;
 }
 
 

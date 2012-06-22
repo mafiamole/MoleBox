@@ -2,7 +2,10 @@
 6cd9074ffcee3783f5dab01214818341 src/MoleBox/__/__/include/MoleBox/Actions/moc_Keyboard.cxx
 36c3274541be2af313230d71f472c943 src/MoleBox/__/__/include/MoleBox/Actions/moc_Mouse.cxx
 91781f27ad48c9b54ed2cb3d4d159785 src/MoleBox/__/__/include/MoleBox/Content/moc_Content.cxx
+82d9e8f9c1ea5bbfe53c5bc7a8306d83 src/MoleBox/__/__/include/MoleBox/Content/moc_ContentID.cxx
 c2d15acbba7af7368a8d19d948cb38df src/MoleBox/__/__/include/MoleBox/Content/moc_ContentTemplate.cxx
+1f4387c12e63213e6ba1c1966caf409a src/MoleBox/__/__/include/MoleBox/Content/moc_Resource.cxx
+9cf4f9c20c52f023587ee099b9efb995 src/MoleBox/__/__/include/MoleBox/Content/moc_Resources.cxx
 be1d44acfe5ee12a8515675054c7de2d src/MoleBox/__/__/include/MoleBox/Lua/moc_Component.cxx
 9137d850e95e017a8ef1c19ca4697151 src/MoleBox/__/__/include/MoleBox/Lua/moc_ComponentFunctions.cxx
 2c3cabf2d856b75303a663b881ca469b src/MoleBox/__/__/include/MoleBox/Lua/moc_Editor.cxx

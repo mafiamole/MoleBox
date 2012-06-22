@@ -38,7 +38,7 @@
  {
   
   QApplication app(argList.argc,argList.argv);
-  MB::Lua::LuaEditor luaEditor(argList.scriptList);
+  MB::Lua::LuaEditor luaEditor(argList.resources,argList.scriptList);
   luaEditor.show();
   
   int result = app.exec();
@@ -47,7 +47,7 @@
  
 #endif
 
-MB::Game::Game(std::string windowName)
+MB::Game::Game(std::string windowName) : resourceManger()
 {
   window = new sf::RenderWindow( sf::VideoMode( 800, 600 ), windowName );
 
@@ -98,7 +98,7 @@ sf::RenderWindow* MB::Game::Window()
 }
 
 
-void MB::Game::Run(int argc, char** argv)
+int MB::Game::Run(int argc, char** argv)
 {
   Types::EventList eventList;
 #ifdef LUA_EDITOR
@@ -106,6 +106,7 @@ void MB::Game::Run(int argc, char** argv)
   argList.argc = argc;
   argList.argv = argv;
   argList.scriptList = this->GetScripts();
+  argList.resources = this->resourceManger.ResourceLists();
   sf::Thread qtThread( &MB::LuaGUIThread,argList);
   qtThread.launch(); 
 #endif
@@ -141,12 +142,15 @@ void MB::Game::Run(int argc, char** argv)
 
     elapsed = clock.restart(); 
 
+    
+    
 
   }
   
 #ifdef LUA_EDITOR
   qtThread.wait();
 #endif
+  return 0;
 }
 
 MB::GameComponent* MB::Game::AddComponent(GameComponent* component)

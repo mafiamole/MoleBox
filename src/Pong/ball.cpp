@@ -78,13 +78,21 @@ void Ball::Update(sf::Time elapsed, MB::Types::EventList* events)
       this->direction.y = this->direction.y * -1.0f;
       calculatedPositon.y = this->sprite.getPosition().y + moveVector.y;
     }
-      
-    if (this->InterceptPlayer(calculatedPositon,moveVector) || this->IntereptEnemy(calculatedPositon,moveVector) )
+    
+    
+    bool playerIntercepted = this->InterceptPlayer(calculatedPositon,moveVector);
+    bool enemyIntercepted = this->IntereptEnemy(calculatedPositon,moveVector);
+    
+    if ( playerIntercepted || enemyIntercepted )
     {
       moveVector.x = moveVector.x * -1.0f; // flip the direction
       this->direction.x = this->direction.x * -1.0f;
       calculatedPositon.x = this->sprite.getPosition().x + moveVector.x;
       this->sprite.setPosition(calculatedPositon);
+      if (playerIntercepted)
+	this->sound.setPosition(-15.0f,0,0);
+      else
+	this->sound.setPosition(15.0f,0,0);
       this->sound.play();
       this->acceleration += 0.05f;
     }

@@ -32,28 +32,36 @@
 #include <sstream>
 #include <map>
 
-typedef std::map< std::string, const luaL_reg * > LuaRegisterMap;
+namespace MB {
+  
+  namespace Lua {
+  
+    typedef std::map< std::string, const luaL_reg * > LuaRegisterMap;
 
-class LuaScript
-{
-private:
-  lua_State *L;
-  bool debug;
-  LuaRegisterMap FuncsToReg;
-public:
-    LuaScript();
-    bool LoadFromFile(std::string file);
-    bool LoadFromString(std::string contents, std::string remarks = "");
-    bool HandleError(int State);
+    class LuaScript
+    {
+    private:
+      lua_State *L;
+      bool debug;
+      LuaRegisterMap FuncsToReg;
+    public:
+	LuaScript();
+	bool LoadFromFile(std::string file);
+	bool LoadFromString(std::string contents, std::string remarks = "");
+	bool HandleError(int State);
 
-    void AddLibrary(std::string name,const luaL_reg * stuff);
-    bool RunScript();
-    bool RunFunction(std::string name);
-    bool LookForFunction( std::string name );
-    std::string ErrorTypeName(int state);
-    lua_State* GetState();
-    virtual ~LuaScript();
+	void AddLibrary(std::string name,const luaL_reg * stuff);
+	bool RunScript();
+	bool RunFunction(std::string name);
+	bool LookForFunction( std::string name );
+	std::string ErrorTypeName(int state);
+	lua_State* GetState();
+	virtual ~LuaScript();
 
-};
+    };
+
+  }
+
+}
 
 #endif // LUASCRIPT_H

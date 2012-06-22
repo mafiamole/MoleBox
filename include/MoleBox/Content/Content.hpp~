@@ -30,12 +30,35 @@
 #include <SFML/Graphics.hpp>
 #include <SFML/Audio.hpp>
 
-#include <MoleBox/ContainerDefinitions.hpp>
-
+#include <MoleBox/Content/ContentTemplate.hpp>
+#include <MoleBox/Lua/Script.hpp>
+#include <fstream>
+#include <MoleBox/Content/ContentID.hpp>
 namespace MB {
 
   namespace Content {
 
+    /**
+     * 
+     * MB::Content::Exception is an exception class for content related errors.
+     * 
+     */
+    
+    enum ERR_TYPE { OTHER, COULD_NOT_LOAD };
+    
+    class Exception
+    {
+      std::string resource;
+      ERR_TYPE type;
+    public:
+      Exception(ERR_TYPE type,std::string resource);
+      std::string toString();
+    };
+    /**
+     * 
+     *  Container for sf::Texture
+     * 
+     */
     template<> class Container<sf::Texture>
     {
       
@@ -52,7 +75,7 @@ namespace MB {
 	  sf::Texture texture;
 	  
 	  if (!texture.loadFromFile(reference))
-	    throw std::string ( "Unable to load texture: " + reference );
+	    throw Exception(COULD_NOT_LOAD,reference);
 	  
 	  this->base.contents.insert(std::pair<std::string,sf::Texture>(reference,texture));
 	  
@@ -71,7 +94,12 @@ namespace MB {
 	sf::Lock(this->base.mutex);
 	return base.List();
       }
-	      
+      
+      TextureID* GetID()
+      {
+	return new TextureID();
+      }
+      
     };
     
     template<> class Container<sf::SoundBuffer>
@@ -90,7 +118,10 @@ namespace MB {
 	  
 	  sf::SoundBuffer buffer;
 	  
-	  buffer.loadFromFile(reference);
+	  if (!buffer.loadFromFile(reference))
+	  {
+	    throw Exception(COULD_NOT_LOAD,reference);
+	  }
 	  
 	  std::pair<std::string,const sf::SoundBuffer> newBuffer(reference,buffer);
 
@@ -115,7 +146,12 @@ namespace MB {
 	return base.List();
 	
       }
-	      
+      
+      SoundID* GetID()
+      {
+	return new SoundID();
+      }
+      
     };
 
     template<> class Container<sf::Music *> 
@@ -130,7 +166,10 @@ namespace MB {
 	
 	if ( this->base.contents.find(reference) == this->base.contents.end()) {
 	  sf::Music * buffer = new sf::Music();
-	  buffer->openFromFile(reference);
+	  
+	  if (!buffer->openFromFile(reference))
+	    throw Exception(COULD_NOT_LOAD,reference);
+	  
 	  std::pair<std::string,sf::Music *> newBuffer(reference,buffer);
 
 	  this->base.contents.insert(newBuffer);
@@ -162,17 +201,85 @@ namespace MB {
 	
 	base.contents.clear();
       }
-
+      
+      MusicID* GetID()
+      {
+	return new MusicID();
+      }
+      
     };
     
     
     sf::Sprite NewSprite(std::string texture);
     sf::Sound NewSound(std::string sound);
     
-  }
-
   
 
+    template<> class Container<MB::Lua::LuaScript *>
+    {
+      
+      Container_Base<MB::Lua::LuaScript *,MB::Lua::LuaScript *> base;
+ 
+      public:
+
+	
+      MB::Lua::LuaScript * Load(std::string reference)
+      {
+
+	if ( this->base.contents.find(reference) == this->base.contents.end())
+	{
+	  
+	  std::ifstream file(reference.c_str());
+
+	  if ( file.good() )
+	  {
+	    file.close();
+	    Lua::LuaScript* script = new MB::Lua::LuaScript();
+	    
+	  }
+	  else
+	  {
+	    file.close();
+	    throw Exception(COULD_NOT_LOAD,reference);
+	  }
+	  Lua::LuaScript* script = new MB::Lua::LuaScript();
+	  if (!script->LoadFromFile(reference))
+	    throw Exception(COULD_NOT_LOAD,reference);
+	  
+	  this->base.contents.insert(std::pair<std::string,MB::Lua::LuaScript *>(reference,script));
+	  
+	}
+	return this->base.contents[reference];
+      }
+      
+      static Container<MB::Lua::LuaScript *>& I()
+      {
+	static Container<MB::Lua::LuaScript *> container;
+	return container;	
+      }
+      
+      StrVect List()
+      {
+	sf::Lock(this->base.mutex);
+	return base.List();
+      }
+ 
+	      
+      ~Container()
+      {
+	std::map<std::string,MB::Lua::LuaScript* >::iterator musicItr;
+	for ( musicItr = base.contents.begin(); musicItr != base.contents.end(); musicItr++)
+	{
+	 MB::Lua::LuaScript* file = (*musicItr).second;
+	  delete file;
+	}
+	
+	base.contents.clear();
+      } 
+ 
+    }; 
+
+  }
 class SpriteBatch : public sf::Drawable, public std::vector<sf::Drawable *> {
     
   private:

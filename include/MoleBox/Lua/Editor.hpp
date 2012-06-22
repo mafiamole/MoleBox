@@ -34,7 +34,11 @@
 #include "ui_GameLuaEditor.h"
 #include <MoleBox/Lua/Scripts.hpp>
 #include <MoleBox/Lua/ScriptHelper.hpp>
-
+#include <QTreeView>
+ #include <QStandardItemModel>
+ #include <QItemSelectionModel>
+#include <MoleBox/Content/Content.hpp>
+#include <MoleBox/ContainerDefinitions.hpp>
 namespace MB {
   
   namespace Lua {
@@ -57,12 +61,15 @@ namespace MB {
       Highlighter *luaHighlight;
       Ui_ScriptEditor ui;
       std::vector< std::string > scripts;
+      QStandardItemModel *resourceModel;
     protected:
       QString ResourcesTabTitle;
       void SetScripts( std::vector< std::string > scripts );
       bool FindTab(QString scriptFile);
+      void InitResourceTree(std::map<std::string,MB::Types::StrVect> resources);
+      void AppendToResourceTree(MB::Content::StrVect list , QStandardItem *root);
     public:
-	LuaEditor(std::vector<std::string> scripts,QWidget* parent = 0);
+	LuaEditor( std::map<std::string,MB::Types::StrVect> resources,std::vector<std::string> scripts,QWidget* parent = 0);
 	virtual ~LuaEditor();
 	int lastTime;
 	

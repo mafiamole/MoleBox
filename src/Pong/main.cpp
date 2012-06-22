@@ -33,16 +33,16 @@ int main(int argc, char **argv) {
     
     Game game;
   
-    game.Run(argc,argv);   
+    return game.Run(argc,argv);   
    
   }
   catch (std::string error) {
     
-    std::cout << error << std::endl;
+    std::cerr << error << std::endl;
+    
+    return 0;
     
   }
-  std::string a;
-  std::cin >> a; 
   return EXIT_SUCCESS;
   
 }

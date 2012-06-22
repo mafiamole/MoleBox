@@ -21,6 +21,7 @@
 #include <QtGui/QListWidget>
 #include <QtGui/QPushButton>
 #include <QtGui/QTabWidget>
+#include <QtGui/QTreeView>
 #include <QtGui/QVBoxLayout>
 #include <QtGui/QWidget>
 
@@ -40,6 +41,8 @@ public:
     QPushButton *pushButton_SaveAs;
     QTabWidget *tabCodeWindow;
     QWidget *tab;
+    QHBoxLayout *horizontalLayout_3;
+    QTreeView *resource_treeView;
     QLabel *label_2;
     QListWidget *listWidget_errors;
 
@@ -115,6 +118,14 @@ public:
         tabCodeWindow->setMovable(false);
         tab = new QWidget();
         tab->setObjectName(QString::fromUtf8("tab"));
+        horizontalLayout_3 = new QHBoxLayout(tab);
+        horizontalLayout_3->setObjectName(QString::fromUtf8("horizontalLayout_3"));
+        resource_treeView = new QTreeView(tab);
+        resource_treeView->setObjectName(QString::fromUtf8("resource_treeView"));
+        resource_treeView->setStyleSheet(QString::fromUtf8(""));
+
+        horizontalLayout_3->addWidget(resource_treeView);
+
         tabCodeWindow->addTab(tab, QString());
 
         verticalLayout->addWidget(tabCodeWindow);
@@ -145,7 +156,7 @@ public:
 
     void retranslateUi(QWidget *ScriptEditor)
     {
-        ScriptEditor->setWindowTitle(QApplication::translate("ScriptEditor", "Lua Script Editor", 0, QApplication::UnicodeUTF8));
+        ScriptEditor->setWindowTitle(QApplication::translate("ScriptEditor", "MoleBox Resource Viewer & Script Manager", 0, QApplication::UnicodeUTF8));
         label->setText(QApplication::translate("ScriptEditor", "Select Script", 0, QApplication::UnicodeUTF8));
         groupBox->setTitle(QString());
         pushButton_Save->setText(QApplication::translate("ScriptEditor", "Save", 0, QApplication::UnicodeUTF8));

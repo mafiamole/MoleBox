@@ -32,6 +32,8 @@
 
 #include <MoleBox/ContainerDefinitions.hpp>
 #include <MoleBox/Actions.hpp>
+#include "Content/ContentID.hpp"
+#include "Content/Resources.hpp"
 
 
 namespace MB {
@@ -54,7 +56,9 @@ class GameComponent;
   int argc;
   char **argv;
   std::vector<std::string> scriptList;
- };
+  std::map<std::string,MB::Types::StrVect> resources;
+   
+};
  
   void LuaGUIThread ( args argList );
 #endif  
@@ -70,6 +74,8 @@ class GameComponent;
     sf::RenderWindow*		window;
     
   protected:
+    
+    Content::Resources		resourceManger;
     
     bool 			windowResized;
     
@@ -121,7 +127,7 @@ class GameComponent;
     /**
     * Contains the game loop
     */
-    virtual void 		Run		(int argc, char** argv);
+    virtual int 		Run		(int argc, char** argv);
     /**
     * 
     * Used to render the sprite to the screen.

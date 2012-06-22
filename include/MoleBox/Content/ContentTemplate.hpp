@@ -4,15 +4,33 @@
 #include <string>
 #include <functional>
 #include <vector>
+#include <list>
 #include <stdlib.h>
 #include <SFML/System/Mutex.hpp>
 
 namespace MB {
   
   namespace Content {
-    
+
     typedef std::vector<std::string> StrVect;
 
+    class ID
+    {
+    protected:
+      std::string type;
+    public:
+      
+      ID(std::string type);
+      ~ID();
+      
+      std::string Type();
+      virtual MB::Content::StrVect List();
+      virtual bool CheckExtension(std::string extension);
+      virtual void Load(std::string string);
+      
+    };   
+    
+    
     template <class T,class C> struct Container_Base
     {
       
@@ -54,15 +72,27 @@ namespace MB {
 	return this->base.List();
       }
       
+      ID* GetID()
+      {
+	return new ID("");
+      }
+      
     };
   
-  template <typename T> static const T& Load(std::string name) {
+  template <typename T> static const T & Load(std::string name) {
       return Container<T>::I().Load(name);
     }
     
   template <typename T> static StrVect List() {
     return Container<T>::I().List();
     }  
+  
+  
+  template <typename T> static ID * GetID()
+  {
+    return Container<T>::I().GetID();
+  }
+
   
   }
 }

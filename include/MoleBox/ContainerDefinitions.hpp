@@ -28,6 +28,7 @@
 #include <map>
 #include <vector>
 #include <string>
+#include <list>
 /**
  * A set of common type definintions used through out.
  * 
@@ -37,6 +38,7 @@ namespace MB {
   namespace Types {
     typedef std::map<sf::Event::EventType,sf::Event> 	EventList;
     typedef std::vector<std::string>			StrVect;
+    typedef std::list<std::string>			StrList;
   }
   
 }

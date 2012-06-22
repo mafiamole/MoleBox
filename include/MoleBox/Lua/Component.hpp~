@@ -38,7 +38,7 @@ extern "C" {
 #include <MoleBox/Lua/Script.hpp>
 
 #ifdef LUA_EDITOR
-  #include "luascripts.h"
+#include <MoleBox/Lua/Scripts.hpp>
 #endif
 
 #include <map>
@@ -53,11 +53,11 @@ extern "C" {
  * 
  */
 namespace MB {
-
   
-  
-namespace Lua {  
+  namespace Lua {
+    
     void ActionsToLua(lua_State* L, MB::Actions* actions);
+    
     class LuaComponent : public GameComponent
     {
     private:

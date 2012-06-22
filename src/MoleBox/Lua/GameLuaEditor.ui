@@ -17,7 +17,7 @@
    </sizepolicy>
   </property>
   <property name="windowTitle">
-   <string>Lua Script Editor</string>
+   <string>MoleBox Resource Viewer &amp; Script Manager</string>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
@@ -135,6 +135,15 @@
       <attribute name="title">
        <string>Resources</string>
       </attribute>
+      <layout class="QHBoxLayout" name="horizontalLayout_3">
+       <item>
+        <widget class="QTreeView" name="resource_treeView">
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+        </widget>
+       </item>
+      </layout>
      </widget>
     </widget>
    </item>

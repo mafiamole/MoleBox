@@ -32,7 +32,7 @@
 #include <cstdlib>
 #include <ctime>
 
-Ball::Ball(Game* game) : MB::GameComponent(game), playerScore(0), computerScore(0), acceleration(1.0f)
+Ball::Ball(MB::Game* game) : MB::GameComponent(game), playerScore(0), computerScore(0), acceleration(1.0f)
 {
   
 
@@ -78,13 +78,21 @@ void Ball::Update(sf::Time elapsed, MB::Types::EventList* events)
       this->direction.y = this->direction.y * -1.0f;
       calculatedPositon.y = this->sprite.getPosition().y + moveVector.y;
     }
-      
-    if (this->InterceptPlayer(calculatedPositon,moveVector) || this->IntereptEnemy(calculatedPositon,moveVector) )
+    
+    
+    bool playerIntercepted = this->InterceptPlayer(calculatedPositon,moveVector);
+    bool enemyIntercepted = this->IntereptEnemy(calculatedPositon,moveVector);
+    
+    if ( playerIntercepted || enemyIntercepted )
     {
       moveVector.x = moveVector.x * -1.0f; // flip the direction
       this->direction.x = this->direction.x * -1.0f;
       calculatedPositon.x = this->sprite.getPosition().x + moveVector.x;
       this->sprite.setPosition(calculatedPositon);
+      if (playerIntercepted)
+	this->sound.setPosition();
+      else
+	this->sound.setPosition();
       this->sound.play();
       this->acceleration += 0.05f;
     }

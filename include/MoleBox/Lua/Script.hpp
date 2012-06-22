@@ -45,7 +45,7 @@ namespace MB {
       bool debug;
       LuaRegisterMap FuncsToReg;
     public:
-	LuaScript();
+	LuaScript(bool debug = false);
 	bool LoadFromFile(std::string file);
 	bool LoadFromString(std::string contents, std::string remarks = "");
 	bool HandleError(int State);

@@ -30,9 +30,9 @@
 #include <fstream>
 #include <sstream>
 using namespace MB;
-Lua::LuaScript::LuaScript()
+Lua::LuaScript::LuaScript(bool debug) : debug(debug)
 {
-
+  
 }
 
 Lua::LuaScript::~LuaScript()
@@ -77,7 +77,7 @@ void Lua::LuaScript::AddLibrary(std::string name,const luaL_Reg* stuff)
 bool Lua::LuaScript::HandleError(int State)
 {
   lua_gettop(L);
-  if ( State > 0)
+  if ( State == LUA_ERRRUN || State == LUA_ERRMEM || State == LUA_ERRERR)
   {
     std::stringstream error;
     error << this->ErrorTypeName(State) <<  " error (";
@@ -86,8 +86,9 @@ bool Lua::LuaScript::HandleError(int State)
     error << lua_tostring(L, -1);
     
     lua_pop(L, 1);
-    
+   
     if (this->debug) {
+      
       throw error.str();
     }
     else {
@@ -177,7 +178,6 @@ bool Lua::LuaScript::RunScript()
   int success;
   
   success = lua_pcall(this->L,0,0,0); //execute script so we can grab functions;
-
   if (this->HandleError(success))
   {
     return true;

@@ -30,7 +30,7 @@
 
 
 #include <MoleBox/GameComponent.hpp>
-
+#include <MoleBox/Content/Resources.hpp>
 #include "lua.hpp"
 
 #include "ball.h"
@@ -45,7 +45,6 @@
 class Game : public MB::Game
 {
 protected:
-
   Player* player;
   Enemy* enemy;
   Ball* ball;
@@ -56,7 +55,7 @@ public:
     Game();
     void Update( sf::Time elapsed, MB::Types::EventList* events);
     void Draw();
-    void Run(int argc,char** argv);
+    int Run(int argc,char** argv);
 
     virtual ~Game();
    

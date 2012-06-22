@@ -35,6 +35,7 @@
 #include <Qt/qfile.h>
 #include <Qt/qtextstream.h>
 
+ 
 using namespace MB;
 
 Lua::Highlighter::Highlighter(QObject* parent): QSyntaxHighlighter(parent)
@@ -125,7 +126,7 @@ void Lua::Highlighter::highlightBlock(const QString& text)
 }
 
 
-Lua::LuaEditor::LuaEditor(std::vector<std::string> scripts,QWidget *parent) : QWidget(parent)
+Lua::LuaEditor::LuaEditor(std::map<std::string,MB::Types::StrVect> resources, std::vector< std::string > scripts, QWidget* parent) : QWidget(parent)
 {
   ui.setupUi(this); 
 
@@ -149,9 +150,12 @@ Lua::LuaEditor::LuaEditor(std::vector<std::string> scripts,QWidget *parent) : QW
   if ( ui.tabCodeWindow->count() > 0 ) { 
     this->ResourcesTabTitle = ui.tabCodeWindow->tabText(0);
   }
-  if (!scripts.empty()) {
-	this->ChangeScript(scripts[0].c_str());
-  }
+//   if (!scripts.empty()) {
+// 	this->ChangeScript(scripts[0].c_str());
+//   }
+  
+  this->resourceModel = new QStandardItemModel;
+  this->InitResourceTree(resources);
 }
 
 Lua::LuaEditor::~LuaEditor()
@@ -159,6 +163,55 @@ Lua::LuaEditor::~LuaEditor()
 
 }
 
+
+void Lua::LuaEditor::InitResourceTree(std::map<std::string,MB::Types::StrVect> resources)
+{
+  
+  QStandardItem *rootNode = this->resourceModel->invisibleRootItem();
+  
+  
+  std::map<std::string,MB::Types::StrVect>::iterator resourceItr;
+  
+  for (resourceItr = resources.begin(); resourceItr != resources.end(); resourceItr++)
+  {
+    QStandardItem *item = new QStandardItem ( (*resourceItr).first.c_str() );
+    this->AppendToResourceTree((*resourceItr).second,item);
+    rootNode->appendRow(item);
+  }
+  /*
+  QStandardItem *textures 	= new QStandardItem("Textures");
+  QStandardItem *sounds   	= new QStandardItem("Sounds");
+  QStandardItem *music	  	= new QStandardItem("Music");
+  QStandardItem *luaScripts 	= new QStandardItem("Lua Scripts");
+  
+  rootNode->appendRow(textures);
+  rootNode->appendRow(sounds);
+  rootNode->appendRow(music);
+  rootNode->appendRow(luaScripts);
+  
+  this->ui.resource_treeView->setModel(resourceModel);
+  this->ui.resource_treeView->expandAll();
+  
+  this->AppendToResourceTree( Content::List<sf::Texture>(), textures );
+  this->AppendToResourceTree( Content::List<sf::SoundBuffer>(), sounds );
+  this->AppendToResourceTree( Content::List<sf::Music *>(), music );
+  this->AppendToResourceTree( Content::List<MB::Lua::LuaScript*>(), luaScripts );
+  */
+  this->ui.resource_treeView->setModel(resourceModel);
+  this->ui.resource_treeView->expandAll();
+}
+
+void Lua::LuaEditor::AppendToResourceTree(MB::Content::StrVect list , QStandardItem *root)
+{
+  MB::Content::StrVect::iterator resourceItr;
+  
+  for (resourceItr = list.begin(); resourceItr != list.end(); resourceItr++)
+  {
+  QStandardItem *item = new QStandardItem((*resourceItr).c_str());
+  root->appendRow(item);
+  }
+  
+}
 
 void Lua::LuaEditor::pushButton_Save_Click(){
 	if ((QTextEdit*)ui.tabCodeWindow->currentIndex() != 0){
@@ -226,28 +279,30 @@ void Lua::LuaEditor::SetScripts( std::vector< std::string > scripts )
 void Lua::LuaEditor::TabChanged(int index)
 {
 
-	// Update current tab formatting
-	
-	if ( ui.tabCodeWindow->tabText(index) != this->ResourcesTabTitle) {
-	
-	QTextEdit* currentTextEdit = (QTextEdit*)ui.tabCodeWindow->widget(index);
+  // Update current tab formatting
+  
+  if ( ui.tabCodeWindow->tabText(index) != this->ResourcesTabTitle) {
+  
+    QTextEdit* currentTextEdit = (QTextEdit*)ui.tabCodeWindow->widget(index);
 
-	if(ui.tabCodeWindow->tabText(index).compare("Resources") == 0){
-		// Code to update Resources
-		
-		
-      }else{
+    if(ui.tabCodeWindow->tabText(index).compare("Resources") == 0)
+    {
+	    // Code to update Resources
+      
+    } 
+    else
+    {
 
-		// Update current script tab
-		QTextEdit* currentTextEdit = (QTextEdit*)ui.tabCodeWindow->currentWidget();
-	
-		luaHighlight = new Lua::Highlighter(currentTextEdit->document());
-			
-	QApplication::connect(currentTextEdit, SIGNAL(textChanged()), this, SLOT(UpdateScript()) ); // updates script on changes.
-	}
+      // Update current script tab
+      QTextEdit* currentTextEdit = (QTextEdit*)ui.tabCodeWindow->currentWidget();
 
-		QApplication::connect(currentTextEdit, SIGNAL(textChanged()), this, SLOT(UpdateScript()) ); // updates script on changes.
-	}
+      luaHighlight = new Lua::Highlighter(currentTextEdit->document());
+		    
+      QApplication::connect(currentTextEdit, SIGNAL(textChanged()), this, SLOT(UpdateScript()) ); // updates script on changes.
+    }
+
+    QApplication::connect(currentTextEdit, SIGNAL(textChanged()), this, SLOT(UpdateScript()) ); // updates script on changes.
+  }
 }
 
 void Lua::LuaEditor::CloseTab(int index)
@@ -303,8 +358,7 @@ void Lua::LuaEditor::UpdateScript()
   try {
 
     
-    std::cout << "Debuging script" << std::endl;
-    LuaScript script;
+    LuaScript script(true);
     
     script.AddLibrary("Window",lua_reg_window_DUMMY);
     script.AddLibrary("Sprite",lua_reg_sprite_DUMMY);
@@ -313,13 +367,24 @@ void Lua::LuaEditor::UpdateScript()
   
     bool success = script.LoadFromString(changedScript);
     
-      script.RunScript();
-      script.RunFunction("init");
-      script.RunFunction("update");
-      script.RunFunction("draw");
-  
-      Lua::LuaScripts::Instance().UpdateScript( scriptFile, changedScript );
+    if (success) {
+      bool testGlobal 	= script.RunScript();
+      bool testInit 	= script.RunFunction("init");
+      bool testUpdate   = script.RunFunction("update");
+      bool testDraw     = script.RunFunction("draw");
       
+      if (testGlobal && testInit && testUpdate && testDraw)
+      {
+	Lua::LuaScripts::Instance().UpdateScript( scriptFile, changedScript );
+
+      }
+      else
+      {
+	throw "Unknown error.";
+      }
+      
+    }
+
   }
   catch (std::string error) {
     

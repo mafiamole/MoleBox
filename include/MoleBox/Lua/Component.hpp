@@ -63,7 +63,7 @@ namespace MB {
     private:
 
       std::string 		scriptFile;
-      LuaScript			script;
+      LuaScript *		script;
       std::map<int,sf::Sprite>	sprites;
       std::map<int,sf::Text>	text;
       std::map<int,sf::Sound>	sounds;
