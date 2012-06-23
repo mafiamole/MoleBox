@@ -1,5 +1,5 @@
 Player = {ScoreText = 0,CurrentScore=0}
-
+Test = 0;
 Computer = {ScoreText = 0,CurrentScore=0}
 WindowDimensions =  {}
 WindowDimensions = {Window.Size()}
@@ -7,7 +7,7 @@ WindowDimensions = {Window.Size()}
 function init()
   Player.ScoreText = Text.Create("0")
   Computer.ScoreText = Text.Create("0")
-
+  Test = Sprite.Load("paddle.png")
   setComputerTextLocation()
 end
 
@@ -37,6 +37,7 @@ function draw()
   
   Text.Draw(Player.ScoreText)
   Text.Draw(Computer.ScoreText)
+  Sprite.Draw(Test)
   
 end
 
