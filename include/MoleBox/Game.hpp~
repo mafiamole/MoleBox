@@ -56,7 +56,7 @@ class GameComponent;
   int argc;
   char **argv;
   std::vector<std::string> scriptList;
-  
+  std::map<std::string,MB::Types::StrVect> resources;
    
 };
  
@@ -66,14 +66,8 @@ class GameComponent;
   class Game
   {
     
-  private:
-
-    /**
-    * SFML render window object.
-    */
-    sf::RenderWindow*		window;
-    
   protected:
+    sf::RenderWindow*		window;
     
     Content::Resources		resourceManger;
     
@@ -98,6 +92,8 @@ class GameComponent;
     
   public:
     
+    
+				Game 	();
     /**
     * The constructor requires the games window title to perform initalisation of the sf::RenderWindow object.
     */

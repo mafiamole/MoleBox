@@ -66,14 +66,8 @@ class GameComponent;
   class Game
   {
     
-  private:
-
-    /**
-    * SFML render window object.
-    */
-    sf::RenderWindow*		window;
-    
   protected:
+    sf::RenderWindow*		window;
     
     Content::Resources		resourceManger;
     
@@ -97,6 +91,7 @@ class GameComponent;
     int 			ComponentCount	();
     
   public:
+    
     
     /**
     * The constructor requires the games window title to perform initalisation of the sf::RenderWindow object.

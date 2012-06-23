@@ -47,9 +47,13 @@
  
 #endif
 
+
+
 MB::Game::Game(std::string windowName) : resourceManger()
 {
-  window = new sf::RenderWindow( sf::VideoMode( 800, 600 ), windowName );
+  
+  
+  //window = new sf::RenderWindow( sf::VideoMode( 800, 600 ), windowName );
 
   
 }

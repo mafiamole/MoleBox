@@ -31,13 +31,15 @@
 #include <Pong/game.h>
 
 
-Game::Game() : MB::Game("Ultra Pong 3000"), won("No one"),finished(false)
+Game::Game() : MB::Game("Ultra Pong 3000")
 {
 
   
-  
+  window = new sf::RenderWindow( sf::VideoMode( 800, 600 ), "Window name" );
+   
   this->actionList.Register("Player Move Up",new MB::Keyboard(sf::Keyboard::Up));
   this->actionList.Register("Player Move Down",new MB::Keyboard(sf::Keyboard::Down));
+  
   try {
 
   this->player 		= (Player*)this->AddComponent( new Player(this) );
@@ -47,7 +49,10 @@ Game::Game() : MB::Game("Ultra Pong 3000"), won("No one"),finished(false)
   enemy->SetBall(ball);
   ball->SetOpponents(player,enemy);
   ui->SetBall(ball);
-  
+  //, won("No one"),finished(false)
+ 
+  this->won.setString("No one");
+  this->finished = false;
   }
   catch (std::string e)
   {
