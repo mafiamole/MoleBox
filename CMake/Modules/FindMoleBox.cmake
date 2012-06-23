@@ -45,7 +45,7 @@ else()
 endif()
 
 
-find_package(SFML 2.0 COMPONENTS system window graphics audio REQUIRED)
+find_package(SFML 2.0 COMPONENTS system window graphics audio network REQUIRED)
 find_package(OpenGL REQUIRED)
 find_package(GLU REQUIRED)
 find_package(Lua51)
