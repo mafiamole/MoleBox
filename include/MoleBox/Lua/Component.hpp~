@@ -60,10 +60,10 @@ namespace MB {
     
     class LuaComponent : public GameComponent
     {
-    private:
+    protected:
 
       std::string 		scriptFile;
-      LuaScript			script;
+      LuaScript *		script;
       std::map<int,sf::Sprite>	sprites;
       std::map<int,sf::Text>	text;
       std::map<int,sf::Sound>	sounds;
@@ -72,7 +72,6 @@ namespace MB {
       int textKey;
       std::vector<int>		spriteBatch;
       std::vector<int>		textBatch;
-    protected:
       virtual void UpdateScriptPreCall(lua_State* L);
     public:
       LuaComponent(MB::Game* game, std::string file);

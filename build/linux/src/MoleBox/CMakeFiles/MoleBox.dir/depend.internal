@@ -518,22 +518,22 @@ src/MoleBox/CMakeFiles/MoleBox.dir/GameComponent.cpp.o
  /usr/local/include/SFML/Window/WindowHandle.hpp
  /usr/local/include/SFML/Window/WindowStyle.hpp
 src/MoleBox/CMakeFiles/MoleBox.dir/Lua/Component.cpp.o
+ ../../include/MoleBox/Action.hpp
+ ../../include/MoleBox/Actions.hpp
+ ../../include/MoleBox/ContainerDefinitions.hpp
+ ../../include/MoleBox/Content/Content.hpp
+ ../../include/MoleBox/Content/ContentID.hpp
+ ../../include/MoleBox/Content/ContentTemplate.hpp
+ ../../include/MoleBox/Content/Resources.hpp
+ ../../include/MoleBox/Game.hpp
+ ../../include/MoleBox/GameComponent.hpp
+ ../../include/MoleBox/Lua/Component.hpp
+ ../../include/MoleBox/Lua/ComponentFunctions.hpp
+ ../../include/MoleBox/Lua/Content.hpp
+ ../../include/MoleBox/Lua/Script.hpp
+ ../../include/MoleBox/Lua/ScriptHelper.hpp
+ ../../include/MoleBox/Lua/Scripts.hpp
  /home/mafiamole/projects/MoleBox/src/MoleBox/Lua/Component.cpp
- /usr/local/include/MoleBox/Action.hpp
- /usr/local/include/MoleBox/Actions.hpp
- /usr/local/include/MoleBox/ContainerDefinitions.hpp
- /usr/local/include/MoleBox/Content/Content.hpp
- /usr/local/include/MoleBox/Content/ContentID.hpp
- /usr/local/include/MoleBox/Content/ContentTemplate.hpp
- /usr/local/include/MoleBox/Content/Resources.hpp
- /usr/local/include/MoleBox/Game.hpp
- /usr/local/include/MoleBox/GameComponent.hpp
- /usr/local/include/MoleBox/Lua/Component.hpp
- /usr/local/include/MoleBox/Lua/ComponentFunctions.hpp
- /usr/local/include/MoleBox/Lua/Content.hpp
- /usr/local/include/MoleBox/Lua/Script.hpp
- /usr/local/include/MoleBox/Lua/ScriptHelper.hpp
- /usr/local/include/MoleBox/Lua/Scripts.hpp
  /usr/local/include/SFML/Audio.hpp
  /usr/local/include/SFML/Audio/Export.hpp
  /usr/local/include/SFML/Audio/Listener.hpp
@@ -609,21 +609,21 @@ src/MoleBox/CMakeFiles/MoleBox.dir/Lua/Component.cpp.o
  /usr/local/include/SFML/Window/WindowHandle.hpp
  /usr/local/include/SFML/Window/WindowStyle.hpp
 src/MoleBox/CMakeFiles/MoleBox.dir/Lua/Content.cpp.o
+ ../../include/MoleBox/Action.hpp
+ ../../include/MoleBox/Actions.hpp
+ ../../include/MoleBox/ContainerDefinitions.hpp
+ ../../include/MoleBox/Content/Content.hpp
+ ../../include/MoleBox/Content/ContentID.hpp
+ ../../include/MoleBox/Content/ContentTemplate.hpp
+ ../../include/MoleBox/Content/Resources.hpp
+ ../../include/MoleBox/Game.hpp
+ ../../include/MoleBox/GameComponent.hpp
+ ../../include/MoleBox/Lua/Component.hpp
+ ../../include/MoleBox/Lua/Content.hpp
+ ../../include/MoleBox/Lua/Script.hpp
+ ../../include/MoleBox/Lua/ScriptHelper.hpp
+ ../../include/MoleBox/Lua/Scripts.hpp
  /home/mafiamole/projects/MoleBox/src/MoleBox/Lua/Content.cpp
- /usr/local/include/MoleBox/Action.hpp
- /usr/local/include/MoleBox/Actions.hpp
- /usr/local/include/MoleBox/ContainerDefinitions.hpp
- /usr/local/include/MoleBox/Content/Content.hpp
- /usr/local/include/MoleBox/Content/ContentID.hpp
- /usr/local/include/MoleBox/Content/ContentTemplate.hpp
- /usr/local/include/MoleBox/Content/Resources.hpp
- /usr/local/include/MoleBox/Game.hpp
- /usr/local/include/MoleBox/GameComponent.hpp
- /usr/local/include/MoleBox/Lua/Component.hpp
- /usr/local/include/MoleBox/Lua/Content.hpp
- /usr/local/include/MoleBox/Lua/Script.hpp
- /usr/local/include/MoleBox/Lua/ScriptHelper.hpp
- /usr/local/include/MoleBox/Lua/Scripts.hpp
  /usr/local/include/SFML/Audio.hpp
  /usr/local/include/SFML/Audio/Export.hpp
  /usr/local/include/SFML/Audio/Listener.hpp
@@ -699,6 +699,15 @@ src/MoleBox/CMakeFiles/MoleBox.dir/Lua/Content.cpp.o
  /usr/local/include/SFML/Window/WindowHandle.hpp
  /usr/local/include/SFML/Window/WindowStyle.hpp
 src/MoleBox/CMakeFiles/MoleBox.dir/Lua/Editor.cpp.o
+ ../../include/MoleBox/ContainerDefinitions.hpp
+ ../../include/MoleBox/Content/Content.hpp
+ ../../include/MoleBox/Content/ContentID.hpp
+ ../../include/MoleBox/Content/ContentTemplate.hpp
+ ../../include/MoleBox/Lua/Editor.hpp
+ ../../include/MoleBox/Lua/EditorFunctions.hpp
+ ../../include/MoleBox/Lua/Script.hpp
+ ../../include/MoleBox/Lua/ScriptHelper.hpp
+ ../../include/MoleBox/Lua/Scripts.hpp
  /home/mafiamole/projects/MoleBox/src/MoleBox/Lua/Editor.cpp
  /usr/include/QtGui/QItemSelectionModel
  /usr/include/QtGui/QStandardItemModel
@@ -708,15 +717,6 @@ src/MoleBox/CMakeFiles/MoleBox.dir/Lua/Editor.cpp.o
  /usr/include/QtGui/qstandarditemmodel.h
  /usr/include/QtGui/qsyntaxhighlighter.h
  /usr/include/QtGui/qtreeview.h
- /usr/local/include/MoleBox/ContainerDefinitions.hpp
- /usr/local/include/MoleBox/Content/Content.hpp
- /usr/local/include/MoleBox/Content/ContentID.hpp
- /usr/local/include/MoleBox/Content/ContentTemplate.hpp
- /usr/local/include/MoleBox/Lua/Editor.hpp
- /usr/local/include/MoleBox/Lua/EditorFunctions.hpp
- /usr/local/include/MoleBox/Lua/Script.hpp
- /usr/local/include/MoleBox/Lua/ScriptHelper.hpp
- /usr/local/include/MoleBox/Lua/Scripts.hpp
  /usr/local/include/SFML/Audio.hpp
  /usr/local/include/SFML/Audio/Export.hpp
  /usr/local/include/SFML/Audio/Listener.hpp
