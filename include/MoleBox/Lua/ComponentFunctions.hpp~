@@ -5,6 +5,7 @@
 namespace MB {
   
   namespace Lua {
+    
     static const luaL_reg sfml_lua_window[] =
     {
       { "Size", Window::Dimensions}, 

@@ -51,7 +51,7 @@ namespace MB {
       { "Pause",Music::Pause},
       { "Continue", Music::Continue},
       { "Stop",Music::Stop},
-      { "Stop",Music::SetLoop},
+      { "SetLoop",Music::SetLoop},
       { NULL, NULL } 
     };
   }

@@ -133,6 +133,18 @@ namespace MB {
       { NULL, NULL }
     };
 
+    static const luaL_Reg sfml_lua_music_DUMMY[] =
+    {
+      { "Load",  LuaEmptyFunctionWithReturn<1,1,int> },
+      { "Play", LuaEmptyFunction<1>},
+      { "Playing", LuaEmptyFunctionWithReturn<1,1,int>},
+      { "Pause",  LuaEmptyFunction<1>},
+      { "Continue",  LuaEmptyFunction<1>},
+      { "Stop",  LuaEmptyFunction<1>},
+      { "SetLoop", LuaEmptyFunction<1>},
+      { NULL, NULL } 
+    };    
+    
   }
 
 }

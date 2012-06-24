@@ -21,7 +21,6 @@ namespace MB {
 	
 	std::stringstream error;
 	error << "(DUMMY)Incorrect number of arguments. " << n << " supplied," << numberOfArgs << " required.";
-
 	lua_pushstring(L,error.str().c_str());
 	lua_error(L);
       }
@@ -69,13 +68,12 @@ namespace MB {
       
       if ( n != numberOfArgs)
       {
-	
-	std::string error;
-	error = "Incorrect number of arguments, this function takes ";
-	error += numberOfArgs;
-	error += " arguments.";
-	lua_pushstring(L,error.c_str());
+
+	std::stringstream error;
+	error << "(DUMMY)Incorrect number of arguments. " << n << " supplied," << numberOfArgs << " required.";
+	lua_pushstring(L,error.str().c_str());
 	lua_error(L);
+	
       }
       try {
 	
@@ -135,6 +133,18 @@ namespace MB {
       { NULL, NULL }
     };
 
+    static const luaL_Reg sfml_lua_music_DUMMY[] =
+    {
+      { "Load",  LuaEmptyFunctionWithReturn<1,1,int> },
+      { "Play", LuaEmptyFunction<1>},
+      { "Playing", LuaEmptyFunction<1>},
+      { "Pause",  LuaEmptyFunction<1>},
+      { "Continue",  LuaEmptyFunction<1>},
+      { "Stop",  LuaEmptyFunction<1>},
+      { "SetLoop", LuaEmptyFunction<1>},
+      { NULL, NULL } 
+    };    
+    
   }
 
 }
