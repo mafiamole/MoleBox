@@ -40,6 +40,7 @@ Game::Game() : MB::Game("Ultra Pong 3000")
   this->actionList.Register("Player Move Up",new MB::Keyboard(sf::Keyboard::Up));
   this->actionList.Register("Player Move Down",new MB::Keyboard(sf::Keyboard::Down));
   
+
   try {
 
   this->player 		= (Player*)this->AddComponent( new Player(this) );
@@ -53,6 +54,10 @@ Game::Game() : MB::Game("Ultra Pong 3000")
  
   this->won.setString("No one");
   this->finished = false;
+  }
+  catch (char const* e)
+  {
+    std::cout << e << std::endl;    
   }
   catch (std::string e)
   {

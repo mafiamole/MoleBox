@@ -39,7 +39,7 @@ static Lua::LuaComponent* getComponentFromUserData(lua_State* L)
 {
   lua_pushstring(L,"MB_GAME_COMPONENT");
   lua_gettable(L,LUA_REGISTRYINDEX);
-  Lua::LuaComponent* _this = (MB::LuaComponent*)lua_touserdata(L,-1);
+  Lua::LuaComponent* _this = (Lua::LuaComponent*)lua_touserdata(L,-1);
   return _this;
 }
 
@@ -467,6 +467,7 @@ int Lua::Window::Resized(lua_State* L)
   
   if ( n != 0)
    Lua::PushError(L, "Window.Resized requires no arguments.");
+  
   Lua::LuaComponent* _this = getComponentFromUserData(L);
   
   bool windowResize = _this->GetGame()->WindowResized();  
@@ -475,5 +476,169 @@ int Lua::Window::Resized(lua_State* L)
   
   return 1;
   
+}
+
+int Lua::Music::Load(lua_State*L)
+{
+  int n = lua_gettop ( L );
+
+  if ( n != 1)
+    Lua::PushError(L, "Music.Load requires one argument ( File ).");
+  
+  Lua::LuaComponent* _this = getComponentFromUserData(L);
+    
+  std::string file = lua_tostring(L,1);
+  
+  try {
+    
+    int value = _this->AddMusic(file);
+    
+    lua_pushinteger(L,value);
+  }
+  catch (std::string err)
+  {
+    Lua::PushError(L, err);
+  }
+  
+  
+    
+  return 1;
+}
+
+int Lua::Music::Playing(lua_State*L)
+{
+  int n = lua_gettop ( L );
+  
+  if ( n != 0)
+    Lua::PushError(L, "Music.Plating requires one argument ( 'music reference' ).");
+  
+  Lua::LuaComponent* _this = getComponentFromUserData(L);
+  
+  int isThisCurrentPlaying  = lua_tointeger(L,1);
+  
+  try
+  {
+    int currentPlaying = _this->CurrentMusicPlaying();
+    
+    lua_pushboolean(L, currentPlaying && isThisCurrentPlaying );
+    
+  }
+  catch (std::string err)
+  {
+    Lua::PushError(L, err);
+  }
+  
+  return 1;
+}
+
+
+int Lua::Music::Play(lua_State*L)
+{
+  int n = lua_gettop ( L );
+  
+  if ( n != 1)
+    Lua::PushError(L, "Music.Play requires one argument ( 'music reference' ).");
+  
+  Lua::LuaComponent* _this = getComponentFromUserData(L);
+  
+  int musicToPlay  = lua_tointeger(L,1);
+  try {
+    _this->SetPlayingMusic(musicToPlay);
+  }
+  catch (std::string err)
+  {
+    Lua::PushError(L,err);
+
+  }
+  catch (const char* err)
+  {
+   Lua::PushError(L,err);
+  }
+  return 0;
+}
+
+
+int Lua::Music::Stop(lua_State*L)
+{
+  int n = lua_gettop ( L );
+  
+  if ( n != 0)
+    Lua::PushError(L, "Music.Stop requires zero arguments.");
+  
+  Lua::LuaComponent* _this = getComponentFromUserData(L);
+
+  try {
+   int current =  _this->CurrentMusicPlaying();
+   _this->GetMusic(current)->stop();
+  }
+  catch (std::string err)
+  {
+    Lua::PushError(L,err);
+
+  }
+  
+  return 0;
+}
+
+
+int Lua::Music::Continue(lua_State*L)
+{
+  int n = lua_gettop ( L );
+  
+  if ( n != 0)
+    Lua::PushError(L, "Music.Load requires zero arguments.");
+  
+  Lua::LuaComponent* _this = getComponentFromUserData(L);
+  
+  try {
+   int current =  _this->CurrentMusicPlaying();
+   _this->GetMusic(current)->play();
+  }
+  catch (std::string err)
+  {
+    Lua::PushError(L,err);
+  }
+  return 0;
+}
+
+
+int Lua::Music::Pause(lua_State*L)
+{
+  int n = lua_gettop ( L );
+  
+  if ( n != 0)
+    Lua::PushError(L, "Music.Load requires zero arguments.");
+  
+  Lua::LuaComponent* _this = getComponentFromUserData(L);
+  try {
+   int current =  _this->CurrentMusicPlaying();
+   _this->GetMusic(current)->pause();
+  }
+  catch (std::string err)
+  {
+    Lua::PushError(L,err);
+  }
+  return 0;
+}
+
+int Lua::Music::SetLoop(lua_State*L)
+{
+  int n = lua_gettop ( L );
+  
+  if ( n != 1)
+    Lua::PushError(L, "Music.Load requires one argument ( bool ).");
+  
+  Lua::LuaComponent* _this = getComponentFromUserData(L);
+  
+  bool loop = lua_toboolean(L,1);
+  try {
+   int current =  _this->CurrentMusicPlaying();
+   _this->SetMusicLoop(current,loop);
+  }
+  catch (std::string err)
+  {
+    Lua::PushError(L,err);
+  }  
+  return 0;
 }
 

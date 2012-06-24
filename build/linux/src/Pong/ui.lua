@@ -7,7 +7,8 @@ WindowDimensions = {Window.Size()}
 function init()
   Player.ScoreText = Text.Create("0")
   Computer.ScoreText = Text.Create("0")
-  Test = Sprite.Load("paddle.png")
+  Test = Music.Load("test.ogg")
+  Music.Play(Test)
   setComputerTextLocation()
 end
 
@@ -37,7 +38,6 @@ function draw()
   
   Text.Draw(Player.ScoreText)
   Text.Draw(Computer.ScoreText)
-  Sprite.Draw(Test)
   
 end
 

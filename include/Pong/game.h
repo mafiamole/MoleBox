@@ -58,6 +58,7 @@ public:
     int Run(int argc,char** argv);
 
     virtual ~Game();
+    sf::Music* music;
    
 
 };

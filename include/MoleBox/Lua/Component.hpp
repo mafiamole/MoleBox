@@ -67,18 +67,22 @@ namespace MB {
       std::map<int,sf::Sprite>	sprites;
       std::map<int,sf::Text>	text;
       std::map<int,sf::Sound>	sounds;
-      int spriteKey;
-      int soundKey;
-      int textKey;
+      std::map<int,sf::Music*>	music;
+      int 			soundKey;
+      int 			currentPlaying;
+      int 			spriteKey;
+      int 			MusicKey;
+      int 			textKey;
       std::vector<int>		spriteBatch;
       std::vector<int>		textBatch;
       virtual void UpdateScriptPreCall(lua_State* L);
-      
+      bool		musicLoop;
     public:
       LuaComponent(MB::Game* game, std::string file);
       
       int	AddSprite(std::string file);
       int	AddSounds(std::string file);
+      int	AddMusic(std::string file);
       
       void AddSpriteToDrawList(int ref);
       void AddTextToDrawList(int ref);
@@ -87,10 +91,15 @@ namespace MB {
       
       const sf::Vector2u& GetWindowSize();
       
-      sf::Sprite* GetSprite(int ref);
+      sf::Sprite* 	GetSprite(int ref);
       sf::Sound*	GetSound(int ref);
-      sf::Text* GetText(int ref);
+      sf::Text* 	GetText(int ref);
+      sf::Music*	GetMusic(int ref);
+      void 		SetMusicLoop(int ref,bool value);
       
+      
+      int		CurrentMusicPlaying	();
+      void 		SetPlayingMusic		(int ref);
       virtual void Update(sf::Time elapsed,Types::EventList* events,int argCount = 2);
       virtual void Draw();
       

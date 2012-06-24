@@ -35,13 +35,15 @@ Game::Game() : MB::Game("Ultra Pong 3000")
 {
 
   
-  
+  window = new sf::RenderWindow( sf::VideoMode( 800, 600 ), "Window name" );
    
   this->actionList.Register("Player Move Up",new MB::Keyboard(sf::Keyboard::Up));
   this->actionList.Register("Player Move Down",new MB::Keyboard(sf::Keyboard::Down));
-  window = new sf::RenderWindow( sf::VideoMode( 800, 600 ), "Window name" );
-  try {
+  
 
+  try {
+  music =  MB::Content::Load<sf::Music *>("menu.ogg");
+  music->play();
   this->player 		= (Player*)this->AddComponent( new Player(this) );
   this->enemy		= (Enemy*)this->AddComponent( new Enemy(this) );
   this->ball 		= (Ball*)this->AddComponent( new Ball(this) );
@@ -53,6 +55,10 @@ Game::Game() : MB::Game("Ultra Pong 3000")
  
   this->won.setString("No one");
   this->finished = false;
+  }
+  catch (char const* e)
+  {
+    std::cout << e << std::endl;    
   }
   catch (std::string e)
   {

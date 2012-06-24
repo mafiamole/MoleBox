@@ -7,39 +7,51 @@ namespace MB {
   namespace Lua {
     static const luaL_reg sfml_lua_window[] =
     {
-      { "Size", MB_Lua::Window::Dimensions}, 
+      { "Size", Window::Dimensions}, 
       { NULL, NULL }
     };
 
     static const luaL_reg sfml_lua_sprite[] =
     {
-      { "Load", MB_Lua::Sprites::Load},
-      { "Draw", MB_Lua::Sprites::Draw},
-      { "Move", MB_Lua::Sprites::Move},
-      { "Size", MB_Lua::Sprites::Size},
-      { "SetPosition", MB_Lua::Sprites::SetPosition},
-      { "GetPosition", MB_Lua::Sprites::GetPosition},
+      { "Load", Sprites::Load},
+      { "Draw", Sprites::Draw},
+      { "Move", Sprites::Move},
+      { "Size", Sprites::Size},
+      { "SetPosition", Sprites::SetPosition},
+      { "GetPosition", Sprites::GetPosition},
       { NULL, NULL }
     };
 
     static const luaL_reg sfml_lua_text[] =
     {
-      { "Create", MB_Lua::Text::Create},
-      { "Draw", MB_Lua::Text::Draw},
-      { "Modify", MB_Lua::Text::Modify},
-      { "Move", MB_Lua::Text::Move},
-      { "Size", MB_Lua::Text::Size},
-      { "SetPosition", MB_Lua::Text::SetPosition},
-      { "GetPosition", MB_Lua::Text::GetPosition},
+      { "Create", Text::Create},
+      { "Draw", Text::Draw},
+      { "Modify", Text::Modify},
+      { "Move", Text::Move},
+      { "Size", Text::Size},
+      { "SetPosition", Text::SetPosition},
+      { "GetPosition", Text::GetPosition},
       { NULL, NULL }
     };
 
     static const luaL_Reg sfml_lua_sound[] =
     {
-      { "Load", MB_Lua::Sounds::Load},
-      { "Play", MB_Lua::Sounds::Play},
+      { "Load", Sounds::Load},
+      { "Play", Sounds::Play},
       
       { NULL, NULL }
+    };
+    
+    static const luaL_Reg sfml_lua_music[] =
+    {
+      { "Load", Music::Load },
+      { "Play", Music::Play},
+      { "Playing",Music::Playing},
+      { "Pause",Music::Pause},
+      { "Continue", Music::Continue},
+      { "Stop",Music::Stop},
+      { "Stop",Music::SetLoop},
+      { NULL, NULL } 
     };
   }
 }

@@ -67,6 +67,20 @@ namespace MB {
       
     };
     
+    class Music {
+      
+    public:
+      
+      static int 				Load				( lua_State *L );
+      static int 				Play				( lua_State *L );
+      static int 				Playing				( lua_State *L );
+      static int 				Pause				( lua_State *L );
+      static int 				Continue			( lua_State *L );
+      static int 				Stop				( lua_State *L );
+      static int 				SetLoop				( lua_State *L );
+
+    };
+    
   class Window {
 
     public:

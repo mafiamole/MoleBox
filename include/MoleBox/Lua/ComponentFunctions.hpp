@@ -5,6 +5,7 @@
 namespace MB {
   
   namespace Lua {
+    
     static const luaL_reg sfml_lua_window[] =
     {
       { "Size", Window::Dimensions}, 
@@ -40,6 +41,18 @@ namespace MB {
       { "Play", Sounds::Play},
       
       { NULL, NULL }
+    };
+    
+    static const luaL_Reg sfml_lua_music[] =
+    {
+      { "Load", Music::Load },
+      { "Play", Music::Play},
+      { "Playing",Music::Playing},
+      { "Pause",Music::Pause},
+      { "Continue", Music::Continue},
+      { "Stop",Music::Stop},
+      { "Stop",Music::SetLoop},
+      { NULL, NULL } 
     };
   }
 }

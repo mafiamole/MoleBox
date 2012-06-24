@@ -53,7 +53,8 @@ void Lua::ActionsToLua(lua_State* L,MB::Actions* actions)
 }
 
 
-Lua::LuaComponent::LuaComponent(Game* game,std::string file) : GameComponent(game), script() , soundKey(0), spriteKey(0), textKey(0), scriptFile(file),text(),textBatch()
+Lua::LuaComponent::LuaComponent(Game* game,std::string file) : GameComponent(game), 
+    script() , soundKey(0), MusicKey(0),currentPlaying(0), spriteKey(0), textKey(0), scriptFile(file),text(),textBatch()
 {
   
   //this->LoadScript(file);
@@ -63,6 +64,7 @@ Lua::LuaComponent::LuaComponent(Game* game,std::string file) : GameComponent(gam
   this->script->AddLibrary("Sprite",sfml_lua_sprite);
   this->script->AddLibrary("Text",sfml_lua_text);
   this->script->AddLibrary("Sound",sfml_lua_sound);
+  this->script->AddLibrary("Music",sfml_lua_music);
   
   bool loadedScript = this->script->LoadFromFile(file);
 
@@ -135,9 +137,9 @@ void Lua::LuaComponent::Update( sf::Time elapsed, MB::Types::EventList* events,i
 
 int Lua::LuaComponent::AddSounds(std::string file)
 {
+  this->soundKey++;
   int key = this->soundKey;  
   this->sounds.insert(std::pair <int,sf::Sound>(key, sf::Sound( Content::Load< sf::SoundBuffer >(file)) ) );
-  this->soundKey++;
   return key;
 }
 
@@ -265,4 +267,70 @@ Lua::LuaComponent::~LuaComponent()
 {
 
   
+}
+
+int Lua::LuaComponent::AddMusic(std::string file)
+{
+  this->MusicKey++;
+  int key = this->MusicKey;
+  sf::Music* musicFile = Content::Load<sf::Music*>(file);
+  this->music.insert( std::pair <int,sf::Music*>( key,musicFile  ) );
+
+  
+  
+  return key;
+}
+
+sf::Music* Lua::LuaComponent::GetMusic(int ref)
+{
+  
+  if ( this->music.find(ref) != this->music.end() )
+  {
+    return this->music[ref];
+  }
+  else
+  {
+    throw "Unable to get music file.";
+  }
+  
+}
+
+int Lua::LuaComponent::CurrentMusicPlaying()
+{
+
+    return this->currentPlaying;
+
+}
+void Lua::LuaComponent::SetPlayingMusic (int ref)
+{
+
+  if (ref != this->currentPlaying)
+  {
+    if ( this->music.find(ref) != this->music.end())
+    {
+      if ( this->music.find(this->currentPlaying) != this->music.end())
+      {
+	this->GetMusic(this->currentPlaying)->stop();
+      }
+    this->GetMusic(ref)->play();
+    }
+  }
+  
+  
+}
+
+
+void Lua::LuaComponent::SetMusicLoop(int ref,bool value)
+{
+  if ( this->music.find(ref) != this->music.end() )
+  {
+  
+    this->music.at(ref)->setLoop(value);
+    
+    
+  }
+  else
+  {
+    throw "Unable to get music file.";
+  }    
 }
