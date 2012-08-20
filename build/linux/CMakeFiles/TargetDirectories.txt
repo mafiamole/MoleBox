@@ -1,2 +1,0 @@
-/home/mafiamole/projects/MoleBox/build/linux/src/MoleBox/CMakeFiles/MoleBox.dir
-/home/mafiamole/projects/MoleBox/build/linux/src/Pong/CMakeFiles/Pong.dir

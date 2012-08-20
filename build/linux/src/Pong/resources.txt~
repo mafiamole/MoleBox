@@ -1,5 +1,0 @@
-sprite ball.png
-sprite paddle.png
-luascript ui.lua
-sound mouthpop.wav
-

@@ -1,4 +1,0 @@
-texture ball.png
-texture paddle.png
-luascript ui.lua
-sound mouthpop.wav
