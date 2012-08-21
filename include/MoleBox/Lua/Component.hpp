@@ -28,6 +28,8 @@
 #define MB_LUA_COMPONENT_H
 
 #include <MoleBox/GameComponent.hpp>
+
+#include <MoleBox/Lua/Container.hpp>
 #include <MoleBox/Lua/Function.hpp>
 #include <MoleBox/Lua/Script.hpp>
 #include <MoleBox/Lua/Containers.hpp>
@@ -44,7 +46,7 @@ namespace MB {
       Containers::Sprites 	spritesContainer;
       Containers::Sounds 	soundContainer;
       Containers::Music 	musicContainer;
-      Script			script;
+      Script *			script;
       
       /**
        * @brief This pushes the arguments for the update script onto the lua stack.

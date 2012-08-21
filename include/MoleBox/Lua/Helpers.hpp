@@ -56,7 +56,8 @@ namespace MB {
      * @param identifier A character array identifier.
      * @return T*
      **/
-    MOLEBOX_LUA_API template <class T> T* GetUserDataFromRegistry(lua_State* L,const char* identifier)
+     
+    template <class T> MOLEBOX_LUA_API T* GetUserDataFromRegistry(lua_State* L,const char* identifier)
     {
       lua_pushstring(L,identifier);
       lua_gettable(L,LUA_REGISTRYINDEX);
@@ -73,7 +74,8 @@ namespace MB {
      * @param data The object pointer to push.
      * @return void
      **/
-    MOLEBOX_LUA_API template <class T> void SetUserDataToRegistry(lua_State* L,const char* identifier,T* data)
+     
+    template <class T> MOLEBOX_LUA_API void SetUserDataToRegistry(lua_State* L,const char* identifier,T* data)
     {
       
       std::cout << identifier << std::endl;

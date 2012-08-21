@@ -30,6 +30,7 @@
 #include <MoleBox/SMGame.hpp>
 #include <ReturnOfPong/MainMenu.hpp>
 #include <ReturnOfPong/PongGame.hpp>
+#include <MoleBox/ResourceUI/RUI_Thread.hpp>
 class Game : public MB::SMGame
 {
 
@@ -38,9 +39,11 @@ public:
     virtual ~Game();
     virtual void Update(sf::Time elapsed, MB::EventList* events);
     virtual void Draw();
-    virtual int Run();
+    int Run();
 private:
     sf::Sprite bg;
+    Args args;
+
 };
 
 #endif // GAME_HPP

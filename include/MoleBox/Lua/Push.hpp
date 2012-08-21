@@ -45,7 +45,7 @@ namespace MB {
      * @throw std::string Always throws this error if no type specialisation for the type provided exists.
      * @return void
      **/
-    template<typename T> MOLEBOX_LUA_API void Push(lua_State* L,T value)
+    template<typename T> void Push(lua_State* L,T value)
 	{
 		throw "type not supporteded";
 	}

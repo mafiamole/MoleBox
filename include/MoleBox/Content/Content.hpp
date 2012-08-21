@@ -4,6 +4,8 @@
 
 #include <MoleBox/Export.hpp>
 #include <MoleBox/Content/Container.hpp>
+#include <SFML/Graphics/Sprite.hpp>
+#include <SFML/Audio/Sound.hpp>
 
 namespace MB {
 
@@ -15,7 +17,7 @@ namespace MB {
      * @param fileLocation File location relative to MB::Content::location.
      * @return const T&
      **/
-    template <typename T> static const T &  Load(std::string fileLocation) {
+      template <typename T> MOLEBOX_API const T &  Load(std::string fileLocation) {
 	return Container<T>::I().Load( location + fileLocation);
       }
       
@@ -24,7 +26,7 @@ namespace MB {
        *
        * @return MB:StrVector
        **/
-       template <typename T> static StrVector  List() {
+     template <typename T> MOLEBOX_API StrVector List() {
       return Container<T>::I().List();
       }  
     
@@ -34,13 +36,14 @@ namespace MB {
      *
      * @return MB:Content::ID*
      **/
-     template <typename T> static ID * GetID()
+    template <typename T> MOLEBOX_API ID * GetID()
     {
       
       return Container<T>::I().GetID();
     }
 
-    
+    MOLEBOX_API sf::Sprite NewSprite(std::string name);
+    MOLEBOX_API sf::Sound NewSound(std::string name);
   }
 }
 

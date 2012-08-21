@@ -41,6 +41,7 @@ set (SOURCES
   Content/ContentID.cpp
   Content/ContainerTemplate.cpp
   Content/Container.cpp
+  Content/Content.cpp
   Content/SpriteBatch.cpp
   Content/SpriteSheet.cpp
   Content/Resources.cpp
@@ -54,13 +55,20 @@ set (SOURCES
 
   if (SFML_FOUND)
     set( MB_LIBS ${SFML_LIBRARIES} ${OPENGL_gl_LIBRARY} ${GLU_LIBRARY} ${LUA_LIBRARIES} )
-	if (BUILD_SHARED_LIBS)
+	if(MB_BUILD_SHARED_LIBS)
 		add_library(MoleBox-Core SHARED ${HEADERS} ${SOURCES})
 	else()
 		add_library(MoleBox-Core STATIC ${HEADERS} ${SOURCES})
 	endif()
     set_target_properties(MoleBox-Core PROPERTIES LIBRARY_OUTPUT_DIRECTORY ${PROJECT_BINARY_DIR}/lib)
     target_link_libraries(MoleBox-Core ${MB_LIBS})
+	install( TARGETS MoleBox-Core
+            RUNTIME DESTINATION bin COMPONENT bin
+            LIBRARY DESTINATION lib${LIB_SUFFIX} COMPONENT bin 
+            ARCHIVE DESTINATION lib${LIB_SUFFIX} COMPONENT devel
+            FRAMEWORK DESTINATION ${CMAKE_INSTALL_FRAMEWORK_PREFIX} COMPONENT bin)
+
+	install (DIRECTORY "${MB_INCLUDE_DIR}/MoleBox" DESTINATION "include" )
 
     add_subdirectory(Content)
     add_subdirectory(Actions)

@@ -30,6 +30,7 @@
 #include <MoleBox/Export.hpp>
 
 #include <MoleBox/GameObject.hpp>
+#include "Actions/Actions.hpp"
 #include <SFML/Graphics/Drawable.hpp>
 
 namespace MB {
@@ -47,7 +48,7 @@ namespace MB {
      * @brief A reference to the main game object.
      **/
     Game *game;
-    
+    Actions::Actions* actions;
   public:
 
     /**
@@ -92,7 +93,7 @@ namespace MB {
        * @return void
        **/
       void DrawAsset(const sf::Drawable& drawable, const sf::RenderStates& states = sf::RenderStates::Default);
-      
+
   };
 
 }

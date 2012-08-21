@@ -49,13 +49,15 @@ namespace MB
 
   namespace Lua
   {
+    class Script;
+    
     namespace SFML
     {
 
       /**
        * @brief C functions for lua to add and use sounds.
        **/
-      class MOLEBOX_LUA_API Sounds
+      class Sounds
       {
 
       public:
@@ -70,7 +72,7 @@ namespace MB
       /**
        * @brief C functions for lua to add and use sprites.
        **/
-      class MOLEBOX_LUA_API Sprites
+      class Sprites
       {
       public:
 	  static int 				Load				( lua_State *L );
@@ -87,7 +89,7 @@ namespace MB
       /**
        * @brief C functions for lua to add and use drawable text.
        **/
-      class MOLEBOX_LUA_API Text
+      class Text
       {
       public:
 	  static int 				Create				( lua_State *L );
@@ -104,7 +106,7 @@ namespace MB
       /**
        * @brief C functions for lua to add and use music.
        **/
-      class MOLEBOX_LUA_API Music
+      class Music
       {
 
       public:
@@ -122,7 +124,7 @@ namespace MB
       /**
        * @brief C functions for lua to obtain window information.
        **/
-      class MOLEBOX_LUA_API Window
+      class Window
       {
       public:
 	  static int Dimensions ( lua_State *L );
@@ -132,7 +134,7 @@ namespace MB
       /**
        * @brief Lua function register array for the window C functions
        **/
-      MOLEBOX_LUA_API static const  luaL_reg window_reg[] =
+      static const  luaL_reg window_reg[] =
       {
 	  { "Size", Window::Dimensions},
 	  { NULL, NULL }
@@ -141,7 +143,7 @@ namespace MB
       /**
        * @brief Lua function register array for the Sprite C functions
        **/
-      MOLEBOX_LUA_API static const luaL_reg sprite_Reg[] =
+      static const luaL_reg sprite_Reg[] =
       {
 	  { "Load", Sprites::Load},
 	  { "Draw", Sprites::Draw},
@@ -155,7 +157,7 @@ namespace MB
       /**
        * @brief Lua function register array for the Text C functions
        **/
-      MOLEBOX_LUA_API static const luaL_reg text_reg[] =
+      static const luaL_reg text_reg[] =
       {
 	  { "Create", Text::Create},
 	  { "Draw", Text::Draw},
@@ -170,7 +172,7 @@ namespace MB
       /**
        * @brief Lua function register array for the Sound C functions
        **/
-      MOLEBOX_LUA_API static const luaL_Reg sound_reg[] =
+      static const luaL_Reg sound_reg[] =
       {
 	  { "Load", Sounds::Load},
 	  { "Play", Sounds::Play},
@@ -181,7 +183,7 @@ namespace MB
       /**
        * @brief Lua function register array for the Music C functions
        **/
-      MOLEBOX_LUA_API static const  luaL_Reg music_reg[] =
+      static const  luaL_Reg music_reg[] =
       {
 	  { "Load", Music::Load },
 	  { "Play", Music::Play},
@@ -193,9 +195,13 @@ namespace MB
 	  { NULL, NULL }
       };
 
+    void RegisterWindow(MB::Lua::Script* script);
+    void RegisterSprites(MB::Lua::Script*);
+    void RegisterText(MB::Lua::Script*);
+    void RegisterSound(MB::Lua::Script*);
+    void RegisterMusic(MB::Lua::Script*);
+
     }
-
-
 
   }
 }

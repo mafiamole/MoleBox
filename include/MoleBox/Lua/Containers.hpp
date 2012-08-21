@@ -49,11 +49,11 @@ namespace MB {
       public:
 	Sprites							(sf::RenderTarget* target);
 	~Sprites						();
-	static const char*		RegRef;
 	sf::Sprite* 			Add		(std::string filename);
 	void 				AppendToDrawList	(sf::Sprite* ref);
 	void 				Draw			();
 	//sf::Sprite*			Get(int ref);
+	static const char*		RegRef;
       };
       
       class MOLEBOX_LUA_API Text
@@ -63,13 +63,15 @@ namespace MB {
 	std::list<sf::Text>		textList;
 	std::list<sf::Text*>		renderList;
 	int				listCounter;
+	sf::Font 			defaultFont;
       public:
-					Text			(sf::RenderTarget* target);
+					Text			(sf::RenderTarget* target, sf::Font font);
 					~Text			();
+	void				SetFont			(std::string file);
 	sf::Text*	Create			(std::string value);
 	void				AppendToDrawList	( sf::Text* ref );
 	void 				Draw			();
-	//sf::Text*			Get(int ref);
+	//sf::Text*			Get(int ref
 	static const char*		RegRef;
       };
       
@@ -96,8 +98,7 @@ namespace MB {
 					~Music			();
 	sf::Music*			Load			(std::string name);
 	void 				Play			(sf::Music* ref);
-	static const char*		RegRef;
-	
+	static const char*		RegRef;	
       };
       
     }

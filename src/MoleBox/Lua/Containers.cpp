@@ -82,7 +82,7 @@ namespace MB
 
 
 
-			Text::Text(sf::RenderTarget* target) : target(target), textList() , listCounter(0)
+			Text::Text(sf::RenderTarget* target, sf::Font font) : target(target), textList() , listCounter(0), defaultFont(font)
 			{
 
 			}
@@ -97,8 +97,8 @@ namespace MB
 			//   int key = listCounter;
 			//   this->text.insert( std::pair<int,sf::Text>( key, sf::Text( sf::String( value.c_str() ) ) ) );
 			//   listCounter++;
-
-				this->textList.push_back(  sf::Text( sf::String( value.c_str() ) ) );
+			
+				this->textList.push_back(  sf::Text( sf::String( value.c_str() ), defaultFont ) );
 
 				std::list< sf::Text >::iterator key = this->textList.end();
 				--key;
@@ -122,6 +122,11 @@ namespace MB
 			void Text::AppendToDrawList( sf::Text* ref )
 			{
 				this->renderList.push_back( ref );
+			}
+			
+			void Text::SetFont( std::string file )
+			{
+			  this->defaultFont.loadFromFile(file);
 			}
 
 			// sf::Text* Text::Get(int ref)

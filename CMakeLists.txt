@@ -17,8 +17,9 @@ set(VERSION_PATCH 0)
 option ( MB_BUILD_SHARED_LIBS " TRUE to build molebox as shared libraries, FALSE to build as static libraries " TRUE )
 option ( MB_BUILD_EXAMPLES "TRUE to build examples, FALSE to not build examples" FALSE )
 
-if(NOT BUILD_SHARED_LIBS)
+if(NOT MB_BUILD_SHARED_LIBS)
     add_definitions(-DMB_STATIC)
+    message("Building static build")
 endif()
 
 ########################################################

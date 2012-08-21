@@ -37,13 +37,22 @@ include_directories(${LUA_INCLUDE_DIR})
 if (LUA_EDITOR_TOOL)
 add_definitions( "-DLUA_EDITOR" )
 endif()
-if (BUILD_SHARED_LIBS)
-add_library(MoleBox-Lua SHARED ${HEADERS} ${SOURCES})
+if(MB_BUILD_SHARED_LIBS)
+  add_library(MoleBox-Lua SHARED ${HEADERS} ${SOURCES})
 else()
-add_library(MoleBox-Lua STATIC ${HEADERS} ${SOURCES})
-
+  add_library(MoleBox-Lua STATIC ${HEADERS} ${SOURCES})
 endif()
 set_target_properties(MoleBox-Lua PROPERTIES LIBRARY_OUTPUT_DIRECTORY ${PROJECT_BINARY_DIR}/lib)
-
+message ( "lua lib includes:" )
+message ( ${MB_LIBS} )
 target_link_libraries(MoleBox-Lua ${MB_LIBS}  MoleBox-Core )
+
 add_subdirectory(Arguments)
+
+	install( TARGETS MoleBox-Lua
+            RUNTIME DESTINATION bin COMPONENT bin
+            LIBRARY DESTINATION lib${LIB_SUFFIX} COMPONENT bin 
+            ARCHIVE DESTINATION lib${LIB_SUFFIX} COMPONENT devel
+            FRAMEWORK DESTINATION ${CMAKE_INSTALL_FRAMEWORK_PREFIX} COMPONENT bin)
+
+	install (DIRECTORY "${MB_INCLUDE_DIR}/MoleBox" DESTINATION "include" )

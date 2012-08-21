@@ -31,7 +31,6 @@ namespace MB
 {
 	namespace Content
 	{
-
 		Resources::Resources(std::string contentDir)
 		{
 		  this->contentDir = contentDir;
@@ -39,9 +38,10 @@ namespace MB
 		  types.push_back(MB::Content::GetID<sf::Texture>());
 		  types.push_back(MB::Content::GetID<sf::SoundBuffer>());
 		  types.push_back(MB::Content::GetID<sf::Music*>());
-		  types.push_back(MB::Content::GetID<MB::Lua::Script*>());
+		  //types.push_back(MB::Content::GetID<MB::Lua::Script*>());
   
 		}
+
 
 		Resources::~Resources()
 		{

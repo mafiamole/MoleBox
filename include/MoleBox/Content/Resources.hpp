@@ -69,7 +69,7 @@ namespace MB {
        * @param contentDir ... Defaults to "/".
        **/
 					Resources(std::string contentDir = "/");
-      /**
+					      /**
        * @brief default destructor
        *
        **/

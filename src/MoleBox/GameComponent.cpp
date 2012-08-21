@@ -34,7 +34,7 @@ namespace MB
 
 	GameComponent::GameComponent(Game* game) : game(game)
 	{
-
+	  actions = this->game->GetActions();
 	}
 	GameComponent::~GameComponent()
 	{

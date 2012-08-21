@@ -28,9 +28,9 @@
 
 HUD::HUD(std::string filename, MB::Game* game): MB::Lua::Component(filename,game)
 {
-  
-  this->script.GetFunc("update")->AddArg("playerScore",0);
-  this->script.GetFunc("update")->AddArg("computerScore",0);
+  this->textContainer.SetFont("DroidSans.ttf");
+  this->script->GetFunc("update")->AddArg("playerScore",0);
+  this->script->GetFunc("update")->AddArg("computerScore",0);
 }
 
 HUD::~HUD()
@@ -44,12 +44,12 @@ void HUD::Update(sf::Time elapsed, MB::EventList* events)
   int playerScore = this->ball->PlayerScore();
   int computerScore = this->ball->ComputerScore();
   
-  MB::Lua::Function* update = this->script.GetFunc("update");
+  MB::Lua::Function* update = this->script->GetFunc("update");
   
   update->SetArg("playerScore",playerScore);
   update->SetArg("computerScore",computerScore);
  
-  lua_State* L = this->script.GetState();
+  lua_State* L = this->script->GetState();
  // update = this->script.GetFunc("update");
   update->InitCall(L,"update",false);
   update->PushArg(L,"elapsed");

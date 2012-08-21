@@ -179,7 +179,7 @@ namespace MB
 			luaL_register( L , (*regItr).first.c_str() , reg);
     
 		  }
-  
+		  
 		  success = luaL_loadfile(this->L,file.c_str());
   
 		  return this->HandleError( success );   

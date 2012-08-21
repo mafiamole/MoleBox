@@ -115,6 +115,10 @@ namespace MB {
 
   /**
    * @brief A 'game' that uses a state machine logic flow.
+   * 
+   * General usage is in extending this class through inheritence.
+   * 
+   * 
    **/
   class MOLEBOX_API SMGame : public MB::Game, public MB::SM::Machine
   {
@@ -122,13 +126,61 @@ namespace MB {
     std::map<std::string,GameState*> states;  
     GameState* currentState;
   public:
+    /**
+     * @brief Creates a new game object that works like some form of state machine
+     *
+     * @param windowName The name of the game window.
+     * @param argc Command line argument count
+     * @param argv The command line argument array
+     * @param preventArgOverwrite This tells the configuration tool to not allow configurations to be overridden by any command line arguments. Defaults to false.
+     **/
     SMGame(std::string windowName, int argc, char** argv, bool preventArgOverwrite = false);
+    /**
+     * @brief Default destructor
+     *
+     **/
     virtual ~SMGame();
+    /**
+     * @brief Adds a game state to the game state machine
+     *
+     * @param state The game state to add
+     * @return void
+     **/
     void 	AddState(GameState* state);
+    /**
+     * @brief changes the current state. This will automatically call the DoExit of the current state,
+     *        followed by setting the state by the given string reference. It then calls DoEntre on that state.
+     *
+     * @param name The name of the state to change to.
+     * @return void
+     **/
     void 	SetState(std::string name);
+    /**
+     * @brief Called once per game loop. Update should be called in the overridden 
+     *        function so that it also updates the game state.
+     *
+     * @param elapsed The time elapsed since the last update
+     * @param events List of input events on this loop
+     * @return void
+     **/
     virtual void Update(sf::Time elapsed, MB::EventList* events);
+    /**
+     * @brief Calls the current gamestate draw method. Use by overriding it and calling it to update the current game state.
+     *
+     * @return void
+     **/
     virtual void Draw();
+    /**
+     * @brief Initiates the game loop. Override it if you want additional tasks (like extra threads) to run along side the main loop
+     *
+     * @return int
+     **/
     virtual int Run();
+    /**
+     * @brief returns a reference to the games window.
+     *
+     * @return sf::RenderWindow*
+     **/
     sf::RenderWindow* Window();
   };
 

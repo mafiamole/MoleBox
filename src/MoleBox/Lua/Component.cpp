@@ -23,7 +23,7 @@
     OTHER DEALINGS IN THE SOFTWARE.
 */
 
-
+#include <MoleBox/Lua/Container.hpp>
 #include <MoleBox/Lua/Component.hpp>
 #include <MoleBox/Lua/Arguments/ActionsArg.hpp>
 #include <MoleBox/Game.hpp>
@@ -34,26 +34,33 @@ namespace MB
 	{
 
 		Component::Component(std::string filename, MB::Game* game) 
-		: MB::GameComponent(game) , spritesContainer( game->Window() ), textContainer( game->Window() )
+		: MB::GameComponent(game) , spritesContainer( game->Window() ), textContainer( game->Window(), sf::Font() )
 		{
-		  this->script.AddFunction("");  
-		  this->script.AddFunction("draw");
-		  this->script.AddFunction("init");
-		  this->script.AddFunction("update");
-  
-		  this->script.RegisterLibrary("Window",SFML::window_reg);
-  
-		  this->script.RegisterLibrary("Sprites",SFML::sprite_Reg);
-		  this->script.RegisterLibrary("Text",SFML::text_reg);
-		  this->script.RegisterLibrary("Sound",SFML::sound_reg);
-		  this->script.RegisterLibrary("Music",SFML::music_reg);
-  
-		  this->script.GetFunc("update")->AddArg("elapsed",0.0f);
-		  this->script.GetFunc("update")->AddArg("events",new ActionsArg(this->game->GetActions()->GetList()));
-  
-		  this->script.LoadFromFile(filename);
-  
-		  lua_State* L = this->script.GetState();
+		  this->script = MB::Content::Load<MB::Lua::Script*>(filename);
+		  
+		  this->script->AddFunction("");  
+		  this->script->AddFunction("draw");
+		  this->script->AddFunction("init");
+		  this->script->AddFunction("update");
+		  
+		  this->script->GetFunc("update")->AddArg("elapsed",0.0f);
+		  this->script->GetFunc("update")->AddArg("events",new ActionsArg(this->game->GetActions()->GetList()));
+  		  
+// 		  this->script.RegisterLibrary("Window",SFML::window_reg);
+// 		  this->script.RegisterLibrary("Sprites",SFML::sprite_Reg);
+// 		  this->script.RegisterLibrary("Text",SFML::text_reg);
+// 		  this->script.RegisterLibrary("Sound",SFML::sound_reg);
+// 		  this->script.RegisterLibrary("Music",SFML::music_reg);
+//   
+		  SFML::RegisterWindow(this->script);
+		  SFML::RegisterMusic(this->script);
+		  SFML::RegisterSound(this->script);
+		  SFML::RegisterSprites(this->script);
+		  SFML::RegisterText(this->script);
+		  
+		  this->script->LoadFromFile(filename);
+   
+		  lua_State* L = this->script->GetState();
   
 		  SetUserDataToRegistry<Containers::Music>	(L ,Containers::Music::RegRef	,&this->musicContainer);
 		  SetUserDataToRegistry<Containers::Sounds>	(L ,Containers::Sounds::RegRef	,&this->soundContainer);
@@ -61,8 +68,8 @@ namespace MB
 		  SetUserDataToRegistry<Containers::Text>	(L ,Containers::Text::RegRef	,&this->textContainer);
 		  SetUserDataToRegistry<sf::RenderWindow>	(L ,"SFML_GAME_WINDOW"		,this->game->Window());
   
-		  this->script.FuncCall("");
-		  this->script.FuncCall("init");
+		  this->script->FuncCall("");
+		  this->script->FuncCall("init");
   
 		}
 
@@ -74,7 +81,7 @@ namespace MB
 
 		void Component::Draw()
 		{
-		  this->script.FuncCall("draw");
+		  this->script->FuncCall("draw");
 		  this->spritesContainer.Draw();
 		  this->textContainer.Draw();
 
@@ -82,14 +89,14 @@ namespace MB
 
 		void Component::PushUpdateArgs(sf::Time elapsed,MB::EventList*events)
 		{
-		  this->script.GetFunc("update")->SetArg("elapsed",elapsed.asMilliseconds());
-		  this->script.GetFunc("update")->GetArg("events")->Set(events); 
+		  this->script->GetFunc("update")->SetArg("elapsed",elapsed.asMilliseconds());
+		  this->script->GetFunc("update")->GetArg("events")->Set(events); 
 		}
 
 		void Component::Update( sf::Time elapsed,MB::EventList *events )
 		{
 		  this->PushUpdateArgs(elapsed,events);
-		  this->script.FuncCall("update");
+		  this->script->FuncCall("update");
 		}
 	}
 }

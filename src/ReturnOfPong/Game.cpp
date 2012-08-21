@@ -26,6 +26,7 @@
 
 #include <ReturnOfPong/Game.hpp>
 #include <MoleBox/Actions/Keyboard.hpp>
+#include <MoleBox/Lua/Container.hpp>
 
 Game::Game(std::string windowName, int argc, char** argv, bool preventArgOverwrite): SMGame(windowName, argc, argv, preventArgOverwrite)
 {
@@ -36,6 +37,10 @@ Game::Game(std::string windowName, int argc, char** argv, bool preventArgOverwri
   this->AddState(new MainMenu("MainMenu",this));
   this->AddState(new PongGame("PongGame",this));
   this->SetState("MainMenu");
+  args.argc = argc;
+  args.argv = argv;
+  this->resourceManager.AddIdentifier(MB::Content::GetID<MB::Lua::Script*>());
+  args.map = this->resourceManager.ResourceLists(); // Must be done after content loading!.
 }
 
 Game::~Game()
@@ -56,13 +61,20 @@ void Game::Update(sf::Time elapsed, MB::EventList* events)
 
 void Game::Draw()
 {
-    MB::SMGame::Draw();
+  MB::SMGame::Draw();
 
 }
 
 int Game::Run()
-{
-    return MB::SMGame::Run();
+{  
+    
+    
+    sf::Thread* thread = CreateRUIThreadOBJ(args);
+    
+    thread->launch();
+    int returnVal = MB::SMGame::Run();
+    thread->wait();
+    return returnVal;
 }
 
 

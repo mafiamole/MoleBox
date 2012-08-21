@@ -23,7 +23,7 @@ add_executable(ReturnOfPong  ${HEADERS} ${SOURCES})
 
 include_directories(${CMAKE_CURRENT_SOURCE_DIR})
 
-target_link_libraries(ReturnOfPong MoleBox-Core MoleBox-Lua)
+target_link_libraries(ReturnOfPong MoleBox-Core MoleBox-Lua MoleBox-Resources)
 
 install (TARGETS ReturnOfPong DESTINATION bin)
 

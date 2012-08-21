@@ -29,6 +29,7 @@
 #include <MoleBox/ResourceUI/LuaEditor.hpp>
 #include <MoleBox/Lua/Script.hpp>
 #include <MoleBox/Patterns.hpp>
+#include <MoleBox/Lua/Container.hpp>
 #include <MoleBox/Content/Content.hpp>
 
 
