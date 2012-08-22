@@ -29,121 +29,157 @@
 namespace MB
 {
 
-	GameConfig::GameConfig()
-	{
-  
-	}
+  GameConfig::GameConfig()
+  {
 
-	GameConfig::~GameConfig()
-	{
-  
-	}
+  }
 
-	int GameConfig::StringToInt(std::string integer)
-	{
-	  return atoi(integer.c_str());
-	}
+  GameConfig::~GameConfig()
+  {
 
-	bool GameConfig::StringToBool(std::string boolean)
-	{
+  }
 
-	  std::transform(boolean.begin(), boolean.end(),boolean.begin(), ::tolower);
-	  std::size_t foundTrue = boolean.find("true");
-	  std::size_t foundYes = boolean.find("yes");
-  
-	  return (foundTrue != 0) || (foundYes !=0);
+  int GameConfig::StringToInt(std::string integer)
+  {
+      return atoi(integer.c_str());
+  }
 
-	}
+  bool GameConfig::StringToBool(std::string boolean)
+  {
 
-	StrPair GameConfig::SplitString(std::string line,char centre)
-	{
-	  std::allocator< char >::size_type valuePos = line.find(centre);
-	  std::string name = line.substr(0, valuePos - 1);
-	  std::string value = line.substr(valuePos+1);
-	  return StrPair( line.substr(0, valuePos - 1), line.substr(valuePos+1) );
-	}
+      std::transform(boolean.begin(), boolean.end(),boolean.begin(), ::tolower);
+      std::size_t foundTrue = boolean.find("true");
+      std::size_t foundYes = boolean.find("yes");
 
-	std::string GameConfig::TruncateCMDArg(std::string line)
-	{
-	  std::allocator< char >::size_type dashPos = line.find("-");
-	  return  line.substr(dashPos+1);
-	}
+      return (foundTrue != 0) || (foundYes !=0);
 
-	ConfList GameConfig::LoadFile (std::string file)
-	{
-	  std::ifstream configStream(file.c_str());
-	  ConfList conf;
-	  if ( configStream.is_open() )
+  }
+
+  StrPair GameConfig::SplitString(std::string line,char centre)
+  {
+      std::allocator< char >::size_type valuePos = line.find(centre);
+      std::string name = line.substr(0, valuePos - 1);
+      std::string value = line.substr(valuePos+1);
+      return StrPair( line.substr(0, valuePos - 1), line.substr(valuePos+1) );
+  }
+
+  std::string GameConfig::TruncateCMDArg(std::string line)
+  {
+      std::allocator< char >::size_type dashPos = line.find("-");
+      return  line.substr(dashPos+1);
+  }
+
+  ConfList GameConfig::LoadFile (std::string file)
+  {
+      std::ifstream configStream(file.c_str());
+      ConfList conf;
+      if ( configStream.is_open() )
+      {
+
+	  while ( !configStream.eof() )
 	  {
-    
-		while ( !configStream.eof() )
-		{
-		  std::string fileLine;
-		  std::getline(configStream,fileLine);
-      
-		  if (fileLine.size() > 0)
-		  {
-		StrPair values =  this->SplitString(fileLine,'=');
-	
-		RegisterValue(values,&conf);
-	
-		  }
+	      std::string fileLine;
+	      std::getline(configStream,fileLine);
 
-		}
-    
-	  }
-  
-	  return conf;
-	}
+	      if (fileLine.size() > 0)
+	      {
+		  StrPair values =  this->SplitString(fileLine,'=');
 
-	ConfList GameConfig::LoadArgs(int argc,char **argv)
-	{
-	   ConfList conf;
- 
-	   for ( int argItr = 0; argItr < argc; argItr++ )
-	   {
-     
-		 std::string fileline = this->TruncateCMDArg(argv[argItr]);
-		 StrPair values =  this->SplitString(fileline,'=');
-		 RegisterValue(values,&conf);
-     
-	   }
- 
-	   return conf;
-	}
+		  RegisterValue(values,&conf);
+		  this->ConfigList.insert(values);
+	      }
 
-	ConfList GameConfig::LoadAll(std::string file,int argc,char **argv)
-	{
-	 return ConfList(); 
-	}
-
-	void GameConfig::RegisterValue(StrPair value,ConfList* config )
-	{
-	  if ( value.first == "resolution" )
-	  {
-		StrPair resTem = this->SplitString(value.second,'X');
-    
-		config->resolution = sf::VideoMode( this->StringToInt(resTem.first), this->StringToInt(resTem.second) );
 	  }
 
+      }
 
-	  if (value.first == "fullscreen")
-		config->fullscreen = this->StringToBool(value.second);
+      return conf;
+  }
 
-	  if (value.first == "resource")
-		config->resourceLocation = value.second;
+  ConfList GameConfig::LoadArgs(int argc,char **argv)
+  {
+      ConfList conf;
 
-	  if (value.first == "fps")
-		config->fps = this->StringToInt(value.second);
-	    
-	}
+      for ( int argItr = 0; argItr < argc; argItr++ )
+      {
 
-	int GameConfig::GetArgCount ()
-	{
-	  return this->argc;
-	}
-	char** GameConfig::GetArgs()
-	{
-	  return this->argv;
-	}
+	  std::string fileline = this->TruncateCMDArg(argv[argItr]);
+	  StrPair values =  this->SplitString(fileline,'=');
+	  RegisterValue(values,&conf);
+	  this->ConfigList.insert(values);
+      }
+
+      return conf;
+  }
+
+  ConfList GameConfig::LoadAll(std::string file,int argc,char **argv)
+  {
+      return ConfList();
+  }
+
+  void GameConfig::RegisterValue(StrPair value,ConfList* config )
+  {
+      if ( value.first == "resolution" )
+      {
+	  StrPair resTem = this->SplitString(value.second,'X');
+
+	  config->resolution = sf::VideoMode( this->StringToInt(resTem.first), this->StringToInt(resTem.second) );
+      }
+
+
+      if (value.first == "fullscreen")
+	  config->fullscreen = this->StringToBool(value.second);
+
+      if (value.first == "resource")
+	  config->resourceLocation = value.second;
+
+      if (value.first == "fps")
+	  config->fps = this->StringToInt(value.second);
+
+  }
+
+  int GameConfig::GetArgCount ()
+  {
+      return this->argc;
+  }
+  char** GameConfig::GetArgs()
+  {
+      return this->argv;
+  }
+
+  int GameConfig::GetIntValue(std::string identifier)
+  {
+    if ( this->ConfigList.find(identifier) != this->ConfigList.end() )
+    {
+      return this->StringToInt(this->ConfigList[identifier]);
+    }
+    else
+    {
+      return 0;
+    }
+  }
+
+  std::string GameConfig::GetStringValue(std::string identifier)
+  {
+    if ( this->ConfigList.find(identifier) != this->ConfigList.end() )
+    {
+      return this->ConfigList[identifier];
+    }
+    else
+    {
+      return "";
+    }
+  }
+
+  bool GameConfig::GetBooleanValue(std::string identifier)
+  {
+    if ( this->ConfigList.find(identifier) != this->ConfigList.end() )
+    {
+      return this->StringToBool(this->ConfigList[identifier]);
+    }
+    else
+    {
+      return false;
+    }
+  }
 }

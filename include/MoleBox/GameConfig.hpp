@@ -33,6 +33,7 @@
 #include <SFML/Window/VideoMode.hpp>
 #include <algorithm>
 #include <string>
+#include <map>
 
 namespace MB {
 
@@ -106,6 +107,7 @@ namespace MB {
     std::string		TruncateCMDArg(std::string line);
     int 		argc;
     char **		argv;
+    std::map<std::string,std::string> ConfigList;
   public:
     /**
      * @brief Default Constructor
@@ -156,6 +158,28 @@ namespace MB {
      * @return char**
      **/
     char**		GetArgs		();
+    /**
+     * @brief Checks to see if a certain configuration value is stored and attempt to return it's value as a integer
+     *
+     * @param identifier Identifier to check by. 
+     * @return int
+     **/
+    int			GetIntValue(std::string identifier);
+    /**
+     * @brief Checks to see if a certain configuration value is stored and attempt to return it's value as a integer
+     *
+     * @param identifier Identifier to check by.
+     * @return :string
+     **/
+    std::string 	GetStringValue(std::string identifier);
+    /**
+     * @brief Checks to see if a certain configuration value is stored and attempt to return it's value as a integer
+     *
+     * @param identifier Identifier to check by.
+     * @return bool
+     **/
+    bool		GetBooleanValue(std::string identifier);
+    
     /**
      * @brief Destructor.
      *
