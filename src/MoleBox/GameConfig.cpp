@@ -25,7 +25,7 @@
 
 
 #include <MoleBox/GameConfig.hpp>
-
+#include <iostream>
 namespace MB
 {
 
@@ -71,26 +71,34 @@ namespace MB
 
   ConfList GameConfig::LoadFile (std::string file)
   {
-      std::ifstream configStream(file.c_str());
+      std::ifstream configStream;
       ConfList conf;
+      
+      configStream.open(file.c_str(), std::ifstream::in);
+      
       if ( configStream.is_open() )
       {
 
 	  while ( !configStream.eof() )
 	  {
 	      std::string fileLine;
-	      std::getline(configStream,fileLine);
-
+	      //std::getline(configStream,fileLine);
+	      configStream >> fileLine;
 	      if (fileLine.size() > 0)
 	      {
 		  StrPair values =  this->SplitString(fileLine,'=');
 
 		  RegisterValue(values,&conf);
 		  this->ConfigList.insert(values);
+		  std::cout << values.first << " = " << values.second << std::endl;
 	      }
 
 	  }
 
+      }
+      else
+      {
+	throw "Unable to load Configuration file";
       }
 
       return conf;
