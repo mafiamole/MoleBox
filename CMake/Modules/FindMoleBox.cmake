@@ -41,7 +41,9 @@ find_package(SFML 2.0 COMPONENTS system window graphics audio network REQUIRED)
 find_package(OpenGL REQUIRED)
 find_package(GLU REQUIRED)
 find_package(Lua51)
+if (LUA_EDITOR_TOOL)
 find_package(Qt4)
+endif()
 if (NOT SFML_FOUND)
     message("SFML was not found!")
     set(MoleBox_FOUND FALSE)
@@ -68,9 +70,10 @@ else()
 endif()
 
 
-
+if (LUA_EDITOR_TOOL)
 include(${QT_USE_FILE})
 add_definitions(${QT_DEFINITIONS})
+endif()
 # convenience vars
 set(MoleBox_LIBRARIES ${SFML_LIBRARIES} ${QT_LIBRARIES} ${OPENGL_gl_LIBRARY} ${GLU_LIBRARY} ${LUA_LIBRARY} ${MoleBox_LIBRARIES} )
 set(MoleBox_INCLUDE_DIRECTORIES ${MoleBox_INCLUDE_DIR} ${SFML_INCLUDE_DIR} ${OPENGL_INCLUDE_DIR} ${GLU_INCLUDE_PATH} ${LUA_INCLUDE_DIR} ${MoleBox_INCLUDE_DIR})

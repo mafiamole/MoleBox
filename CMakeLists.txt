@@ -6,7 +6,7 @@ project(MoleBox)
 ####		  	Version			    ####
 ########################################################
 set(VERSION_MAJOR 0)
-set(VERSION_MINOR 2)
+set(VERSION_MINOR 3)
 set(VERSION_PATCH 0)
 
 
@@ -19,6 +19,7 @@ option ( MB_BUILD_EXAMPLES "TRUE to build examples, FALSE to not build examples"
 
 if(NOT MB_BUILD_SHARED_LIBS)
     add_definitions(-DMB_STATIC)
+    ADD_DEFINITIONS( -DSFML_STATIC )
     message("Building static build")
 endif()
 
@@ -45,7 +46,7 @@ if (LUA_EDITOR_TOOL)
   include(${QT_USE_FILE})
 endif()
 
-find_package(SFML 2.0 COMPONENTS system window graphics audio network REQUIRED)
+find_package(SFML 2 COMPONENTS main system window graphics audio network REQUIRED)
 find_package(OpenGL REQUIRED)
 find_package(GLU REQUIRED)
 
